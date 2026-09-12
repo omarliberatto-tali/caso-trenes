@@ -1,0 +1,543 @@
+{
+  "expediente": "CCF 007731/2026",
+  "caratula": "EQUIPAMIENTO URBANO DEL SUR S.R.L. c/ SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. s/ COBRO ORDINARIO DE PESOS",
+  "documentos": [
+    {
+      "id": "DEM",
+      "titulo": "Escrito de demanda",
+      "tipo": "demanda",
+      "path": "escritos/Demanda_C2.pdf",
+      "paginas": 6
+    },
+    {
+      "id": "CON",
+      "titulo": "Contestación de demanda",
+      "tipo": "contestacion",
+      "path": "escritos/Contestacion_C2.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-1",
+      "titulo": "Orden de compra N° 4520002029",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_1_Orden_de_compra.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-2",
+      "titulo": "Facturas emitidas y refacturaciones",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_2_Facturas.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-3",
+      "titulo": "Intercambio de correo electrónico con la demandada",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_3_Correos.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-4",
+      "titulo": "Memorándum y nota emitidos por la demandada",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_4_Actuaciones.pdf",
+      "paginas": 2
+    }
+  ],
+  "items": [
+    {
+      "id": "AF-01",
+      "grupo": "A",
+      "titulo": "Existencia de la orden de compra",
+      "texto": "En fecha 11 de marzo de 2025 la demandada emitió la orden de compra N° 4520002029, tramitada bajo el expediente EX-2025-00133907-APN-GCO#SOTR, por la cual encomendó a mi mandante la provisión del equipamiento que en ella se detalla.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-02",
+      "grupo": "A",
+      "titulo": "Plazo de pago pactado",
+      "texto": "Se acordó el pago a los sesenta (60) días de la fecha de presentación de la factura, plazo que se encuentra ampliamente vencido, encontrándose la demandada en mora.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-03",
+      "grupo": "B",
+      "titulo": "Entrega en tiempo y forma",
+      "texto": "Los ocho cambiadores de bebé fueron entregados en tiempo y forma el 14 de abril de 2025, conforme el remito N° 0002-00008644 que se acompaña.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-04",
+      "grupo": "B",
+      "titulo": "Conformidad del área requirente",
+      "texto": "El área requirente de la demandada prestó conformidad a la recepción del renglón 1, quedando expedito el trámite de pago de la factura correspondiente.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-05",
+      "grupo": "C",
+      "titulo": "Rechazo de la primera factura en el portal de A.F.I.P.",
+      "texto": "La factura N° 00005-00000143, emitida el 14 de abril de 2025, fue rechazada en el portal de A.F.I.P. por no contar con la certificación del usuario al momento del vencimiento, motivo por el cual la demandada solicitó su refacturación.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-06",
+      "grupo": "C",
+      "titulo": "Refacturación observada",
+      "texto": "En fecha 5 de julio de 2025 mi mandante emitió la factura N° 00005-00000158 por el mismo importe, que también fue observada por la demandada.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-07",
+      "grupo": "C",
+      "titulo": "Rechazo por tipo de cambio",
+      "texto": "La factura N° 00005-00000172, emitida el 9 de agosto de 2025, fue rechazada por la demandada por aplicar un tipo de cambio distinto del que correspondía al día de emisión, indicándose que el total a facturar ascendía a $ 452.535,16.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-08",
+      "grupo": "C",
+      "titulo": "Contabilización de la factura reclamada",
+      "texto": "La factura N° 00005-00000173, que es la que se reclama en autos, fue procesada por la demandada y contabilizada el 10 de agosto de 2025, según le fuera informado a mi mandante por la propia Tesorería.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-09",
+      "grupo": "D",
+      "titulo": "Intercambio de correo electrónico",
+      "texto": "Con anterioridad a promover la presente acción mi mandante mantuvo con la demandada un intercambio de correo electrónico en el que reclamó el pago de lo adeudado, sin obtener respuesta que lo satisficiera.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-10",
+      "grupo": "D",
+      "titulo": "Carta documento",
+      "texto": "En fecha 12 de enero de 2026 mi parte remitió a la demandada la carta documento N° CD 197340228, intimándola al pago en el plazo de cuarenta y ocho (48) horas bajo apercibimiento de iniciar las acciones judiciales pertinentes. La pieza postal fue efectivamente entregada y no mereció respuesta alguna.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-11",
+      "grupo": "D",
+      "titulo": "Pronto despacho",
+      "texto": "En fecha 15 de enero de 2026 se presentó ante la Mesa de Entradas de la demandada la nota de pronto despacho N° PD-2026-00061, cuya recepción consta con el sello de Mesa General de Entradas, SOTR S.E..",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-12",
+      "grupo": "E",
+      "titulo": "Suma total reclamada",
+      "texto": "El total reclamado en autos asciende a PESOS CUATROCIENTOS NOVENTA Y OCHO MIL DOSCIENTOS DOCE CON 70/100 ($ 498.212,70), conforme el detalle que antecede y la certificación contable que se acompaña.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-13",
+      "grupo": "E",
+      "titulo": "Fecha de constitución en mora",
+      "texto": "La demandada quedó constituida en mora de pleno derecho el 10 de octubre de 2025, por haber vencido el plazo pactado sin que mediara pago ni observación alguna.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-14",
+      "grupo": "E",
+      "titulo": "Intereses pretendidos",
+      "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa que aplica el Banco de la Nación Argentina para sus operaciones de descuento de documentos a treinta días, con más las costas del proceso.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-15",
+      "grupo": "E",
+      "titulo": "Inexistencia de pagos parciales",
+      "texto": "La demandada no efectuó pago alguno, ni total ni parcial, imputable a la obligación que se reclama en autos.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    }
+  ],
+  "veredictos": [
+    {
+      "item_id": "AF-01",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-1",
+          "pagina": 1,
+          "fragmento": "Orden de Compra N° 4520002029"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-02",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-1",
+          "pagina": 3,
+          "fragmento": "cuarenta y cinco (45) días corridos"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda invoca un plazo de sesenta días; la cláusula 1 de la orden de compra fija cuarenta y cinco días corridos.",
+      "paginas_admitidas": [
+        3
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-03",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "El remito N° 0002-00008644 que la demanda invoca no fue acompañado: ningún documento del legajo acredita la entrega.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-04",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-4",
+          "pagina": 1,
+          "fragmento": "la recepción de los ocho cambiadores de bebé no fue conformada"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda afirma que el área requirente prestó conformidad; el memorándum de la propia demandada dice que la recepción no fue conformada.",
+      "paginas_admitidas": [
+        1
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-05",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 2,
+          "fragmento": "la factura se encuentra rechazada en el portal de AFIP"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-06",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-2",
+          "pagina": 2,
+          "fragmento": "00005-00000158"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-07",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 3,
+          "fragmento": "Total a facturar $ 452.535,16"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        3
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-08",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 4,
+          "fragmento": "N° 00005-00000172, del 9 de agosto, ya ha sido procesada"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda atribuye la contabilización a la factura 00005-00000173; el correo de Tesorería se refiere a la 00005-00000172, que es una de las refacturaciones anuladas.",
+      "paginas_admitidas": [
+        4
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-09",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 1,
+          "fragmento": "Presentación factura 00005-00000143"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        1,
+        2
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-10",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "La carta documento CD 197340228 que la demanda invoca no fue acompañada ni consta su entrega.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-11",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-4",
+          "pagina": 2,
+          "fragmento": "PD-2026-00061"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-12",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-2",
+          "pagina": 4,
+          "fragmento": "00005-00000173"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda reclama $ 498.212,70; la factura viva es por $ 452.535,16. La diferencia no está explicada en ningún documento del legajo.",
+      "paginas_admitidas": [
+        4
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-13",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "Ningún documento fija la fecha de constitución en mora que la demanda invoca.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-14",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "La orden de compra no prevé intereses por mora ni fija tasa alguna.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-15",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "No hay documento que acredite ni que descarte pagos parciales.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    }
+  ],
+  "informe": [
+    {
+      "item_id": "AF-01",
+      "titulo": "Existencia de la orden de compra",
+      "estado": "respaldada",
+      "documento_id": "DOC-1",
+      "pagina": 1,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-02",
+      "titulo": "Plazo de pago pactado",
+      "estado": "contradicha",
+      "documento_id": "DOC-1",
+      "pagina": 3,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-03",
+      "titulo": "Entrega en tiempo y forma",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-04",
+      "titulo": "Conformidad del área requirente",
+      "estado": "contradicha",
+      "documento_id": "DOC-4",
+      "pagina": 1,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-05",
+      "titulo": "Rechazo de la primera factura en el portal de A.F.I.P.",
+      "estado": "respaldada",
+      "documento_id": "DOC-3",
+      "pagina": 2,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-06",
+      "titulo": "Refacturación observada",
+      "estado": "respaldada",
+      "documento_id": "DOC-2",
+      "pagina": 2,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-07",
+      "titulo": "Rechazo por tipo de cambio",
+      "estado": "respaldada",
+      "documento_id": "DOC-3",
+      "pagina": 3,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-08",
+      "titulo": "Contabilización de la factura reclamada",
+      "estado": "contradicha",
+      "documento_id": "DOC-3",
+      "pagina": 4,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-09",
+      "titulo": "Intercambio de correo electrónico",
+      "estado": "respaldada",
+      "documento_id": "DOC-3",
+      "pagina": 1,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-10",
+      "titulo": "Carta documento",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-11",
+      "titulo": "Pronto despacho",
+      "estado": "respaldada",
+      "documento_id": "DOC-4",
+      "pagina": 2,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-12",
+      "titulo": "Suma total reclamada",
+      "estado": "contradicha",
+      "documento_id": "DOC-2",
+      "pagina": 4,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-13",
+      "titulo": "Fecha de constitución en mora",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-14",
+      "titulo": "Intereses pretendidos",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-15",
+      "titulo": "Inexistencia de pagos parciales",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    }
+  ]
+}

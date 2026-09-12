@@ -1,0 +1,533 @@
+{
+  "expediente": "CNT 044927/2026",
+  "caratula": "MOREYRA, HÉCTOR DANIEL c/ SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. s/ DIFERENCIAS SALARIALES",
+  "documentos": [
+    {
+      "id": "DEM",
+      "titulo": "Escrito de demanda",
+      "tipo": "demanda",
+      "path": "escritos/Demanda_C6.pdf",
+      "paginas": 5
+    },
+    {
+      "id": "CON",
+      "titulo": "Contestación de demanda",
+      "tipo": "contestacion",
+      "path": "escritos/Contestacion_C6.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-1",
+      "titulo": "Recibos de haberes",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_1_Recibos_de_haberes.pdf",
+      "paginas": 3
+    },
+    {
+      "id": "DOC-2",
+      "titulo": "Intercambio telegráfico",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_2_Intercambio_telegrafico.pdf",
+      "paginas": 2
+    },
+    {
+      "id": "DOC-3",
+      "titulo": "Pericia contable",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_3_Pericia_contable.pdf",
+      "paginas": 4
+    },
+    {
+      "id": "DOC-4",
+      "titulo": "Descripción de puesto y actuaciones de personal",
+      "tipo": "prueba",
+      "path": "prueba/Prueba_4_Legajo_y_actuaciones.pdf",
+      "paginas": 2
+    }
+  ],
+  "items": [
+    {
+      "id": "AF-01",
+      "grupo": "A",
+      "titulo": "Fecha de ingreso y vigencia del vínculo",
+      "texto": "Mi mandante ingresó a trabajar bajo dependencia de la demandada el 16 de marzo de 2011 y continúa prestando servicios a la fecha de esta presentación.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-02",
+      "grupo": "A",
+      "titulo": "Categoría en la que se encuentra registrado",
+      "texto": "La demandada registra a mi mandante en la categoría Operario especializado, categoría 5 del C.C.T. 1442/15 «T», y sobre esa base liquida sus haberes.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-03",
+      "grupo": "A",
+      "titulo": "Tareas efectivamente prestadas",
+      "texto": "Mi mandante ejecuta en forma autónoma y sin supervisión tareas de reparación integral de bogies y de montaje final de equipos de freno, que exceden largamente las asignadas a la categoría en la que se lo registra.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-04",
+      "grupo": "A",
+      "titulo": "Encuadre convencional que corresponde",
+      "texto": "Las tareas descriptas encuadran en la categoría Oficial de mantenimiento, categoría 9 del C.C.T. 1442/15 «T», que es la que corresponde reconocer a mi mandante.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-05",
+      "grupo": "B",
+      "titulo": "Escala salarial de la categoría reclamada",
+      "texto": "El básico convencional de la categoría 9 del C.C.T. 1442/15 «T» asciende, a diciembre de 2025, a la suma de $ 1.041.760, según la escala homologada vigente.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-06",
+      "grupo": "B",
+      "titulo": "Diferencia mensual devengada",
+      "texto": "La diferencia entre lo que mi mandante percibe y lo que le corresponde según el encuadre reclamado asciende a $ 353.720 mensuales, que la demandada le adeuda desde enero de 2024.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-07",
+      "grupo": "B",
+      "titulo": "Suplemento por trabajo nocturno",
+      "texto": "Mi mandante prestó tareas en turno noche durante el período reclamado, lo que generó el suplemento nocturno que se liquida en sus recibos.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-08",
+      "grupo": "C",
+      "titulo": "Continuidad de la prestación",
+      "texto": "El vínculo laboral se mantiene vigente y mi mandante continúa desempeñando las mismas tareas que motivan este reclamo.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-09",
+      "grupo": "C",
+      "titulo": "Falta de respuesta de la empleadora",
+      "texto": "La demandada nunca respondió la solicitud de recategorización presentada por mi mandante, ni le comunicó decisión alguna al respecto.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-10",
+      "grupo": "C",
+      "titulo": "Registro de las tareas en el legajo",
+      "texto": "El legajo personal de mi mandante no contiene descripción de puesto ni instrumento alguno que delimite las tareas a su cargo.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 2
+      }
+    },
+    {
+      "id": "AF-11",
+      "grupo": "D",
+      "titulo": "Intercambio de correo electrónico con el área de personal",
+      "texto": "Con anterioridad al distracto mi mandante mantuvo con el área de personal de la demandada un intercambio de correo electrónico en el que reclamó la correcta registración de su categoría, sin obtener respuesta.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-12",
+      "grupo": "D",
+      "titulo": "Instancia conciliatoria obligatoria",
+      "texto": "En fecha 12 de febrero de 2026 se celebró la audiencia ante el Servicio de Conciliación Laboral Obligatoria en el expediente SECLO N° 129806/2026, dándose por cumplida la instancia previa que exige la ley 24.635.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-13",
+      "grupo": "E",
+      "titulo": "Suma total reclamada",
+      "texto": "El total reclamado en autos asciende a PESOS DIECIOCHO MILLONES SEISCIENTOS SESENTA Y CUATRO MIL DOSCIENTOS OCHO CON 40/100 ($ 18.664.208,40), conforme el detalle que antecede y la liquidación que antecede.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-14",
+      "grupo": "E",
+      "titulo": "Intereses pretendidos",
+      "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa de la cartera general nominal anual vencida a treinta días del Banco de la Nación Argentina, con más las costas del proceso.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    },
+    {
+      "id": "AF-15",
+      "grupo": "E",
+      "titulo": "Inexistencia de pagos parciales",
+      "texto": "La demandada no efectuó pago alguno, ni total ni parcial, imputable a la obligación que se reclama en autos.",
+      "origen": {
+        "documento_id": "DEM",
+        "pagina": 3
+      }
+    }
+  ],
+  "veredictos": [
+    {
+      "item_id": "AF-01",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 2,
+          "fragmento": "16 de marzo de 2011"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-02",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-1",
+          "pagina": 1,
+          "fragmento": "Operario especializado, categoría 5"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        1,
+        2,
+        3
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-03",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "Ningún documento del legajo acredita qué tareas ejecuta efectivamente el actor: la descripción de puesto dice qué le fue asignado, no qué hace.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-04",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 3,
+          "fragmento": "la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda reclama el encuadre en la categoría 9 del C.C.T. 1442/15 «T»; la pericia informa que ese convenio llega hasta la categoría 8 y que la denominación invocada pertenece a otro convenio.",
+      "paginas_admitidas": [
+        3
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-05",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 3,
+          "fragmento": "Oficial"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda declara un básico de $ 1.041.760 para la categoría 9; la escala que informa la pericia llega hasta la categoría 8, con un básico de $ 901.320 a diciembre de 2025.",
+      "paginas_admitidas": [
+        3
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-06",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 4,
+          "fragmento": "no surgen diferencias salariales a su favor"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda calcula una diferencia mensual de $ 353.720; la pericia informa que no surgen diferencias a favor del actor en el período reclamado.",
+      "paginas_admitidas": [
+        4
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-07",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-1",
+          "pagina": 2,
+          "fragmento": "Suplemento nocturno"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-08",
+      "estado": "respaldada",
+      "evidencia": [
+        {
+          "documento_id": "DOC-3",
+          "pagina": 2,
+          "fragmento": "con vínculo vigente a la fecha de este informe"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-09",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-4",
+          "pagina": 2,
+          "fragmento": "se le hace saber que su solicitud de recategorización fue analizada por esta Gerencia y desestimada"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda afirma que la solicitud nunca fue respondida; la nota NO-2025-00742118 la desestima expresamente.",
+      "paginas_admitidas": [
+        2
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-10",
+      "estado": "contradicha",
+      "evidencia": [
+        {
+          "documento_id": "DOC-4",
+          "pagina": 1,
+          "fragmento": "Tareas asignadas al puesto"
+        }
+      ],
+      "confianza": 1.0,
+      "nota": "La demanda afirma que el legajo no contiene descripción de puesto; la descripción DP-2023-00214-GRH#SOTR consta en él y le fue notificada.",
+      "paginas_admitidas": [
+        1
+      ],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-11",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "El intercambio de correo electrónico con el área de personal no fue acompañado.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-12",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "No se acompaña acta ni constancia alguna de la audiencia ante el SECLO que la demanda invoca.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-13",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "Ningún documento del legajo respalda el total reclamado: la liquidación se apoya en una escala que la pericia desmiente.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-14",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "Ningún documento del legajo se pronuncia sobre la tasa de interés pretendida.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-15",
+      "estado": "sin_respaldo",
+      "evidencia": [],
+      "confianza": 1.0,
+      "nota": "No hay documento que acredite ni que descarte pagos imputables a las diferencias que se reclaman.",
+      "paginas_admitidas": [],
+      "niega_la_contestacion": "no"
+    }
+  ],
+  "informe": [
+    {
+      "item_id": "AF-01",
+      "titulo": "Fecha de ingreso y vigencia del vínculo",
+      "estado": "respaldada",
+      "documento_id": "DOC-3",
+      "pagina": 2,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-02",
+      "titulo": "Categoría en la que se encuentra registrado",
+      "estado": "respaldada",
+      "documento_id": "DOC-1",
+      "pagina": 1,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-03",
+      "titulo": "Tareas efectivamente prestadas",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-04",
+      "titulo": "Encuadre convencional que corresponde",
+      "estado": "contradicha",
+      "documento_id": "DOC-3",
+      "pagina": 3,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-05",
+      "titulo": "Escala salarial de la categoría reclamada",
+      "estado": "contradicha",
+      "documento_id": "DOC-3",
+      "pagina": 3,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-06",
+      "titulo": "Diferencia mensual devengada",
+      "estado": "contradicha",
+      "documento_id": "DOC-3",
+      "pagina": 4,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-07",
+      "titulo": "Suplemento por trabajo nocturno",
+      "estado": "respaldada",
+      "documento_id": "DOC-1",
+      "pagina": 2,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-08",
+      "titulo": "Continuidad de la prestación",
+      "estado": "respaldada",
+      "documento_id": "DOC-3",
+      "pagina": 2,
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-09",
+      "titulo": "Falta de respuesta de la empleadora",
+      "estado": "contradicha",
+      "documento_id": "DOC-4",
+      "pagina": 2,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-10",
+      "titulo": "Registro de las tareas en el legajo",
+      "estado": "contradicha",
+      "documento_id": "DOC-4",
+      "pagina": 1,
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-11",
+      "titulo": "Intercambio de correo electrónico con el área de personal",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-12",
+      "titulo": "Instancia conciliatoria obligatoria",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-13",
+      "titulo": "Suma total reclamada",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "sí"
+    },
+    {
+      "item_id": "AF-14",
+      "titulo": "Intereses pretendidos",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    },
+    {
+      "item_id": "AF-15",
+      "titulo": "Inexistencia de pagos parciales",
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
+      "niega_la_contestacion": "no"
+    }
+  ]
+}
