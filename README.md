@@ -135,6 +135,7 @@ Pendiente de las próximas semanas: `servidor_mcp.py` (M2), `orquestador.py` (M4
 
 ## Cómo se trabaja el repo
 
-Cada módulo va en su propia rama —`m2-mcp`, `m3-citations`, `m4-fanout`…— y se mergea a `main`
-al cerrar la semana, así `main` siempre tiene el último estado que anda. M1 quedó commiteado
-directo sobre `main`, antes de adoptar la convención.
+Cada módulo va en su propia rama con el prefijo de GitFlow —`feature/m2-mcp`,
+`feature/m3-citations`, `feature/m4-fanout`…— y se mergea al cerrar la semana, así la rama de
+integración siempre tiene el último estado que anda. M1 quedó commiteado directo sobre `main`,
+antes de adoptar la convención.
