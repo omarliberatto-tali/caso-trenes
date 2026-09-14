@@ -26,4 +26,6 @@ Cada inciso arranca con un titulo corto terminado en punto, y despues el cuerpo 
 El titulo y el cuerpo se reportan por separado.
 
 Una afirmacion que arranca en una pagina y termina en la siguiente pertenece a la pagina donde
-arranca."""
+arranca.
+
+Ignora los encabezados y los pies de pagina: no forman parte del texto de ninguna afirmacion."""

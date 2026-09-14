@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import re
 import subprocess
 from pathlib import Path
@@ -108,8 +109,44 @@ def paginas(expediente: str, documento_id: str, permitir_apartada: bool = False)
 
 
 def paginado(expediente: str, documento_id: str, permitir_apartada: bool = False) -> str:
+    """Texto plano paginado del documento.
+
+    Desde M2 ya no es el input del agente -- el agente recibe el PDF como bloque
+    ``document`` (ver ``bloque_documento``). Queda como indice para la busqueda
+    lexica de ``buscar(termino)``, que necesita texto plano.
+    """
     bloques = [
         f'<pagina n="{n}">\n{t}\n</pagina>'
         for n, t in paginas(expediente, documento_id, permitir_apartada).items()
     ]
     return "\n\n".join(bloques)
+
+
+def bloque_documento(
+    expediente: str,
+    documento_id: str,
+    permitir_apartada: bool = False,
+    citations: bool = False,
+) -> Dict:
+    """El documento como bloque ``document`` en base64, listo para el prompt.
+
+    ``citations=True`` es lo unico que hay que tocar en M3: la respuesta pasa a
+    traer bloques de texto con ``citations``, cada una con ``page_location``
+    (``start_page_number`` / ``end_page_number``, 1-indexado).
+    """
+    ruta = _pdf(expediente, documento_id, permitir_apartada)
+    titulo = next(
+        d["titulo"] for d in documentos(expediente, permitir_apartada) if d["id"] == documento_id
+    )
+    bloque: Dict = {
+        "type": "document",
+        "source": {
+            "type": "base64",
+            "media_type": "application/pdf",
+            "data": base64.standard_b64encode(ruta.read_bytes()).decode("ascii"),
+        },
+        "title": titulo,
+    }
+    if citations:
+        bloque["citations"] = {"enabled": True}
+    return bloque

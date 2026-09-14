@@ -18,14 +18,17 @@ MAX_ITERACIONES = 5
 MAX_TOKENS = 4096
 FIN = "<FIN>"
 
+# M3 enciende esto y no hay nada mas que reescribir: el bloque document ya viaja.
+CITATIONS = False
+
 SISTEMA = f"""Sos un analista de escritos judiciales argentinos. Tu unica tarea es leer un
 escrito de demanda y devolver la lista de sus afirmaciones de hecho. No las evaluas, no las
 resumis y no opinas sobre ellas: las extraes tal como estan.
 
 {CRITERIO_AFIRMACION}
 
-El escrito te llega dividido en bloques <pagina n="N">. Ese N es el numero de pagina que
-tenes que reportar.
+El escrito te llega como el PDF completo. La pagina que reportas es el numero de pagina
+del PDF, empezando en 1.
 
 FORMATO DE SALIDA
 Un objeto JSON por linea, sin fences, sin numeracion y sin texto alrededor:
@@ -83,12 +86,21 @@ def extraer(
 ) -> Tuple[List[Item], Dict]:
     load_dotenv()
     cliente = Anthropic()
-    documento = corpus.paginado(expediente, documento_id, permitir_apartada)
+    documento = corpus.bloque_documento(
+        expediente, documento_id, permitir_apartada, citations=CITATIONS
+    )
 
     mensajes: List[Dict] = [
         {
             "role": "user",
-            "content": f"Escrito de demanda del expediente {expediente}:\n\n{documento}",
+            "content": [
+                documento,
+                {
+                    "type": "text",
+                    "text": f"Escrito de demanda del expediente {expediente}. "
+                    "Extrae sus afirmaciones de hecho.",
+                },
+            ],
         }
     ]
 

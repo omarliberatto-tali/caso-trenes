@@ -8,9 +8,9 @@ primer paso: extraer las afirmaciones de hecho de una demanda.
 `agente.py` lee un escrito de demanda y devuelve la lista de sus afirmaciones de hecho, cada
 una con su texto literal y la página de donde salió.
 
-El PDF se extrae con `pdftotext -layout`, se le saca el pie de página de cada hoja y se arma
-un único texto con marcadores `<pagina n="N">`. Ese texto va en el prompt: en la semana 1 no
-hay tools. El agente devuelve una línea JSON por afirmación y cierra con `<FIN>`.
+El PDF viaja entero como bloque `document` en base64, así el modelo ve la paginación real del
+archivo en vez de marcadores que ponemos nosotros. El agente devuelve una línea JSON por
+afirmación y cierra con `<FIN>`.
 
 El loop corta por tres condiciones explícitas: llegó `<FIN>`, una iteración no aportó ninguna
 afirmación nueva, o se alcanzó `max_iteraciones` (5 por defecto). Si la respuesta se corta por
@@ -39,7 +39,29 @@ El criterio vive en `criterio.py`, no en el prompt. En la semana 2 pasa a servir
 del servidor MCP y en la semana 6 se extiende con los tres estados: conviene que ya esté en un
 solo lugar.
 
-## Decisión de diseño
+## Decisiones de diseño
+
+**El PDF entra como bloque `document`, no como texto extraído.** La primera versión lo extraía
+con `pdftotext -layout` y lo envolvía en marcadores `<pagina n="N">`. Funcionaba, pero no se
+extiende: la semana 3 pide el bloque `document` con `citations` habilitado, y las citas salen de
+ese bloque. Y la duplicación no empezaba en la semana 3 sino en la 2, porque `leer_documento(id)`
+va a tener que devolver el bloque igual. Migrar ahora evita mantener dos caminos.
+
+Cuesta input: la llamada pasó de ~4.000 a ~16.300 tokens de entrada. No se optimiza a mano —
+eso lo resuelve `cache_control` en la semana 6, y el documento de prueba es justo el prefijo
+estable de todas las llamadas.
+
+`citations` queda detrás de la constante `CITATIONS` en `agente.py`, en `False`. La semana 3 la
+pone en `True` y no hay nada más que reescribir.
+
+**El pie de página se resuelve por prompt, no por código.** Cada hoja del corpus termina con
+`DOCUMENTO SINTETICO - ejercicio de formacion…`, que al extraer quedaba pegado adentro del texto.
+Con el bloque `document` ya no se puede limpiar antes, así que el criterio dice «ignorá los
+encabezados y los pies de página» y el modelo lo saltea.
+
+**`pdftotext` no se fue: cambió de rol.** `corpus.paginado()` y `corpus.paginas()` siguen en el
+repo. Dejan de ser el input del agente y pasan a ser el índice para `buscar(termino)` de la
+semana 2, que es búsqueda léxica y necesita texto plano.
 
 **Al agente le entra la demanda entera, no el capítulo IV recortado.** Recortar por regex
 subiría el número, pero estaría resolviendo por código justamente lo que se evalúa del agente:
@@ -73,12 +95,19 @@ Estable en dos corridas, y las 15 con similitud 1,0 contra el texto de referenci
 En la corrida normal, ninguno. El eval sí discrimina: con un control negativo —sacar un ítem,
 mover una página, cambiar un texto y agregar uno inventado— baja a 86,7 % y marca los cuatro.
 
-El caso que falla aparece al forzar el loop. Bajando `max_tokens` a 600, la extracción se
-parte en 4 iteraciones y el acierto de página cae a **93,3 %**: **AF-09** se reporta en la
-página 2 cuando arranca en la 3. Es reproducible y tiene explicación: AF-08 es la afirmación
-que cruza el salto de página 2→3, y cuando el corte cae justo ahí el modelo arrastra la página
-del tramo anterior. El acierto de ítem se mantiene en 100 % — o sea, la continuación no pierde
-ni duplica afirmaciones, solo el anclaje de página.
+El caso que falla aparece al forzar el loop. Bajando `MAX_TOKENS` a 600, la extracción se parte
+en 4 iteraciones y el fallo es **AF-09**, cuya página se reporta mal: arranca en la 3. La
+explicación es que AF-08 cruza el salto de página 2→3, y cuando el corte de la continuación cae
+justo ahí el modelo arrastra la página del tramo anterior. El acierto de ítem se mantiene en
+100 % en todos los casos: la continuación no pierde ni duplica afirmaciones, sólo se le desancla
+la página.
+
+**Con el bloque `document` el fallo pasó a ser intermitente.** Con el texto paginado era
+reproducible en cada corrida forzada. Con el PDF nativo, dos corridas forzadas dieron 100 % y
+93,3 % de acierto de página — mismo caso, AF-09. O sea que la paginación real ayuda pero no
+resuelve el problema, que es de la continuación y no de cómo llega el documento. Queda como el
+caso a vigilar cuando en la semana 3 se enciendan las citations, que es donde el anclaje de
+página deja de ser algo que el modelo declara y pasa a ser algo que la API devuelve.
 
 ## La demanda apartada
 
@@ -93,7 +122,7 @@ salvo que se pase `permitir_apartada=True`.
 ```
 contrato.py    las formas de la sección 4 del enunciado
 criterio.py    ESTADOS, la demanda apartada y el criterio de afirmación de hecho
-corpus.py      índice del corpus y extracción de texto paginado
+corpus.py      índice del corpus, bloque document y texto paginado (índice de M2)
 agente.py      el loop de extracción
 evals.py       califica contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
