@@ -132,3 +132,9 @@ salida/        items.json y eval.json por expediente
 
 Pendiente de las próximas semanas: `servidor_mcp.py` (M2), `orquestador.py` (M4) y
 `correr.py` (M7).
+
+## Cómo se trabaja el repo
+
+Cada módulo va en su propia rama —`m2-mcp`, `m3-citations`, `m4-fanout`…— y se mergea a `main`
+al cerrar la semana, así `main` siempre tiene el último estado que anda. M1 quedó commiteado
+directo sobre `main`, antes de adoptar la convención.
