@@ -14,7 +14,8 @@ afirmación y cierra con `<FIN>`.
 
 El loop corta por tres condiciones explícitas: llegó `<FIN>`, una iteración no aportó ninguna
 afirmación nueva, o se alcanzó `max_iteraciones` (5 por defecto). Si la respuesta se corta por
-`max_tokens`, el loop la reinyecta y pide continuar desde el inciso siguiente.
+`max_tokens`, el loop la reinyecta sin la última línea, que quedó incompleta, y pide
+continuar desde el inciso siguiente.
 
 ```
 ../.venv/bin/python agente.py C1_Impresos_y_formularios   # -> salida/<exp>/items.json
@@ -95,19 +96,27 @@ Estable en dos corridas, y las 15 con similitud 1,0 contra el texto de referenci
 En la corrida normal, ninguno. El eval sí discrimina: con un control negativo —sacar un ítem,
 mover una página, cambiar un texto y agregar uno inventado— baja a 86,7 % y marca los cuatro.
 
-El caso que falla aparece al forzar el loop. Bajando `MAX_TOKENS` a 600, la extracción se parte
-en 4 iteraciones y el fallo es **AF-09**, cuya página se reporta mal: arranca en la 3. La
-explicación es que AF-08 cruza el salto de página 2→3, y cuando el corte de la continuación cae
-justo ahí el modelo arrastra la página del tramo anterior. El acierto de ítem se mantiene en
-100 % en todos los casos: la continuación no pierde ni duplica afirmaciones, sólo se le desancla
-la página.
+El caso que fallaba aparece al forzar el loop. Bajando `MAX_TOKENS` a 600, la extracción se
+parte en 4 iteraciones y **AF-09** se reportaba en la página 2 cuando arranca en la 3. El
+acierto de ítem se mantenía en 100 %: la continuación no pierde ni duplica afirmaciones.
 
-**Con el bloque `document` el fallo pasó a ser intermitente.** Con el texto paginado era
-reproducible en cada corrida forzada. Con el PDF nativo, dos corridas forzadas dieron 100 % y
-93,3 % de acierto de página — mismo caso, AF-09. O sea que la paginación real ayuda pero no
-resuelve el problema, que es de la continuación y no de cómo llega el documento. Queda como el
-caso a vigilar cuando en la semana 3 se enciendan las citations, que es donde el anclaje de
-página deja de ser algo que el modelo declara y pasa a ser algo que la API devuelve.
+**Causa.** La iteración 2 se corta a mitad de la línea JSON de AF-09, antes del campo `pagina`.
+Ese fragmento volvía al modelo dentro del mensaje `assistant`, y la iteración 3 reemitía AF-09
+completa con la página de los incisos anteriores. AF-08 es el que cruza el salto 2→3; AF-09
+ya arranca en la 3.
+
+**Arreglo.** Cuando la respuesta termina por `max_tokens`, `agente.py` descarta la última
+línea —la incompleta— antes de reinyectar el texto. La continuación arranca desde líneas
+completas y el inciso cortado se emite de cero.
+
+| corrida forzada (`MAX_TOKENS = 600`) | acierto de página |
+|---|---|
+| sin el arreglo | 93,3 % en 2 de 2 |
+| pidiendo en la continuación que busque la página en el PDF | 100 % en 1 de 2 |
+| descartando la línea incompleta | **100 % en 6 de 6** |
+
+El caso sigue siendo el que conviene revisar cuando en la semana 3 se enciendan las
+citations, donde la página deja de declararla el modelo y la devuelve la API.
 
 ## La demanda apartada
 

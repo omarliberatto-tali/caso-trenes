@@ -141,6 +141,8 @@ def extraer(
             break
 
         ultimo = max(encontrados)
+        if rta.stop_reason == "max_tokens":
+            texto = texto.rsplit("\n", 1)[0]
         mensajes.append({"role": "assistant", "content": texto})
         mensajes.append(
             {
