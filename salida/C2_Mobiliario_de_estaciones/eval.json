@@ -1,0 +1,134 @@
+{
+  "resumen": {
+    "total_referencia": 15,
+    "extraidos": 15,
+    "aciertos": 15,
+    "acierto_item_pct": 100.0,
+    "acierto_pagina_pct": 100.0,
+    "faltantes": 0,
+    "texto_distinto": 0,
+    "inventados": 0
+  },
+  "detalle": [
+    {
+      "id": "AF-01",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-02",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-03",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-04",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-05",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-06",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-07",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-08",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 2,
+      "pagina_obtenida": 2
+    },
+    {
+      "id": "AF-09",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-10",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-11",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-12",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-13",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-14",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    },
+    {
+      "id": "AF-15",
+      "resultado": "acierto",
+      "similitud": 1.0,
+      "pagina_ok": true,
+      "pagina_esperada": 3,
+      "pagina_obtenida": 3
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "AF-01",
+    "texto": "En fecha 11 de marzo de 2025 la demandada emitió la orden de compra N° 4520002029, tramitada bajo el expediente EX-2025-00133907-APN-GCO#SOTR, por la cual encomendó a mi mandante la provisión del equipamiento que en ella se detalla.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Existencia de la orden de compra"
+  },
+  {
+    "id": "AF-02",
+    "texto": "Se acordó el pago a los sesenta (60) días de la fecha de presentación de la factura, plazo que se encuentra ampliamente vencido, encontrándose la demandada en mora.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Plazo de pago pactado"
+  },
+  {
+    "id": "AF-03",
+    "texto": "Los ocho cambiadores de bebé fueron entregados en tiempo y forma el 14 de abril de 2025, conforme el remito N° 0002-00008644 que se acompaña.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Entrega en tiempo y forma"
+  },
+  {
+    "id": "AF-04",
+    "texto": "El área requirente de la demandada prestó conformidad a la recepción del renglón 1, quedando expedito el trámite de pago de la factura correspondiente.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Conformidad del área requirente"
+  },
+  {
+    "id": "AF-05",
+    "texto": "La factura N° 00005-00000143, emitida el 14 de abril de 2025, fue rechazada en el portal de A.F.I.P. por no contar con la certificación del usuario al momento del vencimiento, motivo por el cual la demandada solicitó su refacturación.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Rechazo de la primera factura en el portal de A.F.I.P."
+  },
+  {
+    "id": "AF-06",
+    "texto": "En fecha 5 de julio de 2025 mi mandante emitió la factura N° 00005-00000158 por el mismo importe, que también fue observada por la demandada.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Refacturación observada"
+  },
+  {
+    "id": "AF-07",
+    "texto": "La factura N° 00005-00000172, emitida el 9 de agosto de 2025, fue rechazada por la demandada por aplicar un tipo de cambio distinto del que correspondía al día de emisión, indicándose que el total a facturar ascendía a $ 452.535,16.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Rechazo por tipo de cambio"
+  },
+  {
+    "id": "AF-08",
+    "texto": "La factura N° 00005-00000173, que es la que se reclama en autos, fue procesada por la demandada y contabilizada el 10 de agosto de 2025, según le fuera informado a mi mandante por la propia Tesorería.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Contabilización de la factura reclamada"
+  },
+  {
+    "id": "AF-09",
+    "texto": "Con anterioridad a promover la presente acción mi mandante mantuvo con la demandada un intercambio de correo electrónico en el que reclamó el pago de lo adeudado, sin obtener respuesta que lo satisficiera.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Intercambio de correo electrónico"
+  },
+  {
+    "id": "AF-10",
+    "texto": "En fecha 12 de enero de 2026 mi parte remitió a la demandada la carta documento N° CD 197340228, intimándola al pago en el plazo de cuarenta y ocho (48) horas bajo apercibimiento de iniciar las acciones judiciales pertinentes. La pieza postal fue efectivamente entregada y no mereció respuesta alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Carta documento"
+  },
+  {
+    "id": "AF-11",
+    "texto": "En fecha 15 de enero de 2026 se presentó ante la Mesa de Entradas de la demandada la nota de pronto despacho N° PD-2026-00061, cuya recepción consta con el sello de Mesa General de Entradas, SOTR S.E..",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Pronto despacho"
+  },
+  {
+    "id": "AF-12",
+    "texto": "El total reclamado en autos asciende a PESOS CUATROCIENTOS NOVENTA Y OCHO MIL DOSCIENTOS DOCE CON 70/100 ($ 498.212,70), conforme el detalle que antecede y la certificación contable que se acompaña.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Suma total reclamada"
+  },
+  {
+    "id": "AF-13",
+    "texto": "La demandada quedó constituida en mora de pleno derecho el 10 de octubre de 2025, por haber vencido el plazo pactado sin que mediara pago ni observación alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Fecha de constitución en mora"
+  },
+  {
+    "id": "AF-14",
+    "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa que aplica el Banco de la Nación Argentina para sus operaciones de descuento de documentos a treinta días, con más las costas del proceso.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Intereses pretendidos"
+  },
+  {
+    "id": "AF-15",
+    "texto": "La demandada no efectuó pago alguno, ni total ni parcial, imputable a la obligación que se reclama en autos.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Inexistencia de pagos parciales"
+  }
+]

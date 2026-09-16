@@ -11,7 +11,6 @@ from contrato import Item
 
 RAIZ = Path(__file__).resolve().parent
 REFERENCIA = RAIZ / "referencia"
-UMBRAL_TEXTO = 0.85
 
 
 def _normalizar(texto: str) -> str:
@@ -44,7 +43,7 @@ def calificar(obtenidos: List[Item], referencia: List[Item]) -> Tuple[Dict, List
         detalle.append(
             {
                 "id": esperado["id"],
-                "resultado": "acierto" if sim >= UMBRAL_TEXTO else "texto_distinto",
+                "resultado": "acierto" if _normalizar(obtenido["texto"]) == _normalizar(esperado["texto"]) else "texto_distinto",
                 "similitud": round(sim, 3),
                 "pagina_ok": pagina_ok,
                 "pagina_esperada": esperado["origen"]["pagina"],
