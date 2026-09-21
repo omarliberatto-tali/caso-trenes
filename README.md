@@ -1,25 +1,63 @@
-# caso-trenes — Semana 1 (M1)
+# caso-trenes — Semana 2 (M2)
 
-Verificación de respaldo probatorio sobre expedientes judiciales. Esta entrega cubre el
-primer paso: extraer las afirmaciones de hecho de una demanda.
+Verificación de respaldo probatorio sobre expedientes judiciales. Hasta acá cubre el
+primer paso, extraer las afirmaciones de hecho de una demanda, con el corpus servido por un
+servidor MCP propio.
 
 ## Qué hace el agente
 
 `agente.py` lee un escrito de demanda y devuelve la lista de sus afirmaciones de hecho, cada
 una con su texto literal y la página de donde salió.
 
-El PDF viaja entero como bloque `document` en base64, así el modelo ve la paginación real del
-archivo en vez de marcadores que ponemos nosotros. El agente devuelve una línea JSON por
-afirmación y cierra con `<FIN>`.
+El agente no recibe el documento en el prompt: arranca `servidor_mcp.py` como subproceso
+(stdio), le pide el criterio y las tools, y el primer mensaje sólo nombra el expediente. Con
+`listar_documentos` ubica la demanda y con `leer_documento` la recibe como PDF, que se pasa al
+modelo como bloque `document` dentro del `tool_result`. Devuelve una línea JSON por afirmación
+y cierra con `<FIN>`.
 
 El loop corta por tres condiciones explícitas: llegó `<FIN>`, una iteración no aportó ninguna
-afirmación nueva, o se alcanzó `max_iteraciones` (5 por defecto). Si la respuesta se corta por
-`max_tokens`, el loop la reinyecta y pide continuar desde el inciso siguiente.
+afirmación nueva —salvo que haya pedido tools—, o se alcanzó `max_iteraciones` (8 por
+defecto; las llamadas a tools también cuentan). Si la respuesta se corta por `max_tokens`, el
+loop la reinyecta sin la última línea, que quedó incompleta, y pide continuar desde el inciso
+siguiente.
+
+Requiere Python 3.10 o superior (lo pide `mcp`). El venv vive un nivel arriba del repo:
 
 ```
+python3 -m venv ../.venv && ../.venv/bin/pip install -r requirements.txt
 ../.venv/bin/python agente.py C1_Impresos_y_formularios   # -> salida/<exp>/items.json
 ../.venv/bin/python evals.py  C1_Impresos_y_formularios   # -> salida/<exp>/eval.json
 ```
+
+## El servidor MCP
+
+`servidor_mcp.py` está hecho con FastMCP y atiende un expediente por proceso: se lanza con
+`servidor_mcp.py <expediente>`. Las tres tools tienen la firma fija del enunciado y por eso no
+reciben el expediente como parámetro.
+
+| tool | devuelve |
+|---|---|
+| `listar_documentos()` | el índice: `id`, `titulo`, `tipo`, `path` y `paginas` de cada documento |
+| `leer_documento(id)` | el PDF completo como recurso embebido (`application/pdf`); un id inexistente devuelve un resultado con `is_error` y la lista de ids válidos |
+| `buscar(termino)` | hasta 30 coincidencias con `documento_id`, `pagina` y 120 caracteres de contexto a cada lado |
+
+`buscar` es léxica y recorre todos los documentos del expediente sobre el texto de
+`pdftotext`, indexado la primera vez que se usa. Ignora mayúsculas, tildes y saltos de línea,
+porque en el PDF una fecha o un monto pueden quedar partidos entre dos renglones.
+
+No se agregaron tools además de las tres: la extracción usa sólo las dos primeras, y `buscar`
+queda para el verificador de la semana 4.
+
+**Qué va en MCP y qué queda inline.** El criterio de afirmación de hecho se sirve como prompt
+del servidor (`criterio_afirmacion`) porque en la semana 6 se extiende con los tres estados y
+lo van a consumir también los subagentes. El rol, el formato de salida y la señal de fin
+quedan en `agente.py`: son del loop de extracción, no del corpus.
+
+**`mcp` fijado en `<2`.** La versión 2 renombró `FastMCP` a `MCPServer` y cambió otras APIs;
+el enunciado y el material del curso usan la 1.x.
+
+La demanda apartada también está cerrada del lado del servidor: con ese expediente el proceso
+no arranca, salvo con `--permitir-apartada`.
 
 ## Qué contamos como afirmación de hecho
 
@@ -77,8 +115,14 @@ de respuestas: la semana 2 tiene que poder construir `listar_documentos()` sin t
 ## Resultado del eval
 
 `evals.py` califica por código contra `referencia/<exp>/referencia.json`: matchea por id
-`AF-NN` y compara el texto normalizado con `difflib` (umbral 0,85). Reporta dos números y
-cuenta faltantes, inventados y páginas erradas.
+`AF-NN` y exige que el texto coincida exacto después de normalizarlo (minúsculas, sin tildes
+y con los espacios colapsados). Reporta dos números y cuenta faltantes, inventados y páginas
+erradas. La similitud de `difflib` queda en el detalle sólo como dato de diagnóstico.
+
+No se usa un umbral de similitud porque no distingue lo que importa: sobre los textos de C1,
+negar un hecho da una similitud de 0,93 a 0,99 y cambiar un dígito de un monto da 0,99. Con
+textos de 100 a 300 caracteres, cualquier umbral que tolere diferencias de espaciado también
+deja pasar esos cambios.
 
 Sobre **C1_Impresos_y_formularios**, 15 afirmaciones:
 
@@ -90,24 +134,48 @@ Sobre **C1_Impresos_y_formularios**, 15 afirmaciones:
 
 Estable en dos corridas, y las 15 con similitud 1,0 contra el texto de referencia.
 
+**Con el corpus por tools (M2)**, sobre las cinco demandas que no están apartadas:
+
+| expediente | ítem | página | tokens de entrada |
+|---|---|---|---|
+| C1_Impresos_y_formularios | 100 % | 100 % | 22.421 |
+| C2_Mobiliario_de_estaciones | 100 % | 100 % | 22.018 |
+| C3_Mantenimiento_de_via | 100 % | 100 % | 22.124 |
+| C5_Indemnizacion_por_despido | 100 % | 100 % | 21.659 |
+| C6_Diferencias_salariales | 100 % | 100 % | 19.534 |
+
+Cada corrida hace dos llamadas a tools (`listar_documentos` y `leer_documento("DEM")`) y
+termina por la señal de fin. C1 da lo mismo en dos corridas. El número no se cayó al pasar a
+tools: el agente ubica la demanda solo y la lee entera, igual que cuando venía en el prompt.
+La entrada sube de ~16.300 a ~22.000 tokens: se suman las dos llamadas que piden las tools,
+cada una con el sistema y las definiciones de tools; el PDF entra recién en la tercera.
+
 ### Qué caso falla
 
 En la corrida normal, ninguno. El eval sí discrimina: con un control negativo —sacar un ítem,
 mover una página, cambiar un texto y agregar uno inventado— baja a 86,7 % y marca los cuatro.
 
-El caso que falla aparece al forzar el loop. Bajando `MAX_TOKENS` a 600, la extracción se parte
-en 4 iteraciones y el fallo es **AF-09**, cuya página se reporta mal: arranca en la 3. La
-explicación es que AF-08 cruza el salto de página 2→3, y cuando el corte de la continuación cae
-justo ahí el modelo arrastra la página del tramo anterior. El acierto de ítem se mantiene en
-100 % en todos los casos: la continuación no pierde ni duplica afirmaciones, sólo se le desancla
-la página.
+El caso que fallaba aparece al forzar el loop. Bajando `MAX_TOKENS` a 600, la extracción se
+parte en 4 iteraciones y **AF-09** se reportaba en la página 2 cuando arranca en la 3. El
+acierto de ítem se mantenía en 100 %: la continuación no pierde ni duplica afirmaciones.
 
-**Con el bloque `document` el fallo pasó a ser intermitente.** Con el texto paginado era
-reproducible en cada corrida forzada. Con el PDF nativo, dos corridas forzadas dieron 100 % y
-93,3 % de acierto de página — mismo caso, AF-09. O sea que la paginación real ayuda pero no
-resuelve el problema, que es de la continuación y no de cómo llega el documento. Queda como el
-caso a vigilar cuando en la semana 3 se enciendan las citations, que es donde el anclaje de
-página deja de ser algo que el modelo declara y pasa a ser algo que la API devuelve.
+**Causa.** La iteración 2 se corta a mitad de la línea JSON de AF-09, antes del campo `pagina`.
+Ese fragmento volvía al modelo dentro del mensaje `assistant`, y la iteración 3 reemitía AF-09
+completa con la página de los incisos anteriores. AF-08 es el que cruza el salto 2→3; AF-09
+ya arranca en la 3.
+
+**Arreglo.** Cuando la respuesta termina por `max_tokens`, `agente.py` descarta la última
+línea —la incompleta— antes de reinyectar el texto. La continuación arranca desde líneas
+completas y el inciso cortado se emite de cero.
+
+| corrida forzada (`MAX_TOKENS = 600`) | acierto de página |
+|---|---|
+| sin el arreglo | 93,3 % en 2 de 2 |
+| pidiendo en la continuación que busque la página en el PDF | 100 % en 1 de 2 |
+| descartando la línea incompleta | **100 % en 6 de 6** |
+
+El caso sigue siendo el que conviene revisar cuando en la semana 3 se enciendan las
+citations, donde la página deja de declararla el modelo y la devuelve la API.
 
 ## La demanda apartada
 
@@ -123,19 +191,29 @@ salvo que se pase `permitir_apartada=True`.
 contrato.py    las formas de la sección 4 del enunciado
 criterio.py    ESTADOS, la demanda apartada y el criterio de afirmación de hecho
 corpus.py      índice del corpus, bloque document y texto paginado (índice de M2)
-agente.py      el loop de extracción
+servidor_mcp.py  las tres tools del corpus y el prompt del criterio
+agente.py      el loop de extracción, cliente del servidor MCP
 evals.py       califica contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
 salida/        items.json y eval.json por expediente
+requirements.txt  dependencias del venv
 ```
 
-Pendiente de las próximas semanas: `servidor_mcp.py` (M2), `orquestador.py` (M4) y
+Pendiente de las próximas semanas: `orquestador.py` (M4) y
 `correr.py` (M7).
 
 ## Cómo se trabaja el repo
 
-Cada módulo va en su propia rama con el prefijo de GitFlow —`feature/m2-mcp`,
-`feature/m3-citations`, `feature/m4-fanout`…— y se mergea al cerrar la semana, así la rama de
-integración siempre tiene el último estado que anda. M1 quedó commiteado directo sobre `main`,
-antes de adoptar la convención.
+GitFlow, con las tres ramas y sus roles:
+
+| Rama | Para qué |
+|---|---|
+| `main` | Los cierres de semana. Cada módulo entregado se mergea acá y queda como el estado presentable. |
+| `develop` | Integración. Es de donde salen y a donde vuelven las features. |
+| `feature/mN-…` | Un módulo. `feature/m2-mcp`, `feature/m3-citations`, `feature/m4-fanout`, `feature/m5-claude-code`, `feature/m6-structured`, `feature/m7-corrida`. |
+
+El ciclo de cada semana: `feature/mN-…` sale de `develop`, se trabaja ahí, se mergea a `develop`
+cuando el eval da, y al cerrar la semana `develop` va a `main`.
+
+M1 quedó commiteado directo sobre `main`, antes de adoptar la convención.

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "AF-01",
+    "texto": "Mi mandante ingresó a trabajar bajo dependencia de la demandada el 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por los servicios prestados en la empresa antecesora.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Fecha de ingreso y antigüedad reconocida"
+  },
+  {
+    "id": "AF-02",
+    "texto": "Mi mandante se desempeñó como Auxiliar de estación, categoría 8 del C.C.T. 1764/18 «E», realizando tareas de atención al público, control de acceso y manejo de recaudación.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Categoría profesional y tareas"
+  },
+  {
+    "id": "AF-03",
+    "texto": "Mi mandante cumplió una jornada rotativa de seis horas diarias en turnos de mañana, tarde y noche, con dos francos semanales no coincidentes, régimen que generó el adicional por trabajo nocturno que nunca le fue abonado.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Jornada y régimen horario"
+  },
+  {
+    "id": "AF-04",
+    "texto": "La mejor remuneración mensual, normal y habitual percibida por mi mandante en el último año asciende a $ 1.284.320,18, correspondiente al mes de junio de 2025, base sobre la cual se practica la liquidación que se acompaña.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Mejor remuneración mensual, normal y habitual"
+  },
+  {
+    "id": "AF-05",
+    "texto": "La remuneración de mi mandante se integró con sueldo básico, adicional por antigüedad del nueve por ciento, adicional de convenio y presentismo.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Composición de los rubros remunerativos"
+  },
+  {
+    "id": "AF-06",
+    "texto": "La demandada abonó a mi mandante los conceptos «Adicional mensual SUBE» y «Falla de caja» consignándolos como no remunerativos en los recibos de haberes.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Rubros abonados como no remunerativos"
+  },
+  {
+    "id": "AF-07",
+    "texto": "La demandada dispuso el despido sin invocación de causa, limitándose a comunicar la decisión de prescindir de los servicios de mi mandante.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Causa de la extinción"
+  },
+  {
+    "id": "AF-08",
+    "texto": "Con anterioridad al distracto mi mandante intimó a la demandada mediante telegrama laboral a que registrara correctamente su categoría profesional y abonara las diferencias salariales devengadas.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Intimación previa cursada por la trabajadora"
+  },
+  {
+    "id": "AF-09",
+    "texto": "La demandada nunca entregó ni puso a disposición de mi mandante los certificados de trabajo y de aportes previstos en el artículo 80 de la Ley de Contrato de Trabajo, pese a encontrarse vencido el plazo legal.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Entrega de los certificados del artículo 80"
+  },
+  {
+    "id": "AF-10",
+    "texto": "Con anterioridad al distracto mi mandante mantuvo con el área de personal de la demandada un intercambio de correo electrónico en el que reclamó la correcta registración de su categoría, sin obtener respuesta.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Intercambio de correo electrónico con el área de personal"
+  },
+  {
+    "id": "AF-11",
+    "texto": "En fecha 23 de junio de 2025 mi mandante remitió el telegrama laboral N° TL 88204617 intimando a la empleadora en los términos de la ley 24.013, bajo apercibimiento de considerarse en situación de despido indirecto.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Intimación por vía telegráfica"
+  },
+  {
+    "id": "AF-12",
+    "texto": "El total reclamado en autos asciende a PESOS CUARENTA Y UN MILLONES DOSCIENTOS OCHENTA Y CUATRO MIL SEISCIENTOS TREINTA CON 55/100 ($ 41.284.630,55), conforme el detalle que antecede y la liquidación que antecede.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Suma total reclamada"
+  },
+  {
+    "id": "AF-13",
+    "texto": "La demandada quedó constituida en mora de pleno derecho el 14 de julio de 2025, por haber vencido el plazo pactado sin que mediara pago ni observación alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Fecha de constitución en mora"
+  },
+  {
+    "id": "AF-14",
+    "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa de la cartera general nominal anual vencida a treinta días del Banco de la Nación Argentina, capitalizable conforme el acta 2764 de la C.N.A.T., con más las costas del proceso.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Intereses pretendidos"
+  },
+  {
+    "id": "AF-15",
+    "texto": "La demandada no efectuó pago alguno, ni total ni parcial, imputable a la obligación que se reclama en autos.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Inexistencia de pagos parciales"
+  }
+]

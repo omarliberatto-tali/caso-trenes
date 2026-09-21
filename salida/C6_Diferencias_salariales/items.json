@@ -1,0 +1,152 @@
+[
+  {
+    "id": "AF-01",
+    "texto": "Mi mandante ingreso a trabajar bajo dependencia de la demandada el 16 de marzo de 2011 y continua prestando servicios a la fecha de esta presentacion.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Fecha de ingreso y vigencia del vinculo"
+  },
+  {
+    "id": "AF-02",
+    "texto": "La demandada registra a mi mandante en la categoria Operario especializado, categoria 5 del C.C.T. 1442/15 «T», y sobre esa base liquida sus haberes.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Categoria en la que se encuentra registrado"
+  },
+  {
+    "id": "AF-03",
+    "texto": "Mi mandante ejecuta en forma autonoma y sin supervision tareas de reparacion integral de bogies y de montaje final de equipos de freno, que exceden largamente las asignadas a la categoria en la que se lo registra.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Tareas efectivamente prestadas"
+  },
+  {
+    "id": "AF-04",
+    "texto": "Las tareas descriptas encuadran en la categoria Oficial de mantenimiento, categoria 9 del C.C.T. 1442/15 «T», que es la que corresponde reconocer a mi mandante.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "A",
+    "titulo": "Encuadre convencional que corresponde"
+  },
+  {
+    "id": "AF-05",
+    "texto": "El basico convencional de la categoria 9 del C.C.T. 1442/15 «T» asciende, a diciembre de 2025, a la suma de $ 1.041.760, segun la escala homologada vigente.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Escala salarial de la categoria reclamada"
+  },
+  {
+    "id": "AF-06",
+    "texto": "La diferencia entre lo que mi mandante percibe y lo que le corresponde segun el encuadre reclamado asciende a $ 353.720 mensuales, que la demandada le adeuda desde enero de 2024.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Diferencia mensual devengada"
+  },
+  {
+    "id": "AF-07",
+    "texto": "Mi mandante presto tareas en turno noche durante el periodo reclamado, lo que genero el suplemento nocturno que se liquida en sus recibos.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "B",
+    "titulo": "Suplemento por trabajo nocturno"
+  },
+  {
+    "id": "AF-08",
+    "texto": "El vinculo laboral se mantiene vigente y mi mandante continua desempeñando las mismas tareas que motivan este reclamo.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Continuidad de la prestacion"
+  },
+  {
+    "id": "AF-09",
+    "texto": "La demandada nunca respondio la solicitud de recategorizacion presentada por mi mandante, ni le comunico decision alguna al respecto.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Falta de respuesta de la empleadora"
+  },
+  {
+    "id": "AF-10",
+    "texto": "El legajo personal de mi mandante no contiene descripcion de puesto ni instrumento alguno que delimite las tareas a su cargo.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "C",
+    "titulo": "Registro de las tareas en el legajo"
+  },
+  {
+    "id": "AF-11",
+    "texto": "Con anterioridad al distracto mi mandante mantuvo con el area de personal de la demandada un intercambio de correo electronico en el que reclamo la correcta registracion de su categoria, sin obtener respuesta.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Intercambio de correo electronico con el area de personal"
+  },
+  {
+    "id": "AF-12",
+    "texto": "En fecha 12 de febrero de 2026 se celebro la audiencia ante el Servicio de Conciliacion Laboral Obligatoria en el expediente SECLO N° 129806/2026, dandose por cumplida la instancia previa que exige la ley 24.635.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "D",
+    "titulo": "Instancia conciliatoria obligatoria"
+  },
+  {
+    "id": "AF-13",
+    "texto": "El total reclamado en autos asciende a PESOS DIECIOCHO MILLONES SEISCIENTOS SESENTA Y CUATRO MIL DOSCIENTOS OCHO CON 40/100 ($ 18.664.208,40), conforme el detalle que antecede y la liquidacion que antecede.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Suma total reclamada"
+  },
+  {
+    "id": "AF-14",
+    "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa de la cartera general nominal anual vencida a treinta dias del Banco de la Nacion Argentina, con mas las costas del proceso.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Intereses pretendidos"
+  },
+  {
+    "id": "AF-15",
+    "texto": "La demandada no efectuo pago alguno, ni total ni parcial, imputable a la obligacion que se reclama en autos.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "E",
+    "titulo": "Inexistencia de pagos parciales"
+  }
+]
