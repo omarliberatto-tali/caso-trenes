@@ -10,7 +10,7 @@ from mcp.types import BlobResourceContents, EmbeddedResource
 
 import corpus
 from contrato import Documento
-from criterio import CRITERIO_AFIRMACION
+from criterio import CRITERIO_AFIRMACION, CRITERIO_VEREDICTO
 
 CONTEXTO = 120
 MAX_COINCIDENCIAS = 30
@@ -58,7 +58,10 @@ def leer_documento(id: str) -> EmbeddedResource:
     if doc is None:
         ids = ", ".join(d["id"] for d in corpus.documentos(expediente, permitir))
         raise ToolError(f"no existe el documento {id!r}. Ids validos: {ids}")
-    bloque = corpus.bloque_documento(expediente, id, permitir)
+    try:
+        bloque = corpus.bloque_documento(expediente, id, permitir)
+    except corpus.DocumentoInvalido as exc:
+        raise ToolError(f"no se puede leer {id}: {exc}") from None
     return EmbeddedResource(
         type="resource",
         resource=BlobResourceContents(
@@ -66,7 +69,7 @@ def leer_documento(id: str) -> EmbeddedResource:
             mimeType="application/pdf",
             blob=bloque["source"]["data"],
         ),
-        _meta={"titulo": doc["titulo"]},
+        _meta={"id": id, "titulo": doc["titulo"]},
     )
 
 
@@ -97,6 +100,12 @@ def buscar(termino: str) -> List[Dict]:
 def criterio_afirmacion() -> str:
     """Que cuenta como afirmacion de hecho en una demanda y que queda afuera."""
     return CRITERIO_AFIRMACION
+
+
+@mcp.prompt()
+def criterio_veredicto() -> str:
+    """Los tres estados de un veredicto y que documentos cuentan como prueba."""
+    return CRITERIO_VEREDICTO
 
 
 def main() -> None:

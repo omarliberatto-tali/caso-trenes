@@ -1,4 +1,4 @@
-# caso-trenes — Semana 2 (M2)
+# caso-trenes — Semana 3 (M3)
 
 Verificación de respaldo probatorio sobre expedientes judiciales. Hasta acá cubre el
 primer paso, extraer las afirmaciones de hecho de una demanda, con el corpus servido por un
@@ -185,18 +185,66 @@ Sorteada con `secrets.choice` sobre los 6 expedientes el 11/09/2026, antes de co
 abre en la semana 6. `corpus.py` la bloquea: cualquier acceso levanta `ExpedienteApartado`
 salvo que se pase `permitir_apartada=True`.
 
+## M3 — la cita
+
+Después de extraer, el agente verifica cada afirmación contra la prueba documental y devuelve
+un `Veredicto` (`respaldada` · `sin_respaldo` · `contradicha`) con su evidencia: documento,
+página y fragmento textual.
+
+```
+../.venv/bin/python agente.py C1_Impresos_y_formularios                 # extrae y verifica
+../.venv/bin/python agente.py C1_Impresos_y_formularios --reusar-items  # solo verifica
+../.venv/bin/python evals.py  C1_Impresos_y_formularios                 # los dos evals
+```
+
+**Qué cambió:**
+
+- **Citations en el loop, no en un script aparte.** `leer_documento` devuelve el PDF como bloque
+  `document` dentro del `tool_result`, y en la fase de verificación el agente le enciende
+  `citations`. La extracción queda sin citations: su salida es una línea JSON por afirmación y
+  ya da 100 % de página.
+- **La evidencia sale de las citas de la API, no de lo que el modelo escribe.** Cada cita trae
+  `document_title`, `start_page_number` y `cited_text`, que es texto literal del PDF. El título
+  del documento arranca con su id (`DOC-1 · Orden de compra`) para saber de qué documento
+  vino. Las citas a la demanda o a la contestación se descartan como evidencia y quedan en la
+  traza.
+- **El criterio de los tres estados vive en el servidor MCP**, como prompt
+  `criterio_veredicto`, junto al de afirmación de hecho. Deja explícito que «no aparece» es
+  `sin_respaldo` y no `contradicha`, y que la contestación va a la nota.
+- **Qué hacer cuando el material no alcanza:** el system prompt pide `sin_respaldo` con
+  confianza baja y la nota diciendo qué faltó, y prohíbe completar con lo que diría un
+  documento que no se leyó.
+- **Errores obvios:** `corpus.validar_pdf` distingue archivo inexistente, formato no soportado
+  (no empieza con `%PDF-`) y PDF ilegible o sin capa de texto. `leer_documento` los devuelve
+  como error de tool (`is_error`) y el loop sigue. Un PDF roto no tira abajo
+  `listar_documentos`: figura con 0 páginas.
+- **Traza:** `salida/<exp>/traza.json` guarda las tools que se llamaron y, por afirmación, las
+  citas crudas que la sostienen y las que se descartaron.
+- **Corte por `max_tokens`:** si la respuesta se corta, la última afirmación se descarta entera
+  y se pide de nuevo, igual que el arreglo de AF-09 en M1.
+
+**Cómo se mide** (`evals.py`, sección VERIFICACION):
+
+- **Acierto de ítem:** el estado coincide con el de la referencia.
+- **Acierto de fuente:** alguna evidencia cae en el documento esperado y en una de sus
+  `paginas_admitidas`. Si la referencia es `sin_respaldo` sin evidencia, lo correcto es no
+  citar nada. El fragmento no se compara, porque con citations es literal del PDF por
+  construcción y la referencia guarda uno solo de los pasajes válidos.
+
+Resultado sobre C1, C2 y C3: pendiente de la primera corrida.
+
 ## Estado del repo
 
 ```
 contrato.py    las formas de la sección 4 del enunciado
-criterio.py    ESTADOS, la demanda apartada y el criterio de afirmación de hecho
-corpus.py      índice del corpus, bloque document y texto paginado (índice de M2)
-servidor_mcp.py  las tres tools del corpus y el prompt del criterio
-agente.py      el loop de extracción, cliente del servidor MCP
-evals.py       califica contra el set de referencia
+criterio.py    ESTADOS, la demanda apartada y los criterios de afirmación y de veredicto
+corpus.py      índice del corpus, bloque document, validación de PDF y texto paginado
+servidor_mcp.py  las tres tools del corpus y los prompts de los dos criterios
+agente.py      los loops de extracción y de verificación, cliente del servidor MCP
+evals.py       califica extracción y verificación contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
-salida/        items.json y eval.json por expediente
+salida/        items.json, veredictos.json, traza.json y eval.json por expediente
 requirements.txt  dependencias del venv
 ```
 

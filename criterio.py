@@ -29,3 +29,19 @@ Una afirmacion que arranca en una pagina y termina en la siguiente pertenece a l
 arranca.
 
 Ignora los encabezados y los pies de pagina: no forman parte del texto de ninguna afirmacion."""
+
+CRITERIO_VEREDICTO = """Cada afirmacion de hecho recibe exactamente uno de tres estados:
+
+- respaldada: un documento de prueba dice lo mismo que la afirmacion en lo esencial (el acto,
+  la fecha, el monto, la cantidad, el numero de comprobante).
+- contradicha: un documento de prueba dice algo incompatible con la afirmacion: otra fecha,
+  otro monto, otra cantidad, o muestra que el hecho no ocurrio como se afirma.
+- sin_respaldo: ningun documento de prueba se refiere al hecho. No aparece no es lo mismo que
+  la prueba dice lo contrario: si no encontras nada, es sin_respaldo, no contradicha.
+
+Solo cuentan como prueba los documentos de tipo "prueba" (DOC-1, DOC-2, ...). La demanda es de
+donde salen las afirmaciones y la contestacion dice que discute la demandada: ninguna de las
+dos decide el estado ni se cita como evidencia. Que la contestacion niegue un hecho va a la
+nota, no al estado.
+
+Una afirmacion puede necesitar dos documentos para quedar respaldada: cita los dos."""
