@@ -6,11 +6,6 @@
       {
         "documento_id": "DOC-1",
         "pagina": 1,
-        "fragmento": "CCF 007731/2026 — Orden de compra N° 4520002029 DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
-      },
-      {
-        "documento_id": "DOC-1",
-        "pagina": 1,
         "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° 4520002029 Fecha de emisión 11 de marzo de 2025 Proveedor EQUIPAMIENTO URBANO DEL SUR S.R.L."
       },
       {
@@ -39,8 +34,8 @@
     "item_id": "AF-03",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.6,
-    "nota": "Si bien la demanda menciona entrega el 14 de abril de 2025 con remito N° 0002-00008644, la prueba documental (facturas y correos) confirma que este remito está asociado a la orden de compra, pero no aparece documentación que muestre explícitamente la entrega o firma del remito con fecha 14 de abril. Los documentos (facturas, correos) hacen referencia al remito como \"0002-00008644\" pero no hay un documento de remito propiamente dicho en la prueba."
+    "confianza": 0.4,
+    "nota": "Los documentos confirman que ocho cambiadores de bebé fueron entregados (según el remito asociado N° 0002-00008644 mencionado en las facturas), pero no existe en el expediente un documento de prueba que sea el remito en sí mismo que acredite la fecha de 14 de abril de 2025 y la firma de conformidad de recepción."
   },
   {
     "item_id": "AF-04",
@@ -49,7 +44,7 @@
       {
         "documento_id": "DOC-4",
         "pagina": 1,
-        "fragmento": "En atención a la presentación efectuada por la firma del asunto, se informa que la factura objeto del reclamo se encuentra en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1. El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+        "fragmento": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
       }
     ],
     "confianza": 0.9,
@@ -80,7 +75,7 @@
       {
         "documento_id": "DOC-2",
         "pagina": 2,
-        "fragmento": "30-71540982- 4 Condición frente al I.V.A."
+        "fragmento": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
       }
     ],
     "confianza": 0.95,
@@ -112,16 +107,6 @@
         "documento_id": "DOC-3",
         "pagina": 4,
         "fragmento": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Correo electrónico — 30 de septiembre de 2025 De f.casella@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 30 de septiembre de 2025 Asunto RE: Consulta estado de factura Por lo que veo en el sistema, la factura de EQUIPAMIENTO URBANO DEL SUR S.R.L. N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto."
-      },
-      {
-        "documento_id": "DOC-2",
-        "pagina": 4,
-        "fragmento": "30-70988341-6 Combate de los Pozos 1855, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 00005-00000173 Fecha de emisión 9 de agosto de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
-      },
-      {
-        "documento_id": "DOC-2",
-        "pagina": 4,
-        "fragmento": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 452.535,16 Total de la factura $ 452.535,16 Son PESOS CUATROCIENTOS CINCUENTA Y DOS MIL QUINIENTOS TREINTA Y CINCO CON 16/100."
       }
     ],
     "confianza": 0.85,
@@ -134,7 +119,7 @@
       {
         "documento_id": "DOC-3",
         "pagina": 1,
-        "fragmento": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril. Quedamos a la espera de su confirmación.CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Correo electrónico — 28 de junio de 2025 De m.pereda@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 28 de junio de 2025 Asunto RE: Presentación factura 00005-00000143 — OC 4520002029 Buenos días. Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
+        "fragmento": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril. Quedamos a la espera de su confirmación.CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Correo electrónico — 28 de junio de 2025 De m.pereda@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 28 de junio de 2025 Asunto RE: Presentación factura 00005-00000143 — OC 4520002029 Buenos días. Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
       }
     ],
     "confianza": 0.9,
@@ -144,8 +129,8 @@
     "item_id": "AF-10",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.7,
-    "nota": "La afirmación menciona la carta documento N° CD 197340228 del 12 de enero de 2026, pero no aparece en la prueba documental ningún original o copia de esa carta documento. Se menciona en la demanda y en la búsqueda, pero no hay documento de prueba que la incorpore."
+    "confianza": 0.5,
+    "nota": "Mientras que la demanda menciona una carta documento N° CD 197340228 remitida el 12 de enero de 2026, ningún documento de prueba acredita la existencia, envío, entrega o contenido de esta carta documento. La contestación niega haber recibido tal documento."
   },
   {
     "item_id": "AF-11",
@@ -164,28 +149,28 @@
     "item_id": "AF-12",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.6,
-    "nota": "La afirmación sostiene que el total reclamado es $ 498.212,70 \"conforme el detalle que antecede y la certificación contable que se acompaña\". Si bien la demanda menciona este monto, en la prueba documental los montos de las facturas son: Factura 00005-00000143: $ 399.784,00; Factura 00005-00000158: $ 399.784,00; Factura 00005-00000172: $ 399.784,00; Factura 00005-00000173: $ 452.535,16. La suma de 399.784 + 45.428,70 = 445.212,70 o 452.535,16 + 45.677,54 = 498.212,70 según cómo se calcule. No aparece en la prueba documental una \"certificación contable\" que respalde explícitamente ese total."
+    "confianza": 0.3,
+    "nota": "Si bien la suma de $ 498.212,70 surge del cálculo que puede hacerse sumando las facturas ($ 452.535,16 + $ 45.677,54 según la demanda), ningún documento de prueba contiene una \"certificación contable\" que acredite este total reclamado. Los documentos solo muestran las facturas individuales."
   },
   {
     "item_id": "AF-13",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.5,
-    "nota": "La afirmación sostiene que la demandada quedó constituida en mora el 10 de octubre de 2025. Considerando que la factura N° 00005-00000143 fue emitida el 14 de abril de 2025, con plazo de 45 días según la orden de compra, vencería aproximadamente el 29 de mayo de 2025. Sin embargo, no consta en la prueba documental una declaración explícita sobre la fecha de constitución en mora. La búsqueda no encuentra referencia a esa fecha."
+    "confianza": 0.2,
+    "nota": "La afirmación sostiene que la demandada quedó constituida en mora el 10 de octubre de 2025. Sin embargo, la orden de compra establece que el plazo de pago es de 45 días desde la presentación de la factura conforme (no desde la emisión). Como no hay conformidad de recepción del renglón 1, el plazo no habría comenzado a correr. Además, ningún documento de prueba calcula específicamente la fecha de mora."
   },
   {
     "item_id": "AF-14",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.5,
-    "nota": "La afirmación reclama intereses a la tasa activa del Banco de la Nación Argentina. Si bien la orden de compra contiene una cláusula que dice que no genera intereses, eso no contradice la afirmación (es una cuestión de derecho, no de hecho). Sin embargo, no hay documento en la prueba que respalde la procedencia de los intereses reclamados desde el punto de vista de qué se está pidiendo en autos."
+    "confianza": 0.3,
+    "nota": "Si bien la orden de compra contiene una cláusula que establece que no genera intereses por demora en la conformación, ningún documento de prueba acredita que se hayan devengado intereses a la tasa mencionada (Banco de la Nación Argentina) desde ninguna fecha. Los documentos no contienen cálculo de intereses."
   },
   {
     "item_id": "AF-15",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.6,
-    "nota": "No aparece en la prueba documental ningún comprobante de pago parcial o total de la demandada. Los documentos muestran el proceso de facturación y rechazo, pero no registran pagos. Sin embargo, tampoco hay un documento que afirme explícitamente que no hubo pagos; es una ausencia de evidencia."
+    "confianza": 0.5,
+    "nota": "Los documentos de prueba no contienen evidencia de pagos parciales o totales imputables a esta obligación, pero tampoco contienen una declaración explícita de que no se efectuó pago alguno."
   }
 ]

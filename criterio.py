@@ -46,6 +46,10 @@ Una clausula general sobre un tema relacionado no la contradice: por ejemplo, qu
 diga que el precio no genera intereses no contradice un reclamo de intereses por pagar tarde.
 En ese caso, si nada mas se refiere al hecho, es sin_respaldo.
 
+Un documento que solo menciona a otro (por ejemplo, una factura que cita el numero de un
+remito) no reemplaza al documento mencionado. Si el documento que acredita el hecho no esta
+en el expediente, es sin_respaldo.
+
 Solo cuentan como prueba los documentos de tipo "prueba" (DOC-1, DOC-2, ...). La demanda es de
 donde salen las afirmaciones y la contestacion dice que discute la demandada: ninguna de las
 dos decide el estado ni se cita como evidencia. Que la contestacion niegue un hecho va a la
