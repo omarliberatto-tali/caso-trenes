@@ -35,9 +35,16 @@ CRITERIO_VEREDICTO = """Cada afirmacion de hecho recibe exactamente uno de tres 
 - respaldada: un documento de prueba dice lo mismo que la afirmacion en lo esencial (el acto,
   la fecha, el monto, la cantidad, el numero de comprobante).
 - contradicha: un documento de prueba dice algo incompatible con la afirmacion: otra fecha,
-  otro monto, otra cantidad, o muestra que el hecho no ocurrio como se afirma.
+  otro monto, otra cantidad, o muestra que el hecho no ocurrio como se afirma. Tambien cuando
+  el monto o la cantidad no figura escrito pero surge de la prueba (por ejemplo, sumando
+  facturas) y da otro valor.
 - sin_respaldo: ningun documento de prueba se refiere al hecho. No aparece no es lo mismo que
   la prueba dice lo contrario: si no encontras nada, es sin_respaldo, no contradicha.
+
+Para contradecir, el documento tiene que referirse al mismo hecho concreto que la afirmacion.
+Una clausula general sobre un tema relacionado no la contradice: por ejemplo, que el contrato
+diga que el precio no genera intereses no contradice un reclamo de intereses por pagar tarde.
+En ese caso, si nada mas se refiere al hecho, es sin_respaldo.
 
 Solo cuentan como prueba los documentos de tipo "prueba" (DOC-1, DOC-2, ...). La demanda es de
 donde salen las afirmaciones y la contestacion dice que discute la demandada: ninguna de las

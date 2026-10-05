@@ -18,7 +18,7 @@ from mcp.types import CallToolResult
 from contrato import Evidencia, Item, Origen, Veredicto
 from criterio import ESTADOS
 
-MODELO = "claude-sonnet-5"
+MODELO = "claude-haiku-4-5"
 MAX_ITERACIONES = 8
 MAX_TOKENS = 4096
 MAX_ITERACIONES_VERIF = 12
