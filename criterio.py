@@ -50,6 +50,14 @@ Un documento que solo menciona a otro (por ejemplo, una factura que cita el nume
 remito) no reemplaza al documento mencionado. Si el documento que acredita el hecho no esta
 en el expediente, es sin_respaldo.
 
+Cualquier pago imputable a un rubro reclamado (por ejemplo, la liquidacion final, las
+vacaciones o el aguinaldo proporcionales) contradice la afirmacion de que no hubo pagos.
+
+La base de la indemnizacion por antiguedad (art. 245 de la Ley de Contrato de Trabajo) es la
+mejor remuneracion mensual, normal y habitual del ultimo año, y se calcula solo con los
+conceptos remunerativos. Si la afirmacion toma un monto que incluye conceptos no remunerativos
+y la prueba informa la base remunerativa, es contradicha.
+
 Solo cuentan como prueba los documentos de tipo "prueba" (DOC-1, DOC-2, ...). La demanda es de
 donde salen las afirmaciones y la contestacion dice que discute la demandada: ninguna de las
 dos decide el estado ni se cita como evidencia. Que la contestacion niegue un hecho va a la

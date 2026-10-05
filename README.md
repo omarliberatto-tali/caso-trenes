@@ -211,6 +211,14 @@ página y fragmento textual.
 - **El criterio de los tres estados vive en el servidor MCP**, como prompt
   `criterio_veredicto`, junto al de afirmación de hecho. Deja explícito que «no aparece» es
   `sin_respaldo` y no `contradicha`, y que la contestación va a la nota.
+- **Conocimiento del dominio en el criterio.** Como no se suma material al expediente, lo que
+  sabe un abogado va en el criterio. Una regla entra si un especialista la pondría en un
+  manual para alguien que arranca, sin haber visto el caso, y si tiene fuente; si solo existe
+  para que un ítem del eval dé bien, no entra. Reglas de derecho laboral:
+  - Cualquier pago imputable a un rubro reclamado contradice que no hubo pagos.
+  - La base de la indemnización por antigüedad es la mejor remuneración mensual, normal y
+    habitual del último año, calculada solo con los conceptos remunerativos
+    (art. 245 de la Ley de Contrato de Trabajo, Ley 20.744).
 - **Qué hacer cuando el material no alcanza:** el system prompt pide `sin_respaldo` con
   confianza baja y la nota diciendo qué faltó, y prohíbe completar con lo que diría un
   documento que no se leyó.
