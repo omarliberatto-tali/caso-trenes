@@ -1,0 +1,23 @@
+{
+  "_descripcion": "Fuentes que el eval acepta ademas de las de referencia.json, para el numero de 'fuente ampliada'. referencia.json no se toca. Cada entrada se justifica con la nota de la propia referencia. Pendiente de validar con el mentor.",
+  "C3_Mantenimiento_de_via": {
+    "AF-03": {
+      "admitidas": [["DOC-1", 3]],
+      "motivo": "La nota de la referencia invoca la clausula 5 del contrato, que esta en la pagina 3."
+    }
+  },
+  "C5_Indemnizacion_por_despido": {
+    "AF-02": {
+      "admitidas": [["DOC-3", 2]],
+      "motivo": "La nota de la referencia dice que los recibos y la pericia consignan la categoria 6; la pericia lo hace en la pagina 2."
+    },
+    "AF-06": {
+      "admitidas": [["DOC-3", 3]],
+      "motivo": "La pericia deja constancia de que SUBE y Falla de caja estan registrados como no remunerativos, que es la afirmacion."
+    },
+    "AF-08": {
+      "admitidas": [["DOC-2", 1]],
+      "motivo": "Es el telegrama de intimacion mismo; la referencia cita la respuesta de la pagina 2."
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "iteraciones": 4,
+  "motivo": "señal de fin",
+  "in": 84880,
+  "out": 12169,
+  "tools": [
+    {
+      "tool": "listar_documentos",
+      "input": {},
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-1"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-2"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-3"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-4"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "00000158"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "60 días"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "mora"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "498.212"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "carta documento"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "197340228"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "activa"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "pago parcial"
+      },
+      "error": false
+    }
+  ],
+  "items": {
+    "AF-01": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° 4520002029 Fecha de emisión 11 de marzo de 2025 Proveedor EQUIPAMIENTO URBANO DEL SUR S.R.L."
+        },
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Expediente EX-2025-00133907-APN-GCO#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-02": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-03": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-04": {
+      "citas": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-05": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-06": {
+      "citas": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "CCF 007731/2026 — Facturas emitidas y refacturaciones DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 EQUIPAMIENTO URBANO DEL SUR S.R.L."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "30-71540982- 4 Condición frente al I.V.A. Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-07": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Tipo de cambio del 08.08.25: $ 133,57. Total $ 373.996 más IVA 21 % $ 78.539,16. Total a facturar $ 452.535,16. La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión. Se solicita su anulación y reemplazo."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-08": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-09": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto. Respecto de fechas de transferencia no poseo información; las órdenes de compra deberían indicar dónde consultar."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-10": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-11": {
+      "citas": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Se acusa recibo de la nota de pronto despacho presentada en fecha 15 de enero de 2026 ante la Mesa General de Entradas de esta sociedad, la que fuera registrada bajo el número de referencia."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-12": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-13": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-14": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "La presente orden de compra no genera intereses, actualización ni diferencia de cambio a favor del proveedor por causa de demora en el trámite de conformación."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-15": {
+      "citas": [],
+      "descartadas": []
+    }
+  },
+  "segundos": 117.7
+}

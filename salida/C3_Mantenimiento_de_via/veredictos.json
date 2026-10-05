@@ -1,0 +1,193 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° CT-42/2024 Fecha de emisión 3 de junio de 2024 Proveedor VÍAS Y OBRAS DEL CENTRO S.A. — C.U.I.T. 30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "El contrato prueba exactamente fecha, número de expediente y objeto (mantenimiento de vía del ramal indicado)."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.15,
+    "nota": "Ningún documento de prueba menciona un servicio de guardia permanente los siete días de la semana, atención de emergencias en dos horas, ni dotación/equipamiento exclusivo. El Contrato (DOC-1) solo detalla renglones de rebaje de riel, durmientes, balasto y fijaciones, y regula horarios de entrega de lunes a viernes de 8 a 14 hs, sin referencia alguna a guardia o emergencias."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "Los precios unitarios son firmes y definitivos por todo el plazo contractual. El contrato no admite redeterminación, actualización ni reconocimiento de mayores costos por ningún concepto."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La prueba documental contradice directamente la existencia de un mecanismo de redeterminación por índices INDEC."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "El pago de cada certificación se efectuará a los sesenta (60) días corridos de su presentación, siempre que se acompañen los partes de servicio conformados por la Inspección de Obra."
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "El plazo de 60 días está respaldado. Sobre el vencimiento efectivo respecto de las cuatro certificaciones, la prueba documental no permite verificarlo con precisión (la contestación niega la mora, pero eso no decide el estado)."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "30-71540982-4 Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "No es cierto que la totalidad de los partes fue conformada sin observaciones; hay al menos un parte sin conformar y con observación expresa."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "30-71540982-4 Fecha 31 de agosto de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 1.050 Observaciones Conformado por la Inspección de Obra Recibió Ing."
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 3,
+        "fragmento": "30-71540982-4 Fecha 31 de octubre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 1.050 Observaciones Conformado por la Inspección de Obra Recibió Ing."
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "30-71540982-4 Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar."
+      }
+    ],
+    "confianza": 0.75,
+    "nota": "Los 4.200 metros corresponden a la cantidad total contratada (Renglón 1 del Contrato), no a lo efectivamente ejecutado durante el período reclamado según los partes."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 4,
+        "fragmento": "Responsable inscripto Orden de compra CT-42/2024 Remito asociado PS-2025-1113 Condición de venta Cuenta corriente Concepto Importe Certificación de servicios de mantenimiento de vía según orden de compra N° CT\u000242/2024$ 38.118.406,31 Total de la factura $ 38.118.406,31 Son PESOS TREINTA Y OCHO MILLONES CIENTO DIECIOCHO MIL CUATROCIENTOS SEIS CON 31/100."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "El monto documentado difiere sustancialmente del alegado."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra. La Inspección de Obra dejó constancia de que el ítem 1 no fue ejecutado en el período, por lo que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "Contradice directamente la afirmación de ausencia total de observaciones."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.1,
+    "nota": "Ningún documento de prueba (DOC-1 a DOC-5) hace referencia a un intercambio de correos electrónicos entre las partes. La mención solo aparece en la demanda, que no es prueba."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.1,
+    "nota": "No existe en el expediente documento de prueba que acredite el envío, contenido o entrega de la carta documento CD 231907744. Solo surge del relato de la demanda."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Asuntos Jurídicos Dictamen N° IF-2026-00402118-APN-GAJ#SOTR Fecha 6 de marzo de 2026 Referencia Reclamo administrativo previo — CT-42/2024 Destinatario Gerencia de Infraestructura Vienen las presentes actuaciones a fin de que esta Gerencia dictamine sobre el reclamo administrativo previo RA-2026- 00092, interpuesto por la contratista y registrado por la Mesa General de Entradas el 22 de enero de 2026."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "Coincide el número de reclamo y la fecha de registro; el expediente administrativo no detalla expresamente el sello físico, pero confirma la recepción por Mesa de Entradas en esa fecha."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 2,
+        "fragmento": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 181.024.192,18."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "El total que surge de la prueba contable ($181.024.192,18) no coincide con los $186.430.912,44 reclamados."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.1,
+    "nota": "Ningún documento de prueba fija o menciona el 3 de febrero de 2026 como fecha de constitución en mora; esa fecha solo surge de la demanda."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "El presente contrato no genera intereses ni actualización a favor del contratista por demoras en el trámite de conformación o de pago."
+      }
+    ],
+    "confianza": 0.6,
+    "nota": "La prueba documental (cláusula contractual) es incompatible con la pretensión de intereses por mora en los términos planteados; la tasa, capitalización y costas tampoco están respaldadas por ningún documento de prueba."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "sin_respaldo",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "Del análisis de las constancias surge que tres de las cuatro certificaciones reclamadas se encuentran conformadas y en trámite de pago, y que la restante fue observada por la Inspección de Obra en los términos de la nota NO-2026-00318442- APN-GIN#SOTR."
+      }
+    ],
+    "confianza": 0.3,
+    "nota": "Ningún documento de prueba confirma ni descarta pagos. El dictamen jurídico solo indica que tres certificaciones están conformadas y en trámite de pago, lo que no equivale a constancia de pago efectivo ni contradice la ausencia de pagos."
+  }
+]

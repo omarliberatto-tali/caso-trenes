@@ -94,7 +94,19 @@ def _fuente_ok(obtenido: Veredicto, esperado: Dict) -> bool:
     return False
 
 
-def calificar_veredictos(obtenidos: List[Veredicto], referencia: List[Dict]) -> Tuple[Dict, List[Dict]]:
+def fuentes_extra(expediente: str) -> Dict[str, Dict]:
+    """Fuentes que se aceptan ademas de las de la referencia, justificadas una por una en
+    ``referencia/fuentes_extra.json``. Solo alimentan el numero de fuente ampliada."""
+    ruta = REFERENCIA / "fuentes_extra.json"
+    if not ruta.exists():
+        return {}
+    return json.loads(ruta.read_text(encoding="utf-8")).get(expediente, {})
+
+
+def calificar_veredictos(
+    obtenidos: List[Veredicto], referencia: List[Dict], extra: Dict[str, Dict] | None = None
+) -> Tuple[Dict, List[Dict]]:
+    extra = extra or {}
     por_id = {v["item_id"]: v for v in obtenidos}
     detalle: List[Dict] = []
     for esperado in referencia:
@@ -102,11 +114,15 @@ def calificar_veredictos(obtenidos: List[Veredicto], referencia: List[Dict]) -> 
         if obtenido is None:
             detalle.append({"id": esperado["item_id"], "estado_ok": False, "fuente_ok": False, "faltante": True})
             continue
+        fuente_ok = _fuente_ok(obtenido, esperado)
+        admitidas = [tuple(a) for a in extra.get(esperado["item_id"], {}).get("admitidas", [])]
+        citadas = [(e["documento_id"], e["pagina"]) for e in obtenido["evidencia"]]
         detalle.append(
             {
                 "id": esperado["item_id"],
                 "estado_ok": obtenido["estado"] == esperado["estado"],
-                "fuente_ok": _fuente_ok(obtenido, esperado),
+                "fuente_ok": fuente_ok,
+                "fuente_ampliada_ok": fuente_ok or any(c in admitidas for c in citadas),
                 "estado_esperado": esperado["estado"],
                 "estado_obtenido": obtenido["estado"],
                 "fuente_esperada": [(e["documento_id"], e["pagina"]) for e in esperado["evidencia"]],
@@ -119,6 +135,9 @@ def calificar_veredictos(obtenidos: List[Veredicto], referencia: List[Dict]) -> 
         "total_referencia": total,
         "acierto_item_pct": round(100 * sum(d["estado_ok"] for d in detalle) / total, 1) if total else 0.0,
         "acierto_fuente_pct": round(100 * sum(d["fuente_ok"] for d in detalle) / total, 1) if total else 0.0,
+        "acierto_fuente_ampliada_pct": (
+            round(100 * sum(d.get("fuente_ampliada_ok", False) for d in detalle) / total, 1) if total else 0.0
+        ),
         "faltantes": sum(1 for d in detalle if d.get("faltante")),
     }
     return resumen, detalle
@@ -155,10 +174,13 @@ def main() -> None:
     ruta_v = Path(args.veredictos) if args.veredictos else destino / "veredictos.json"
     if ruta_v.exists():
         obtenidos_v: List[Veredicto] = json.loads(ruta_v.read_text(encoding="utf-8"))
-        resumen_v, detalle_v = calificar_veredictos(obtenidos_v, veredictos_esperados(args.expediente))
+        resumen_v, detalle_v = calificar_veredictos(
+            obtenidos_v, veredictos_esperados(args.expediente), fuentes_extra(args.expediente)
+        )
         print("VERIFICACION (M3)")
         print(f"  acierto de item   {resumen_v['acierto_item_pct']}%  (el estado es el correcto)")
         print(f"  acierto de fuente {resumen_v['acierto_fuente_pct']}%  (documento y pagina citados son los correctos)")
+        print(f"  fuente ampliada   {resumen_v['acierto_fuente_ampliada_pct']}%  (suma referencia/fuentes_extra.json)")
         fallas_v = [d for d in detalle_v if not (d["estado_ok"] and d["fuente_ok"])]
         if fallas_v:
             print("  casos que fallan:")
@@ -170,6 +192,7 @@ def main() -> None:
                     f"    {d['id']}  estado {d['estado_obtenido']} (esperado {d['estado_esperado']})"
                     f"  cita {d['fuente_obtenida']} (esperada {d['fuente_esperada']})"
                     f"  confianza {d['confianza']}"
+                    + ("  [fuente admitida en fuentes_extra]" if d["fuente_ampliada_ok"] and not d["fuente_ok"] else "")
                 )
         salida["verificacion"] = {"resumen": resumen_v, "detalle": detalle_v}
 

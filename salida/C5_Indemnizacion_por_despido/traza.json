@@ -1,0 +1,268 @@
+{
+  "iteraciones": 5,
+  "motivo": "señal de fin",
+  "in": 121546,
+  "out": 5665,
+  "tools": [
+    {
+      "tool": "listar_documentos",
+      "input": {},
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-1"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-2"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-3"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-4"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-5"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "41.284.630,55"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "mora"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "tasa activa"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "correo electrónico"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "telegrama"
+      },
+      "error": false
+    }
+  ],
+  "items": {
+    "AF-01": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "ARANDA, SILVANA NOEMÍ, legajo 41.208, figura registrada como personal en relación de dependencia con los siguientes datos: Ingreso: 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-02": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E»."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-03": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-04": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos. $ 1.284.320,18 tomando los conceptos remunerativos y los no remunerativos."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-05": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-06": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Se deja constancia de que los adicionales «Adicional mensual SUBE» y «Falla de caja» se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-07": {
+      "citas": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Destinatario ARANDA, SILVANA NOEMÍ Fecha de imposición 14 de julio de 2025 Estado Entregada el 16 de julio de 2025 Texto: Ante su negativa a reintegrarse pese a la intimación cursada, comunícole que a partir de la fecha queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo. Haberes y liquidación final a su disposición."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Causal registrada: despido con justa causa, artículo 244 L.C.T."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-08": {
+      "citas": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-09": {
+      "citas": [
+        {
+          "documento": "DOC-5",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Destinatario ARANDA, SILVANA NOEMÍ Se comunica que los certificados previstos en el artículo 80 de la Ley de Contrato de Trabajo se encuentran confeccionados y a su disposición en la Gerencia de Recursos Humanos, sita en el domicilio de la sociedad, en el horario de 10 a 16 horas."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Certificados artículo 80 L.C.T. a su disposición en el área de personal."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-10": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-11": {
+      "citas": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "CNT 038114/2026 — Intercambio telegráfico DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 3 Telegrama Ley 23.789 N° TL 88204617 Remitente ARANDA, SILVANA NOEMÍ Destinatario SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Ley 24.013."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-12": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-13": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-14": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-15": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "No surge de los registros el pago de indemnización alguna por antigüedad, preaviso ni integración del mes de despido."
+        }
+      ],
+      "descartadas": []
+    }
+  },
+  "segundos": 61.2
+}

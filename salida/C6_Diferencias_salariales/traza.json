@@ -1,0 +1,313 @@
+{
+  "iteraciones": 6,
+  "motivo": "señal de fin",
+  "in": 128180,
+  "out": 5330,
+  "tools": [
+    {
+      "tool": "listar_documentos",
+      "input": {},
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-1"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-2"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-3"
+      },
+      "error": false
+    },
+    {
+      "tool": "leer_documento",
+      "input": {
+        "id": "DOC-4"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "SECLO"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "18.664.208"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "tasa activa"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "1.041.760"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "353.720"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "pago a cuenta"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "correo electronico"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "no efectuo pago"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "pago parcial"
+      },
+      "error": false
+    }
+  ],
+  "items": {
+    "AF-01": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Marzo de 2025 Apellido y nombre MOREYRA, HÉCTOR DANIEL Legajo 33.907 Fecha de ingreso 16 de marzo de 2011 Categoría Operario especializado, categoría 5 C.C.T."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "CNT 044927/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Puntos 2 y 3 — Registración y categoría El Sr. MOREYRA, HÉCTOR DANIEL, legajo 33.907, figura registrado como personal en relación de dependencia desde el 16 de marzo de 2011, con vínculo vigente a la fecha de este informe."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-02": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Marzo de 2025 Apellido y nombre MOREYRA, HÉCTOR DANIEL Legajo 33.907 Fecha de ingreso 16 de marzo de 2011 Categoría Operario especializado, categoría 5 C.C.T."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Categoría registrada: Operario especializado, categoría 5, conforme C.C.T. 1442/15 «T»."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-03": {
+      "citas": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Descripción de puesto N° DP-2023-00214-GRH#SOTR Fecha 12 de septiembre de 2023 Referencia Puesto «Operario especializado» — Taller de bogies Destinatario Legajo 33.907 Tareas asignadas al puesto: desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector. El puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Las tareas que menciona son ejecutadas bajo supervisión de un Oficial y no habilitan el encuadre que pretende."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-04": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "1442/15 «T» para el período reclamado, según los acuerdos homologados, es la siguiente: Se deja constancia de que la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8. La denominación que invoca el actor corresponde al C.C.T. 1198/11 «M», que no resulta aplicable a la demandada."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-05": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Categoría Denominación Básico dic-2025 4 Operario 612.180,00 5 Operario especializado 688.040,00 6 Operario de primera 744.260,00 7 Medio oficial 812.900,00 8 Oficial 901.320,00"
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "1442/15 «T» para el período reclamado, según los acuerdos homologados, es la siguiente: Se deja constancia de que la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-06": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "CNT 044927/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Punto 6 — Diferencias salariales Practicada la comparación entre lo percibido por el actor y la escala de la categoría 5 que registra, no surgen diferencias salariales a su favor en el período comprendido entre enero de 2024 y diciembre de 2025."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-07": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Septiembre de 2025 Apellido y nombre MOREYRA, HÉCTOR DANIEL Legajo 33.907 Fecha de ingreso 16 de marzo de 2011 Categoría Operario especializado, categoría 5 C.C.T. aplicable C.C.T. 1442/15 «T» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 604.420,00 Antigüedad 14 % 84.618,80 Adicional taller 90.663,00 Suplemento nocturno 121.844,00 Adicional mensual SUBE 126.900,00 Totales 901.545,80 126.900,00 Total de descuentos 181.818,66 Neto percibido 846.627,14 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 3 de octubre de 2025"
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "Se deja constancia de que el suplemento nocturno liquidado en el recibo de septiembre de 2025 responde a la prestación efectiva de tareas en turno noche y se encuentra correctamente calculado."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-08": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "CNT 044927/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Puntos 2 y 3 — Registración y categoría El Sr. MOREYRA, HÉCTOR DANIEL, legajo 33.907, figura registrado como personal en relación de dependencia desde el 16 de marzo de 2011, con vínculo vigente a la fecha de este informe."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-09": {
+      "citas": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Nota N° NO-2025-00742118-APN-GRH#SOTR Fecha 27 de noviembre de 2025 Referencia Legajo 33.907 — solicitud de recategorización Destinatario MOREYRA, HÉCTOR DANIEL En respuesta a su presentación, se le hace saber que su solicitud de recategorización fue analizada por esta Gerencia y desestimada, por no corresponder las tareas que invoca a las efectivamente asignadas a su puesto según la descripción DP-2023-00214-GRH#SOTR obrante en su legajo."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-10": {
+      "citas": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "CNT 044927/2026 — Descripción de puesto y actuaciones de personal DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 2 SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        },
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Descripción de puesto N° DP-2023-00214-GRH#SOTR Fecha 12 de septiembre de 2023 Referencia Puesto «Operario especializado» — Taller de bogies Destinatario Legajo 33.907 Tareas asignadas al puesto: desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector."
+        },
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "La presente descripción se incorpora al legajo del agente y le fue notificada en la fecha."
+        }
+      ],
+      "descartadas": []
+    },
+    "AF-11": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-12": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-13": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-14": {
+      "citas": [],
+      "descartadas": []
+    },
+    "AF-15": {
+      "citas": [],
+      "descartadas": []
+    }
+  },
+  "segundos": 54.2
+}
