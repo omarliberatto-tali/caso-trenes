@@ -241,6 +241,54 @@ página y fragmento textual.
 
 Resultado sobre C1, C2 y C3: pendiente de la primera corrida.
 
+### Prueba con Haiku 5.5 (rama `feature/m3-haiku-5-5`, 08/10/2026)
+
+Haiku 5.5 cuesta US$0,10 / US$0,50 por millón de tokens con prompts de hasta 100K (Haiku 4.5:
+US$1 / US$5). Trae el pensamiento prendido por defecto, y el esfuerzo se fija con
+`output_config.effort` (constante `ESFUERZO` en `agente.py`). Todas las corridas son con
+`--reusar-items` y una sola vez por configuración. Cada celda es acierto de estado / acierto de
+fuente.
+
+| Configuración | C1 | C2 | C3 | C5 | C6 |
+|---|---|---|---|---|---|
+| Haiku 4.5, criterio `90eb477` | — | 93,3 / — | — | 93,3 / — | — |
+| 5.5, esfuerzo bajo | — | 80 / 73,3 | — | 73,3 / 60 | — |
+| 5.5, esfuerzo medio | — | 80 / 80 | — | 93,3 / 80 | — |
+| 5.5, esfuerzo alto | — | 73,3 / 66,7 | — | 86,7 / 73,3 | — |
+| 5.5 medio + reglas nuevas | — | 100 / 66,7 | — | 100 / 80 | — |
+| + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
+| + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
+
+Con esfuerzo bajo, C5 cortó en 12 de 15 veredictos. Medio quedó como valor fijo: alto gasta
+casi el doble de salida y no corrige nada. Una corrida de los cinco expedientes con 5.5 cuesta
+unos US$0,08.
+
+Reglas que se sumaron a `CRITERIO_VEREDICTO`:
+
+- Si la prueba acredita el hecho principal (acto, fecha, monto), un detalle accesorio que no
+  figura no lo baja a `sin_respaldo`: va a la nota.
+- Una cláusula que excluye o no prevé lo que se reclama no contradice el reclamo.
+- La prueba que registra el mismo hecho sobre otro número de comprobante lo contradice.
+- Un total queda contradicho si la prueba contradice uno de sus componentes.
+- Un rechazo, una negativa o una observación de una parte es su postura, no prueba en contra,
+  salvo que la afirmación trate de ese mismo acto de la parte.
+- `respaldada` y `contradicha` citan; `sin_respaldo` no cita.
+
+**Lo que queda abierto:**
+
+- **La cláusula de intereses:** C1 AF-14 y C2 AF-14 esperan `sin_respaldo` y C3 AF-14 espera
+  `respaldada` frente a cláusulas parecidas. Ninguna regla general acierta los tres.
+- **Citas en `sin_respaldo`:** el modelo transcribe fragmentos en la NOTA, citations los
+  devuelve como citas, y el parser asigna a la afirmación todas las citas de su bloque. Pedirle
+  en el prompt que no cite en la NOTA hizo que también dejara de citar en las `contradicha`.
+  La alternativa es tomar evidencia solo de la línea del pasaje, en el parser.
+- **Variación entre corridas:** C2 AF-03 dio los tres estados con el mismo criterio. Con una
+  corrida por configuración, una diferencia de una afirmación (6,7 puntos) no se distingue del
+  ruido.
+
+Las salidas commiteadas en `salida/` son de la última corrida, la de la NOTA sin citas. El
+criterio tal como quedó, sin esa instrucción, todavía no se corrió completo.
+
 ## Estado del repo
 
 ```

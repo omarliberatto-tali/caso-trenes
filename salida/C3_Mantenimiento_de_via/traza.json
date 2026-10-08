@@ -1,8 +1,8 @@
 {
   "iteraciones": 4,
   "motivo": "señal de fin",
-  "in": 98561,
-  "out": 7506,
+  "in": 108960,
+  "out": 13270,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -47,7 +47,42 @@
     {
       "tool": "buscar",
       "input": {
+        "termino": "correo electrónico"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "guardia"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
         "termino": "carta documento"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "231907744"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "43.525.126,57"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "INDEC"
       },
       "error": false
     },
@@ -61,14 +96,7 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "correo electronico"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "186.430.912"
+        "termino": "pago"
       },
       "error": false
     }
@@ -83,14 +111,6 @@
             1
           ],
           "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° CT-42/2024 Fecha de emisión 3 de junio de 2024 Proveedor VÍAS Y OBRAS DEL CENTRO S.A. — C.U.I.T. 30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
-        },
-        {
-          "documento": "DOC-1",
-          "paginas": [
-            1,
-            1
-          ],
-          "texto": "30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
         }
       ],
       "descartadas": []
@@ -100,16 +120,7 @@
       "descartadas": []
     },
     "AF-03": {
-      "citas": [
-        {
-          "documento": "DOC-1",
-          "paginas": [
-            3,
-            3
-          ],
-          "texto": "Los precios unitarios son firmes y definitivos por todo el plazo contractual. El contrato no admite redeterminación, actualización ni reconocimiento de mayores costos por ningún concepto."
-        }
-      ],
+      "citas": [],
       "descartadas": []
     },
     "AF-04": {
@@ -134,14 +145,6 @@
             4
           ],
           "texto": "30-71540982-4 Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
-        },
-        {
-          "documento": "DOC-2",
-          "paginas": [
-            4,
-            4
-          ],
-          "texto": "La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
         }
       ],
       "descartadas": []
@@ -183,6 +186,14 @@
             4,
             4
           ],
+          "texto": "30-70441926-3 Avenida Vélez Sarsfield 1720, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 0003-00001288 Fecha de emisión 4 de diciembre de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
           "texto": "Responsable inscripto Orden de compra CT-42/2024 Remito asociado PS-2025-1113 Condición de venta Cuenta corriente Concepto Importe Certificación de servicios de mantenimiento de vía según orden de compra N° CT\u000242/2024$ 38.118.406,31 Total de la factura $ 38.118.406,31 Son PESOS TREINTA Y OCHO MILLONES CIENTO DIECIOCHO MIL CUATROCIENTOS SEIS CON 31/100."
         }
       ],
@@ -196,7 +207,15 @@
             1,
             1
           ],
-          "texto": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra. La Inspección de Obra dejó constancia de que el ítem 1 no fue ejecutado en el período, por lo que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288."
+          "texto": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
         }
       ],
       "descartadas": []
@@ -230,7 +249,7 @@
             2,
             2
           ],
-          "texto": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 181.024.192,18."
+          "texto": "Detalle de los comprobantes Comprobante Fecha Importe (USD) 0003-00001204 05/09/25 41.883.004,10 0003-00001233 06/10/25 48.027.663,72 0003-00001261 05/11/25 52.995.118,05 0003-00001288 04/12/25 38.118.406,31 TOTAL 181.024.192,18 5."
         }
       ],
       "descartadas": []
@@ -240,31 +259,22 @@
       "descartadas": []
     },
     "AF-14": {
-      "citas": [
-        {
-          "documento": "DOC-1",
-          "paginas": [
-            3,
-            3
-          ],
-          "texto": "El presente contrato no genera intereses ni actualización a favor del contratista por demoras en el trámite de conformación o de pago."
-        }
-      ],
+      "citas": [],
       "descartadas": []
     },
     "AF-15": {
       "citas": [
         {
-          "documento": "DOC-4",
+          "documento": "DOC-5",
           "paginas": [
-            2,
-            2
+            1,
+            1
           ],
-          "texto": "Del análisis de las constancias surge que tres de las cuatro certificaciones reclamadas se encuentran conformadas y en trámite de pago, y que la restante fue observada por la Inspección de Obra en los términos de la nota NO-2026-00318442- APN-GIN#SOTR."
+          "texto": "Información objeto de la certificación Los comprobantes de venta emitidos por la sociedad al cliente indicado, pendientes de cobro a la fecha de este informe, y su registración en los libros rubricados de la sociedad."
         }
       ],
       "descartadas": []
     }
   },
-  "segundos": 75.5
+  "segundos": 65.4
 }

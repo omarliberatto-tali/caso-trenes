@@ -19,7 +19,7 @@ from contrato import Evidencia, Item, Origen, Veredicto
 from criterio import ESTADOS
 
 MODELO = "claude-haiku-5-5"
-ESFUERZO = "low"
+ESFUERZO = "medium"
 MAX_ITERACIONES = 8
 MAX_TOKENS = 4096
 MAX_ITERACIONES_VERIF = 12

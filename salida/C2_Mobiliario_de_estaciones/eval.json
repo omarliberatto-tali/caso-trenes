@@ -134,9 +134,9 @@
   "verificacion": {
     "resumen": {
       "total_referencia": 15,
-      "acierto_item_pct": 93.3,
-      "acierto_fuente_pct": 93.3,
-      "acierto_fuente_ampliada_pct": 93.3,
+      "acierto_item_pct": 86.7,
+      "acierto_fuente_pct": 86.7,
+      "acierto_fuente_ampliada_pct": 86.7,
       "faltantes": 0
     },
     "detalle": [
@@ -184,18 +184,23 @@
             3
           ]
         ],
-        "confianza": 0.95
+        "confianza": 0.9
       },
       {
         "id": "AF-03",
-        "estado_ok": true,
-        "fuente_ok": true,
-        "fuente_ampliada_ok": true,
+        "estado_ok": false,
+        "fuente_ok": false,
+        "fuente_ampliada_ok": false,
         "estado_esperado": "sin_respaldo",
-        "estado_obtenido": "sin_respaldo",
+        "estado_obtenido": "respaldada",
         "fuente_esperada": [],
-        "fuente_obtenida": [],
-        "confianza": 0.4
+        "fuente_obtenida": [
+          [
+            "DOC-3",
+            1
+          ]
+        ],
+        "confianza": 0.6
       },
       {
         "id": "AF-04",
@@ -216,7 +221,7 @@
             1
           ]
         ],
-        "confianza": 0.9
+        "confianza": 0.85
       },
       {
         "id": "AF-05",
@@ -233,11 +238,19 @@
         ],
         "fuente_obtenida": [
           [
+            "DOC-2",
+            1
+          ],
+          [
+            "DOC-3",
+            2
+          ],
+          [
             "DOC-3",
             2
           ]
         ],
-        "confianza": 0.95
+        "confianza": 0.75
       },
       {
         "id": "AF-06",
@@ -262,7 +275,7 @@
             2
           ]
         ],
-        "confianza": 0.95
+        "confianza": 0.8
       },
       {
         "id": "AF-07",
@@ -287,7 +300,7 @@
             3
           ]
         ],
-        "confianza": 0.95
+        "confianza": 0.85
       },
       {
         "id": "AF-08",
@@ -308,7 +321,7 @@
             4
           ]
         ],
-        "confianza": 0.85
+        "confianza": 0.8
       },
       {
         "id": "AF-09",
@@ -327,9 +340,13 @@
           [
             "DOC-3",
             1
+          ],
+          [
+            "DOC-3",
+            2
           ]
         ],
-        "confianza": 0.9
+        "confianza": 0.6
       },
       {
         "id": "AF-10",
@@ -340,7 +357,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.5
+        "confianza": 0.8
       },
       {
         "id": "AF-11",
@@ -359,36 +376,66 @@
           [
             "DOC-4",
             2
+          ],
+          [
+            "DOC-4",
+            2
           ]
         ],
-        "confianza": 0.95
+        "confianza": 0.9
       },
       {
         "id": "AF-12",
-        "estado_ok": false,
-        "fuente_ok": false,
-        "fuente_ampliada_ok": false,
+        "estado_ok": true,
+        "fuente_ok": true,
+        "fuente_ampliada_ok": true,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "sin_respaldo",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-2",
             4
           ]
         ],
-        "fuente_obtenida": [],
-        "confianza": 0.3
+        "fuente_obtenida": [
+          [
+            "DOC-2",
+            1
+          ],
+          [
+            "DOC-2",
+            2
+          ],
+          [
+            "DOC-2",
+            3
+          ],
+          [
+            "DOC-2",
+            4
+          ]
+        ],
+        "confianza": 0.85
       },
       {
         "id": "AF-13",
-        "estado_ok": true,
-        "fuente_ok": true,
-        "fuente_ampliada_ok": true,
+        "estado_ok": false,
+        "fuente_ok": false,
+        "fuente_ampliada_ok": false,
         "estado_esperado": "sin_respaldo",
-        "estado_obtenido": "sin_respaldo",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [],
-        "fuente_obtenida": [],
-        "confianza": 0.2
+        "fuente_obtenida": [
+          [
+            "DOC-1",
+            3
+          ],
+          [
+            "DOC-2",
+            4
+          ]
+        ],
+        "confianza": 0.55
       },
       {
         "id": "AF-14",
@@ -399,7 +446,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.3
+        "confianza": 0.7
       },
       {
         "id": "AF-15",
@@ -410,7 +457,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.5
+        "confianza": 0.4
       }
     ]
   }

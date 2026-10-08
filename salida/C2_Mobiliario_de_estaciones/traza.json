@@ -1,8 +1,8 @@
 {
-  "iteraciones": 5,
+  "iteraciones": 4,
   "motivo": "señal de fin",
-  "in": 109334,
-  "out": 2410,
+  "in": 113349,
+  "out": 15999,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -40,70 +40,35 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "remito 0002-00008644"
+        "termino": "197340228"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "498.212,70"
+        "termino": "498.212"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "CD 197340228"
+        "termino": "pago"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "nota de pronto despacho PD-2026-00061"
+        "termino": "0002-00008644"
       },
       "error": false
     },
     {
-      "tool": "buscar",
+      "tool": "leer_documento",
       "input": {
-        "termino": "plazo 45 dias 60 dias"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "10 de octubre de 2025 mora"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "cuarenta y cinco 45 dias fecha presentacion factura"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "sesenta 60 dias"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "14 de abril 2025 entrega"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "reclamo pago intercambio"
+        "id": "DEM"
       },
       "error": false
     }
@@ -144,7 +109,16 @@
       "descartadas": []
     },
     "AF-03": {
-      "citas": [],
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril."
+        }
+      ],
       "descartadas": []
     },
     "AF-04": {
@@ -163,12 +137,28 @@
     "AF-05": {
       "citas": [
         {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-70988341-6 Combate de los Pozos 1855, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 00005-00000143 Fecha de emisión 14 de abril de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        },
+        {
           "documento": "DOC-3",
           "paginas": [
             2,
             2
           ],
-          "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
+          "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Solicitamos proceder a la refacturación."
         }
       ],
       "descartadas": []
@@ -210,7 +200,7 @@
             3,
             3
           ],
-          "texto": "Total a facturar $ 452.535,16. La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión."
+          "texto": "La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión. Se solicita su anulación y reemplazo."
         }
       ],
       "descartadas": []
@@ -234,9 +224,17 @@
           "documento": "DOC-3",
           "paginas": [
             1,
+            1
+          ],
+          "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
             2
           ],
-          "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril. Quedamos a la espera de su confirmación.CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Correo electrónico — 28 de junio de 2025 De m.pereda@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 28 de junio de 2025 Asunto RE: Presentación factura 00005-00000143 — OC 4520002029 Buenos días. Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
+          "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
         }
       ],
       "descartadas": []
@@ -254,16 +252,74 @@
             2
           ],
           "texto": "Se acusa recibo de la nota de pronto despacho presentada en fecha 15 de enero de 2026 ante la Mesa General de Entradas de esta sociedad, la que fuera registrada bajo el número de referencia."
+        },
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Secretaría General Nota N° NO-2026-01293598-APN-SG#SOTR Fecha 3 de febrero de 2026 Referencia Nota de pronto despacho PD-2026-00061 Destinatario EQUIPAMIENTO URBANO DEL SUR S.R.L."
         }
       ],
       "descartadas": []
     },
     "AF-12": {
-      "citas": [],
+      "citas": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 452.535,16 Total de la factura $ 452.535,16 Son PESOS CUATROCIENTOS CINCUENTA Y DOS MIL QUINIENTOS TREINTA Y CINCO CON 16/100."
+        }
+      ],
       "descartadas": []
     },
     "AF-13": {
-      "citas": [],
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "30-70988341-6 Combate de los Pozos 1855, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 00005-00000173 Fecha de emisión 9 de agosto de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        }
+      ],
       "descartadas": []
     },
     "AF-14": {
@@ -275,5 +331,5 @@
       "descartadas": []
     }
   },
-  "segundos": 29.5
+  "segundos": 76.0
 }
