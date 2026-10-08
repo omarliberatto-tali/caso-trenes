@@ -18,7 +18,8 @@ from mcp.types import CallToolResult
 from contrato import Evidencia, Item, Origen, Veredicto
 from criterio import ESTADOS
 
-MODELO = "claude-haiku-4-5"
+MODELO = "claude-haiku-5-5"
+ESFUERZO = "low"
 MAX_ITERACIONES = 8
 MAX_TOKENS = 4096
 MAX_ITERACIONES_VERIF = 12
@@ -274,6 +275,7 @@ async def _extraer(
             rta = cliente.messages.create(
                 model=MODELO,
                 max_tokens=MAX_TOKENS,
+                output_config={"effort": ESFUERZO},
                 system=sistema,
                 tools=tools,
                 messages=mensajes,
@@ -384,6 +386,7 @@ async def _verificar(
             rta = cliente.messages.create(
                 model=MODELO,
                 max_tokens=MAX_TOKENS_VERIF,
+                output_config={"effort": ESFUERZO},
                 system=sistema,
                 tools=tools,
                 messages=mensajes,
