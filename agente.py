@@ -133,8 +133,10 @@ def _parsear_veredictos(bloques: List) -> Tuple[List[Tuple[Veredicto, Dict]], bo
 
     Con citations la respuesta llega partida en varios bloques de texto y los que citan traen
     ``citations``. Se concatenan en un solo texto guardando en que posicion arranca cada
-    bloque citado; cada cita pertenece al encabezado que la precede. Devuelve los veredictos
-    con su traza, si llego la señal de fin, y el texto completo.
+    bloque citado; cada cita pertenece al encabezado que la precede. Solo cuentan como evidencia
+    las citas del pasaje, entre el encabezado y la NOTA: las que el modelo hace dentro de la
+    explicacion quedan en la traza como ``en_nota``. Devuelve los veredictos con su traza, si
+    llego la señal de fin, y el texto completo.
     """
     texto = ""
     citas: List[Tuple[int, object]] = []
@@ -151,7 +153,7 @@ def _parsear_veredictos(bloques: List) -> Tuple[List[Tuple[Veredicto, Dict]], bo
         fin = encabezados[n + 1].start() if n + 1 < len(encabezados) else len(texto)
         nota = _NOTA.search(texto, m.end(), fin)
         evidencia: List[Evidencia] = []
-        traza: Dict = {"citas": [], "descartadas": []}
+        traza: Dict = {"citas": [], "descartadas": [], "en_nota": []}
         for pos, c in citas:
             if not m.start() <= pos < fin:
                 continue
@@ -163,6 +165,9 @@ def _parsear_veredictos(bloques: List) -> Tuple[List[Tuple[Veredicto, Dict]], bo
             cruda = {"documento": documento_id, "paginas": [pagina, ultima], "texto": fragmento}
             if not documento_id.startswith("DOC-"):
                 traza["descartadas"].append(cruda)
+                continue
+            if nota and pos >= nota.start():
+                traza["en_nota"].append(cruda)
                 continue
             traza["citas"].append(cruda)
             ev = Evidencia(documento_id=documento_id, pagina=pagina, fragmento=fragmento)

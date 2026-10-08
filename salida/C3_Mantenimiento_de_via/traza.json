@@ -1,8 +1,8 @@
 {
-  "iteraciones": 4,
+  "iteraciones": 5,
   "motivo": "señal de fin",
-  "in": 108960,
-  "out": 13270,
+  "in": 162998,
+  "out": 11629,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -47,35 +47,7 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "correo electrónico"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "guardia"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "carta documento"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "231907744"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "43.525.126,57"
+        "termino": "guardia permanente"
       },
       "error": false
     },
@@ -89,7 +61,35 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "mora"
+        "termino": "correo electrónico"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "231907744"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "carta documento"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "43.525.126"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "186.430.912"
       },
       "error": false
     },
@@ -99,29 +99,44 @@
         "termino": "pago"
       },
       "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "3 de febrero de 2026"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "pronto despacho"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "RA-2026-00092"
+      },
+      "error": false
     }
   ],
   "items": {
     "AF-01": {
-      "citas": [
-        {
-          "documento": "DOC-1",
-          "paginas": [
-            1,
-            1
-          ],
-          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° CT-42/2024 Fecha de emisión 3 de junio de 2024 Proveedor VÍAS Y OBRAS DEL CENTRO S.A. — C.U.I.T. 30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
-        }
-      ],
-      "descartadas": []
+      "citas": [],
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-02": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-03": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-04": {
       "citas": [
@@ -134,20 +149,23 @@
           "texto": "El pago de cada certificación se efectuará a los sesenta (60) días corridos de su presentación, siempre que se acompañen los partes de servicio conformados por la Inspección de Obra."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-05": {
       "citas": [
         {
-          "documento": "DOC-2",
+          "documento": "DOC-4",
           "paginas": [
-            4,
-            4
+            1,
+            1
           ],
-          "texto": "30-71540982-4 Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
+          "texto": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [],
+      "estado_invalido": true
     },
     "AF-06": {
       "citas": [
@@ -176,7 +194,9 @@
           "texto": "30-71540982-4 Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [],
+      "estado_invalido": true
     },
     "AF-07": {
       "citas": [
@@ -186,18 +206,20 @@
             4,
             4
           ],
-          "texto": "30-70441926-3 Avenida Vélez Sarsfield 1720, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 0003-00001288 Fecha de emisión 4 de diciembre de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+          "texto": "Responsable inscripto Orden de compra CT-42/2024 Remito asociado PS-2025-1113 Condición de venta Cuenta corriente Concepto Importe Certificación de servicios de mantenimiento de vía según orden de compra N° CT\u000242/2024$ 38.118.406,31 Total de la factura $ 38.118.406,31 Son PESOS TREINTA Y OCHO MILLONES CIENTO DIECIOCHO MIL CUATROCIENTOS SEIS CON 31/100."
         },
         {
-          "documento": "DOC-3",
+          "documento": "DOC-4",
           "paginas": [
-            4,
-            4
+            1,
+            1
           ],
-          "texto": "Responsable inscripto Orden de compra CT-42/2024 Remito asociado PS-2025-1113 Condición de venta Cuenta corriente Concepto Importe Certificación de servicios de mantenimiento de vía según orden de compra N° CT\u000242/2024$ 38.118.406,31 Total de la factura $ 38.118.406,31 Son PESOS TREINTA Y OCHO MILLONES CIENTO DIECIOCHO MIL CUATROCIENTOS SEIS CON 31/100."
+          "texto": "La Inspección de Obra dejó constancia de que el ítem 1 no fue ejecutado en el período, por lo que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [],
+      "estado_invalido": true
     },
     "AF-08": {
       "citas": [
@@ -208,25 +230,21 @@
             1
           ],
           "texto": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra."
-        },
-        {
-          "documento": "DOC-2",
-          "paginas": [
-            4,
-            4
-          ],
-          "texto": "La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección El presente parte no habilita por sí el pago."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [],
+      "estado_invalido": true
     },
     "AF-09": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-10": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-11": {
       "citas": [
@@ -239,7 +257,8 @@
           "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Asuntos Jurídicos Dictamen N° IF-2026-00402118-APN-GAJ#SOTR Fecha 6 de marzo de 2026 Referencia Reclamo administrativo previo — CT-42/2024 Destinatario Gerencia de Infraestructura Vienen las presentes actuaciones a fin de que esta Gerencia dictamine sobre el reclamo administrativo previo RA-2026- 00092, interpuesto por la contratista y registrado por la Mesa General de Entradas el 22 de enero de 2026."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-12": {
       "citas": [
@@ -250,17 +269,38 @@
             2
           ],
           "texto": "Detalle de los comprobantes Comprobante Fecha Importe (USD) 0003-00001204 05/09/25 41.883.004,10 0003-00001233 06/10/25 48.027.663,72 0003-00001261 05/11/25 52.995.118,05 0003-00001288 04/12/25 38.118.406,31 TOTAL 181.024.192,18 5."
+        },
+        {
+          "documento": "DOC-5",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 181.024.192,18."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [],
+      "estado_invalido": true
     },
     "AF-13": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-14": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "El presente contrato no genera intereses ni actualización a favor del contratista por demoras en el trámite de conformación o de pago."
+        }
+      ]
     },
     "AF-15": {
       "citas": [
@@ -271,10 +311,28 @@
             1
           ],
           "texto": "Información objeto de la certificación Los comprobantes de venta emitidos por la sociedad al cliente indicado, pendientes de cobro a la fecha de este informe, y su registración en los libros rubricados de la sociedad."
+        },
+        {
+          "documento": "DOC-5",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 181.024.192,18."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [
+        {
+          "documento": "DOC-4",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Del análisis de las constancias surge que tres de las cuatro certificaciones reclamadas se encuentran conformadas y en trámite de pago, y que la restante fue observada por la Inspección de Obra en los términos de la nota NO-2026-00318442- APN-GIN#SOTR."
+        }
+      ]
     }
   },
-  "segundos": 65.4
+  "segundos": 57.0
 }

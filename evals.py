@@ -5,7 +5,7 @@ import json
 import unicodedata
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from contrato import Item, Veredicto
 
@@ -76,16 +76,16 @@ def veredictos_esperados(expediente: str) -> List[Dict]:
     return datos["veredictos"]
 
 
-def _fuente_ok(obtenido: Veredicto, esperado: Dict) -> bool:
+def _fuente_ok(obtenido: Veredicto, esperado: Dict) -> Optional[bool]:
     """La fuente es correcta si alguna evidencia cae en el documento esperado y en una de sus
-    paginas admitidas. Si la referencia no trae evidencia (sin_respaldo), lo correcto es no
-    citar nada: citar algo ahi es respaldar con material que no corresponde.
+    paginas admitidas. Si la referencia no trae evidencia (sin_respaldo) no hay cita esperada
+    y la fuente no se mide: devuelve None y el item queda fuera del porcentaje.
 
     El fragmento no se compara con el de la referencia: con citations es texto literal del
     PDF por construccion, y la referencia guarda uno solo de los pasajes validos.
     """
     if not esperado["evidencia"]:
-        return not obtenido["evidencia"]
+        return None
     for ev_ref in esperado["evidencia"]:
         admitidas = esperado.get("paginas_admitidas") or [ev_ref["pagina"]]
         for ev in obtenido["evidencia"]:
@@ -112,7 +112,10 @@ def calificar_veredictos(
     for esperado in referencia:
         obtenido = por_id.get(esperado["item_id"])
         if obtenido is None:
-            detalle.append({"id": esperado["item_id"], "estado_ok": False, "fuente_ok": False, "faltante": True})
+            fuente = False if esperado["evidencia"] else None
+            detalle.append(
+                {"id": esperado["item_id"], "estado_ok": False, "fuente_ok": fuente, "fuente_ampliada_ok": fuente, "faltante": True}
+            )
             continue
         fuente_ok = _fuente_ok(obtenido, esperado)
         admitidas = [tuple(a) for a in extra.get(esperado["item_id"], {}).get("admitidas", [])]
@@ -122,7 +125,7 @@ def calificar_veredictos(
                 "id": esperado["item_id"],
                 "estado_ok": obtenido["estado"] == esperado["estado"],
                 "fuente_ok": fuente_ok,
-                "fuente_ampliada_ok": fuente_ok or any(c in admitidas for c in citadas),
+                "fuente_ampliada_ok": None if fuente_ok is None else fuente_ok or any(c in admitidas for c in citadas),
                 "estado_esperado": esperado["estado"],
                 "estado_obtenido": obtenido["estado"],
                 "fuente_esperada": [(e["documento_id"], e["pagina"]) for e in esperado["evidencia"]],
@@ -131,12 +134,14 @@ def calificar_veredictos(
             }
         )
     total = len(referencia)
+    con_cita = [d for d in detalle if d["fuente_ok"] is not None]
     resumen = {
         "total_referencia": total,
+        "items_con_cita": len(con_cita),
         "acierto_item_pct": round(100 * sum(d["estado_ok"] for d in detalle) / total, 1) if total else 0.0,
-        "acierto_fuente_pct": round(100 * sum(d["fuente_ok"] for d in detalle) / total, 1) if total else 0.0,
+        "acierto_fuente_pct": round(100 * sum(d["fuente_ok"] for d in con_cita) / len(con_cita), 1) if con_cita else 0.0,
         "acierto_fuente_ampliada_pct": (
-            round(100 * sum(d.get("fuente_ampliada_ok", False) for d in detalle) / total, 1) if total else 0.0
+            round(100 * sum(d["fuente_ampliada_ok"] for d in con_cita) / len(con_cita), 1) if con_cita else 0.0
         ),
         "faltantes": sum(1 for d in detalle if d.get("faltante")),
     }
@@ -179,9 +184,12 @@ def main() -> None:
         )
         print("VERIFICACION (M3)")
         print(f"  acierto de item   {resumen_v['acierto_item_pct']}%  (el estado es el correcto)")
-        print(f"  acierto de fuente {resumen_v['acierto_fuente_pct']}%  (documento y pagina citados son los correctos)")
+        print(
+            f"  acierto de fuente {resumen_v['acierto_fuente_pct']}%  (documento y pagina citados son los correctos,"
+            f" sobre los {resumen_v['items_con_cita']} items con cita esperada)"
+        )
         print(f"  fuente ampliada   {resumen_v['acierto_fuente_ampliada_pct']}%  (suma referencia/fuentes_extra.json)")
-        fallas_v = [d for d in detalle_v if not (d["estado_ok"] and d["fuente_ok"])]
+        fallas_v = [d for d in detalle_v if not d["estado_ok"] or d["fuente_ok"] is False]
         if fallas_v:
             print("  casos que fallan:")
             for d in fallas_v:
@@ -192,7 +200,7 @@ def main() -> None:
                     f"    {d['id']}  estado {d['estado_obtenido']} (esperado {d['estado_esperado']})"
                     f"  cita {d['fuente_obtenida']} (esperada {d['fuente_esperada']})"
                     f"  confianza {d['confianza']}"
-                    + ("  [fuente admitida en fuentes_extra]" if d["fuente_ampliada_ok"] and not d["fuente_ok"] else "")
+                    + ("  [fuente admitida en fuentes_extra]" if d["fuente_ampliada_ok"] and d["fuente_ok"] is False else "")
                 )
         salida["verificacion"] = {"resumen": resumen_v, "detalle": detalle_v}
 

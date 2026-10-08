@@ -235,8 +235,9 @@ página y fragmento textual.
 
 - **Acierto de ítem:** el estado coincide con el de la referencia.
 - **Acierto de fuente:** alguna evidencia cae en el documento esperado y en una de sus
-  `paginas_admitidas`. Si la referencia es `sin_respaldo` sin evidencia, lo correcto es no
-  citar nada. El fragmento no se compara, porque con citations es literal del PDF por
+  `paginas_admitidas`. Se mide solo sobre los ítems que tienen cita esperada: un `sin_respaldo`
+  de la referencia no trae evidencia y queda fuera del porcentaje (el eval informa sobre cuántos
+  ítems se calculó). El fragmento no se compara, porque con citations es literal del PDF por
   construcción y la referencia guarda uno solo de los pasajes válidos.
 
 Resultado sobre C1, C2 y C3: pendiente de la primera corrida.
@@ -258,6 +259,13 @@ fuente.
 | 5.5 medio + reglas nuevas | — | 100 / 66,7 | — | 100 / 80 | — |
 | + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
 | + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
+| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 46,7 / 60 | 86,7 / 72,7 | 86,7 / 100 |
+
+La última fila no se compara directo con las anteriores en fuente: el porcentaje se calcula
+sobre los ítems con cita esperada (9 a 11 por expediente) y no sobre los 15. En esa corrida, C3
+escribió el estado en inglés (`contradicted`) en cinco afirmaciones, que el eval cuenta como
+error de estado aunque el sentido es el correcto; C5 salteó AF-03 y AF-10; y en C2 cinco
+veredictos con estado correcto no trajeron ninguna cita, ni en el pasaje ni en la NOTA.
 
 Con esfuerzo bajo, C5 cortó en 12 de 15 veredictos. Medio quedó como valor fijo: alto gasta
 casi el doble de salida y no corrige nada. Una corrida de los cinco expedientes con 5.5 cuesta
@@ -276,18 +284,29 @@ Reglas que se sumaron a `CRITERIO_VEREDICTO`:
 
 **Lo que queda abierto:**
 
-- **La cláusula de intereses:** C1 AF-14 y C2 AF-14 esperan `sin_respaldo` y C3 AF-14 espera
-  `respaldada` frente a cláusulas parecidas. Ninguna regla general acierta los tres.
-- **Citas en `sin_respaldo`:** el modelo transcribe fragmentos en la NOTA, citations los
-  devuelve como citas, y el parser asigna a la afirmación todas las citas de su bloque. Pedirle
-  en el prompt que no cite en la NOTA hizo que también dejara de citar en las `contradicha`.
-  La alternativa es tomar evidencia solo de la línea del pasaje, en el parser.
+- **Posible error de la referencia en C3 AF-14 (a consultar):** C1, C2 y C3 reclaman los mismos
+  intereses (tasa activa del BNA a treinta días desde la mora; C3 agrega "capitalizable") y la
+  cláusula 5 de la prueba, en DOC-1 p. 3, dice lo mismo en los tres: C1 "no genera intereses ni
+  actualización de ninguna naturaleza a favor del proveedor", C2 "no genera intereses,
+  actualización ni diferencia de cambio a favor del proveedor por causa de demora en el trámite
+  de conformación", C3 "no genera intereses ni actualización a favor del contratista por demoras
+  en el trámite de conformación o de pago". La referencia espera `sin_respaldo` en C1 y C2 ("la
+  orden de compra no prevé intereses") y `respaldada` en C3, citando "no genera intereses" sin
+  nota. No hay una diferencia en el texto que justifique estados distintos, así que el prompt
+  no se ajusta para acertar los tres y C3 AF-14 queda como falla esperada.
+- **Citas de la NOTA:** el modelo transcribe fragmentos en la NOTA y citations los devuelve como
+  citas. Pedirle en el prompt que no cite en la NOTA hizo que también dejara de citar en las
+  `contradicha`, así que se resuelve en el parser: solo cuentan como evidencia las citas del
+  pasaje, entre el encabezado y la NOTA. Las de la NOTA quedan en `traza.json` como `en_nota`,
+  para depurar, pero no entran al veredicto. El estado lo sigue decidiendo el modelo; el parser
+  solo decide qué parte de su respuesta es evidencia, igual que ya separaba la línea de la
+  demanda de la de la prueba.
 - **Variación entre corridas:** C2 AF-03 dio los tres estados con el mismo criterio. Con una
   corrida por configuración, una diferencia de una afirmación (6,7 puntos) no se distingue del
   ruido.
 
-Las salidas commiteadas en `salida/` son de la última corrida, la de la NOTA sin citas. El
-criterio tal como quedó, sin esa instrucción, todavía no se corrió completo.
+Las salidas commiteadas en `salida/` son de la última corrida, la del parser que ignora las
+citas de la NOTA.
 
 ## Estado del repo
 

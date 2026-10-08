@@ -1,8 +1,8 @@
 {
   "iteraciones": 3,
   "motivo": "señal de fin",
-  "in": 45977,
-  "out": 6729,
+  "in": 45791,
+  "out": 7963,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -57,21 +57,10 @@
           "texto": "ARANDA, SILVANA NOEMÍ, legajo 41.208, figura registrada como personal en relación de dependencia con los siguientes datos: Ingreso: 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-02": {
-      "citas": [],
-      "descartadas": []
-    },
-    "AF-03": {
-      "citas": [],
-      "descartadas": []
-    },
-    "AF-04": {
-      "citas": [],
-      "descartadas": []
-    },
-    "AF-05": {
       "citas": [
         {
           "documento": "DOC-1",
@@ -80,9 +69,54 @@
             1
           ],
           "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E»."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
+    },
+    "AF-04": {
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "$ 1.284.320,18 tomando los conceptos remunerativos y los no remunerativos."
+        }
+      ],
+      "descartadas": [],
+      "en_nota": []
+    },
+    "AF-05": {
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Junio de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T. aplicable C.C.T. 1764/18 «E» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 612.480,00 Antigüedad 9 % 55.123,20 Adicional convenio 91.872,00 Presentismo 61.248,00 S.A.C."
+        }
+      ],
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-06": {
       "citas": [
@@ -93,9 +127,18 @@
             1
           ],
           "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
+        },
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Se deja constancia de que los adicionales «Adicional mensual SUBE» y «Falla de caja» se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-07": {
       "citas": [
@@ -108,7 +151,17 @@
           "texto": "Destinatario ARANDA, SILVANA NOEMÍ Fecha de imposición 14 de julio de 2025 Estado Entregada el 16 de julio de 2025 Texto: Ante su negativa a reintegrarse pese a la intimación cursada, comunícole que a partir de la fecha queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Causal registrada: despido con justa causa, artículo 244 L.C.T."
+        }
+      ]
     },
     "AF-08": {
       "citas": [
@@ -121,7 +174,17 @@
           "texto": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "Niego adeudar diferencia salarial alguna."
+        }
+      ]
     },
     "AF-09": {
       "citas": [
@@ -132,13 +195,18 @@
             1
           ],
           "texto": "Destinatario ARANDA, SILVANA NOEMÍ Se comunica que los certificados previstos en el artículo 80 de la Ley de Contrato de Trabajo se encuentran confeccionados y a su disposición en la Gerencia de Recursos Humanos, sita en el domicilio de la sociedad, en el horario de 10 a 16 horas."
+        },
+        {
+          "documento": "DOC-5",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "mediante la nota NO\u00022025-00588127-APN-GRH#SOTR, la ex dependiente no se presentó a retirarlos dentro del plazo previsto."
         }
       ],
-      "descartadas": []
-    },
-    "AF-10": {
-      "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-11": {
       "citas": [
@@ -148,7 +216,7 @@
             1,
             1
           ],
-          "texto": "CNT 038114/2026 — Intercambio telegráfico DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 3 Telegrama Ley 23.789 N° TL 88204617 Remitente ARANDA, SILVANA NOEMÍ Destinatario SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
+          "texto": "CNT 038114/2026 — Intercambio telegráfico DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 3 Telegrama Ley 23.789 N° TL 88204617 Remitente ARANDA, SILVANA NOEMÍ Destinatario SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
         },
         {
           "documento": "DOC-2",
@@ -156,13 +224,24 @@
             1,
             1
           ],
-          "texto": "Ley 24.013."
+          "texto": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
         }
       ],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-12": {
-      "citas": [
+      "citas": [],
+      "descartadas": [],
+      "en_nota": [
         {
           "documento": "DOC-3",
           "paginas": [
@@ -171,21 +250,49 @@
           ],
           "texto": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos."
         }
-      ],
-      "descartadas": []
+      ]
     },
     "AF-13": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Haberes y liquidación final a su disposición."
+        }
+      ]
     },
     "AF-14": {
       "citas": [],
-      "descartadas": []
+      "descartadas": [],
+      "en_nota": []
     },
     "AF-15": {
-      "citas": [],
-      "descartadas": []
+      "citas": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": "Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora, operación registrada en el libro banco de la demandada."
+        },
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "1764/18 «E» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 14 días 285.824,00 Antigüedad 9 % 25.724,16 Vacaciones proporcionales 872.538,52 S.A.C. proporcional 641.160,09 Adicional mensual SUBE 59.929,33 Totales 1.825.246,77 59.929,33 Total de descuentos 341.690,22 Neto percibido 1.543.485,88 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 8 de agosto de 2025."
+        }
+      ],
+      "descartadas": [],
+      "en_nota": []
     }
   },
-  "segundos": 31.5
+  "segundos": 38.7
 }
