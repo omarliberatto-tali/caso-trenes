@@ -97,6 +97,7 @@ _ENCABEZADO = re.compile(
 )
 _NOTA = re.compile(r"^NOTA:\s*(.*)$", re.MULTILINE)
 _FIN = re.compile(rf"^\s*{re.escape(FIN)}\s*$", re.MULTILINE)
+_ESTADO_EN = {"supported": "respaldada", "unsupported": "sin_respaldo", "contradicted": "contradicha"}
 
 
 def _parsear(texto: str) -> Tuple[List[Dict], bool]:
@@ -175,11 +176,13 @@ def _parsear_veredictos(bloques: List) -> Tuple[List[Tuple[Veredicto, Dict]], bo
                 evidencia.append(ev)
         veredicto = Veredicto(
             item_id=m.group(1),
-            estado=m.group(2),
+            estado=_ESTADO_EN.get(m.group(2), m.group(2)),
             evidencia=evidencia,
             confianza=float(m.group(3).replace(",", ".")),
             nota=nota.group(1).strip() if nota else "",
         )
+        if m.group(2) in _ESTADO_EN:
+            traza["estado_original"] = m.group(2)
         if veredicto["estado"] not in ESTADOS:
             traza["estado_invalido"] = True
         filas.append((veredicto, traza))

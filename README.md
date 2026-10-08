@@ -259,12 +259,13 @@ fuente.
 | 5.5 medio + reglas nuevas | — | 100 / 66,7 | — | 100 / 80 | — |
 | + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
 | + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
-| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 46,7 / 60 | 86,7 / 72,7 | 86,7 / 100 |
+| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 80 / 60 | 86,7 / 72,7 | 86,7 / 100 |
 
 La última fila no se compara directo con las anteriores en fuente: el porcentaje se calcula
 sobre los ítems con cita esperada (9 a 11 por expediente) y no sobre los 15. En esa corrida, C3
-escribió el estado en inglés (`contradicted`) en cinco afirmaciones, que el eval cuenta como
-error de estado aunque el sentido es el correcto; C5 salteó AF-03 y AF-10; y en C2 cinco
+escribió el estado en inglés (`contradicted`) en cinco afirmaciones: el parser ahora traduce
+`supported`, `unsupported` y `contradicted` al estado en español y guarda el original en la
+traza como `estado_original` (C3 pasó de 46,7 a 80 sin volver a correr); C5 salteó AF-03 y AF-10; y en C2 cinco
 veredictos con estado correcto no trajeron ninguna cita, ni en el pasaje ni en la NOTA.
 
 Con esfuerzo bajo, C5 cortó en 12 de 15 veredictos. Medio quedó como valor fijo: alto gasta

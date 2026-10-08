@@ -35,7 +35,7 @@
   },
   {
     "item_id": "AF-05",
-    "estado": "contradicted",
+    "estado": "contradicha",
     "evidencia": [
       {
         "documento_id": "DOC-4",
@@ -48,7 +48,7 @@
   },
   {
     "item_id": "AF-06",
-    "estado": "contradicted",
+    "estado": "contradicha",
     "evidencia": [
       {
         "documento_id": "DOC-2",
@@ -71,7 +71,7 @@
   },
   {
     "item_id": "AF-07",
-    "estado": "contradicted",
+    "estado": "contradicha",
     "evidencia": [
       {
         "documento_id": "DOC-3",
@@ -89,7 +89,7 @@
   },
   {
     "item_id": "AF-08",
-    "estado": "contradicted",
+    "estado": "contradicha",
     "evidencia": [
       {
         "documento_id": "DOC-4",
@@ -129,7 +129,7 @@
   },
   {
     "item_id": "AF-12",
-    "estado": "contradicted",
+    "estado": "contradicha",
     "evidencia": [
       {
         "documento_id": "DOC-5",

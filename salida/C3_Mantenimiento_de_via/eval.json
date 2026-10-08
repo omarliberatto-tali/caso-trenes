@@ -135,7 +135,7 @@
     "resumen": {
       "total_referencia": 15,
       "items_con_cita": 10,
-      "acierto_item_pct": 46.7,
+      "acierto_item_pct": 80.0,
       "acierto_fuente_pct": 60.0,
       "acierto_fuente_ampliada_pct": 60.0,
       "faltantes": 0
@@ -207,11 +207,11 @@
       },
       {
         "id": "AF-05",
-        "estado_ok": false,
+        "estado_ok": true,
         "fuente_ok": false,
         "fuente_ampliada_ok": false,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "contradicted",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-2",
@@ -228,11 +228,11 @@
       },
       {
         "id": "AF-06",
-        "estado_ok": false,
+        "estado_ok": true,
         "fuente_ok": true,
         "fuente_ampliada_ok": true,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "contradicted",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-2",
@@ -257,11 +257,11 @@
       },
       {
         "id": "AF-07",
-        "estado_ok": false,
+        "estado_ok": true,
         "fuente_ok": true,
         "fuente_ampliada_ok": true,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "contradicted",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-3",
@@ -282,11 +282,11 @@
       },
       {
         "id": "AF-08",
-        "estado_ok": false,
+        "estado_ok": true,
         "fuente_ok": true,
         "fuente_ampliada_ok": true,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "contradicted",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-4",
@@ -346,11 +346,11 @@
       },
       {
         "id": "AF-12",
-        "estado_ok": false,
+        "estado_ok": true,
         "fuente_ok": true,
         "fuente_ampliada_ok": true,
         "estado_esperado": "contradicha",
-        "estado_obtenido": "contradicted",
+        "estado_obtenido": "contradicha",
         "fuente_esperada": [
           [
             "DOC-5",
