@@ -387,7 +387,9 @@ async def _verificar(
             }
         ]
         encontrados: Dict[str, Veredicto] = {}
-        traza: Dict = {"iteraciones": 0, "motivo": "", "in": 0, "out": 0, "tools": [], "items": {}}
+        traza: Dict = {"iteraciones": 0, "motivo": "", "in": 0, "out": 0, "tools": [], "items": {}, "textos": []}
+        orden = [it["id"] for it in items]
+        reintento: List[str] = []
 
         for i in range(1, max_iteraciones + 1):
             traza["iteraciones"] = i
@@ -402,6 +404,7 @@ async def _verificar(
             traza["in"] += rta.usage.input_tokens
             traza["out"] += rta.usage.output_tokens
             filas, fin, texto = _parsear_veredictos(rta.content)
+            traza["textos"].append(texto)
 
             # Cortada por max_tokens, la ultima afirmacion puede estar a medias (sin sus
             # citas o sin la nota): se descarta y se pide de nuevo, igual que AF-09 en M1.
@@ -412,9 +415,11 @@ async def _verificar(
 
             nuevos = 0
             for veredicto, traza_item in filas:
-                if veredicto["item_id"] not in encontrados:
-                    encontrados[veredicto["item_id"]] = veredicto
-                    traza["items"][veredicto["item_id"]] = traza_item
+                item_id = veredicto["item_id"]
+                previo = encontrados.get(item_id)
+                if previo is None or (item_id in reintento and veredicto["evidencia"] and not previo["evidencia"]):
+                    encontrados[item_id] = veredicto
+                    traza["items"][item_id] = traza_item
                     nuevos += 1
 
             if verbose:
@@ -428,6 +433,30 @@ async def _verificar(
                 mensajes.append({"role": "user", "content": resultados})
                 if i == max_iteraciones:
                     traza["motivo"] = "max_iteraciones"
+                continue
+
+            # Antes de cerrar, una sola vuelta mas por las afirmaciones que faltan o que quedaron
+            # respaldadas o contradichas sin ninguna cita.
+            pendientes = [
+                item_id
+                for item_id in orden
+                if item_id not in encontrados
+                or (encontrados[item_id]["estado"] in ("respaldada", "contradicha") and not encontrados[item_id]["evidencia"])
+            ]
+            if (fin or len(encontrados) == len(items) or nuevos == 0) and pendientes and not reintento and i < max_iteraciones:
+                reintento = pendientes
+                traza["reintento"] = pendientes
+                if verbose:
+                    print(f"  reintento: {', '.join(pendientes)}")
+                mensajes.append({"role": "assistant", "content": texto})
+                mensajes.append(
+                    {
+                        "role": "user",
+                        "content": f"Faltan o quedaron sin cita: {', '.join(pendientes)}. Verifica solo esas, "
+                        f"mismo formato. Las respaldada y contradicha citan el pasaje del documento de la "
+                        f"prueba, no el resultado de buscar. Al terminar, la señal de fin.",
+                    }
+                )
                 continue
 
             if fin:
@@ -453,7 +482,6 @@ async def _verificar(
                 }
             )
 
-    orden = [it["id"] for it in items]
     veredictos = sorted(encontrados.values(), key=lambda v: orden.index(v["item_id"]) if v["item_id"] in orden else len(orden))
     return veredictos, traza
 

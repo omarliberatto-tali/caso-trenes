@@ -260,6 +260,13 @@ fuente.
 | + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
 | + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
 | Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 86,7 / 66,7 | 86,7 / 72,7 | 86,7 / 100 |
+| + reintento de faltantes y sin cita (no se disparó) | — | 93,3 / 80 | — | 93,3 / 81,8 | — |
+
+La última fila corre solo C2 y C5. Antes de cerrar, el agente hace una vuelta más por las
+afirmaciones que faltan o que quedaron `respaldada`/`contradicha` sin cita, y guarda en
+`traza.json` el texto crudo de cada iteración (`textos`) y los ids reintentados (`reintento`).
+En esta corrida no hizo falta: C5 trajo las 15 y C2 citó todas, así que la mejora es variación
+entre corridas y el reintento queda como red. Se probó aparte con un cliente simulado.
 
 La referencia de C3 AF-14 se corrigió a `sin_respaldo` (igual que C1 y C2): la columna C3 de la
 última fila está recalculada con la referencia nueva; las filas anteriores, con la vieja.
