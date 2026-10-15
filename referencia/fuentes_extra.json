@@ -1,5 +1,11 @@
 {
   "_descripcion": "Fuentes que el eval acepta ademas de las de referencia.json, para el numero de 'fuente ampliada'. referencia.json no se toca. Cada entrada se justifica con la nota de la propia referencia. Pendiente de validar con el mentor.",
+  "C2_Mobiliario_de_estaciones": {
+    "AF-09": {
+      "admitidas": [["DOC-3", 4]],
+      "motivo": "Es la respuesta de Tesoreria a la consulta por el estado de la factura, sin fecha de pago: el reclamo sin respuesta que lo satisfaga. La pagina 1 que cita la referencia es la presentacion de la factura 143, que no reclama pago."
+    }
+  },
   "C3_Mantenimiento_de_via": {
     "AF-03": {
       "admitidas": [["DOC-1", 3]],

@@ -137,7 +137,7 @@
       "items_con_cita": 10,
       "acierto_item_pct": 93.3,
       "acierto_fuente_pct": 80.0,
-      "acierto_fuente_ampliada_pct": 80.0,
+      "acierto_fuente_ampliada_pct": 90.0,
       "faltantes": 0
     },
     "detalle": [
@@ -327,7 +327,7 @@
         "id": "AF-09",
         "estado_ok": true,
         "fuente_ok": false,
-        "fuente_ampliada_ok": false,
+        "fuente_ampliada_ok": true,
         "estado_esperado": "respaldada",
         "estado_obtenido": "respaldada",
         "fuente_esperada": [
