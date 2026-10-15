@@ -259,7 +259,10 @@ fuente.
 | 5.5 medio + reglas nuevas | — | 100 / 66,7 | — | 100 / 80 | — |
 | + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
 | + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
-| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 80 / 60 | 86,7 / 72,7 | 86,7 / 100 |
+| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 86,7 / 66,7 | 86,7 / 72,7 | 86,7 / 100 |
+
+La referencia de C3 AF-14 se corrigió a `sin_respaldo` (igual que C1 y C2): la columna C3 de la
+última fila está recalculada con la referencia nueva; las filas anteriores, con la vieja.
 
 La última fila no se compara directo con las anteriores en fuente: el porcentaje se calcula
 sobre los ítems con cita esperada (9 a 11 por expediente) y no sobre los 15. En esa corrida, C3
@@ -285,16 +288,6 @@ Reglas que se sumaron a `CRITERIO_VEREDICTO`:
 
 **Lo que queda abierto:**
 
-- **Posible error de la referencia en C3 AF-14 (a consultar):** C1, C2 y C3 reclaman los mismos
-  intereses (tasa activa del BNA a treinta días desde la mora; C3 agrega "capitalizable") y la
-  cláusula 5 de la prueba, en DOC-1 p. 3, dice lo mismo en los tres: C1 "no genera intereses ni
-  actualización de ninguna naturaleza a favor del proveedor", C2 "no genera intereses,
-  actualización ni diferencia de cambio a favor del proveedor por causa de demora en el trámite
-  de conformación", C3 "no genera intereses ni actualización a favor del contratista por demoras
-  en el trámite de conformación o de pago". La referencia espera `sin_respaldo` en C1 y C2 ("la
-  orden de compra no prevé intereses") y `respaldada` en C3, citando "no genera intereses" sin
-  nota. No hay una diferencia en el texto que justifique estados distintos, así que el prompt
-  no se ajusta para acertar los tres y C3 AF-14 queda como falla esperada.
 - **Citas de la NOTA:** el modelo transcribe fragmentos en la NOTA y citations los devuelve como
   citas. Pedirle en el prompt que no cite en la NOTA hizo que también dejara de citar en las
   `contradicha`, así que se resuelve en el parser: solo cuentan como evidencia las citas del
