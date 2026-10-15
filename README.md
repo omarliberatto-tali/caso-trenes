@@ -261,12 +261,22 @@ fuente.
 | + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
 | Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 86,7 / 66,7 | 86,7 / 72,7 | 86,7 / 100 |
 | + reintento de faltantes y sin cita (no se disparó) | — | 93,3 / 80 | — | 93,3 / 81,8 | — |
+| + regla de conclusión jurídica (mora) | 100 / 100 | 100 / 100 | 86,7 / 77,8 | 100 / 72,7 | 86,7 / 100 |
 
 La última fila corre solo C2 y C5. Antes de cerrar, el agente hace una vuelta más por las
 afirmaciones que faltan o que quedaron `respaldada`/`contradicha` sin cita, y guarda en
 `traza.json` el texto crudo de cada iteración (`textos`) y los ids reintentados (`reintento`).
 En esta corrida no hizo falta: C5 trajo las 15 y C2 citó todas, así que la mejora es variación
 entre corridas y el reintento queda como red. Se probó aparte con un cliente simulado.
+
+La regla de conclusión jurídica dice que una afirmación como la constitución en mora se verifica
+por su hecho principal: si ninguna prueba lo fija, es `sin_respaldo` aunque la prueba contradiga
+un fundamento accesorio ("sin observación alguna"), y prevalece sobre la excepción de la postura
+de parte. Con ella la fecha de mora (AF-13 en C1, C2, C3 y C5) sale bien en todos. En esa
+corrida el reintento se disparó en C3, C5 y C6. Quedan C6 AF-13 (total reclamado: la referencia
+espera `sin_respaldo` y el agente aplica la regla del total contradicho por un componente, que
+en C2 y C3 coincide con la referencia), C6 AF-03 (tareas asignadas contra tareas ejecutadas),
+C3 AF-03 y AF-15, y C3 AF-05 sin cita aun con el reintento.
 
 La referencia de C3 AF-14 se corrigió a `sin_respaldo` (igual que C1 y C2): la columna C3 de la
 última fila está recalculada con la referencia nueva; las filas anteriores, con la vieja.

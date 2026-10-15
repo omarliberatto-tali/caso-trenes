@@ -7,15 +7,10 @@
         "documento_id": "DOC-1",
         "pagina": 1,
         "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° 430011742 Fecha de emisión 26 de septiembre de 2025 Proveedor GRÁFICA DEL PLATA S.A. — C.U.I.T."
-      },
-      {
-        "documento_id": "DOC-1",
-        "pagina": 2,
-        "fragmento": "CCF 004182/2026 — Orden de compra N° 430011742 DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Detalle de renglones Renglón Descripción Unidad Cantidad 1 Libro de Registro, uso tareas base de señalamiento unidad 320 2 Talonario, uso boleterías, resumen de ventas unidad 4.800 3 Formulario, uso boleterías, envío de remesa unidad 12.000 4 Talonario, uso boleterías, planilla de recaudación unidad 6.500 5 Talonario, uso memorándum interno unidad 2.400 Las cantidades consignadas son firmes."
       }
     ],
     "confianza": 0.95,
-    "nota": "La orden de compra acredita la emisión, la fecha y el objeto de la provisión."
+    "nota": "La prueba acredita número, fecha y proveedor. La orden fue emitida por SOTR S.E. y no se discute su existencia."
   },
   {
     "item_id": "AF-02",
@@ -23,22 +18,22 @@
     "evidencia": [
       {
         "documento_id": "DOC-1",
-        "pagina": 1,
-        "fragmento": "30-71204885-7 Moneda de la operación dólares estadounidenses Lugar de entrega Depósito Central Liniers, Avenida Emilio Castro 6400, C.A.B.A."
-      },
-      {
-        "documento_id": "DOC-1",
         "pagina": 3,
         "fragmento": "El pago se efectuará a los treinta (30) días corridos de la fecha de presentación de la factura en la casilla de recepción de proveedores, siempre que se acompañe el remito conformado por el responsable del depósito."
       }
     ],
     "confianza": 0.9,
-    "nota": "La afirmación dice sesenta (60) días y la orden de compra pacta treinta (30) días corridos. Ese es el plazo que decide el estado."
+    "nota": "La moneda dólares estadounidenses sí coincide con la orden (Moneda de la operación dólares estadounidenses). El plazo de 60 días no coincide con los 30 días pactados. Como el vencimiento se calcula desde ese plazo, la afirmación de que está \"ampliamente vencido\" también depende de esta diferencia."
   },
   {
     "item_id": "AF-03",
     "estado": "respaldada",
     "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 1,
+        "fragmento": "30-71540982-4 Fecha 5 de enero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 3 Formulario, uso boleterías, envío de remesa 12.000 Observaciones Recibido de conformidad Recibió R. Quintana — Depósito Liniers El presente remito no es válido como factura."
+      },
       {
         "documento_id": "DOC-3",
         "pagina": 2,
@@ -51,27 +46,17 @@
       },
       {
         "documento_id": "DOC-3",
-        "pagina": 1,
-        "fragmento": "30-71540982-4 Fecha 5 de enero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 3 Formulario, uso boleterías, envío de remesa 12.000 Observaciones Recibido de conformidad Recibió R. Quintana — Depósito Liniers El presente remito no es válido como factura."
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 5,
-        "fragmento": "30-71540982-4 Fecha 23 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 4 Talonario, uso boleterías, planilla de recaudación 6.500 Observaciones Recibido sin conformar."
-      },
-      {
-        "documento_id": "DOC-3",
         "pagina": 4,
         "fragmento": "30-71540982-4 Fecha 5 de enero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 5 Talonario, uso memorándum interno 2.400 Observaciones Recibido de conformidad Recibió R. Quintana — Depósito Liniers El presente remito no es válido como factura."
       },
       {
         "documento_id": "DOC-3",
-        "pagina": 6,
-        "fragmento": "30-71540982-4 Fecha 18 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 2 Talonario, uso boleterías, resumen de ventas 1.600 Observaciones Recibido con observaciones."
+        "pagina": 5,
+        "fragmento": "30-71540982-4 Fecha 23 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 4 Talonario, uso boleterías, planilla de recaudación 6.500 Observaciones Recibido sin conformar."
       }
     ],
     "confianza": 0.7,
-    "nota": "Las cantidades entregadas cubren las pedidas en todos los renglones. El renglón 2 excede la cantidad de la orden (4.800) en 1.600 unidades, y la orden exige autorización previa para entregas en exceso (Toda entrega en exceso o en defecto requiere autorización previa y por escrito de la Gerencia de Compras y Contrataciones). El renglón 4 consta como recibido sin conformar (ver AF-04)."
+    "nota": "El renglón 2 tiene entregas por 6.400 unidades (4.800 + 1.600, remitos 0002-00011673 y 0002-00011807) frente a 4.800 pedidas, lo que es una entrega en exceso que la orden condiciona a autorización previa. Los remitos 0002-00011760 y 0002-00011807 no están conformados por el responsable del depósito, lo que se trata en AF-04."
   },
   {
     "item_id": "AF-04",
@@ -88,26 +73,26 @@
         "fragmento": "30-71540982-4 Fecha 18 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 2 Talonario, uso boleterías, resumen de ventas 1.600 Observaciones Recibido con observaciones. No se verificaron las cantidades Recibió Mesa de recepción — sin firma del responsable El presente remito no es válido como factura."
       }
     ],
-    "confianza": 0.8,
-    "nota": "La afirmación trata de la conformidad de la demandada, que es el acto que estos remitos documentan, por eso no son una simple observación de la contraria. La orden de compra exige la firma del responsable del depósito para la conformidad (Solo el remito que lleve su firma y aclaración acredita recepción conforme.). Otros remitos sí figuran como recibidos de conformidad, pero no alcanzan para sostener que la totalidad fue conformada."
+    "confianza": 0.95,
+    "nota": "Los remitos 0002-00011456, 0002-00011653, 0002-00011673 y 0002-00011674 sí figuran como \"Recibido de conformidad\", por lo que la afirmación es falsa solo respecto de la \"totalidad\". La propia orden exige para la recepción conforme la firma del responsable del depósito."
   },
   {
     "item_id": "AF-05",
     "estado": "contradicha",
     "evidencia": [
       {
-        "documento_id": "DOC-3",
-        "pagina": 5,
-        "fragmento": "30-71540982-4 Fecha 23 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 4 Talonario, uso boleterías, planilla de recaudación 6.500 Observaciones Recibido sin conformar."
-      },
-      {
         "documento_id": "DOC-1",
         "pagina": 2,
         "fragmento": "CCF 004182/2026 — Orden de compra N° 430011742 DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Detalle de renglones Renglón Descripción Unidad Cantidad 1 Libro de Registro, uso tareas base de señalamiento unidad 320 2 Talonario, uso boleterías, resumen de ventas unidad 4.800 3 Formulario, uso boleterías, envío de remesa unidad 12.000 4 Talonario, uso boleterías, planilla de recaudación unidad 6.500 5 Talonario, uso memorándum interno unidad 2.400 Las cantidades consignadas son firmes."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 5,
+        "fragmento": "30-71540982-4 Fecha 23 de febrero de 2026 Orden de compra 430011742 Renglón Descripción Cantidad 4 Talonario, uso boleterías, planilla de recaudación 6.500 Observaciones Recibido sin conformar."
       }
     ],
-    "confianza": 0.9,
-    "nota": "No se encontró ningún remito de 8.000 unidades del renglón 4."
+    "confianza": 0.95,
+    "nota": "El remito no está conformado (ver AF-04), por lo que la cantidad recibida está pendiente de verificación."
   },
   {
     "item_id": "AF-06",
@@ -116,25 +101,30 @@
       {
         "documento_id": "DOC-2",
         "pagina": 4,
-        "fragmento": "30-71204885-7 Bartolomé Mitre 2740, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 0004-00000335 Fecha de emisión 20 de febrero de 2026 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. — C.U.I.T. 30-71540982- 4 Condición frente al I.V.A. Responsable inscripto Orden de compra 430011742 Remito asociado 0002-00011807 Condición de venta Cuenta corriente Concepto Importe Provisión de impresos y formularios según orden de compra N° 430011742 USD 3.208,79 Total de la factura USD 3.208,79 Son DÓLARES ESTADOUNIDENSES TRES MIL DOSCIENTOS OCHO CON 79/100."
+        "fragmento": "30-71204885-7 Bartolomé Mitre 2740, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 0004-00000335 Fecha de emisión 20 de febrero de 2026 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "Responsable inscripto Orden de compra 430011742 Remito asociado 0002-00011807 Condición de venta Cuenta corriente Concepto Importe Provisión de impresos y formularios según orden de compra N° 430011742 USD 3.208,79 Total de la factura USD 3.208,79 Son DÓLARES ESTADOUNIDENSES TRES MIL DOSCIENTOS OCHO CON 79/100."
       }
     ],
     "confianza": 0.95,
-    "nota": "La certificación contable también registra este comprobante por USD 3.208,79 (ver AF-12)."
+    "nota": "La diferencia es de USD 594,00. El total reclamado en AF-12 parece construido con el importe de USD 3.802,79."
   },
   {
     "item_id": "AF-07",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.7,
-    "nota": "No hay en la prueba ningún acuse de recibo, sello de mesa de entradas ni constancia de recepción de las facturas por la demandada. Las facturas (DOC-2) son los propios comprobantes, y la certificación contable (DOC-4) acredita registros del emisor, no la recepción por el cliente. Las \"constancias que se acompañan\" a las que alude la afirmación no están en el expediente."
+    "confianza": 0.5,
+    "nota": "No hay en el expediente las constancias de recepción que la afirmación menciona. Tampoco hay acuse de recibo para las facturas 0004-00000335 y 0004-00000336. La única prueba indirecta de recepción es la transferencia de la demandada, que indica como concepto la cancelación de las facturas 318, 323 y 326 (DOC-6). Eso no alcanza a acreditar la recepción de la totalidad de las facturas."
   },
   {
     "item_id": "AF-08",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.8,
-    "nota": "No hay en la prueba ningún intercambio de correo electrónico entre las partes. La única mención es la del propio escrito de demanda, que no es prueba."
+    "confianza": 0.9,
+    "nota": "No hay en el expediente ningún intercambio de correos electrónicos. La documentación postal y de reclamos se limita a la carta documento CD 214880917 y a la nota de pronto despacho PD-2026-00418."
   },
   {
     "item_id": "AF-09",
@@ -151,8 +141,8 @@
         "fragmento": "— Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Estado de la pieza Entregada el 11 de marzo de 2026 Texto de la pieza: Intímoles el pago de la suma adeudada en concepto de facturas impagas correspondientes a la orden de compra N° 430011742, en el plazo de cuarenta y ocho (48) horas de recibida la presente, bajo apercibimiento de iniciar sin más trámite las acciones judiciales que por derecho correspondan, con más intereses y costas."
       }
     ],
-    "confianza": 0.9,
-    "nota": "La constancia de seguimiento registra CD 214880917 11 de marzo de 2026 Sin respuesta registrada a la fecha, lo que respalda que no mereció respuesta."
+    "confianza": 0.95,
+    "nota": "La falta de respuesta se trata en AF-11."
   },
   {
     "item_id": "AF-10",
@@ -162,15 +152,10 @@
         "documento_id": "DOC-5",
         "pagina": 2,
         "fragmento": "Sello de recepción 12 de marzo de 2016 Referencia Orden de compra N° 430011742 Texto de la nota: Vengo por la presente a solicitar pronto despacho de las actuaciones referenciadas, en las que se encuentra pendiente de pago la facturación oportunamente presentada por mi representada, sin que a la fecha se haya dictado acto alguno ni se haya dado respuesta a los reclamos efectuados por la vía correspondiente."
-      },
-      {
-        "documento_id": "DOC-5",
-        "pagina": 3,
-        "fragmento": "CCF 004182/2026 — Intercambio postal y notas DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 3 Constancia de seguimiento de actuaciones Consultado el sistema de seguimiento de actuaciones de la demandada respecto de las presentaciones individualizadas en este legajo, se obtiene el siguiente resultado: Presentación Fecha de ingreso Estado CD 214880917 11 de marzo de 2026 Sin respuesta registrada a la fecha PD-2026-00418 12 de marzo de 2016 Sin respuesta registrada a la fecha La constancia se emite al solo efecto de acreditar el estado de trámite y no importa pronunciamiento sobre el fondo de lo peticionado."
       }
     ],
-    "confianza": 0.7,
-    "nota": "La afirmación dice 12 de marzo de 2026. El número de la nota (PD-2026-00418) y la mención a los reclamos sugieren que se trata de un error de tipeo en el sello, pero el documento, tal como está, indica 2016 y conviene aclararlo. El sello de Mesa General de Entradas de SOTR S.E. sí aparece en la prueba."
+    "confianza": 0.6,
+    "nota": "El número PD-2026-00418 y el sello de Mesa General de Entradas de SOTR S.E. coinciden con la afirmación. La fecha de 2016 es anterior a la orden de compra de 2025 y a la carta documento de 2026, por lo que puede ser un error de transcripción en la copia. Igualmente, el documento dice una fecha distinta y el juez debería verificar el original."
   },
   {
     "item_id": "AF-11",
@@ -182,8 +167,8 @@
         "fragmento": "CCF 004182/2026 — Intercambio postal y notas DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 3 Constancia de seguimiento de actuaciones Consultado el sistema de seguimiento de actuaciones de la demandada respecto de las presentaciones individualizadas en este legajo, se obtiene el siguiente resultado: Presentación Fecha de ingreso Estado CD 214880917 11 de marzo de 2026 Sin respuesta registrada a la fecha PD-2026-00418 12 de marzo de 2016 Sin respuesta registrada a la fecha La constancia se emite al solo efecto de acreditar el estado de trámite y no importa pronunciamiento sobre el fondo de lo peticionado."
       }
     ],
-    "confianza": 0.6,
-    "nota": "La prueba acredita la falta de respuesta, pero no dice nada sobre los plazos que la normativa aplicable impone, que es un detalle que la afirmación agrega y que no figura en ningún documento. Además, la fecha de la nota en esa constancia es 2016 (ver AF-10)."
+    "confianza": 0.7,
+    "nota": "La prueba acredita la falta de respuesta. No hay en el expediente la normativa que fije los plazos de respuesta que la afirmación invoca. La fecha de la segunda presentación tiene la discrepancia señalada en AF-10."
   },
   {
     "item_id": "AF-12",
@@ -200,33 +185,22 @@
         "fragmento": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 73.798,76."
       }
     ],
-    "confianza": 0.9,
-    "nota": "La afirmación reclama USD 74.392,76, una diferencia de USD 594,00. Esa diferencia coincide con la que resultaría de tomar USD 3.802,79 por la factura 0004-00000335, cuyo importe en la prueba es USD 3.208,79 (AF-06). La certificación tampoco respalda el total reclamado."
+    "confianza": 0.95,
+    "nota": "La suma de las cinco facturas de la prueba también da USD 73.798,76. La diferencia de USD 594,00 equivale a reemplazar la factura 0004-00000335 por USD 3.802,79 (ver AF-06)."
   },
   {
     "item_id": "AF-13",
-    "estado": "contradicha",
-    "evidencia": [
-      {
-        "documento_id": "DOC-1",
-        "pagina": 3,
-        "fragmento": "El pago se efectuará a los treinta (30) días corridos de la fecha de presentación de la factura en la casilla de recepción de proveedores, siempre que se acompañe el remito conformado por el responsable del depósito."
-      },
-      {
-        "documento_id": "DOC-2",
-        "pagina": 1,
-        "fragmento": "30-71204885-7 Bartolomé Mitre 2740, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 0004-00000318 Fecha de emisión 27 de diciembre de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
-      }
-    ],
-    "confianza": 0.6,
-    "nota": "Aplicando el plazo de la orden a cada factura, el plazo vencía entre fines de enero y fines de marzo de 2026 (por ejemplo, la factura 318 vencía alrededor del 26 de enero de 2026). Ninguna fecha coincide con el 22 de abril de 2026 que se afirma. El estado es contradicha, pero la confianza es media: la mora depende además de cómo se compute el plazo y de lo que decida el juez."
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningún documento de prueba fija el 22 de abril de 2026 como fecha de mora. La constancia de transferencia de la demandada es del 28 de abril de 2026 y no determina la mora. La afirmación también invoca el vencimiento del plazo pactado, y ese fundamento está controvertido: la orden fija 30 días y no 60 (ver AF-02). Además, la demandada registra pagos imputados a facturas (ver AF-15), lo que tampoco se condice con la afirmación de que no hubo pago."
   },
   {
     "item_id": "AF-14",
     "estado": "sin_respaldo",
     "evidencia": [],
     "confianza": 0.8,
-    "nota": "Ningún documento de prueba fija una tasa de interés. La orden de compra excluye intereses en favor del proveedor: La presente orden de compra no genera intereses ni actualización de ninguna naturaleza a favor del proveedor. Esa cláusula no contradice el reclamo, pero tampoco lo respalda; la cuestión de si corresponde el interés queda para el juez. La carta documento solo menciona \"con más intereses y costas\" sin especificar tasa."
+    "nota": "Ningún documento de prueba se refiere a una tasa activa del Banco de la Nación para descuento a treinta días. La cláusula 5 de la orden de compra establece que <cláusula> \"La presente orden de compra no genera intereses ni actualización de ninguna naturaleza a favor del proveedor.\" Esa cláusula no contradice el reclamo, pero no hay otra prueba del pacto de intereses. Decidir si corresponde el reclamo es tarea del juez."
   },
   {
     "item_id": "AF-15",
@@ -235,15 +209,10 @@
       {
         "documento_id": "DOC-6",
         "pagina": 1,
-        "fragmento": "de destino 0110599530000012345678 Importe $ 48.920.330,15 Concepto Cancelación facturas 318, 323 y 326 — OC 430011742 Estado Acreditada La presente constancia se emite a solicitud del ordenante y no constituye recibo de pago a los efectos fiscales."
-      },
-      {
-        "documento_id": "DOC-6",
-        "pagina": 1,
-        "fragmento": "CCF 004182/2026 — Constancia de transferencia bancaria de fecha 28 de abril de 2026 DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 2 Banco de la Nación Argentina C.U.I.T."
+        "fragmento": "Constancia de transferencia interbancaria Constancia de transferencia Fecha de la operación 28 de abril de 2026 Ordenante SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
       }
     ],
     "confianza": 0.9,
-    "nota": "Es un pago imputado a tres de las facturas reclamadas, lo que contradice que no haya habido pago alguno. La constancia está expresada en pesos y no indica el tipo de cambio aplicado, por lo que el monto en dólares que cancela debe verificarse con el perito o en la contestación."
+    "nota": "El pago está imputado a tres de las facturas reclamadas. El importe figura en pesos y las facturas en dólares, y el expediente no contiene la conversión, por lo que la imputación exacta debe resolverla el juez."
   }
 ]

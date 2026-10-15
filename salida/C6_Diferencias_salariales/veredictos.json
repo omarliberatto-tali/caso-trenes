@@ -14,8 +14,8 @@
         "fragmento": "CNT 044927/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Puntos 2 y 3 — Registración y categoría El Sr. MOREYRA, HÉCTOR DANIEL, legajo 33.907, figura registrado como personal en relación de dependencia desde el 16 de marzo de 2011, con vínculo vigente a la fecha de este informe."
       }
     ],
-    "confianza": 0.95,
-    "nota": "La pericia es de fecha anterior a la presentación de la demanda, así que la vigencia se acredita hasta la fecha del informe y los recibos llegan a diciembre de 2025."
+    "confianza": 0.9,
+    "nota": "La fecha de ingreso está acreditada. La vigencia está acreditada a la fecha del informe pericial, que no figura en el pasaje citado. Los recibos llegan hasta diciembre de 2025, así que la continuidad a la fecha de la demanda se apoya en la pericia."
   },
   {
     "item_id": "AF-02",
@@ -25,27 +25,28 @@
         "documento_id": "DOC-1",
         "pagina": 1,
         "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Marzo de 2025 Apellido y nombre MOREYRA, HÉCTOR DANIEL Legajo 33.907 Fecha de ingreso 16 de marzo de 2011 Categoría Operario especializado, categoría 5 C.C.T."
-      },
-      {
-        "documento_id": "DOC-1",
-        "pagina": 1,
-        "fragmento": "1442/15 «T» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 498.200,00 Antigüedad 14 % 69.748,00 Adicional taller 74.730,00 Adicional mensual SUBE 104.600,00 Totales 642.678,00 104.600,00 Total de descuentos 129.008,16 Neto percibido 618.269,84 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 4 de abril de 2025"
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 2,
-        "fragmento": "Categoría registrada: Operario especializado, categoría 5, conforme C.C.T. 1442/15 «T»."
       }
     ],
-    "confianza": 0.95,
-    "nota": "La liquidación sobre esa base surge de los recibos de haberes (DOC-1)."
+    "confianza": 0.9,
+    "nota": "El sueldo básico liquidado en los recibos ($688.040 en diciembre de 2025, en Diciembre de 2025) coincide con el básico de la categoría 5 de la escala pericial. Eso respalda que la liquidación se hace sobre la categoría 5."
   },
   {
     "item_id": "AF-03",
-    "estado": "sin_respaldo",
-    "evidencia": [],
-    "confianza": 0.3,
-    "nota": "Ningún documento de prueba acredita que el actor ejecute en forma autónoma tareas de reparación de bogies o montaje final de frenos. La descripción de puesto del legajo fija como tareas asignadas desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector. y dice que el puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial. Eso corrobora que las tareas reclamadas exceden las asignadas, pero no prueba que el actor las haga. La única afirmación sobre la ejecución de esas tareas es el telegrama del actor (DOC-2), que es manifestación de parte. La contestación niega el hecho. La carta documento de la demandada (DOC-2) dice que las tareas que menciona son ejecutadas bajo supervisión de un Oficial y no habilitan el encuadre que pretende. Esa carta es un rechazo de la demandada, así que va a la nota y no contradice."
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Descripción de puesto N° DP-2023-00214-GRH#SOTR Fecha 12 de septiembre de 2023 Referencia Puesto «Operario especializado» — Taller de bogies Destinatario Legajo 33.907 Tareas asignadas al puesto: desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector."
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "El puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial."
+      }
+    ],
+    "confianza": 0.7,
+    "nota": "La descripción habla de las tareas asignadas al puesto, no necesariamente de las realmente ejecutadas. Por eso la confianza es 0.7 y no más alta. La carta documento de la demandada (DOC-2) afirma que las tareas se ejecutan bajo supervisión de un Oficial. Como es una negativa de la parte, va a esta nota y no sustenta el estado."
   },
   {
     "item_id": "AF-04",
@@ -54,16 +55,11 @@
       {
         "documento_id": "DOC-3",
         "pagina": 3,
-        "fragmento": "1442/15 «T» para el período reclamado, según los acuerdos homologados, es la siguiente: Se deja constancia de que la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8."
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 3,
-        "fragmento": "La denominación que invoca el actor corresponde al C.C.T. 1198/11 «M», que no resulta aplicable a la demandada."
+        "fragmento": "1442/15 «T» para el período reclamado, según los acuerdos homologados, es la siguiente: Se deja constancia de que la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8. La denominación que invoca el actor corresponde al C.C.T. 1198/11 «M», que no resulta aplicable a la demandada."
       }
     ],
     "confianza": 0.85,
-    "nota": "La categoría 9 no existe en el convenio aplicable, así que el encuadre reclamado no puede corresponder."
+    "nota": "La afirmación sostiene que las tareas encuadran en la categoría 9 del C.C.T. 1442/15, y la prueba dice que esa categoría no existe en ese convenio, así que el encuadre pretendido es incompatible con él. La descripción de puesto de la demandada ubica las tareas que se reservan a la categoría Oficial: El puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial. La confianza es 0.85 y no más alta porque la prueba no dice qué categoría del convenio corresponde a esas tareas; sólo que la categoría 9 invocada no integra la escala."
   },
   {
     "item_id": "AF-05",
@@ -75,8 +71,8 @@
         "fragmento": "Categoría Denominación Básico dic-2025 4 Operario 612.180,00 5 Operario especializado 688.040,00 6 Operario de primera 744.260,00 7 Medio oficial 812.900,00 8 Oficial 901.320,00"
       }
     ],
-    "confianza": 0.85,
-    "nota": "El monto de $1.041.760 no figura en la escala de la pericia. La contestación lo niega (va a la nota)."
+    "confianza": 0.75,
+    "nota": "El monto de $1.041.760 no aparece en ningún documento de prueba. Se contradice porque la prueba dice que la categoría 9 no integra la escala del convenio, así que no puede existir un básico \"homologado\" para ella. La contestación niega el monto, pero esa postura no sustenta el estado."
   },
   {
     "item_id": "AF-06",
@@ -89,7 +85,7 @@
       }
     ],
     "confianza": 0.9,
-    "nota": "La diferencia de $353.720 surge de restar al básico reclamado ($1.041.760) el de la categoría 5 ($688.040), que es la base que la pericia comparó. La pericia contradice el monto."
+    "nota": "La diferencia de $353.720 surge de restar el básico reclamado ($1.041.760) menos el de la categoría 5 ($688.040). Como el básico reclamado no existe en la escala (ver AF-05), la diferencia también queda contradicha."
   },
   {
     "item_id": "AF-07",
@@ -107,7 +103,7 @@
       }
     ],
     "confianza": 0.85,
-    "nota": "Solo hay un recibo con el suplemento (septiembre de 2025). No se verifica que se liquide durante todo el período reclamado."
+    "nota": "La prueba acredita el suplemento solo para septiembre de 2025. La afirmación habla de \"el periodo reclamado\" completo, y no hay recibos de otros meses del período."
   },
   {
     "item_id": "AF-08",
@@ -120,7 +116,7 @@
       }
     ],
     "confianza": 0.7,
-    "nota": "Ningún documento acredita que el actor siga haciendo las mismas tareas que motivan el reclamo. Las tareas reclamadas solo aparecen en el telegrama del actor (DOC-2), y no hay prueba de su ejecución actual."
+    "nota": "La continuidad del vínculo está acreditada. La parte \"mismas tareas que motivan este reclamo\" no tiene respaldo propio en la prueba. Según la descripción de puesto (DOC-4), las tareas asignadas no incluyen la ejecución autónoma de reparaciones (ver AF-03), así que ese detalle queda sin confirmar."
   },
   {
     "item_id": "AF-09",
@@ -132,8 +128,8 @@
         "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Nota N° NO-2025-00742118-APN-GRH#SOTR Fecha 27 de noviembre de 2025 Referencia Legajo 33.907 — solicitud de recategorización Destinatario MOREYRA, HÉCTOR DANIEL En respuesta a su presentación, se le hace saber que su solicitud de recategorización fue analizada por esta Gerencia y desestimada, por no corresponder las tareas que invoca a las efectivamente asignadas a su puesto según la descripción DP-2023-00214-GRH#SOTR obrante en su legajo."
       }
     ],
-    "confianza": 0.9,
-    "nota": ""
+    "confianza": 0.85,
+    "nota": "La afirmación trata del acto de responder de la empleadora, y ese acto está documentado en la nota del 27 de noviembre de 2025. Por eso la excepción sobre documentos de rechazo aplica y la nota sí contradice. La carta documento (DOC-2) también es una respuesta al telegrama del actor."
   },
   {
     "item_id": "AF-10",
@@ -142,30 +138,30 @@
       {
         "documento_id": "DOC-4",
         "pagina": 1,
-        "fragmento": "La presente descripción se incorpora al legajo del agente y le fue notificada en la fecha."
+        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Descripción de puesto N° DP-2023-00214-GRH#SOTR Fecha 12 de septiembre de 2023 Referencia Puesto «Operario especializado» — Taller de bogies Destinatario Legajo 33.907 Tareas asignadas al puesto: desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector."
       },
       {
         "documento_id": "DOC-4",
         "pagina": 1,
-        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Recursos Humanos Descripción de puesto N° DP-2023-00214-GRH#SOTR Fecha 12 de septiembre de 2023 Referencia Puesto «Operario especializado» — Taller de bogies Destinatario Legajo 33.907 Tareas asignadas al puesto: desarme y limpieza de conjuntos de bogie, preparación de piezas para montaje, asistencia al Oficial en las tareas de reparación y ensayo, control de stock de repuestos del sector."
+        "fragmento": "La presente descripción se incorpora al legajo del agente y le fue notificada en la fecha."
       }
     ],
-    "confianza": 0.9,
-    "nota": ""
+    "confianza": 0.85,
+    "nota": "La prueba muestra que el legajo sí contiene una descripción de puesto que delimita las tareas, lo que contradice la afirmación."
   },
   {
     "item_id": "AF-11",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.8,
-    "nota": "Ningún documento de prueba contiene correos electrónicos entre el actor y el área de personal. La búsqueda en el expediente no encuentra ninguno. El único reclamo previo en prueba es el telegrama de noviembre de 2025 (DOC-2), que no es un correo electrónico."
+    "confianza": 0.85,
+    "nota": "El intercambio de correo electrónico con el área de personal aparece solo en la demanda. No hay ningún correo ni documento de prueba que lo acredite. Los únicos intercambios en la prueba son el telegrama y la carta documento (DOC-2), que no son correos electrónicos."
   },
   {
     "item_id": "AF-12",
     "estado": "sin_respaldo",
     "evidencia": [],
     "confianza": 0.85,
-    "nota": "No hay en la prueba ningún documento del SECLO ni acta de la audiencia de conciliación. El número de expediente SECLO 129806/2026 y la fecha del 12 de febrero de 2026 aparecen solo en la demanda, que no es prueba."
+    "nota": "La audiencia ante el SECLO del 12 de febrero de 2026 (expediente 129806/2026) aparece únicamente en la demanda. No hay acta, certificado ni documento del SECLO en la prueba, así que el hecho no está acreditado."
   },
   {
     "item_id": "AF-13",
@@ -177,27 +173,21 @@
         "fragmento": "CNT 044927/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Punto 6 — Diferencias salariales Practicada la comparación entre lo percibido por el actor y la escala de la categoría 5 que registra, no surgen diferencias salariales a su favor en el período comprendido entre enero de 2024 y diciembre de 2025."
       }
     ],
-    "confianza": 0.7,
-    "nota": "Ningún documento informa el total en sí. La contestación lo niega (va a la nota). El total queda contradicho porque uno de sus componentes principales queda contradicho."
+    "confianza": 0.75,
+    "nota": "El total de $18.664.208,40 se compone de diferencias salariales, multas y aportes (la demanda lo detalla, pero ese detalle no es prueba). Como la prueba contradice el componente principal (las diferencias salariales), el total también queda contradicho."
   },
   {
     "item_id": "AF-14",
     "estado": "sin_respaldo",
     "evidencia": [],
     "confianza": 0.8,
-    "nota": "Ningún documento de prueba se refiere a intereses, tasa activa del Banco de la Nación ni costas. La contestación no es prueba."
+    "nota": "Ningún documento de prueba se refiere a los intereses, a la tasa activa del Banco de la Nación ni a la fecha de mora. La telegrama del 4 de noviembre de 2025 intima a pagar diferencias, pero no fija intereses. Esta afirmación tampoco puede verificarse con la prueba."
   },
   {
     "item_id": "AF-15",
-    "estado": "contradicha",
-    "evidencia": [
-      {
-        "documento_id": "DOC-1",
-        "pagina": 3,
-        "fragmento": "1442/15 «T» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 688.040,00 Antigüedad 14 % 96.325,60 Adicional taller 103.206,00 S.A.C. segundo semestre 443.785,80 Adicional mensual SUBE 141.800,00 Totales 1.331.357,40 141.800,00 Total de descuentos 289.862,13 Neto percibido 1.183.295,27 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 6 de enero de 2026"
-      }
-    ],
-    "confianza": 0.6,
-    "nota": "El SAC pagado está calculado sobre la base de la categoría 5 y no sobre diferencias, así que el juez tendrá que decidir si alcanza para desvirtuar la afirmación. Los demás recibos muestran pagos de salario regular, que no son diferencias reclamadas. La pericia no informa pagos imputables a diferencias."
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.5,
+    "nota": "Los recibos muestran pagos de sueldo básico, S.A.C. y adicionales en Diciembre de 2025, pero ninguno se identifica como pago de diferencias salariales. La pericia tampoco se pronuncia sobre pagos parciales. Como la prueba no dice si hubo o no pagos imputables a la diferencia reclamada, el estado es sin_respaldo. Conviene verificar si el S.A.C. segundo semestre liquidado en diciembre de 2025 o el sueldo básico de otros meses se reclaman como parte de la diferencia."
   }
 ]

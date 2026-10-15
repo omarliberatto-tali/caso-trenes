@@ -10,7 +10,7 @@
       }
     ],
     "confianza": 0.95,
-    "nota": "Los recibos de haberes también consignan Fecha de ingreso 2 de mayo de 2016."
+    "nota": "Coinciden fecha de ingreso y antigüedad reconocida. La fecha de ingreso también figura en los recibos (Fecha de ingreso 2 de mayo de 2016)."
   },
   {
     "item_id": "AF-02",
@@ -20,22 +20,17 @@
         "documento_id": "DOC-1",
         "pagina": 1,
         "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 2,
-        "fragmento": "Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E»."
       }
     ],
     "confianza": 0.9,
-    "nota": "La categoría 8 aparece solo en el telegrama de la trabajadora (DOC-2), que es su propia postura y no prueba el hecho. Sobre las tareas (atención al público, control de acceso, recaudación) no hay documentos en el expediente. La demandada niega la diferencia en la carta documento de respuesta, que va a la nota y no contradice."
+    "nota": "La categoría 8 aparece sólo en el telegrama de la propia trabajadora (DOC-2), que no prueba la categoría. Las tareas de atención al público, control de acceso y recaudación no están documentadas en la prueba. La contestación niega la categoría reclamada, pero eso no decide el estado."
   },
   {
     "item_id": "AF-03",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.85,
-    "nota": "Ningún documento de prueba se refiere a la jornada rotativa de seis horas, a los turnos, a los francos ni al adicional por trabajo nocturno. Los recibos de DOC-1 no muestran ningún concepto por nocturnidad."
+    "confianza": 0.2,
+    "nota": "Ningún documento de prueba se refiere a la jornada rotativa, los turnos, los francos ni al adicional por trabajo nocturno. El único lugar donde aparecen es la demanda y la contestación, que no son evidencia. Los recibos tampoco muestran ningún adicional nocturno."
   },
   {
     "item_id": "AF-04",
@@ -50,15 +45,10 @@
         "documento_id": "DOC-3",
         "pagina": 3,
         "fragmento": "$ 1.284.320,18 tomando los conceptos remunerativos y los no remunerativos."
-      },
-      {
-        "documento_id": "DOC-1",
-        "pagina": 2,
-        "fragmento": "primer semestre 91.757,24 Adicional mensual SUBE 128.420,00 Falla de caja 92.180,00 Totales 912.480,44 220.600,00 Total de descuentos 187.426,53 Neto percibido 945.653,91 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 4 de julio de 2025"
       }
     ],
-    "confianza": 0.85,
-    "nota": "La base del artículo 245 LCT se calcula solo con conceptos remunerativos, por lo que el monto de $ 1.284.320,18 incluye los no remunerativos y queda contradicho por la prueba."
+    "confianza": 0.9,
+    "nota": "Según el art. 245 LCT la base sólo incluye conceptos remunerativos, así que la base correcta es $ 912.480,44. Además, $ 1.284.320,18 no coincide ni con la suma de los totales de junio, Totales 912.480,44 220.600,00 (que suman $ 1.133.080,44), por lo que la cifra reclamada no se explica con la prueba."
   },
   {
     "item_id": "AF-05",
@@ -66,12 +56,12 @@
     "evidencia": [
       {
         "documento_id": "DOC-1",
-        "pagina": 2,
-        "fragmento": "1764/18 «E» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 612.480,00 Antigüedad 9 % 55.123,20 Adicional convenio 91.872,00 Presentismo 61.248,00 S.A.C."
+        "pagina": 1,
+        "fragmento": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
       }
     ],
-    "confianza": 0.9,
-    "nota": "El recibo de junio incluye además un S.A.C. primer semestre de 91.757,24, que la afirmación no menciona. Es un detalle accesorio y no altera el estado."
+    "confianza": 0.8,
+    "nota": "La afirmación no menciona el S.A.C. El recibo de junio también incluye S.A.C. primer semestre 91.757,24 como remunerativo. Es un detalle que la afirmación omite y no altera el estado."
   },
   {
     "item_id": "AF-06",
@@ -107,7 +97,7 @@
       }
     ],
     "confianza": 0.9,
-    "nota": "La afirmación dice que no se invocó causa, y la prueba muestra que sí se invocó (abandono de trabajo)."
+    "nota": "La afirmación dice que no hubo invocación de causa, y el documento muestra que sí la hubo, aunque sea por abandono. Si esa causa es válida corresponde al juez."
   },
   {
     "item_id": "AF-08",
@@ -119,8 +109,8 @@
         "fragmento": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
       }
     ],
-    "confianza": 0.9,
-    "nota": "Es anterior al despido, que la propia demandada fecha el 14 de julio de 2025 (DOC-2, carta documento CD 258114022)."
+    "confianza": 0.95,
+    "nota": "Es anterior a la extinción, que la carta de la demandada fija el 14 de julio de 2025 (Fecha de imposición 14 de julio de 2025)."
   },
   {
     "item_id": "AF-09",
@@ -138,14 +128,14 @@
       }
     ],
     "confianza": 0.85,
-    "nota": "La prueba muestra que sí hubo puesta a disposición, así que la afirmación de que nunca se puso a disposición no se sostiene. Si el plazo legal estaba vencido al momento de la puesta a disposición es una cuestión que decidirá el juez."
+    "nota": "Se trata de un acto de la propia demandada (poner a disposición), así que el documento es prueba directa y no sólo una postura. La prueba no acredita la entrega efectiva, pero sí que los certificados fueron puestos a disposición."
   },
   {
     "item_id": "AF-10",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.85,
-    "nota": "No hay en el expediente ningún correo electrónico entre la trabajadora y el área de personal. La prueba de DOC-2 es telegráfica. El intercambio sólo aparece en la demanda, que no cuenta como prueba."
+    "confianza": 0.2,
+    "nota": "Ningún documento de prueba contiene correos electrónicos ni una comunicación de ese tipo con el área de personal. La mención aparece sólo en la demanda, que no es evidencia. Los únicos reclamos documentados son el telegrama de la trabajadora (DOC-2), que es posterior en forma de intimación y no es un correo."
   },
   {
     "item_id": "AF-11",
@@ -160,11 +150,6 @@
         "documento_id": "DOC-2",
         "pagina": 1,
         "fragmento": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
-      },
-      {
-        "documento_id": "DOC-2",
-        "pagina": 1,
-        "fragmento": "Ley 24.013."
       }
     ],
     "confianza": 0.95,
@@ -180,33 +165,22 @@
         "fragmento": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos."
       }
     ],
-    "confianza": 0.75,
-    "nota": "Ningún documento de prueba informa el total de $ 41.284.630,55. Lo contradice el componente base de la liquidación, de acuerdo con la regla de la base del total. La liquidación de la demanda no está en la prueba y no se pudo verificar cada rubro por separado."
+    "confianza": 0.6,
+    "nota": "El total reclamado depende de una liquidación que no está en la prueba; sólo aparece en la demanda, que no es evidencia, así que no puedo verificar la suma completa. Se contradice por su base: el total se construye sobre la mejor remuneración de AF-04, que la prueba fija en $ 912.480,44 cuando se consideran sólo los conceptos remunerativos. Un total cuya base queda contradicha queda contradicho. La contestación niega la suma reclamada, pero eso va a esta nota y no decide el estado."
   },
   {
     "item_id": "AF-13",
-    "estado": "contradicha",
-    "evidencia": [
-      {
-        "documento_id": "DOC-2",
-        "pagina": 2,
-        "fragmento": "Niego adeudar diferencia salarial alguna."
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 3,
-        "fragmento": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos."
-      }
-    ],
-    "confianza": 0.65,
-    "nota": "La carta documento de rechazo es una observación de la demandada sobre el mismo reclamo, lo que contradice la afirmación de que no hubo observación alguna. Si la mora es de pleno derecho y en qué fecha se produjo son cuestiones de derecho que decidirá el juez. Ningún documento menciona un plazo pactado que venza el 14 de julio."
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.3,
+    "nota": "Ningún documento de prueba fija una constitución en mora el 14 de julio de 2025. Esa fecha corresponde a la carta documento de despido (Fecha de imposición 14 de julio de 2025), no a una intimación de pago. Los fundamentos accesorios tampoco se sostienen: la liquidación final se pagó el 8 de agosto de 2025, después de esa fecha, y la carta del 14 de julio indicaba que Haberes y liquidación final a su disposición."
   },
   {
     "item_id": "AF-14",
     "estado": "sin_respaldo",
     "evidencia": [],
-    "confianza": 0.85,
-    "nota": "Ningún documento de prueba se refiere a intereses, a la tasa activa del Banco de la Nación ni a la capitalización del acta 2764 de la C.N.A.T. La contestación niega la capitalización, pero esa postura va a la nota y no decide el estado."
+    "confianza": 0.2,
+    "nota": "Ningún documento de prueba se refiere a la tasa de interés, a la capitalización ni al acta 2764. La cuestión aparece sólo en la demanda y en la contestación. La pericia no hace ningún cálculo de intereses. La procedencia de la tasa y de la capitalización es una cuestión que corresponde al juez."
   },
   {
     "item_id": "AF-15",
@@ -216,14 +190,9 @@
         "documento_id": "DOC-3",
         "pagina": 4,
         "fragmento": "Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora, operación registrada en el libro banco de la demandada."
-      },
-      {
-        "documento_id": "DOC-3",
-        "pagina": 4,
-        "fragmento": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Punto 7 — Liquidación final y su pago La liquidación final fue practicada por la demandada e incluye vacaciones proporcionales y S.A.C."
       }
     ],
-    "confianza": 0.9,
-    "nota": "El pago recae sobre rubros que la demanda reclama (vacaciones y S.A.C. proporcionales), por lo que contradice la afirmación de que no hubo pagos imputables."
+    "confianza": 0.95,
+    "nota": "Hubo pagos imputables a rubros reclamados (vacaciones y S.A.C. proporcionales), y la afirmación de que no hubo pagos queda contradicha. La pericia también aclara que no surge pago de indemnización por antigüedad, preaviso ni integración del mes de despido."
   }
 ]

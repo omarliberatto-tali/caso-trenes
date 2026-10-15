@@ -80,6 +80,12 @@ cuando la afirmacion trata de ese mismo acto de la parte (por ejemplo, que prest
 que acepto algo): ahi el documento de la parte es prueba directa de ese acto y puede respaldarla
 o contradecirla.
 
+Si la afirmacion es una conclusion juridica (por ejemplo, que la demandada quedo constituida en
+mora en una fecha), se verifica por su hecho principal: si ningun documento de la prueba lo
+fija, es sin_respaldo, aunque la prueba contradiga alguno de los fundamentos accesorios que la
+afirmacion invoca. Esos fundamentos van a la nota. Esta regla prevalece sobre la excepcion del
+parrafo anterior.
+
 Una afirmacion puede necesitar dos documentos para quedar respaldada: cita los dos.
 
 Las citas van segun el estado: respaldada y contradicha siempre citan el fragmento de la prueba

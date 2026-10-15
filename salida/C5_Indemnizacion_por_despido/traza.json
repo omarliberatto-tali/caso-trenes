@@ -1,8 +1,8 @@
 {
-  "iteraciones": 4,
+  "iteraciones": 5,
   "motivo": "señal de fin",
-  "in": 89604,
-  "out": 9632,
+  "in": 136369,
+  "out": 9380,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -47,20 +47,6 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "41.284.630"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "1.284.320"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
         "termino": "correo electrónico"
       },
       "error": false
@@ -68,14 +54,14 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "turno nocturno"
+        "termino": "nocturno"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "interes"
+        "termino": "interés"
       },
       "error": false
     },
@@ -83,6 +69,13 @@
       "tool": "buscar",
       "input": {
         "termino": "mora"
+      },
+      "error": false
+    },
+    {
+      "tool": "buscar",
+      "input": {
+        "termino": "turno"
       },
       "error": false
     }
@@ -120,14 +113,6 @@
             1
           ],
           "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
-        },
-        {
-          "documento": "DOC-3",
-          "paginas": [
-            2,
-            2
-          ],
-          "texto": "Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E»."
         }
       ],
       "descartadas": [],
@@ -155,7 +140,10 @@
             3
           ],
           "texto": "$ 1.284.320,18 tomando los conceptos remunerativos y los no remunerativos."
-        },
+        }
+      ],
+      "descartadas": [],
+      "en_nota": [
         {
           "documento": "DOC-1",
           "paginas": [
@@ -164,26 +152,41 @@
           ],
           "texto": "primer semestre 91.757,24 Adicional mensual SUBE 128.420,00 Falla de caja 92.180,00 Totales 912.480,44 220.600,00 Total de descuentos 187.426,53 Neto percibido 945.653,91 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 4 de julio de 2025"
         }
-      ],
-      "descartadas": [],
-      "en_nota": []
+      ]
     },
     "AF-05": {
       "citas": [
         {
           "documento": "DOC-1",
           "paginas": [
-            2,
-            2
+            1,
+            1
           ],
-          "texto": "1764/18 «E» Concepto Cantidad Remunerativo No remunerativo Sueldo básico 30 días 612.480,00 Antigüedad 9 % 55.123,20 Adicional convenio 91.872,00 Presentismo 61.248,00 S.A.C."
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
         }
       ],
       "descartadas": [],
-      "en_nota": []
+      "en_nota": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "primer semestre 91.757,24 Adicional mensual SUBE 128.420,00 Falla de caja 92.180,00 Totales 912.480,44 220.600,00 Total de descuentos 187.426,53 Neto percibido 945.653,91 Lugar y fecha de pago Ciudad Autónoma de Buenos Aires, 4 de julio de 2025"
+        }
+      ]
     },
     "AF-06": {
       "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires RECIBO DE HABERES Mayo de 2025 Apellido y nombre ARANDA, SILVANA NOEMÍ Legajo 41.208 Fecha de ingreso 2 de mayo de 2016 Categoría Auxiliar de estación, categoría 6 C.C.T."
+        },
         {
           "documento": "DOC-1",
           "paginas": [
@@ -238,7 +241,16 @@
         }
       ],
       "descartadas": [],
-      "en_nota": []
+      "en_nota": [
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "CNT 038114/2026 — Intercambio telegráfico DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 3 Carta Documento N° CD 258114022 Remitente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        }
+      ]
     },
     "AF-09": {
       "citas": [
@@ -292,14 +304,6 @@
             1
           ],
           "texto": "Fecha de imposición 23 de junio de 2025 Estado Entregado el 25 de junio de 2025 Texto: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses, todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa."
-        },
-        {
-          "documento": "DOC-2",
-          "paginas": [
-            1,
-            1
-          ],
-          "texto": "Ley 24.013."
         }
       ],
       "descartadas": [],
@@ -320,26 +324,26 @@
       "en_nota": []
     },
     "AF-13": {
-      "citas": [
+      "citas": [],
+      "descartadas": [],
+      "en_nota": [
         {
           "documento": "DOC-2",
-          "paginas": [
-            2,
-            2
-          ],
-          "texto": "Niego adeudar diferencia salarial alguna."
-        },
-        {
-          "documento": "DOC-3",
           "paginas": [
             3,
             3
           ],
-          "texto": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Punto 5 — Mejor remuneración del último año Informo que la mejor remuneración mensual, normal y habitual percibida en el último año corresponde al mes de junio de 2025, y que su importe difiere según los conceptos que se consideren: $ 912.480,44 tomando solamente los conceptos remunerativos."
+          "texto": "CNT 038114/2026 — Intercambio telegráfico DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 3 Carta Documento N° CD 258114022 Remitente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+        },
+        {
+          "documento": "DOC-2",
+          "paginas": [
+            3,
+            3
+          ],
+          "texto": "Haberes y liquidación final a su disposición."
         }
-      ],
-      "descartadas": [],
-      "en_nota": []
+      ]
     },
     "AF-14": {
       "citas": [],
@@ -355,14 +359,6 @@
             4
           ],
           "texto": "Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora, operación registrada en el libro banco de la demandada."
-        },
-        {
-          "documento": "DOC-3",
-          "paginas": [
-            4,
-            4
-          ],
-          "texto": "CNT 038114/2026 — Pericia contable DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Punto 7 — Liquidación final y su pago La liquidación final fue practicada por la demandada e incluye vacaciones proporcionales y S.A.C."
         }
       ],
       "descartadas": [],
@@ -373,7 +369,11 @@
     "",
     "",
     "",
-    "### AF-01 | respaldada | 0.95\nLa pericia contable registra que ARANDA, SILVANA NOEMÍ, legajo 41.208, figura registrada como personal en relación de dependencia con los siguientes datos: Ingreso: 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora.\nNOTA: Los recibos de haberes también consignan Fecha de ingreso 2 de mayo de 2016.\n\n### AF-02 | contradicha | 0.9\nLos recibos registran la categoría 6, no la 8: Categoría Auxiliar de estación, categoría 6. La pericia coincide: Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E».\nNOTA: La categoría 8 aparece solo en el telegrama de la trabajadora (DOC-2), que es su propia postura y no prueba el hecho. Sobre las tareas (atención al público, control de acceso, recaudación) no hay documentos en el expediente. La demandada niega la diferencia en la carta documento de respuesta, que va a la nota y no contradice.\n\n### AF-03 | sin_respaldo | 0.85\nNOTA: Ningún documento de prueba se refiere a la jornada rotativa de seis horas, a los turnos, a los francos ni al adicional por trabajo nocturno. Los recibos de DOC-1 no muestran ningún concepto por nocturnidad.\n\n### AF-04 | contradicha | 0.85\nLa pericia informa dos valores según los conceptos considerados: $ 912.480,44 tomando solamente los conceptos remunerativos. El importe de $ 1.284.320,18 surge de tomando los conceptos remunerativos y los no remunerativos. El recibo de junio muestra el mismo total remunerativo: Totales 912.480,44 220.600,00.\nNOTA: La base del artículo 245 LCT se calcula solo con conceptos remunerativos, por lo que el monto de $ 1.284.320,18 incluye los no remunerativos y queda contradicho por la prueba.\n\n### AF-05 | respaldada | 0.9\nEl recibo de junio detalla Sueldo básico 30 días 612.480,00 Antigüedad 9 % 55.123,20 Adicional convenio 91.872,00 Presentismo 61.248,00 como conceptos remunerativos.\nNOTA: El recibo de junio incluye además un S.A.C. primer semestre de 91.757,24, que la afirmación no menciona. Es un detalle accesorio y no altera el estado.\n\n### AF-06 | respaldada | 0.95\nEl recibo de mayo consigna Adicional mensual SUBE 128.420,00 ... Falla de caja 92.180,00 en la columna de no remunerativos. La pericia confirma: se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable.\n\n### AF-07 | contradicha | 0.9\nLa carta documento del 14 de julio dice que a partir de la fecha queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo. La pericia registra Causal registrada: despido con justa causa, artículo 244 L.C.T.\nNOTA: La afirmación dice que no se invocó causa, y la prueba muestra que sí se invocó (abandono de trabajo).\n\n### AF-08 | respaldada | 0.9\nEl telegrama del 23 de junio de 2025 intimaba a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses.\nNOTA: Es anterior al despido, que la propia demandada fecha el 14 de julio de 2025 (DOC-2, carta documento CD 258114022).\n\n### AF-09 | contradicha | 0.85\nLa nota de la Gerencia de Recursos Humanos informa que los certificados previstos en el artículo 80 de la Ley de Contrato de Trabajo se encuentran confeccionados y a su disposición en la Gerencia de Recursos Humanos. La constancia posterior dice que la ex dependiente no se presentó a retirarlos dentro del plazo previsto.\nNOTA: La prueba muestra que sí hubo puesta a disposición, así que la afirmación de que nunca se puso a disposición no se sostiene. Si el plazo legal estaba vencido al momento de la puesta a disposición es una cuestión que decidirá el juez.\n\n### AF-10 | sin_respaldo | 0.85\nNOTA: No hay en el expediente ningún correo electrónico entre la trabajadora y el área de personal. La prueba de DOC-2 es telegráfica. El intercambio sólo aparece en la demanda, que no cuenta como prueba.\n\n### AF-11 | respaldada | 0.95\nEl telegrama está identificado como Telegrama Ley 23.789 N° TL 88204617, con Fecha de imposición 23 de junio de 2025. Su texto cierra con todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa. Consigna también Ley 24.013.\n\n### AF-12 | contradicha | 0.75\nLa demanda reclama la suma de $ 41.284.630,55, pero la liquidación que la integra se practica sobre la base de la mejor remuneración de $ 1.284.320,18 (AF-04). La pericia muestra que esa base incluye conceptos no remunerativos y que la base remunerativa es de $ 912.480,44.\nNOTA: Ningún documento de prueba informa el total de $ 41.284.630,55. Lo contradice el componente base de la liquidación, de acuerdo con la regla de la base del total. La liquidación de la demanda no está en la prueba y no se pudo verificar cada rubro por separado.\n\n### AF-13 | contradicha | 0.65\nLa demandada respondió al telegrama mediante carta documento el 1 de julio, que dice Niego adeudar diferencia salarial alguna. La afirmación dice que la mora se produjo sin que mediara pago ni observación alguna (DOC-2, 2-8, carta documento de 1 de julio, pero la demanda lo presenta sin observación).\nNOTA: La carta documento de rechazo es una observación de la demandada sobre el mismo reclamo, lo que contradice la afirmación de que no hubo observación alguna. Si la mora es de pleno derecho y en qué fecha se produjo son cuestiones de derecho que decidirá el juez. Ningún documento menciona un plazo pactado que venza el 14 de julio.\n\n### AF-14 | sin_respaldo | 0.85\nNOTA: Ningún documento de prueba se refiere a intereses, a la tasa activa del Banco de la Nación ni a la capitalización del acta 2764 de la C.N.A.T. La contestación niega la capitalización, pero esa postura va a la nota y no decide el estado.\n\n### AF-15 | contradicha | 0.9\nLa pericia registra que Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora. La liquidación final que se pagó incluye vacaciones proporcionales y S.A.C. proporcional del segundo semestre.\nNOTA: El pago recae sobre rubros que la demanda reclama (vacaciones y S.A.C. proporcionales), por lo que contradice la afirmación de que no hubo pagos imputables.\n\n<FIN>"
+    "### AF-01 | respaldada | 0.95\nLa pericia contable registra que ARANDA, SILVANA NOEMÍ, legajo 41.208, figura registrada como personal en relación de dependencia con los siguientes datos: Ingreso: 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora.\nNOTA: Coinciden fecha de ingreso y antigüedad reconocida. La fecha de ingreso también figura en los recibos (Fecha de ingreso 2 de mayo de 2016).\n\n### AF-02 | contradicha | 0.9\nLos recibos registran otra categoría: Categoría Auxiliar de estación, categoría 6. La pericia confirma: Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E».\nNOTA: La categoría 8 aparece sólo en el telegrama de la propia trabajadora (DOC-2), que no prueba la categoría. Las tareas de atención al público, control de acceso y recaudación no están documentadas en la prueba. La contestación niega la categoría reclamada, pero eso no decide el estado.\n\n### AF-03 | sin_respaldo | 0.2\nNOTA: Ningún documento de prueba se refiere a la jornada rotativa, los turnos, los francos ni al adicional por trabajo nocturno. El único lugar donde aparecen es la demanda y la contestación, que no son evidencia. Los recibos tampoco muestran ningún adicional nocturno.\n\n### AF-04 | contradicha | 0.9\nLa pericia distingue dos cifras: $ 912.480,44 tomando solamente los conceptos remunerativos. La cifra de $ 1.284.320,18 surge de tomando los conceptos remunerativos y los no remunerativos.\nNOTA: Según el art. 245 LCT la base sólo incluye conceptos remunerativos, así que la base correcta es $ 912.480,44. Además, $ 1.284.320,18 no coincide ni con la suma de los totales de junio, Totales 912.480,44 220.600,00 (que suman $ 1.133.080,44), por lo que la cifra reclamada no se explica con la prueba.\n\n### AF-05 | respaldada | 0.8\nLos recibos de mayo y junio muestran como remunerativos el Sueldo básico 30 días 612.480,00, Antigüedad 9 % 55.123,20, Adicional convenio 91.872,00, Presentismo 61.248,00, todos en la columna remunerativa.\nNOTA: La afirmación no menciona el S.A.C. El recibo de junio también incluye S.A.C. primer semestre 91.757,24 como remunerativo. Es un detalle que la afirmación omite y no altera el estado.\n\n### AF-06 | respaldada | 0.95\nEn los recibos, Adicional mensual SUBE 128.420,00 y Falla de caja 92.180,00 figuran en la columna de no remunerativo. La pericia lo confirma: los adicionales «Adicional mensual SUBE» y «Falla de caja» se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable.\n\n### AF-07 | contradicha | 0.9\nLa carta documento de la demandada invoca una causa: comunícole que a partir de la fecha queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo. La pericia registra lo mismo: Causal registrada: despido con justa causa, artículo 244 L.C.T.\nNOTA: La afirmación dice que no hubo invocación de causa, y el documento muestra que sí la hubo, aunque sea por abandono. Si esa causa es válida corresponde al juez.\n\n### AF-08 | respaldada | 0.95\nEl telegrama del 23 de junio de 2025 dice: Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses.\nNOTA: Es anterior a la extinción, que la carta de la demandada fija el 14 de julio de 2025 (Fecha de imposición 14 de julio de 2025).\n\n### AF-09 | contradicha | 0.85\nLa nota de Recursos Humanos informa que los certificados previstos en el artículo 80 de la Ley de Contrato de Trabajo se encuentran confeccionados y a su disposición en la Gerencia de Recursos Humanos. La constancia posterior dice que la ex dependiente no se presentó a retirarlos dentro del plazo previsto. La carta documento también informa Certificados artículo 80 L.C.T. a su disposición en el área de personal.\nNOTA: Se trata de un acto de la propia demandada (poner a disposición), así que el documento es prueba directa y no sólo una postura. La prueba no acredita la entrega efectiva, pero sí que los certificados fueron puestos a disposición.\n\n### AF-10 | sin_respaldo | 0.2\nNOTA: Ningún documento de prueba contiene correos electrónicos ni una comunicación de ese tipo con el área de personal. La mención aparece sólo en la demanda, que no es evidencia. Los únicos reclamos documentados son el telegrama de la trabajadora (DOC-2), que es posterior en forma de intimación y no es un correo.\n\n### AF-11 | respaldada | 0.95\nEl telegrama está registrado con Telegrama Ley 23.789 N° TL 88204617, Fecha de imposición 23 de junio de 2025. Su texto incluye todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa. Ley 24.013.\n\n### AF-12 | contradicha | 0.6\nNOTA: El total depende de una liquidación que no está en la prueba (sólo figura en la demanda, que no es evidencia). No puedo verificar la suma completa. Sin embargo, su base es la mejor remuneración de AF-04, y la prueba la contradice: la base remunerativa es $ 912.480,44 tomando solamente los conceptos remunerativos. Un total cuya base está contradicha queda contradicho. Además, la demanda y la contestación mencionan sumas que no coinciden entre sí (la contestación niega la suma de $ 41.284.630,55), pero ese punto no decide el estado.\n\n### AF-13 | sin_respaldo | 0.3\nNOTA: Ningún documento de prueba fija una constitución en mora el 14 de julio de 2025. Esa fecha corresponde a la carta documento de despido (Fecha de imposición 14 de julio de 2025), no a una intimación de pago. Los fundamentos accesorios tampoco se sostienen: la liquidación final se pagó el 8 de agosto de 2025, después de esa fecha, y la carta del 14 de julio indicaba que Haberes y liquidación final a su disposición.\n\n### AF-14 | sin_respaldo | 0.2\nNOTA: Ningún documento de prueba se refiere a la tasa de interés, a la capitalización ni al acta 2764. La cuestión aparece sólo en la demanda y en la contestación. La pericia no hace ningún cálculo de intereses. La procedencia de la tasa y de la capitalización es una cuestión que corresponde al juez.\n\n### AF-15 | contradicha | 0.95\nLa pericia informa que Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora, operación registrada en el libro banco de la demandada. Ese pago corresponde a la liquidación final, que incluye vacaciones proporcionales y S.A.C. proporcional del segundo semestre.\nNOTA: Hubo pagos imputables a rubros reclamados (vacaciones y S.A.C. proporcionales), y la afirmación de que no hubo pagos queda contradicha. La pericia también aclara que no surge pago de indemnización por antigüedad, preaviso ni integración del mes de despido.\n\n<FIN>",
+    "### AF-12 | contradicha | 0.6\nLa pericia informa que la mejor remuneración mensual del último año corresponde a junio de 2025, y que $ 912.480,44 tomando solamente los conceptos remunerativos.\nNOTA: El total reclamado depende de una liquidación que no está en la prueba; sólo aparece en la demanda, que no es evidencia, así que no puedo verificar la suma completa. Se contradice por su base: el total se construye sobre la mejor remuneración de AF-04, que la prueba fija en $ 912.480,44 cuando se consideran sólo los conceptos remunerativos. Un total cuya base queda contradicha queda contradicho. La contestación niega la suma reclamada, pero eso va a esta nota y no decide el estado.\n\n<FIN>"
   ],
-  "segundos": 48.6
+  "reintento": [
+    "AF-12"
+  ],
+  "segundos": 51.4
 }

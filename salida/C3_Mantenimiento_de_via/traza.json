@@ -1,8 +1,8 @@
 {
   "iteraciones": 5,
   "motivo": "señal de fin",
-  "in": 162998,
-  "out": 11629,
+  "in": 165121,
+  "out": 12206,
   "tools": [
     {
       "tool": "listar_documentos",
@@ -47,14 +47,7 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "guardia permanente"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "INDEC"
+        "termino": "43.525.126,57"
       },
       "error": false
     },
@@ -75,21 +68,14 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "carta documento"
+        "termino": "3 de febrero de 2026"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "43.525.126"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "186.430.912"
+        "termino": "guardia"
       },
       "error": false
     },
@@ -103,35 +89,62 @@
     {
       "tool": "buscar",
       "input": {
-        "termino": "3 de febrero de 2026"
+        "termino": "carta documento"
       },
       "error": false
     },
     {
       "tool": "buscar",
       "input": {
-        "termino": "pronto despacho"
-      },
-      "error": false
-    },
-    {
-      "tool": "buscar",
-      "input": {
-        "termino": "RA-2026-00092"
+        "termino": "INDEC"
       },
       "error": false
     }
   ],
   "items": {
     "AF-01": {
-      "citas": [],
+      "citas": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° CT-42/2024 Fecha de emisión 3 de junio de 2024 Proveedor VÍAS Y OBRAS DEL CENTRO S.A. — C.U.I.T."
+        },
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Gerencia de Compras y Contrataciones Orden de Compra N° CT-42/2024 Fecha de emisión 3 de junio de 2024 Proveedor VÍAS Y OBRAS DEL CENTRO S.A. — C.U.I.T."
+        },
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            1,
+            1
+          ],
+          "texto": "30-70441926-3 Moneda de la operación pesos, a precio firme Lugar de entrega Ramal Retiro — Villa Rosa, entre progresivas KM 12,400 y KM 41,800 Expediente EX-2024-00297714-APN-GIN#SOTR Estado Emitida y notificada al proveedor La presente orden de compra se emite en el marco del procedimiento de contratación indicado y se rige por las cláusulas generales que forman parte de ella."
+        }
+      ],
       "descartadas": [],
       "en_nota": []
     },
     "AF-02": {
       "citas": [],
       "descartadas": [],
-      "en_nota": []
+      "en_nota": [
+        {
+          "documento": "DOC-1",
+          "paginas": [
+            2,
+            2
+          ],
+          "texto": "CAF 011605/2026 — Contrato CT-42/2024 DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 2 de 4 Detalle de renglones Renglón Descripción Unidad Cantidad 1 Rebaje de riel por amolado, vía principal ascendente metro 4.200 2 Sustitución de durmientes de madera dura unidad 1.800 3 Perfilado y compactación de balasto metro 4.200 4 Ajuste de fijaciones elásticas unidad 8.400 Las cantidades consignadas son firmes."
+        }
+      ]
     },
     "AF-03": {
       "citas": [],
@@ -153,19 +166,9 @@
       "en_nota": []
     },
     "AF-05": {
-      "citas": [
-        {
-          "documento": "DOC-4",
-          "paginas": [
-            1,
-            1
-          ],
-          "texto": "Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra."
-        }
-      ],
+      "citas": [],
       "descartadas": [],
-      "en_nota": [],
-      "estado_invalido": true
+      "en_nota": []
     },
     "AF-06": {
       "citas": [
@@ -195,8 +198,7 @@
         }
       ],
       "descartadas": [],
-      "en_nota": [],
-      "estado_invalido": true
+      "en_nota": []
     },
     "AF-07": {
       "citas": [
@@ -218,8 +220,7 @@
         }
       ],
       "descartadas": [],
-      "en_nota": [],
-      "estado_invalido": true
+      "en_nota": []
     },
     "AF-08": {
       "citas": [
@@ -233,8 +234,7 @@
         }
       ],
       "descartadas": [],
-      "en_nota": [],
-      "estado_invalido": true
+      "en_nota": []
     },
     "AF-09": {
       "citas": [],
@@ -280,13 +280,21 @@
         }
       ],
       "descartadas": [],
-      "en_nota": [],
-      "estado_invalido": true
+      "en_nota": []
     },
     "AF-13": {
       "citas": [],
       "descartadas": [],
-      "en_nota": []
+      "en_nota": [
+        {
+          "documento": "DOC-3",
+          "paginas": [
+            4,
+            4
+          ],
+          "texto": ": 4 de diciembre de 2025."
+        }
+      ]
     },
     "AF-14": {
       "citas": [],
@@ -311,28 +319,21 @@
             1
           ],
           "texto": "Información objeto de la certificación Los comprobantes de venta emitidos por la sociedad al cliente indicado, pendientes de cobro a la fecha de este informe, y su registración en los libros rubricados de la sociedad."
-        },
-        {
-          "documento": "DOC-5",
-          "paginas": [
-            2,
-            2
-          ],
-          "texto": "Conclusión Sobre la base del trabajo realizado, informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 181.024.192,18."
         }
       ],
       "descartadas": [],
-      "en_nota": [
-        {
-          "documento": "DOC-4",
-          "paginas": [
-            2,
-            2
-          ],
-          "texto": "Del análisis de las constancias surge que tres de las cuatro certificaciones reclamadas se encuentran conformadas y en trámite de pago, y que la restante fue observada por la Inspección de Obra en los términos de la nota NO-2026-00318442- APN-GIN#SOTR."
-        }
-      ]
+      "en_nota": []
     }
   },
-  "segundos": 57.0
+  "textos": [
+    "",
+    "",
+    "",
+    "### AF-01 | respaldada | 0.9\nLa orden de compra fechada Fecha de emisión 3 de junio de 2024, Proveedor VÍAS Y OBRAS DEL CENTRO S.A. identifica el contrato como Orden de Compra N° CT-42/2024, y Expediente EX-2024-00297714-APN-GIN#SOTR.\nNOTA: El documento es una orden de compra emitida y notificada, no un acto de adjudicación separado. La fecha, el número y el expediente coinciden con la afirmación.\n\n### AF-02 | sin_respaldo | 0.6\nNOTA: El contrato (DOC-1) solo detalla cuatro renglones de obra: rebaje de riel, durmientes, balasto y fijaciones (Renglón 1 Rebaje de riel por amolado, vía principal ascendente metro 4.200). No menciona guardia permanente de siete días, atención de emergencias en dos horas, dotación propia ni equipamiento exclusivo. La contestación niega ese servicio, pero eso no se evalúa como prueba.\n\n### AF-03 | sin_respaldo | 0.4\nNOTA: Ningún documento de prueba describe un régimen de redeterminación por índices INDEC. La cláusula 2 del contrato dice lo contrario: Los precios unitarios son firmes y definitivos por todo el plazo contractual. El contrato no admite redeterminación, actualización ni reconocimiento de mayores costos por ningún concepto. Por la regla aplicable, esta cláusula que excluye lo reclamado no contradice el reclamo; queda para decisión del juez, por lo que el estado es sin_respaldo.\n\n### AF-04 | respaldada | 0.8\nLa cláusula 1 del contrato fija que El pago de cada certificación se efectuará a los sesenta (60) días corridos de su presentación, siempre que se acompañen los partes de servicio conformados por la Inspección de Obra.\nNOTA: El plazo está respaldado. La cláusula condiciona el pago a partes conformados, y la noviembre fue observada (ver AF-05 y AF-08), así que el vencimiento de las cuatro certificaciones no es uniforme. Eso debe considerarlo el juez.\n\n### AF-05 | contradicha | 0.9\nEl parte PS-2025-1113 del 30/11/2025 dice: Observaciones Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes. Recibió Presentado por el contratista — sin firma de la Inspección.\nNOTA: La afirmación trata del acto de conformar, y este parte muestra que la Inspección no conformó todos los partes. El documento es del contratista, pero registra la observación de la Inspección sobre ese mismo acto.\n\n### AF-06 | contradicha | 0.6\nLos partes muestran menos metros que los afirmados. El parte de agosto registra Rebaje de riel por amolado, vía principal ascendente 1.050, el de octubre también Rebaje de riel por amolado, vía principal ascendente 1.050, y el de noviembre Rebaje de riel por amolado, vía principal ascendente 0. Suman 2.100 metros de rebaje, no 4.200.\nNOTA: Los 4.200 metros son la cantidad del renglón 1 de la orden de compra, no metros ejecutados. Solo constan tres partes de rebaje en el expediente, así que la confianza es moderada.\n\n### AF-07 | contradicha | 0.95\nLa factura N° 0003-00001288 registra Total de la factura $ 38.118.406,31. La nota de observación dice que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288. El monto de $ 43.525.126,57 no figura en ningún documento de prueba; solo aparece en la demanda y la contestación la niega.\n\n### AF-08 | contradicha | 0.9\nLa demandada observó la certificación de noviembre: Se hace saber a la contratista que la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra.\nNOTA: La afirmación trata del mismo acto de observar (el acto de la parte), por lo que la nota de la demandada es prueba directa y no solo una postura. La contestación niega esto, pero no se evalúa como evidencia.\n\n### AF-09 | sin_respaldo | 0.8\nNOTA: No hay en el expediente de prueba ningún correo electrónico entre las partes. Solo la demanda menciona el intercambio.\n\n### AF-10 | sin_respaldo | 0.8\nNOTA: La carta documento CD 231907744 no figura en los documentos de prueba. Solo aparece en la demanda, que no es evidencia. Tampoco consta la entrega ni la falta de respuesta.\n\n### AF-11 | respaldada | 0.85\nLa dictamen de la demandada registra que reclamo administrativo previo RA-2026-00092, interpuesto por la contratista y registrado por la Mesa General de Entradas el 22 de enero de 2026.\nNOTA: La prueba fija la fecha y el número, pero la dictamen llama al escrito \"reclamo administrativo previo\" y no \"nota de pronto despacho\". El sello físico no es visible en el texto. El registro lo hace la propia demandada, así que es prueba de ese acto.\n\n### AF-12 | contradicha | 0.9\nEl detalle de facturas suma TOTAL 181.024.192,18, y la certificación contable informa que el total de los créditos así registrados asciende a USD 181.024.192,18. Eso es distinto de $ 186.430.912,44.\nNOTA: La diferencia es de $ 5.406.720,26, igual a lo que se suma por la noviembre (43.525.126,57 frente a 38.118.406,31). La certificación contable dice \"USD\", aunque las facturas están en pesos; esa inconsistencia debe tenerse en cuenta.\n\n### AF-13 | sin_respaldo | 0.8\nNOTA: Ningún documento de prueba fija el 3 de febrero de 2026 como fecha de mora. La carta documento que la demanda invoca no está en el expediente. Como cálculo propio y no como prueba, la factura de noviembre tiene fecha de emisión 4 de diciembre de 2025, y 60 días corridos desde esa fecha darían el 2 de febrero de 2026, pero no consta la fecha de presentación. La nota de observación del 20/02/2026 también es posterior a la fecha afirmada.\n\n### AF-14 | sin_respaldo | 0.7\nNOTA: La cláusula 5 del contrato dice que El presente contrato no genera intereses ni actualización a favor del contratista por demoras en el trámite de conformación o de pago. Esa cláusula no contradice el reclamo; corresponde al juez decidir sobre ella. Ningún documento de prueba menciona la tasa activa del Banco de la Nación ni la capitalización.\n\n### AF-15 | respaldada | 0.6\nLa certificación contable dice que los comprobantes están pendientes de cobro a la fecha de este informe, y registra los cuatro comprobantes por sus importes completos.\nNOTA: No hay extractos ni comprobantes de pago en el expediente. La afirmación se apoya en que los comprobantes figuran como pendientes, no en un registro de cobros. Además, la certificación fue hecha a pedido de la actora.\n\n<FIN>",
+    "### AF-05 | contradicha | 0.9\nEl parte PS-2025-1113 del 30 de noviembre de 2025 dice que Fecha 30 de noviembre de 2025 Orden de compra CT-42/2024 Ítem Tarea ejecutada Metros 1 Rebaje de riel por amolado, vía principal ascendente 0 3 Perfilado y compactación de balasto 1.050 Observaciones Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes Recibió Presentado por el contratista — sin firma de la Inspección.\nNOTA: La afirmación dice que la totalidad de los partes fue conformada sin observación, y este parte muestra lo contrario. El documento lo presentó el contratista, pero registra la observación de la Inspección de Obra sobre ese mismo acto de conformar, por lo que sirve como prueba directa. Los partes de agosto, septiembre y octubre sí figuran como conformados, lo que no alcanza para respaldar la totalidad.\n\n<FIN>"
+  ],
+  "reintento": [
+    "AF-05"
+  ],
+  "segundos": 61.7
 }

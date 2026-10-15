@@ -136,16 +136,16 @@
       "total_referencia": 15,
       "items_con_cita": 9,
       "acierto_item_pct": 86.7,
-      "acierto_fuente_pct": 66.7,
-      "acierto_fuente_ampliada_pct": 66.7,
+      "acierto_fuente_pct": 77.8,
+      "acierto_fuente_ampliada_pct": 77.8,
       "faltantes": 0
     },
     "detalle": [
       {
         "id": "AF-01",
         "estado_ok": true,
-        "fuente_ok": false,
-        "fuente_ampliada_ok": false,
+        "fuente_ok": true,
+        "fuente_ampliada_ok": true,
         "estado_esperado": "respaldada",
         "estado_obtenido": "respaldada",
         "fuente_esperada": [
@@ -154,7 +154,16 @@
             1
           ]
         ],
-        "fuente_obtenida": [],
+        "fuente_obtenida": [
+          [
+            "DOC-1",
+            1
+          ],
+          [
+            "DOC-1",
+            1
+          ]
+        ],
         "confianza": 0.9
       },
       {
@@ -166,7 +175,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.7
+        "confianza": 0.6
       },
       {
         "id": "AF-03",
@@ -182,7 +191,7 @@
           ]
         ],
         "fuente_obtenida": [],
-        "confianza": 0.6
+        "confianza": 0.4
       },
       {
         "id": "AF-04",
@@ -218,12 +227,7 @@
             4
           ]
         ],
-        "fuente_obtenida": [
-          [
-            "DOC-4",
-            1
-          ]
-        ],
+        "fuente_obtenida": [],
         "confianza": 0.9
       },
       {
@@ -253,7 +257,7 @@
             4
           ]
         ],
-        "confianza": 0.7
+        "confianza": 0.6
       },
       {
         "id": "AF-07",
@@ -321,7 +325,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.85
+        "confianza": 0.8
       },
       {
         "id": "AF-11",
@@ -342,7 +346,7 @@
             2
           ]
         ],
-        "confianza": 0.75
+        "confianza": 0.85
       },
       {
         "id": "AF-12",
@@ -367,7 +371,7 @@
             2
           ]
         ],
-        "confianza": 0.85
+        "confianza": 0.9
       },
       {
         "id": "AF-13",
@@ -378,7 +382,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.4
+        "confianza": 0.8
       },
       {
         "id": "AF-14",
@@ -389,7 +393,7 @@
         "estado_obtenido": "sin_respaldo",
         "fuente_esperada": [],
         "fuente_obtenida": [],
-        "confianza": 0.8
+        "confianza": 0.7
       },
       {
         "id": "AF-15",
@@ -403,10 +407,6 @@
           [
             "DOC-5",
             1
-          ],
-          [
-            "DOC-5",
-            2
           ]
         ],
         "confianza": 0.6
