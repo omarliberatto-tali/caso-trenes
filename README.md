@@ -419,6 +419,10 @@ corpus.py      índice del corpus, bloque document, validación de PDF y texto p
 servidor_mcp.py  las tres tools del corpus y los prompts de los dos criterios
 agente.py      los loops de extracción y de verificación, cliente del servidor MCP
 orquestador.py el fan-out por afirmación (M4): orquestador, extractor y verificadores
+CLAUDE.md      cómo se corre, convenciones y decisiones de diseño, para Claude Code (M5)
+.mcp.json      el servidor MCP del corpus conectado a Claude Code; el expediente sale de EXPEDIENTE
+.claude/       settings (permisos y hooks), hooks/ (apartada bloqueada, eval tras cada corrida),
+               skills/resultados (tabla de aciertos sin gastar API)
 evals.py       califica extracción y verificación contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
