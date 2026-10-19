@@ -252,6 +252,7 @@ async def _extraer(
     max_iteraciones: int,
     permitir_apartada: bool,
     verbose: bool,
+    tools_permitidas: List[str] | None = None,
 ) -> Tuple[List[Item], Dict]:
     args = [str(SERVIDOR), expediente]
     if permitir_apartada:
@@ -263,6 +264,7 @@ async def _extraer(
         tools = [
             {"name": t.name, "description": t.description or "", "input_schema": t.inputSchema}
             for t in (await sesion.list_tools()).tools
+            if tools_permitidas is None or t.name in tools_permitidas
         ]
         prompt = await sesion.get_prompt("criterio_afirmacion")
         criterio = prompt.messages[0].content.text
@@ -272,7 +274,8 @@ async def _extraer(
         mensajes: List[Dict] = [
             {
                 "role": "user",
-                "content": f"Expediente {expediente}. Extrae las afirmaciones de hecho de su demanda.",
+                "content": f"Expediente {expediente}. Extrae las afirmaciones de hecho de su demanda, "
+                f"que es el documento {documento_id}.",
             }
         ]
         encontrados: Dict[str, Item] = {}
@@ -345,9 +348,12 @@ def extraer(
     max_iteraciones: int = MAX_ITERACIONES,
     permitir_apartada: bool = False,
     verbose: bool = True,
+    tools_permitidas: List[str] | None = None,
 ) -> Tuple[List[Item], Dict]:
     load_dotenv()
-    return asyncio.run(_extraer(expediente, documento_id, max_iteraciones, permitir_apartada, verbose))
+    return asyncio.run(
+        _extraer(expediente, documento_id, max_iteraciones, permitir_apartada, verbose, tools_permitidas)
+    )
 
 
 async def _verificar(
@@ -356,6 +362,7 @@ async def _verificar(
     max_iteraciones: int,
     permitir_apartada: bool,
     verbose: bool,
+    tools_permitidas: List[str] | None = None,
 ) -> Tuple[List[Veredicto], Dict]:
     args = [str(SERVIDOR), expediente]
     if permitir_apartada:
@@ -367,6 +374,7 @@ async def _verificar(
         tools = [
             {"name": t.name, "description": t.description or "", "input_schema": t.inputSchema}
             for t in (await sesion.list_tools()).tools
+            if tools_permitidas is None or t.name in tools_permitidas
         ]
         prompt = await sesion.get_prompt("criterio_veredicto")
         sistema = SISTEMA_VERIF.format(criterio=prompt.messages[0].content.text, fin=FIN)
@@ -492,9 +500,12 @@ def verificar(
     max_iteraciones: int = MAX_ITERACIONES_VERIF,
     permitir_apartada: bool = False,
     verbose: bool = True,
+    tools_permitidas: List[str] | None = None,
 ) -> Tuple[List[Veredicto], Dict]:
     load_dotenv()
-    return asyncio.run(_verificar(expediente, items, max_iteraciones, permitir_apartada, verbose))
+    return asyncio.run(
+        _verificar(expediente, items, max_iteraciones, permitir_apartada, verbose, tools_permitidas)
+    )
 
 
 def _guardar(destino: Path, nombre: str, datos) -> None:

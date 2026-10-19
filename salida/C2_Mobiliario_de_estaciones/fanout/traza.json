@@ -1,0 +1,399 @@
+{
+  "iteraciones": 3,
+  "motivo": "fin del orquestador",
+  "in": 3848,
+  "out": 554,
+  "tools": [
+    [
+      {
+        "tool": "extraer_afirmaciones",
+        "documento_id": "DEM"
+      }
+    ],
+    [
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-01"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-02"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-03"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-04"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-05"
+      }
+    ],
+    []
+  ],
+  "respuesta": "AF-01 - respaldada\nAF-02 - contradicha\nAF-03 - sin_respaldo\nAF-04 - contradicha\nAF-05 - respaldada\n\nAF-01 figura como respaldada con confianza 0.95, pero el verificador no devolvió citas, así que conviene revisar su sustento antes de darlo por firme. Ninguna verificación devolvió error, así que no hubo reintentos.",
+  "faltantes": [],
+  "subagentes": {
+    "extractor": {
+      "reusado": "salida/C2_Mobiliario_de_estaciones/items.json",
+      "segundos": 0.0
+    },
+    "AF-04": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 41869,
+      "out": 1236,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-04": {
+          "citas": [
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "En atención a la presentación efectuada por la firma del asunto, se informa que la factura objeto del reclamo se encuentra en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1. El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-1",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "La conformidad del área requirente es condición previa al trámite de pago."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-04 | contradicha | 0.9\nEn atención a la presentación efectuada por la firma del asunto, se informa que la factura objeto del reclamo se encuentra en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1. El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica.\n\nNOTA: El memorándum ME-2026-01254057-APN-GCA#SOTR es un acto de la propia demandada sobre la conformidad del área requirente, así que es prueba directa de ese acto. Dice lo contrario a la afirmación: la conformidad del renglón 1 no fue otorgada, y la factura sigue \"en trámite de conformación\". Esto es coherente con la cláusula 4 de la orden de compra, según la cual la conformidad del área requirente es condición previa al trámite de pago, por lo que el trámite de pago tampoco quedó expedito. La contestación no se considera como evidencia. Tampoco hay constancia documental de una conformidad posterior en el expediente.\n\n<FIN>"
+      ],
+      "segundos": 10.6
+    },
+    "AF-01": {
+      "iteraciones": 4,
+      "motivo": "señal de fin",
+      "in": 37725,
+      "out": 1657,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "4520002029"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "EX-2025-00133907"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-01": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "### AF-01 | respaldada | 0.95\nLa orden de compra DOC-1 lleva el \"Orden de Compra N° 4520002029\", con \"Fecha de emisión 11 de marzo de 2025\", y como proveedor figura \"EQUIPAMIENTO URBANO DEL SUR S.R.L.\". Su encabezado indica \"Expediente EX-2025-00133907-APN-GCO#SOTR\", y el \"Detalle de renglones\" (pág. 2) lista el equipamiento encomendado, entre ellos el \"Cambiador de bebé de PVC para uso público\".\nNOTA: La contestación (CON) reconoce expresamente la emisión de la orden de compra N° 4520002029, aunque niega la conformación del renglón 1 y la entrega de los ocho cambiadores. Esa negativa no altera el estado, que se funda en la propia orden (DOC-1). Esos hechos posteriores (recepción y conformidad) quedan fuera de esta afirmación. DOC-2 y DOC-3 también mencionan la orden, pero no son necesarios para respaldar el hecho.\n\n<FIN>",
+        "",
+        "### AF-01 | respaldada | 0.95\nLa orden de compra registra que Orden de Compra N° 4520002029 Fecha de emisión 11 de marzo de 2025 Proveedor EQUIPAMIENTO URBANO DEL SUR S.R.L.. Su encabezado indica Expediente EX-2025-00133907-APN-GCO#SOTR, y el detalle de renglones enumera el equipamiento encomendado, entre ellos Cambiador de bebé de PVC para uso público, 90 × 58 × 15 cm, unidad, cantidad 8.\nNOTA: La contestación reconoce expresamente la emisión de la orden de compra N° 4520002029, aunque niega la conformación del renglón 1 y la entrega de los ocho cambiadores. Esa negativa no altera el estado, que se funda en la propia orden (DOC-1). La recepción y la conformidad son hechos posteriores que quedan fuera de esta afirmación. DOC-2 y DOC-3 también mencionan la orden, pero no son necesarios para respaldarla.\n\n<FIN>"
+      ],
+      "reintento": [
+        "AF-01"
+      ],
+      "segundos": 11.6
+    },
+    "AF-02": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 42626,
+      "out": 1341,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "sesenta (60) días"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "60 días"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-02": {
+          "citas": [
+            {
+              "documento": "DOC-1",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-02 | contradicha | 0.9\nLas cláusulas generales de la orden de compra fijan otro plazo: El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente.\nNOTA: La afirmación fija el plazo en sesenta días y la orden de compra, que es el documento donde se pactó la condición de pago, dice cuarenta y cinco días corridos. Ese es el dato que contradice el plazo afirmado. La cláusula también condiciona el pago a la conformidad del área requirente, y el memorándum de la demandada (DOC-4) informa que esa conformidad no se otorgó. Ese punto bears sobre si la mora existe, pero el plazo pactado ya está contradicho por la prueba. Además, la conclusión de mora depende de un plazo que la prueba no respalda. La contestación de la demandada no se tuvo en cuenta para decidir el estado.\n\n<FIN>"
+      ],
+      "segundos": 12.9
+    },
+    "AF-05": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 33370,
+      "out": 1710,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000143"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "rechazada"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-05": {
+          "citas": [
+            {
+              "documento": "DOC-2",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "30-70988341-6 Combate de los Pozos 1855, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 00005-00000143 Fecha de emisión 14 de abril de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "Solicitamos proceder a la refacturación."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-05 | respaldada | 0.75\nLa factura figura emitida por N° 00005-00000143 Fecha de emisión 14 de abril de 2025. El correo del 28 de junio de 2025 enviado desde la gerencia de la demandada dice que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Y agrega: Solicitamos proceder a la refacturación.\nNOTA: La prueba de la solicitud de refacturación es directa, porque la afirmación trata del pedido que hizo la propia demandada. El rechazo en el portal de A.F.I.P. solo consta en ese correo de la demandada; el expediente no trae un comprobante emitido por A.F.I.P. que lo acredite de forma independiente. La contestación (CON) niega hechos de la demanda, pero no se toma como evidencia. Por eso la confianza es moderada.\n\n<FIN>"
+      ],
+      "segundos": 14.1
+    },
+    "AF-03": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 46884,
+      "out": 2292,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "0002-00008644"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "cambiadores"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-03": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-03 | sin_respaldo | 0.3\nNOTA: No hay en el expediente el remito N° 0002-00008644, que es el documento que acredita la entrega. El listado de prueba (DOC-1 a DOC-4) no incluye ningún remito. Según la orden de compra, solo el remito firmado y aclarado por el responsable del depósito acredita recepción conforme, así que su ausencia pesa para este hecho. Las facturas (DOC-2) mencionan ese número de remito como \"remito asociado\", pero una factura que cita el remito no reemplaza al remito. Hay además correos de la actora (DOC-3) que dicen que los cambiadores fueron entregados el 14 de abril de 2025. Son manifestaciones unilaterales de la parte que reclama y no acreditan la entrega por sí solas, por lo que no alcanzan para respaldar la afirmación. Sobre la forma, la contestación niega que se hayan entregado los ocho cambiadores, y el memorándum de la demandada (DOC-4) dice que la recepción no fue conformada por no acreditarse la especificación técnica. Esa postura de la demandada va a la nota y no determina el estado. La cuestión de \"tiempo y forma\" tampoco queda acreditada, porque la conformidad de la recepción no aparece en la prueba.\n\n<FIN>"
+      ],
+      "segundos": 17.7
+    }
+  },
+  "segundos": 21.7,
+  "segundos_verificacion": 17.7,
+  "segundos_suma_verificadores": 66.9,
+  "total": {
+    "in": 206322,
+    "out": 8790
+  }
+}

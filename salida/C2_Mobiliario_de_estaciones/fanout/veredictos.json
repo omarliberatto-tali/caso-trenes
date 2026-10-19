@@ -1,0 +1,65 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [],
+    "confianza": 0.95,
+    "nota": "La contestación (CON) reconoce expresamente la emisión de la orden de compra N° 4520002029, aunque niega la conformación del renglón 1 y la entrega de los ocho cambiadores. Esa negativa no altera el estado, que se funda en la propia orden (DOC-1). Esos hechos posteriores (recepción y conformidad) quedan fuera de esta afirmación. DOC-2 y DOC-3 también mencionan la orden, pero no son necesarios para respaldar el hecho."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La afirmación fija el plazo en sesenta días y la orden de compra, que es el documento donde se pactó la condición de pago, dice cuarenta y cinco días corridos. Ese es el dato que contradice el plazo afirmado. La cláusula también condiciona el pago a la conformidad del área requirente, y el memorándum de la demandada (DOC-4) informa que esa conformidad no se otorgó. Ese punto bears sobre si la mora existe, pero el plazo pactado ya está contradicho por la prueba. Además, la conclusión de mora depende de un plazo que la prueba no respalda. La contestación de la demandada no se tuvo en cuenta para decidir el estado."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.3,
+    "nota": "No hay en el expediente el remito N° 0002-00008644, que es el documento que acredita la entrega. El listado de prueba (DOC-1 a DOC-4) no incluye ningún remito. Según la orden de compra, solo el remito firmado y aclarado por el responsable del depósito acredita recepción conforme, así que su ausencia pesa para este hecho. Las facturas (DOC-2) mencionan ese número de remito como \"remito asociado\", pero una factura que cita el remito no reemplaza al remito. Hay además correos de la actora (DOC-3) que dicen que los cambiadores fueron entregados el 14 de abril de 2025. Son manifestaciones unilaterales de la parte que reclama y no acreditan la entrega por sí solas, por lo que no alcanzan para respaldar la afirmación. Sobre la forma, la contestación niega que se hayan entregado los ocho cambiadores, y el memorándum de la demandada (DOC-4) dice que la recepción no fue conformada por no acreditarse la especificación técnica. Esa postura de la demandada va a la nota y no determina el estado. La cuestión de \"tiempo y forma\" tampoco queda acreditada, porque la conformidad de la recepción no aparece en la prueba."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "En atención a la presentación efectuada por la firma del asunto, se informa que la factura objeto del reclamo se encuentra en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1. El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "El memorándum ME-2026-01254057-APN-GCA#SOTR es un acto de la propia demandada sobre la conformidad del área requirente, así que es prueba directa de ese acto. Dice lo contrario a la afirmación: la conformidad del renglón 1 no fue otorgada, y la factura sigue \"en trámite de conformación\". Esto es coherente con la cláusula 4 de la orden de compra, según la cual la conformidad del área requirente es condición previa al trámite de pago, por lo que el trámite de pago tampoco quedó expedito. La contestación no se considera como evidencia. Tampoco hay constancia documental de una conformidad posterior en el expediente."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "30-70988341-6 Combate de los Pozos 1855, Ciudad Autónoma de Buenos Aires FACTURA DE CRÉDITO ELECTRÓNICA MiPyMEs N° 00005-00000143 Fecha de emisión 14 de abril de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Solicitamos proceder a la refacturación."
+      }
+    ],
+    "confianza": 0.75,
+    "nota": "La prueba de la solicitud de refacturación es directa, porque la afirmación trata del pedido que hizo la propia demandada. El rechazo en el portal de A.F.I.P. solo consta en ese correo de la demandada; el expediente no trae un comprobante emitido por A.F.I.P. que lo acredite de forma independiente. La contestación (CON) niega hechos de la demanda, pero no se toma como evidencia. Por eso la confianza es moderada."
+  }
+]
