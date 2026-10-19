@@ -319,6 +319,122 @@ Reglas que se sumaron a `CRITERIO_VEREDICTO`:
 Las salidas commiteadas en `salida/` son de la última corrida, la del parser que ignora las
 citas de la NOTA.
 
+## M4 — fan-out por afirmación
+
+`orquestador.py` es un orchestrator-worker. El orquestador es un modelo que no lee documentos:
+tiene dos tools «meta» y decide cuándo llamarlas. Cada llamada corre un sub-agente; las
+`verificar_afirmacion` que pide en una misma respuesta corren a la vez, en hilos.
+
+```
+                         ┌──────────────────────────┐
+                         │       orquestador        │  max 6 iteraciones
+                         │ tools: extraer_afirmac.  │  ve ids, títulos y estados
+                         │        verificar_afirm.  │
+                         └────────────┬─────────────┘
+             1) extraer_afirmaciones  │  2) verificar_afirmacion × N, en paralelo
+             ┌────────────────────────┼───────────────┬──────────────┐
+             ▼                        ▼               ▼              ▼
+      ┌─────────────┐          ┌────────────┐  ┌────────────┐  ┌────────────┐
+      │  extractor  │          │verificador │  │verificador │  │verificador │
+      │ leer_doc.   │          │  AF-01     │  │  AF-02     │  │  AF-NN     │
+      └──────┬──────┘          └─────┬──────┘  └─────┬──────┘  └─────┬──────┘
+             │ Item[]                └───────────────┼───────────────┘
+             │                                       ▼ Veredicto
+             └──────────────►  fan-in (código): veredictos en el orden de las afirmaciones
+                                         salida/<exp>/fanout/
+```
+
+**Qué se comparte y qué no.**
+
+| De → a | Pasa | No pasa |
+|---|---|---|
+| Orquestador → extractor | el expediente y el id de la demanda | nada del historial |
+| Extractor → orquestador | id y título de cada afirmación | el texto, que queda en el código |
+| Orquestador → verificador | el id de una afirmación; el código le manda el ítem entero | el historial del orquestador y las otras afirmaciones |
+| Verificador → orquestador | estado, confianza y cantidad de citas | la evidencia y la nota, que van directo al fan-in |
+
+El criterio no viaja desde el orquestador: cada sub-agente lo pide al servidor MCP como prompt,
+igual que en la versión secuencial. Que el orquestador no vea textos ni evidencia es a propósito:
+su contexto crece con cada ronda y no necesita nada de eso para decidir qué delegar.
+
+**Tools por sub-agente (blast radius).** Ninguno escribe: las tres tools del corpus son de
+lectura, y lo único que se escribe en disco lo hace el código, en el fan-in.
+
+| Sub-agente | Tools | Sin | Por qué |
+|---|---|---|---|
+| Orquestador | `extraer_afirmaciones`, `verificar_afirmacion` | las tres del corpus | coordina; si leyera documentos, su contexto cargaría con PDFs que no usa |
+| Extractor | `leer_documento` | `listar_documentos`, `buscar` | recibe el id de la demanda: no tiene que buscar nada ni leer la prueba |
+| Verificador | `listar_documentos`, `leer_documento`, `buscar` | las meta | ubica la prueba que corresponde a su afirmación; no puede delegar ni pedir otras |
+
+El filtro se aplica en `agente.py` (`tools_permitidas`): el modelo no recibe la definición de
+las tools que no le tocan, así que no las puede pedir.
+
+**Prompt injection.** El verificador es el que lee la prueba, y su prompt de sistema
+(`SISTEMA_VERIF`) dice que lo que dicen los documentos es material a analizar y no
+instrucciones, y que si un documento pide algo se ignora. Además, aunque una instrucción
+inyectada lo convenciera, sus tools son de lectura y sólo devuelve un veredicto que el código
+parsea con un formato fijo.
+
+**Errores.** Si un verificador termina sin veredicto o el id no existe, la tool vuelve con
+`is_error` y el orquestador la pide de nuevo una vez. Un reintento no pisa la traza del intento
+anterior (`AF-03#2`), así sus tokens también se cuentan.
+
+**Cómo se corre.**
+
+```
+python orquestador.py C2_Mobiliario_de_estaciones --reusar-items --primeras 5
+python evals.py C2_Mobiliario_de_estaciones --veredictos salida/C2_Mobiliario_de_estaciones/fanout/veredictos.json
+```
+
+`--primeras 5` es el subconjunto para depurar; `--paralelo` fija cuántos verificadores corren a
+la vez (5 por defecto). `traza.json` guarda `segundos_verificacion` (del primer verificador que
+arranca al último que termina), comparable con `segundos` de la versión secuencial, y
+`segundos_suma_verificadores`, lo que tardaría uno detrás de otro. Con `--veredictos`, el eval
+escribe su `eval.json` en `fanout/` y no pisa el de la versión secuencial.
+
+**Costo.** Cada verificador lee su propia prueba, así que el fan-out manda los PDFs una vez por
+afirmación en vez de una vez por expediente: va a gastar bastante más entrada que la secuencial.
+
+**Primera corrida (19/10/2026, C2, `--reusar-items --primeras 5`, Haiku 5.5).**
+
+| | Fan-out, 5 afirmaciones | Secuencial, 15 afirmaciones |
+|---|---|---|
+| Tiempo de verificación | 17,7 s (66,9 s sumando los verificadores) | 84,5 s |
+| Estado correcto | 5/5 | — |
+| Fuente correcta | 3/4 | — |
+| Entrada por afirmación | ~40.000 tokens | ~6.400 tokens |
+
+El paralelo se nota: el tiempo lo marca el verificador más lento (AF-03, 17,7 s), no la suma.
+AF-01 sale `respaldada` sin cita: el verificador transcribió el pasaje de DOC-1 entre comillas en
+vez de citarlo, también en el reintento; es la misma variación entre corridas del M3. La entrada
+por afirmación es unas 6 veces la de la secuencial (≈ US$0,025 la corrida). El eval da 33,3 %
+porque cuenta como faltantes las 10 afirmaciones que no se corrieron.
+
+**Corrida completa (19/10/2026, las 15 afirmaciones de las 5 demandas, `--reusar-items`).** Se
+cortó en C5 por el tope mensual de la API del workspace; C5 y C6 se corrieron el mismo día,
+cuando se subió el tope. La salida de C2 reemplaza a la de la primera corrida.
+
+| Expediente | Estado sec. / fan-out | Fuente sec. / fan-out | Verificación sec. / fan-out | Entrada sec. / fan-out |
+|---|---|---|---|---|
+| C1 | 100 / 100 % | 100 / 100 % | 55,8 / 48,6 s | 63k / 620k |
+| C2 | 100 / 100 % | 100 / 80 % | 84,5 / 52,2 s | 96k / 728k |
+| C3 | 86,7 / 86,7 % | 77,8 / 66,7 % | 61,7 / 56,6 s | 165k / 705k |
+| C5 | 100 / 100 % | 72,7 / 72,7 % | 51,4 / 39,9 s | 136k / 477k |
+| C6 | 86,7 / 86,7 % | 100 / 77,8 % | 59,5 / 53,0 s | 116k / 655k |
+| **Promedio** | **94,7 / 94,7 %** | **90,1 / 79,4 %** | **62,6 / 50,1 s** | **3,2 M en total** |
+
+- El estado promedio es el mismo que en la secuencial. En C6 cambian los errores (la secuencial
+  falla AF-03, el fan-out AF-15) pero no la cantidad.
+- La fuente baja unos 11 puntos: `respaldada` o `contradicha` sin cita (C2 AF-01 y AF-06, C3
+  AF-01, C6 AF-05 y AF-10), porque el verificador transcribe el pasaje en vez de citarlo. Con un
+  ítem por verificador el reintento no alcanza.
+- El paralelo gana poco, un 20 %: con `--paralelo 5` los 15 verificadores corren en tres tandas
+  (la suma de los verificadores, 178-234 s, se reparte en 40-57 s), y la secuencial lee todo una
+  vez y escribe los 15 veredictos en pocas vueltas.
+- La entrada es entre 3,5 y 10 veces la de la secuencial: ≈ 3,2 millones de tokens y 140.000 de
+  salida los cinco, unos US$0,39, contra ≈ US$0,085 de la secuencial. Cada verificador lee su
+  propia prueba: es el lugar donde más pegaría el cache del M6.
+
 ## Estado del repo
 
 ```
@@ -327,6 +443,7 @@ criterio.py    ESTADOS, la demanda apartada y los criterios de afirmación y de 
 corpus.py      índice del corpus, bloque document, validación de PDF y texto paginado
 servidor_mcp.py  las tres tools del corpus y los prompts de los dos criterios
 agente.py      los loops de extracción y de verificación, cliente del servidor MCP
+orquestador.py el fan-out por afirmación (M4): orquestador, extractor y verificadores
 evals.py       califica extracción y verificación contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
@@ -334,8 +451,7 @@ salida/        items.json, veredictos.json, traza.json y eval.json por expedient
 requirements.txt  dependencias del venv
 ```
 
-Pendiente de las próximas semanas: `orquestador.py` (M4) y
-`correr.py` (M7).
+Pendiente de las próximas semanas: `correr.py` (M7).
 
 ## Cómo se trabaja el repo
 
