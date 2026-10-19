@@ -371,7 +371,9 @@ las tools que no le tocan, así que no las puede pedir.
 
 **Prompt injection.** El verificador es el que lee la prueba, y su prompt de sistema
 (`SISTEMA_VERIF`) dice que lo que dicen los documentos es material a analizar y no
-instrucciones, y que si un documento pide algo se ignora. Además, aunque una instrucción
+instrucciones, y que si un documento pide algo se ignora. Las afirmaciones también vienen de un
+documento (la demanda): llegan entre etiquetas `<afirmaciones>` y el prompt las declara datos a
+verificar, no instrucciones. Además, aunque una instrucción
 inyectada lo convenciera, sus tools son de lectura y sólo devuelve un veredicto que el código
 parsea con un formato fijo.
 
