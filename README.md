@@ -410,24 +410,30 @@ vez de citarlo, también en el reintento; es la misma variación entre corridas 
 por afirmación es unas 6 veces la de la secuencial (≈ US$0,025 la corrida). El eval da 33,3 %
 porque cuenta como faltantes las 10 afirmaciones que no se corrieron.
 
-**Corrida completa (19/10/2026, las 15 afirmaciones, `--reusar-items`).** Se cortó en C5 por
-el tope mensual de la API del workspace (US$3): C5 y C6 quedan para cuando se renueve, el
-01/11. La salida de C2 reemplaza a la de la primera corrida.
+**Corrida completa (19/10/2026, las 15 afirmaciones de las 5 demandas, `--reusar-items`).** Se
+cortó en C5 por el tope mensual de la API del workspace; C5 y C6 se corrieron el mismo día,
+cuando se subió el tope. La salida de C2 reemplaza a la de la primera corrida.
 
 | Expediente | Estado sec. / fan-out | Fuente sec. / fan-out | Verificación sec. / fan-out | Entrada sec. / fan-out |
 |---|---|---|---|---|
 | C1 | 100 / 100 % | 100 / 100 % | 55,8 / 48,6 s | 63k / 620k |
 | C2 | 100 / 100 % | 100 / 80 % | 84,5 / 52,2 s | 96k / 728k |
 | C3 | 86,7 / 86,7 % | 77,8 / 66,7 % | 61,7 / 56,6 s | 165k / 705k |
+| C5 | 100 / 100 % | 72,7 / 72,7 % | 51,4 / 39,9 s | 136k / 477k |
+| C6 | 86,7 / 86,7 % | 100 / 77,8 % | 59,5 / 53,0 s | 116k / 655k |
+| **Promedio** | **94,7 / 94,7 %** | **90,1 / 79,4 %** | **62,6 / 50,1 s** | **3,2 M en total** |
 
-- El estado es el mismo que en la secuencial en los tres: el fan-out no cambia lo que se decide.
-- La fuente baja en C2 (AF-01, AF-06) y en C3 (AF-01): `respaldada` sin cita, el verificador
-  transcribe el pasaje en vez de citarlo. Con un ítem por verificador el reintento no alcanza.
-- El paralelo gana menos de lo esperado: con 15 verificadores y `--paralelo 5` corren en tres
-  tandas, y la suma de los verificadores (214-234 s) se reparte en ~50 s. La secuencial lee todo
-  una vez y escribe los 15 veredictos en pocas vueltas, así que ya era rápida.
-- La entrada es entre 4 y 10 veces la de la secuencial (≈ 2 millones de tokens los tres, unos
-  US$0,25): cada verificador lee su propia prueba. Es el lugar donde más pegaría el cache del M6.
+- El estado promedio es el mismo que en la secuencial. En C6 cambian los errores (la secuencial
+  falla AF-03, el fan-out AF-15) pero no la cantidad.
+- La fuente baja unos 11 puntos: `respaldada` o `contradicha` sin cita (C2 AF-01 y AF-06, C3
+  AF-01, C6 AF-05 y AF-10), porque el verificador transcribe el pasaje en vez de citarlo. Con un
+  ítem por verificador el reintento no alcanza.
+- El paralelo gana poco, un 20 %: con `--paralelo 5` los 15 verificadores corren en tres tandas
+  (la suma de los verificadores, 178-234 s, se reparte en 40-57 s), y la secuencial lee todo una
+  vez y escribe los 15 veredictos en pocas vueltas.
+- La entrada es entre 3,5 y 10 veces la de la secuencial: ≈ 3,2 millones de tokens y 140.000 de
+  salida los cinco, unos US$0,39, contra ≈ US$0,085 de la secuencial. Cada verificador lee su
+  propia prueba: es el lugar donde más pegaría el cache del M6.
 
 ## Estado del repo
 
