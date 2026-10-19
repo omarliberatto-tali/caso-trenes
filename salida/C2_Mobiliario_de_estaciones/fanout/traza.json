@@ -1,0 +1,1226 @@
+{
+  "iteraciones": 3,
+  "motivo": "fin del orquestador",
+  "in": 5686,
+  "out": 1212,
+  "tools": [
+    [
+      {
+        "tool": "extraer_afirmaciones",
+        "documento_id": "DEM"
+      }
+    ],
+    [
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-01"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-02"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-03"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-04"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-05"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-06"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-07"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-08"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-09"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-10"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-11"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-12"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-13"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-14"
+      },
+      {
+        "tool": "verificar_afirmacion",
+        "item_id": "AF-15"
+      }
+    ],
+    []
+  ],
+  "respuesta": "AF-01: respaldada\nAF-02: contradicha\nAF-03: sin_respaldo\nAF-04: contradicha\nAF-05: respaldada\nAF-06: respaldada\nAF-07: respaldada\nAF-08: contradicha\nAF-09: respaldada\nAF-10: sin_respaldo\nAF-11: respaldada\nAF-12: contradicha\nAF-13: sin_respaldo\nAF-14: sin_respaldo\nAF-15: sin_respaldo\n\nNinguna verificación dio error, así que no hubo reintentos. Hay dos casos a revisar a mano: AF-01 aparece como respaldada pero sin citas, y AF-09 tiene confianza baja (0.6).",
+  "faltantes": [],
+  "subagentes": {
+    "extractor": {
+      "reusado": "salida/C2_Mobiliario_de_estaciones/items.json",
+      "segundos": 0.0
+    },
+    "AF-01": {
+      "iteraciones": 4,
+      "motivo": "señal de fin",
+      "in": 37809,
+      "out": 1444,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "4520002029"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "EX-2025-00133907"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-01": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "### AF-01 | respaldada | 0.95\nEl documento DOC-1 es la orden de compra, con \"Orden de Compra N° 4520002029\", \"Fecha de emisión 11 de marzo de 2025\", \"Proveedor EQUIPAMIENTO URBANO DEL SUR S.R.L.\" y \"Expediente EX-2025-00133907-APN-GCO#SOTR\". El detalle de renglones (pág. 2) incluye el cambiador de bebé de PVC, es decir, el equipamiento que la orden encomienda al proveedor.\nNOTA: La demandada emite la orden en nombre de la Sociedad Operadora de Trenes Regionales S.E. La contestación (CON) reconoce expresamente la emisión de la orden N° 4520002029, pero no se cita como evidencia. Además, la contestación niega la conformación del renglón 1 y la entrega de los ocho cambiadores. Esa negativa no altera el estado de esta afirmación, que se refiere solo a la emisión de la orden.\n\n<FIN>",
+        "",
+        "### AF-01 | respaldada | 0.95\nOrden de Compra N° 4520002029 Fecha de emisión 11 de marzo de 2025 Proveedor EQUIPAMIENTO URBANO DEL SUR S.R.L. El Expediente EX-2025-00133907-APN-GCO#SOTR figura en la misma orden, y el Detalle de renglones incluye como renglón 1 un \"Cambiador de bebé de PVC para uso público, 90 × 58 × 15 cm\", unidad, cantidad 8, junto con otros dos renglones de equipamiento.\nNOTA: La orden la emite la Sociedad Operadora de Trenes Regionales S.E. y la contestación reconoce su emisión, pero esa contestación no se cita como evidencia. La contestación niega la conformación del renglón 1 y la entrega de los ocho cambiadores; esa negativa no altera el estado, que se refiere solo a la emisión de la orden y al encargo de provisión.\n\n<FIN>"
+      ],
+      "reintento": [
+        "AF-01"
+      ],
+      "segundos": 10.7
+    },
+    "AF-04": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 26887,
+      "out": 1140,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "conformidad"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-04": {
+          "citas": [
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "En atención a la presentación efectuada por la firma del asunto, se informa que la factura objeto del reclamo se encuentra en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-04 | contradicha | 0.9\nEl memorándum de la demandada informa que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica. Esto es incompatible con la afirmación de que el área requirente prestó conformidad al renglón 1.\nNOTA: La afirmación trata del acto de conformidad del área requirente de la demandada, y el memorándum (DOC-4) es prueba directa de ese acto. Por eso se lo toma como prueba y no solo como postura de la parte. La contestación niega expresamente la conformidad (Niego, rechazo y desconozco que el área requirente haya prestado conformidad a la recepción del renglón 1.), pero esa negativa no decide el estado. El mismo memorándum confirma que el trámite está en trámite de conformación en el área requirente, la que ha formulado observaciones respecto de la conformidad de recepción del renglón 1. La orden de compra (DOC-1) también establece que La conformidad del área requirente es condición previa al trámite de pago. Como la conformidad no se prestó, el trámite de pago no quedó expedito.\n\n<FIN>"
+      ],
+      "segundos": 11.5
+    },
+    "AF-02": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 41902,
+      "out": 1549,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-02": {
+          "citas": [
+            {
+              "documento": "DOC-1",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-1",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "La conformidad del área requirente es condición previa al trámite de pago."
+            },
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-02 | contradicha | 0.9\nEl pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente. La afirmación fija el plazo en sesenta (60) días, y la orden de compra pactó cuarenta y cinco (45).\n\nNOTA: La cláusula 1 de la orden de compra también condiciona el pago a la conformidad del área requirente, y la cláusula 4 dice que la conformidad del área requirente es condición previa al trámite de pago. Por eso la mora depende de esa conformidad, que es lo que discute la demandada. El memorándum de la demandada informa que la recepción de los ocho cambiadores de bebé no fue conformada. Ese documento es postura de la parte y no prueba la conformidad, así que se registra acá y no decide el estado. La fecha de presentación de la factura 00005-00000143 surge del correo del 31 de mayo de 2025 (adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029). Con 45 días corridos, el vencimiento sería el 15 de julio de 2025, no 60 días después. El cálculo es mío y no figura en el expediente. La cláusula 5 de la orden de compra excluye intereses por demora en la conformación, lo que tampoco está en la afirmación, pero no altera el plazo.\n\n<FIN>"
+      ],
+      "segundos": 12.9
+    },
+    "AF-05": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 24304,
+      "out": 1889,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000143"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "rechazada"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-05": {
+          "citas": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-05 | respaldada | 0.8\nLes informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación. El correo es de 28 de junio de 2025, enviado por la Gerencia de Coordinación Administrativa de la demandada.\nNOTA: El correo lo emitió la demandada, no A.F.I.P., así que el rechazo en el portal aparece sólo como informado por la demandada; en el expediente no hay constancia directa del portal. La afirmación trata del pedido de refacturación que hizo la propia demandada, y ese acto sí surge del documento. La emisión de la factura N° 00005-00000143 el 14 de abril de 2025 está respaldada por la factura misma (DOC-2), que la muestra con esa fecha. La contestación (CON) reconoce que se observaron las facturas 00005-00000143, 00005-00000158 y 00005-00000172, pero no se usó como evidencia.\n\n<FIN>"
+      ],
+      "segundos": 13.4
+    },
+    "AF-03": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 47151,
+      "out": 2131,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "0002-00008644"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "cambiadores"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-03": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-03 | sin_respaldo | 0.3\nNOTA: El remito N° 0002-00008644, que es el documento que acredita la entrega, no está en el expediente. Las facturas de la prueba (DOC-2) solo lo citan como \"remito asociado\" en sus cuatro comprobantes, y eso no reemplaza al remito. La orden de compra (DOC-1, Anexo A.3) dice que \"solo el remito que lleve su firma y aclaración acredita recepción conforme\", y ese remito firmado no fue acompañado. El correo de la actora del 31 de mayo de 2025 (DOC-3) menciona \"ocho cambiadores de bebé entregados el 14 de abril\", pero es una afirmación de la propia parte en un correo de presentación de factura. No prueba por sí sola la entrega ni la forma. Además, el memorándum ME-2026-01254057-APN-GCA#SOTR (DOC-4) informa que \"la recepción de los ocho cambiadores de bebé no fue conformada\", y la contestación niega la entrega (CON). Esa postura de la demandada va a la nota y no contradice el hecho. El \"tiempo y forma\" tampoco tiene respaldo documental, porque la conformidad de recepción no fue emitida según la prueba.\n\n<FIN>"
+      ],
+      "segundos": 16.5
+    },
+    "AF-08": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 22602,
+      "out": 1356,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000173"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "contabilizada"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-08": {
+          "citas": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                4,
+                4
+              ],
+              "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Correo electrónico — 30 de septiembre de 2025 De f.casella@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 30 de septiembre de 2025 Asunto RE: Consulta estado de factura Por lo que veo en el sistema, la factura de EQUIPAMIENTO URBANO DEL SUR S.R.L. N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión. Se solicita su anulación y reemplazo."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-08 | contradicha | 0.85\n\nTesorería informó que la factura de EQUIPAMIENTO URBANO DEL SUR S.R.L. N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto. La afirmación reclama la contabilización del 10 de agosto para la factura 00005-00000173, pero la prueba registra ese mismo hecho sobre la factura 00005-00000172.\n\nNOTA: La fecha y el origen de la información coinciden con lo afirmado (es Tesorería quien informa), pero el número de comprobante no. La factura 00005-00000173 figura en DOC-2 como N° 00005-00000173 Fecha de emisión 9 de agosto de 2025, y el correo de DOC-3 del 9 de agosto dice que la factura emitida por $399.784 fue la 00005-00000172 y que se solicita su anulación y reemplazo, lo que sugiere que la 173 es la factura de reemplazo. Por eso el correo de Tesorería no respalda que la 173 haya sido contabilizada el 10 de agosto. La contestación (CON, pág. 2) niega expresamente que la factura 00005-00000173 haya sido contabilizada; esa negativa va a la nota y no determina el estado. Ningún documento de prueba registra la contabilización de la 173 con esa fecha. Además, el correo de Tesorería del 30/9/2025 indica que no tiene información sobre fechas de transferencia, lo cual no altera el veredicto.\n\n<FIN>"
+      ],
+      "segundos": 12.0
+    },
+    "AF-07": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 34608,
+      "out": 2522,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000172"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "452.535,16"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-07": {
+          "citas": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 3 de 4 Correo electrónico — 9 de agosto de 2025 De h.rodriguez@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 9 de agosto de 2025 Asunto Observación factura 00005-00000172 Paso a detallar según la OC 4520002029."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "Total a facturar $ 452.535,16. La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "Se solicita su anulación y reemplazo."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-07 | respaldada | 0.85\nEl correo del 9 de agosto de 2025 lleva por asunto Observación factura 00005-00000172. Allí la demandada indica que Total a facturar $ 452.535,16. La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión.\nNOTA: El correo no usa la palabra \"rechazo\", sino \"observación\", y pide la anulación y el reemplazo de la factura (Se solicita su anulación y reemplazo.). Igualmente, la afirmación trata del acto mismo de la demandada, así que el correo es prueba directa de ese acto. El importe de $ 452.535,16 coincide con la factura N° 00005-00000173, emitida el mismo día por ese monto, que figura en la prueba DOC-2. La contestación (CON) reconoce la observación, pero no se usó como evidencia.\n\n<FIN>"
+      ],
+      "segundos": 15.6
+    },
+    "AF-09": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 27366,
+      "out": 2295,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "correo electrónico"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "correo"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-09": {
+          "citas": [
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 1 de 4 Correo electrónico — 31 de mayo de 2025 De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar Fecha 31 de mayo de 2025 Asunto Presentación factura 00005-00000143 — OC 4520002029 Estimados: adjunto la factura N° 00005-00000143 correspondiente a la orden de compra 4520002029, por la provisión de ocho cambiadores de bebé entregados el 14 de abril."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "Quedamos a la espera de su confirmación."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                4,
+                4
+              ],
+              "texto": "CCF 007731/2026 — Intercambio de correo electrónico con la demandada DOCUMENTO SINTETICO - ejercicio de formacion Winter AI Camp - personas, sociedades y expedientes son ficticios | 4 de 4 Correo electrónico — 30 de septiembre de 2025 De f.casella@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar Fecha 30 de septiembre de 2025 Asunto RE: Consulta estado de factura Por lo que veo en el sistema, la factura de EQUIPAMIENTO URBANO DEL SUR S.R.L."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                4,
+                4
+              ],
+              "texto": "N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto. Respecto de fechas de transferencia no poseo información; las órdenes de compra deberían indicar dónde consultar."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-09 | respaldada | 0.6\nCorreo electrónico — 31 de mayo de 2025, De cobranzas@equipamientodelsur.com.ar Para recepciondeproveedores@sotr.gob.ar, con el asunto \"Presentación factura 00005-00000143 — OC 4520002029\", en el que quedamos a la espera de su confirmación. Posteriormente, Correo electrónico — 30 de septiembre de 2025 De f.casella@sotr.gob.ar Para cobranzas@equipamientodelsur.com.ar, con el asunto \"RE: Consulta estado de factura\", en el que la demandada respondió que la factura de EQUIPAMIENTO URBANO DEL SUR S.R.L. N° 00005-00000172, del 9 de agosto, ya ha sido procesada y contabilizada el 10 de agosto. Respecto de fechas de transferencia no poseo información.\n\nNOTA: El expediente acredita un intercambio de correos entre la actora y la demandada, con respuestas de SOTR S.E. en junio, agosto y septiembre de 2025. Sin embargo, ninguno de los correos incluidos en la prueba contiene un reclamo de pago en términos explícitos: el primero es una presentación de factura y el último es una respuesta a una \"consulta de estado\" cuyo mensaje original de la actora no está en el expediente. La afirmación de que la respuesta no fue satisfactoria es una valoración que corresponde al juez. Los correos de la demandada que rechazan la factura o piden refacturación o anulación (DOC-3, páginas 2 y 3) son posturas de la contraparte y no se toman como evidencia de contradicción. La confianza es moderada porque el contenido reclamatorio no surge del texto de la prueba. Convendría acompañar el correo original de reclamo de pago.\n\n<FIN>"
+      ],
+      "segundos": 14.7
+    },
+    "AF-06": {
+      "iteraciones": 6,
+      "motivo": "señal de fin",
+      "in": 95757,
+      "out": 2876,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000158"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "5 de julio de 2025"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "00005-00000158"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "observada"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "refacturación"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-06": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "",
+        "",
+        "### AF-06 | respaldada | 0.8\nN° 00005-00000158 Fecha de emisión 5 de julio de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. — C.U.I.T. 30-71540982-4 Condición frente al I.V.A. Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00.\nNOTA: La prueba acredita la emisión de la factura N° 00005-00000158 el 5 de julio de 2025 por $ 399.784,00, mismo importe que la factura 00005-00000143. Falta respaldo en la prueba del detalle accesorio de que la demandada haya observado esta factura. La única mención de esa observación es la contestación (CON, pág. 2), que no es prueba y que además la reconoce como observada junto con las facturas 00005-00000143 y 00005-00000172. Los correos de la prueba (DOC-3) se refieren a las facturas 00005-00000143 y 00005-00000172, no a la 00005-00000158. Por eso la afirmación queda respaldada en lo esencial y la observación queda sin acreditar en la prueba.\n\n<FIN>",
+        "### AF-06 | respaldada | 0.8\nLa prueba acredita el acto: N° 00005-00000158 Fecha de emisión 5 de julio de 2025 Cliente SOCIEDAD OPERADORA DE TRENES REGIONALES S.E. — C.U.I.T. 30-71540982-4 Condición frente al I.V.A. Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00.\nNOTA: La factura N° 00005-00000158 aparece emitida el 5 de julio de 2025 por $ 399.784,00, el mismo importe que la factura 00005-00000143, así que el hecho principal queda acreditado. No hay en la prueba ningún documento que diga que la demandada observó esta factura. La única referencia es la contestación (CON, pág. 2), que reconoce la observación de las facturas 00005-00000143, 00005-00000158 y 00005-00000172, pero la contestación no es prueba y no se cita como evidencia. Los correos de la prueba (DOC-3) tratan sobre las facturas 00005-00000143 y 00005-00000172, no sobre la 00005-00000158. Por eso el detalle de la observación queda sin acreditar en la prueba.\n\n<FIN>"
+      ],
+      "reintento": [
+        "AF-06"
+      ],
+      "segundos": 19.9
+    },
+    "AF-10": {
+      "iteraciones": 4,
+      "motivo": "señal de fin",
+      "in": 79527,
+      "out": 1289,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "CD 197340228"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "197340228"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "carta documento"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "12 de enero de 2026"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "intimacion"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-10": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "",
+        "### AF-10 | sin_respaldo | 0.85\nNOTA: Ningun documento de prueba (DOC-1 a DOC-4) menciona la carta documento N° CD 197340228 ni su envío del 12 de enero de 2026. Las búsquedas por el número, por \"carta documento\", por la fecha y por \"intimación\" solo devolvieron la demanda y la contestación, que no son prueba. La única fecha de enero de 2026 vinculada a una presentación en la prueba es la nota de pronto despacho PD-2026-00061 del 15 de enero de 2026, que aparece en DOC-4 y es un acto distinto, sin relación con la carta documento. Tampoco hay prueba de la entrega de la pieza postal ni de la falta de respuesta: DOC-4 contiene el memorándum ME-2026-01254057-APN-GCA#SOTR, que responde a esa presentación, pero no menciona carta documento alguna. La contestación niega haber recibido la carta documento, lo que va a la nota y no determina el estado. Falta la pieza postal o el certificado de entrega de Correo Argentino para acreditar el envío y la entrega.\n\n<FIN>"
+      ],
+      "segundos": 15.5
+    },
+    "AF-11": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 17171,
+      "out": 1075,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "PD-2026-00061"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-11": {
+          "citas": [
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "30-71540982-4 Avenida Rivadavia 4380, Ciudad Autónoma de Buenos Aires Secretaría General Nota N° NO-2026-01293598-APN-SG#SOTR Fecha 3 de febrero de 2026 Referencia Nota de pronto despacho PD-2026-00061 Destinatario EQUIPAMIENTO URBANO DEL SUR S.R.L. Se acusa recibo de la nota de pronto despacho presentada en fecha 15 de enero de 2026 ante la Mesa General de Entradas de esta sociedad, la que fuera registrada bajo el número de referencia."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-11 | respaldada | 0.85\nLa nota de la demandada acusa recibo de la presentación: Referencia Nota de pronto despacho PD-2026-00061 ... Se acusa recibo de la nota de pronto despacho presentada en fecha 15 de enero de 2026 ante la Mesa General de Entradas de esta sociedad, la que fuera registrada bajo el número de referencia.\nNOTA: La prueba acredita la fecha (15 de enero de 2026), el número de nota (PD-2026-00061), la Mesa de Entradas receptora y el acuse de recibo por parte de SOTR S.E. El documento no menciona literalmente el \"sello\" de recepción, así que ese detalle accesorio no queda expresamente verificado, aunque el acuse de recibo lo cubre en lo sustancial. Se toma como prueba directa del acto porque es un acuse emitido por la propia demandada sobre su recepción. La contestación no se considera como evidencia.\n\n<FIN>"
+      ],
+      "segundos": 11.1
+    },
+    "AF-13": {
+      "iteraciones": 4,
+      "motivo": "señal de fin",
+      "in": 83790,
+      "out": 1738,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "10 de octubre de 2025"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "mora"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "octubre"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "10/10/2025"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-13": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": [
+            {
+              "documento": "DOC-1",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "Les informo que la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento."
+            },
+            {
+              "documento": "DOC-4",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+            },
+            {
+              "documento": "DOC-3",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "Se solicita su anulación y reemplazo."
+            }
+          ]
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "",
+        "### AF-13 | sin_respaldo | 0.8\n\nNOTA: Ningún documento de prueba fija la fecha del 10 de octubre de 2025 como fecha de constitución en mora. La búsqueda de \"10 de octubre de 2025\", \"10/10/2025\" y \"octubre\" solo arrojó la propia demanda, que no es prueba. El plazo pactado es el de la cláusula 1 de la orden de compra, que establece que el pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente. Con ese plazo, la mora no puede fijarse en una fecha única sin establecer antes la fecha de presentación de una factura conformada, y la prueba no permite hacerlo. La factura 00005-00000143 fue presentada por correo del 31 de mayo de 2025, pero luego la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Además, la demandada informó que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica.\n\nRespecto de los fundamentos accesorios que invoca la afirmación, la prueba no coincide con la frase \"sin que mediara pago ni observación alguna\". Hay observaciones documentadas de la demandada, como el correo del 9 de agosto de 2025 que pide la anulación y reemplazo de la factura 00005-00000172. Tampoco hay constancia de pagos en el expediente. Estos puntos no deciden el estado, porque la fecha de mora es el hecho principal y no figura en la prueba. La demandada, en el memorándum de 2 de febrero de 2026, sostuvo que la factura estaba en trámite de conformación, postura que queda en esta nota y no se usa como prueba.\n\n<FIN>"
+      ],
+      "segundos": 15.6
+    },
+    "AF-15": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 41845,
+      "out": 1534,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-15": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-15 | sin_respaldo | 0.6\nNOTA: Ningún documento de prueba registra un pago concreto (total ni parcial) imputable a las facturas 00005-00000143, 00005-00000158, 00005-00000172 o 00005-00000173. Las cuatro facturas son de cuenta corriente y no tienen cancelación ni recibo asociado. El correo de Tesorería del 30 de septiembre de 2025 dice que la factura 00005-00000172 \"ya ha sido procesada y contabilizada el 10 de agosto\", pero también aclara que \"respecto de fechas de transferencia no poseo información\". Procesar o contabilizar una factura no equivale a pagarla, así que ese correo no contradice la afirmación, aunque tampoco la respalda. La afirmación es negativa, por lo que el expediente no prueba la inexistencia de pagos. La contestación niega los hechos de la demanda, pero eso no se toma como prueba. Corresponde que la demandada acredite los pagos que alegue, o que se pida informe a Tesorería sobre transferencias. El expediente no incluye ningún comprobante de pago para verificar.\n\n<FIN>"
+      ],
+      "segundos": 12.8
+    },
+    "AF-14": {
+      "iteraciones": 3,
+      "motivo": "señal de fin",
+      "in": 44619,
+      "out": 1473,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "intereses"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "tasa activa"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "Banco de la Nacion"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "costas"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-14": {
+          "citas": [],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "### AF-14 | sin_respaldo | 0.8\nNOTA: Ningún documento de prueba (DOC-1 a DOC-4) se refiere al reclamo de intereses a la tasa activa del Banco de la Nación para descuento a treinta días, ni a la fecha de mora desde la que se computarían. La única cláusula relacionada es la cláusula 5 de la orden de compra (DOC-1, pág. 3), que establece que la orden \"no genera intereses, actualización ni diferencia de cambio a favor del proveedor por causa de demora en el trámite de conformación\". Esa cláusula no contradice el reclamo porque no se refiere a intereses moratorios por falta de pago de la factura, y decidir si corresponde es tarea del juez; la dejo como nota y no como contradicción. Tampoco hay prueba sobre las costas, que dependen de lo que resuelva el juez. La afirmación de la demanda sobre la mora y los intereses no tiene respaldo documental en la prueba acompañada.\n\n<FIN>"
+      ],
+      "segundos": 14.2
+    },
+    "AF-12": {
+      "iteraciones": 4,
+      "motivo": "señal de fin",
+      "in": 96670,
+      "out": 3134,
+      "tools": [
+        {
+          "tool": "listar_documentos",
+          "input": {},
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-1"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-2"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-3"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DOC-4"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "498.212,70"
+          },
+          "error": false
+        },
+        {
+          "tool": "buscar",
+          "input": {
+            "termino": "498212"
+          },
+          "error": false
+        },
+        {
+          "tool": "leer_documento",
+          "input": {
+            "id": "DEM"
+          },
+          "error": false
+        }
+      ],
+      "items": {
+        "AF-12": {
+          "citas": [
+            {
+              "documento": "DOC-2",
+              "paginas": [
+                1,
+                1
+              ],
+              "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+            },
+            {
+              "documento": "DOC-2",
+              "paginas": [
+                2,
+                2
+              ],
+              "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+            },
+            {
+              "documento": "DOC-2",
+              "paginas": [
+                3,
+                3
+              ],
+              "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 Total de la factura $ 399.784,00 Son PESOS TRESCIENTOS NOVENTA Y NUEVE MIL SETECIENTOS OCHENTA Y CUATRO CON 00/100."
+            },
+            {
+              "documento": "DOC-2",
+              "paginas": [
+                4,
+                4
+              ],
+              "texto": "Responsable inscripto Orden de compra 4520002029 Remito asociado 0002-00008644 Condición de venta Cuenta corriente Concepto Importe Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 452.535,16 Total de la factura $ 452.535,16 Son PESOS CUATROCIENTOS CINCUENTA Y DOS MIL QUINIENTOS TREINTA Y CINCO CON 16/100."
+            }
+          ],
+          "descartadas": [],
+          "en_nota": []
+        }
+      },
+      "textos": [
+        "",
+        "",
+        "",
+        "### AF-12 | contradicha | 0.85\n\nLas cuatro facturas que la demanda enumera suman otra cifra: Provisión de mobiliario y equipamiento según orden de compra N° 4520002029 $ 399.784,00 (factura 00005-00000143), $ 399.784,00 (factura 00005-00000158), $ 399.784,00 (factura 00005-00000172) y $ 452.535,16 (factura 00005-00000173). Sumadas dan $ 1.651.887,16, no $ 498.212,70, y el total de la demanda no coincide con el detalle que la propia demanda dice respaldar.\n\nNOTA: La demanda afirma que el total surge del detalle que antecede y de una certificación contable, pero el detalle no reproduce el total: las cuatro facturas que enumera suman $ 1.651.887,16 y no encuentro combinación de ellas que dé $ 498.212,70. La certificación contable a la que alude no figura en el expediente, así que no pude verificarla. La orden de compra (DOC-1) no consigna precios, por lo que no permite reconstruir el monto. Además, las facturas 143, 158 y 172 remiten a la misma orden de compra y al mismo remito 0002-00008644, de modo que sumarlas parece duplicar el mismo suministro. La demandada, en su correo del 9 de agosto de 2025, calculó el total a facturar en $ 452.535,16 (DOC-3), pero ese correo es una observación de la demandada y sólo lo consigno como referencia, no como base del estado. La contestación (CON) niega el monto y sostiene que la única factura vigente es la 173, pero la contestación no es prueba y no fundamenta el estado.\n\n<FIN>"
+      ],
+      "segundos": 25.1
+    }
+  },
+  "segundos": 57.7,
+  "segundos_verificacion": 52.2,
+  "segundos_suma_verificadores": 221.5,
+  "total": {
+    "in": 727694,
+    "out": 28657
+  }
+}

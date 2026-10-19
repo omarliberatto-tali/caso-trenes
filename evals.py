@@ -177,6 +177,9 @@ def main() -> None:
     salida = {"resumen": resumen, "detalle": detalle}
 
     ruta_v = Path(args.veredictos) if args.veredictos else destino / "veredictos.json"
+    # Con --veredictos el eval.json queda al lado de esos veredictos y no pisa el de salida/<exp>.
+    if args.veredictos:
+        destino = ruta_v.parent
     if ruta_v.exists():
         obtenidos_v: List[Veredicto] = json.loads(ruta_v.read_text(encoding="utf-8"))
         resumen_v, detalle_v = calificar_veredictos(

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "corpus-trenes": {
+      "command": "../.venv/bin/python",
+      "args": ["servidor_mcp.py", "${EXPEDIENTE:-C1_Impresos_y_formularios}"]
+    }
+  }
+}
