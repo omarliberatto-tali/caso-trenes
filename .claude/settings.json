@@ -1,0 +1,33 @@
+{
+  "enabledMcpjsonServers": ["corpus-trenes"],
+  "permissions": {
+    "allow": [
+      "Bash(../.venv/bin/python evals.py:*)",
+      "mcp__corpus-trenes__listar_documentos",
+      "mcp__corpus-trenes__leer_documento",
+      "mcp__corpus-trenes__buscar"
+    ],
+    "ask": [
+      "Bash(../.venv/bin/python agente.py:*)",
+      "Bash(../.venv/bin/python orquestador.py:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Edit(./referencia/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/proteger_apartada.py"}]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/eval_tras_corrida.py", "timeout": 60}]
+      }
+    ]
+  }
+}
