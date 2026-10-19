@@ -5,9 +5,9 @@ import json
 import unicodedata
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
-from contrato import Item
+from contrato import Item, Veredicto
 
 RAIZ = Path(__file__).resolve().parent
 REFERENCIA = RAIZ / "referencia"
@@ -71,10 +71,88 @@ def calificar(obtenidos: List[Item], referencia: List[Item]) -> Tuple[Dict, List
     return resumen, detalle
 
 
+def veredictos_esperados(expediente: str) -> List[Dict]:
+    datos = json.loads((REFERENCIA / expediente / "referencia.json").read_text(encoding="utf-8"))
+    return datos["veredictos"]
+
+
+def _fuente_ok(obtenido: Veredicto, esperado: Dict) -> Optional[bool]:
+    """La fuente es correcta si alguna evidencia cae en el documento esperado y en una de sus
+    paginas admitidas. Si la referencia no trae evidencia (sin_respaldo) no hay cita esperada
+    y la fuente no se mide: devuelve None y el item queda fuera del porcentaje.
+
+    El fragmento no se compara con el de la referencia: con citations es texto literal del
+    PDF por construccion, y la referencia guarda uno solo de los pasajes validos.
+    """
+    if not esperado["evidencia"]:
+        return None
+    for ev_ref in esperado["evidencia"]:
+        admitidas = esperado.get("paginas_admitidas") or [ev_ref["pagina"]]
+        for ev in obtenido["evidencia"]:
+            if ev["documento_id"] == ev_ref["documento_id"] and ev["pagina"] in admitidas:
+                return True
+    return False
+
+
+def fuentes_extra(expediente: str) -> Dict[str, Dict]:
+    """Fuentes que se aceptan ademas de las de la referencia, justificadas una por una en
+    ``referencia/fuentes_extra.json``. Solo alimentan el numero de fuente ampliada."""
+    ruta = REFERENCIA / "fuentes_extra.json"
+    if not ruta.exists():
+        return {}
+    return json.loads(ruta.read_text(encoding="utf-8")).get(expediente, {})
+
+
+def calificar_veredictos(
+    obtenidos: List[Veredicto], referencia: List[Dict], extra: Dict[str, Dict] | None = None
+) -> Tuple[Dict, List[Dict]]:
+    extra = extra or {}
+    por_id = {v["item_id"]: v for v in obtenidos}
+    detalle: List[Dict] = []
+    for esperado in referencia:
+        obtenido = por_id.get(esperado["item_id"])
+        if obtenido is None:
+            fuente = False if esperado["evidencia"] else None
+            detalle.append(
+                {"id": esperado["item_id"], "estado_ok": False, "fuente_ok": fuente, "fuente_ampliada_ok": fuente, "faltante": True}
+            )
+            continue
+        fuente_ok = _fuente_ok(obtenido, esperado)
+        admitidas = [tuple(a) for a in extra.get(esperado["item_id"], {}).get("admitidas", [])]
+        citadas = [(e["documento_id"], e["pagina"]) for e in obtenido["evidencia"]]
+        detalle.append(
+            {
+                "id": esperado["item_id"],
+                "estado_ok": obtenido["estado"] == esperado["estado"],
+                "fuente_ok": fuente_ok,
+                "fuente_ampliada_ok": None if fuente_ok is None else fuente_ok or any(c in admitidas for c in citadas),
+                "estado_esperado": esperado["estado"],
+                "estado_obtenido": obtenido["estado"],
+                "fuente_esperada": [(e["documento_id"], e["pagina"]) for e in esperado["evidencia"]],
+                "fuente_obtenida": [(e["documento_id"], e["pagina"]) for e in obtenido["evidencia"]],
+                "confianza": obtenido["confianza"],
+            }
+        )
+    total = len(referencia)
+    con_cita = [d for d in detalle if d["fuente_ok"] is not None]
+    resumen = {
+        "total_referencia": total,
+        "items_con_cita": len(con_cita),
+        "acierto_item_pct": round(100 * sum(d["estado_ok"] for d in detalle) / total, 1) if total else 0.0,
+        "acierto_fuente_pct": round(100 * sum(d["fuente_ok"] for d in con_cita) / len(con_cita), 1) if con_cita else 0.0,
+        "acierto_fuente_ampliada_pct": (
+            round(100 * sum(d["fuente_ampliada_ok"] for d in con_cita) / len(con_cita), 1) if con_cita else 0.0
+        ),
+        "faltantes": sum(1 for d in detalle if d.get("faltante")),
+    }
+    return resumen, detalle
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Califica la extraccion contra el set de referencia.")
     ap.add_argument("expediente", nargs="?", default="C1_Impresos_y_formularios")
     ap.add_argument("--items", default=None)
+    ap.add_argument("--veredictos", default=None)
     args = ap.parse_args()
 
     ruta = Path(args.items) if args.items else RAIZ / "salida" / args.expediente / "items.json"
@@ -82,8 +160,9 @@ def main() -> None:
     resumen, detalle = calificar(obtenidos, esperados(args.expediente))
 
     print(f"EVAL {args.expediente}")
-    print(f"  acierto de item   {resumen['acierto_item_pct']}%  ({resumen['aciertos']}/{resumen['total_referencia']})")
-    print(f"  acierto de pagina {resumen['acierto_pagina_pct']}%")
+    print("EXTRACCION (M1/M2)")
+    print(f"  acierto de afirmacion {resumen['acierto_item_pct']}%  ({resumen['aciertos']}/{resumen['total_referencia']})")
+    print(f"  acierto de pagina     {resumen['acierto_pagina_pct']}%")
     print(f"  extraidos {resumen['extraidos']} | faltantes {resumen['faltantes']} | texto distinto {resumen['texto_distinto']} | inventados {resumen['inventados']}")
     fallas = [d for d in detalle if d["resultado"] != "acierto" or not d.get("pagina_ok", True)]
     if fallas:
@@ -95,9 +174,39 @@ def main() -> None:
             print(f"    {d['id']}  {d['resultado']}  sim={d['similitud']}{extra}")
 
     destino = RAIZ / "salida" / args.expediente
+    salida = {"resumen": resumen, "detalle": detalle}
+
+    ruta_v = Path(args.veredictos) if args.veredictos else destino / "veredictos.json"
+    if ruta_v.exists():
+        obtenidos_v: List[Veredicto] = json.loads(ruta_v.read_text(encoding="utf-8"))
+        resumen_v, detalle_v = calificar_veredictos(
+            obtenidos_v, veredictos_esperados(args.expediente), fuentes_extra(args.expediente)
+        )
+        print("VERIFICACION (M3)")
+        print(f"  acierto de item   {resumen_v['acierto_item_pct']}%  (el estado es el correcto)")
+        print(
+            f"  acierto de fuente {resumen_v['acierto_fuente_pct']}%  (documento y pagina citados son los correctos,"
+            f" sobre los {resumen_v['items_con_cita']} items con cita esperada)"
+        )
+        print(f"  fuente ampliada   {resumen_v['acierto_fuente_ampliada_pct']}%  (suma referencia/fuentes_extra.json)")
+        fallas_v = [d for d in detalle_v if not d["estado_ok"] or d["fuente_ok"] is False]
+        if fallas_v:
+            print("  casos que fallan:")
+            for d in fallas_v:
+                if d.get("faltante"):
+                    print(f"    {d['id']}  faltante")
+                    continue
+                print(
+                    f"    {d['id']}  estado {d['estado_obtenido']} (esperado {d['estado_esperado']})"
+                    f"  cita {d['fuente_obtenida']} (esperada {d['fuente_esperada']})"
+                    f"  confianza {d['confianza']}"
+                    + ("  [fuente admitida en fuentes_extra]" if d["fuente_ampliada_ok"] and d["fuente_ok"] is False else "")
+                )
+        salida["verificacion"] = {"resumen": resumen_v, "detalle": detalle_v}
+
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "eval.json").write_text(
-        json.dumps({"resumen": resumen, "detalle": detalle}, ensure_ascii=False, indent=2),
+        json.dumps(salida, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
