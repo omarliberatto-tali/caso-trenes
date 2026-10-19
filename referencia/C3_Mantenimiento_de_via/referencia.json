@@ -398,19 +398,11 @@
     },
     {
       "item_id": "AF-14",
-      "estado": "respaldada",
-      "evidencia": [
-        {
-          "documento_id": "DOC-1",
-          "pagina": 3,
-          "fragmento": "no genera intereses"
-        }
-      ],
+      "estado": "sin_respaldo",
+      "evidencia": [],
       "confianza": 1.0,
-      "nota": "",
-      "paginas_admitidas": [
-        3
-      ],
+      "nota": "El contrato no prevé intereses por mora ni fija tasa alguna.",
+      "paginas_admitidas": [],
       "niega_la_contestacion": "sí"
     },
     {
@@ -531,9 +523,9 @@
     {
       "item_id": "AF-14",
       "titulo": "Intereses pretendidos",
-      "estado": "respaldada",
-      "documento_id": "DOC-1",
-      "pagina": 3,
+      "estado": "sin_respaldo",
+      "documento_id": "",
+      "pagina": "",
       "niega_la_contestacion": "sí"
     },
     {

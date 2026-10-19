@@ -20,6 +20,10 @@ class ExpedienteApartado(RuntimeError):
     pass
 
 
+class DocumentoInvalido(ValueError):
+    """El archivo no existe, no es un PDF o no se puede leer su texto."""
+
+
 def expedientes() -> List[str]:
     return sorted(d.name for d in CORPUS.iterdir() if d.is_dir())
 
@@ -37,7 +41,26 @@ def _ruta(expediente: str, permitir_apartada: bool = False) -> Path:
 
 
 def _paginas(pdf: Path) -> int:
-    return len(_crudo(pdf))
+    # Un PDF roto no tiene que tirar abajo el indice entero: queda con 0 paginas y el
+    # error aparece recien cuando alguien lo quiere leer (validar_pdf).
+    try:
+        return len(_crudo(pdf))
+    except subprocess.CalledProcessError:
+        return 0
+
+
+def validar_pdf(pdf: Path) -> None:
+    if not pdf.is_file():
+        raise DocumentoInvalido(f"el archivo {pdf.name} no existe")
+    with pdf.open("rb") as f:
+        if pdf.suffix.lower() != ".pdf" or f.read(5) != b"%PDF-":
+            raise DocumentoInvalido(f"{pdf.name}: formato no soportado, se espera un PDF")
+    try:
+        crudo = _crudo(pdf)
+    except subprocess.CalledProcessError:
+        raise DocumentoInvalido(f"{pdf.name}: PDF ilegible") from None
+    if not crudo:
+        raise DocumentoInvalido(f"{pdf.name}: el PDF no tiene capa de texto")
 
 
 def _crudo(pdf: Path) -> List[str]:
@@ -135,6 +158,7 @@ def bloque_documento(
     (``start_page_number`` / ``end_page_number``, 1-indexado).
     """
     ruta = _pdf(expediente, documento_id, permitir_apartada)
+    validar_pdf(ruta)
     titulo = next(
         d["titulo"] for d in documentos(expediente, permitir_apartada) if d["id"] == documento_id
     )

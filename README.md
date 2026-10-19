@@ -1,4 +1,4 @@
-# caso-trenes — Semana 2 (M2)
+# caso-trenes — Semana 3 (M3)
 
 Verificación de respaldo probatorio sobre expedientes judiciales. Hasta acá cubre el
 primer paso, extraer las afirmaciones de hecho de una demanda, con el corpus servido por un
@@ -185,18 +185,152 @@ Sorteada con `secrets.choice` sobre los 6 expedientes el 11/09/2026, antes de co
 abre en la semana 6. `corpus.py` la bloquea: cualquier acceso levanta `ExpedienteApartado`
 salvo que se pase `permitir_apartada=True`.
 
+## M3 — la cita
+
+Después de extraer, el agente verifica cada afirmación contra la prueba documental y devuelve
+un `Veredicto` (`respaldada` · `sin_respaldo` · `contradicha`) con su evidencia: documento,
+página y fragmento textual.
+
+```
+../.venv/bin/python agente.py C1_Impresos_y_formularios                 # extrae y verifica
+../.venv/bin/python agente.py C1_Impresos_y_formularios --reusar-items  # solo verifica
+../.venv/bin/python evals.py  C1_Impresos_y_formularios                 # los dos evals
+```
+
+**Qué cambió:**
+
+- **Citations en el loop, no en un script aparte.** `leer_documento` devuelve el PDF como bloque
+  `document` dentro del `tool_result`, y en la fase de verificación el agente le enciende
+  `citations`. La extracción queda sin citations: su salida es una línea JSON por afirmación y
+  ya da 100 % de página.
+- **La evidencia sale de las citas de la API, no de lo que el modelo escribe.** Cada cita trae
+  `document_title`, `start_page_number` y `cited_text`, que es texto literal del PDF. El título
+  del documento arranca con su id (`DOC-1 · Orden de compra`) para saber de qué documento
+  vino. Las citas a la demanda o a la contestación se descartan como evidencia y quedan en la
+  traza.
+- **El criterio de los tres estados vive en el servidor MCP**, como prompt
+  `criterio_veredicto`, junto al de afirmación de hecho. Deja explícito que «no aparece» es
+  `sin_respaldo` y no `contradicha`, y que la contestación va a la nota.
+- **Conocimiento del dominio en el criterio.** Como no se suma material al expediente, lo que
+  sabe un abogado va en el criterio. Una regla entra si un especialista la pondría en un
+  manual para alguien que arranca, sin haber visto el caso, y si tiene fuente; si solo existe
+  para que un ítem del eval dé bien, no entra. Reglas de derecho laboral:
+  - Cualquier pago imputable a un rubro reclamado contradice que no hubo pagos.
+  - La base de la indemnización por antigüedad es la mejor remuneración mensual, normal y
+    habitual del último año, calculada solo con los conceptos remunerativos
+    (art. 245 de la Ley de Contrato de Trabajo, Ley 20.744).
+- **Qué hacer cuando el material no alcanza:** el system prompt pide `sin_respaldo` con
+  confianza baja y la nota diciendo qué faltó, y prohíbe completar con lo que diría un
+  documento que no se leyó.
+- **Errores obvios:** `corpus.validar_pdf` distingue archivo inexistente, formato no soportado
+  (no empieza con `%PDF-`) y PDF ilegible o sin capa de texto. `leer_documento` los devuelve
+  como error de tool (`is_error`) y el loop sigue. Un PDF roto no tira abajo
+  `listar_documentos`: figura con 0 páginas.
+- **Traza:** `salida/<exp>/traza.json` guarda las tools que se llamaron y, por afirmación, las
+  citas crudas que la sostienen y las que se descartaron.
+- **Corte por `max_tokens`:** si la respuesta se corta, la última afirmación se descarta entera
+  y se pide de nuevo, igual que el arreglo de AF-09 en M1.
+
+**Cómo se mide** (`evals.py`, sección VERIFICACION):
+
+- **Acierto de ítem:** el estado coincide con el de la referencia.
+- **Acierto de fuente:** alguna evidencia cae en el documento esperado y en una de sus
+  `paginas_admitidas`. Se mide solo sobre los ítems que tienen cita esperada: un `sin_respaldo`
+  de la referencia no trae evidencia y queda fuera del porcentaje (el eval informa sobre cuántos
+  ítems se calculó). El fragmento no se compara, porque con citations es literal del PDF por
+  construcción y la referencia guarda uno solo de los pasajes válidos.
+
+Resultado sobre C1, C2 y C3: pendiente de la primera corrida.
+
+### Prueba con Haiku 5.5 (rama `feature/m3-haiku-5-5`, 08/10/2026)
+
+Haiku 5.5 cuesta US$0,10 / US$0,50 por millón de tokens con prompts de hasta 100K (Haiku 4.5:
+US$1 / US$5). Trae el pensamiento prendido por defecto, y el esfuerzo se fija con
+`output_config.effort` (constante `ESFUERZO` en `agente.py`). Todas las corridas son con
+`--reusar-items` y una sola vez por configuración. Cada celda es acierto de estado / acierto de
+fuente.
+
+| Configuración | C1 | C2 | C3 | C5 | C6 |
+|---|---|---|---|---|---|
+| Haiku 4.5, criterio `90eb477` | — | 93,3 / — | — | 93,3 / — | — |
+| 5.5, esfuerzo bajo | — | 80 / 73,3 | — | 73,3 / 60 | — |
+| 5.5, esfuerzo medio | — | 80 / 80 | — | 93,3 / 80 | — |
+| 5.5, esfuerzo alto | — | 73,3 / 66,7 | — | 86,7 / 73,3 | — |
+| 5.5 medio + reglas nuevas | — | 100 / 66,7 | — | 100 / 80 | — |
+| + regla de citas por estado | 93,3 / 80 | 93,3 / 73,3 | 80 / 86,7 | 100 / 80 | 86,7 / 73,3 |
+| + NOTA sin citas (revertida) | 100 / 66,7 | 86,7 / 86,7 | 80 / 80 | 100 / 60 | 86,7 / 80 |
+| Parser sin citas de la NOTA, fuente sobre ítems con cita | 93,3 / 100 | 93,3 / 50 | 86,7 / 66,7 | 86,7 / 72,7 | 86,7 / 100 |
+| + reintento de faltantes y sin cita (no se disparó) | — | 93,3 / 80 | — | 93,3 / 81,8 | — |
+| + regla de conclusión jurídica (mora) | 100 / 100 | 100 / 100 | 86,7 / 77,8 | 100 / 72,7 | 86,7 / 100 |
+
+La última fila corre solo C2 y C5. Antes de cerrar, el agente hace una vuelta más por las
+afirmaciones que faltan o que quedaron `respaldada`/`contradicha` sin cita, y guarda en
+`traza.json` el texto crudo de cada iteración (`textos`) y los ids reintentados (`reintento`).
+En esta corrida no hizo falta: C5 trajo las 15 y C2 citó todas, así que la mejora es variación
+entre corridas y el reintento queda como red. Se probó aparte con un cliente simulado.
+
+La regla de conclusión jurídica dice que una afirmación como la constitución en mora se verifica
+por su hecho principal: si ninguna prueba lo fija, es `sin_respaldo` aunque la prueba contradiga
+un fundamento accesorio ("sin observación alguna"), y prevalece sobre la excepción de la postura
+de parte. Con ella la fecha de mora (AF-13 en C1, C2, C3 y C5) sale bien en todos. En esa
+corrida el reintento se disparó en C3, C5 y C6. Quedan C6 AF-13 (total reclamado: la referencia
+espera `sin_respaldo` y el agente aplica la regla del total contradicho por un componente, que
+en C2 y C3 coincide con la referencia), C6 AF-03 (tareas asignadas contra tareas ejecutadas),
+C3 AF-03 y AF-15, y C3 AF-05 sin cita aun con el reintento.
+
+La referencia de C3 AF-14 se corrigió a `sin_respaldo` (igual que C1 y C2): la columna C3 de la
+última fila está recalculada con la referencia nueva; las filas anteriores, con la vieja.
+
+La última fila no se compara directo con las anteriores en fuente: el porcentaje se calcula
+sobre los ítems con cita esperada (9 a 11 por expediente) y no sobre los 15. En esa corrida, C3
+escribió el estado en inglés (`contradicted`) en cinco afirmaciones: el parser ahora traduce
+`supported`, `unsupported` y `contradicted` al estado en español y guarda el original en la
+traza como `estado_original` (C3 pasó de 46,7 a 80 sin volver a correr); C5 salteó AF-03 y AF-10; y en C2 cinco
+veredictos con estado correcto no trajeron ninguna cita, ni en el pasaje ni en la NOTA.
+
+Con esfuerzo bajo, C5 cortó en 12 de 15 veredictos. Medio quedó como valor fijo: alto gasta
+casi el doble de salida y no corrige nada. Una corrida de los cinco expedientes con 5.5 cuesta
+unos US$0,08.
+
+Reglas que se sumaron a `CRITERIO_VEREDICTO`:
+
+- Si la prueba acredita el hecho principal (acto, fecha, monto), un detalle accesorio que no
+  figura no lo baja a `sin_respaldo`: va a la nota.
+- Una cláusula que excluye o no prevé lo que se reclama no contradice el reclamo.
+- La prueba que registra el mismo hecho sobre otro número de comprobante lo contradice.
+- Un total queda contradicho si la prueba contradice uno de sus componentes.
+- Un rechazo, una negativa o una observación de una parte es su postura, no prueba en contra,
+  salvo que la afirmación trate de ese mismo acto de la parte.
+- `respaldada` y `contradicha` citan; `sin_respaldo` no cita.
+
+**Lo que queda abierto:**
+
+- **Citas de la NOTA:** el modelo transcribe fragmentos en la NOTA y citations los devuelve como
+  citas. Pedirle en el prompt que no cite en la NOTA hizo que también dejara de citar en las
+  `contradicha`, así que se resuelve en el parser: solo cuentan como evidencia las citas del
+  pasaje, entre el encabezado y la NOTA. Las de la NOTA quedan en `traza.json` como `en_nota`,
+  para depurar, pero no entran al veredicto. El estado lo sigue decidiendo el modelo; el parser
+  solo decide qué parte de su respuesta es evidencia, igual que ya separaba la línea de la
+  demanda de la de la prueba.
+- **Variación entre corridas:** C2 AF-03 dio los tres estados con el mismo criterio. Con una
+  corrida por configuración, una diferencia de una afirmación (6,7 puntos) no se distingue del
+  ruido.
+
+Las salidas commiteadas en `salida/` son de la última corrida, la del parser que ignora las
+citas de la NOTA.
+
 ## Estado del repo
 
 ```
 contrato.py    las formas de la sección 4 del enunciado
-criterio.py    ESTADOS, la demanda apartada y el criterio de afirmación de hecho
-corpus.py      índice del corpus, bloque document y texto paginado (índice de M2)
-servidor_mcp.py  las tres tools del corpus y el prompt del criterio
-agente.py      el loop de extracción, cliente del servidor MCP
-evals.py       califica contra el set de referencia
+criterio.py    ESTADOS, la demanda apartada y los criterios de afirmación y de veredicto
+corpus.py      índice del corpus, bloque document, validación de PDF y texto paginado
+servidor_mcp.py  las tres tools del corpus y los prompts de los dos criterios
+agente.py      los loops de extracción y de verificación, cliente del servidor MCP
+evals.py       califica extracción y verificación contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
-salida/        items.json y eval.json por expediente
+salida/        items.json, veredictos.json, traza.json y eval.json por expediente
 requirements.txt  dependencias del venv
 ```
 
