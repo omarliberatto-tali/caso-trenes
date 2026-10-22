@@ -437,6 +437,76 @@ cuando se subió el tope. La salida de C2 reemplaza a la de la primera corrida.
   salida los cinco, unos US$0,39, contra ≈ US$0,085 de la secuencial. Cada verificador lee su
   propia prueba: es el lugar donde más pegaría el cache del M6.
 
+## M6 — tool forzada, cache y Batch API
+
+`estructurado.py` verifica con un request por afirmación, sin loop de tools: la prueba entera del
+expediente va en el prompt y el veredicto sale por `registrar_veredicto` (en `criterio.py`), con
+`tool_choice` forzado y `strict: true`. Haiku 5.5 acepta la tool forzada; con ella no piensa
+antes de llamarla, así que el razonamiento va en el primer campo del esquema (`analisis`).
+
+```
+../.venv/bin/python estructurado.py C2_Mobiliario_de_estaciones --primeras 3   # tiempo real, para depurar
+../.venv/bin/python estructurado.py                                          # los 5, tiempo real
+../.venv/bin/python estructurado.py --batch                                  # los 5, Batch API
+```
+
+**Prompt de sistema reescrito.** Secciones con etiquetas XML (`<rol>`, `<contexto>`, `<criterio>`,
+`<datos>`, `<como_responder>`, `<ejemplos>`), contexto explícito de para qué se usa el resultado,
+tres ejemplos de un expediente inventado (uno por estado) y chain-of-thought en el campo
+`analisis`. Sin prefill: Haiku 5.5 lo rechaza con 400.
+
+**Validación antes de usar el veredicto.** Primero pydantic (`VeredictoModelo`): el estado dentro
+del enum, la confianza entre 0 y 1, `DOC-n` como documento, y las citas según el estado
+(respaldada y contradicha citan; sin_respaldo no). Después la cita contra el PDF (`_anclar`):
+sin citations, la página la declara el modelo, y el código busca el fragmento en el texto del
+documento. Si está en otra página vale la del texto; si no está, es un error. Un veredicto que no
+pasa vuelve al modelo como `tool_result` con `is_error`, una sola vez; si la corrección tampoco
+pasa, se guarda lo que validó con confianza 0 y la marca de revisar a mano. En las corridas de
+abajo ninguna respuesta falló la validación; los seis casos de falla (estado fuera del enum,
+confianza 1,5, respaldada sin cita, sin_respaldo con cita, fragmento inventado, cita de la
+demanda) se probaron con respuestas armadas.
+
+**Cache.** El orden del prompt es tools → system → messages, y el primer mensaje arranca con la
+lista y los PDFs de la prueba: el `cache_control` va en el último PDF, y la afirmación, que es lo
+único que cambia, va después. La prueba ocupa entre 22.000 y 44.000 tokens por expediente. La
+primera afirmación escribe la cache y va sola; las otras 14 la leen, cinco en paralelo.
+
+**Reintentos.** El cliente va con `max_retries=0` y `_llamar` reintenta solo 429, 5xx y fallas de
+conexión, con backoff exponencial, jitter y `retry-after` como mínimo. Un 400 no se reintenta.
+
+**Batch API.** Un batch con los cinco expedientes; `custom_id` = `<expediente>__<AF-NN>`, que es
+el join (los resultados vuelven en cualquier orden). Los resultados crudos se guardan en
+`salida/batch_<id>.jsonl`, porque la API los borra a los 29 días. Los que vuelven `errored`,
+`expired` o `canceled` se piden de nuevo en tiempo real; `--batch-id` retoma un batch enviado.
+
+**Resultados (22/10/2026, Haiku 5.5, las 75 afirmaciones).**
+
+| | M4 secuencial | M6 tiempo real | M6 batch sin precalentar | M6 batch precalentado |
+|---|---|---|---|---|
+| Estado | 94,7 % | 92,0 % | 92,0 % | 89,3 % |
+| Fuente | 90,1 % | 82,7 % | 82,7 % | 82,3 % |
+| Fuente ampliada | — | 88,5 % | 88,5 % | 88,1 % |
+| Costo de los 5 | ≈ US$0,085 | US$0,068 | US$0,168 | US$0,061 |
+| Costo por afirmación | ≈ US$0,0011 | US$0,0009 | US$0,0022 | US$0,0008 |
+| Tiempo | ~5 min | 1 min 50 s | 3 min 15 s | 6 min 35 s |
+
+- Sin cache, los mismos 2,7 millones de tokens de entrada costarían unos US$0,29 en tiempo real:
+  la cache baja la corrida un 77 %.
+- El batch sin precalentar salió más caro que el tiempo real. Procesa los requests en paralelo,
+  así que los 15 de un expediente escriben la cache a la vez (a 2x, con TTL de 1 hora) y casi
+  ninguno la lee: es el caso en que la cache encarece. Precalentado —la primera afirmación de
+  cada expediente en tiempo real, el resto por el batch— cada expediente escribe una vez y las
+  otras 14 leen. Contra el tiempo real ahorra un 11 %, no la mitad: con la cache, la entrada ya
+  cuesta poco y lo que el batch abarata es lo que queda.
+- El estado baja 2,7 puntos y la fuente 7 contra la secuencial del M4. Las fallas se concentran
+  en C2 (AF-08, AF-09 y AF-12 salen sin_respaldo) y en C5, que cita páginas que tienen el pasaje
+  pero no son las de la referencia. Este modo no tiene `buscar` ni piensa antes de la tool; no
+  está medido cuál de las dos pesa.
+- Entre las dos corridas por batch cambian C5 y C6 con el mismo prompt: es la variación entre
+  corridas, del orden de una o dos afirmaciones por expediente.
+- La extracción sigue siendo la del M1 (JSON por línea): con `--reusar-items` no se corre, y para
+  la demanda apartada se corre una vez antes de verificar.
+
 ## Estado del repo
 
 ```
@@ -446,6 +516,7 @@ corpus.py      índice del corpus, bloque document, validación de PDF y texto p
 servidor_mcp.py  las tres tools del corpus y los prompts de los dos criterios
 agente.py      los loops de extracción y de verificación, cliente del servidor MCP
 orquestador.py el fan-out por afirmación (M4): orquestador, extractor y verificadores
+estructurado.py la verificación con tool forzada, cache y Batch API (M6)
 CLAUDE.md      cómo se corre, convenciones y decisiones de diseño, para Claude Code (M5)
 .mcp.json      el servidor MCP del corpus conectado a Claude Code; el expediente sale de EXPEDIENTE
 .claude/       settings (permisos y hooks), hooks/ (apartada bloqueada, eval tras cada corrida),
@@ -453,7 +524,8 @@ CLAUDE.md      cómo se corre, convenciones y decisiones de diseño, para Claude
 evals.py       califica extracción y verificación contra el set de referencia
 corpus/        los 6 expedientes (escritos + prueba)
 referencia/    el set de referencia de cada expediente
-salida/        items.json, veredictos.json, traza.json y eval.json por expediente
+salida/        items.json, veredictos.json, traza.json y eval.json por expediente; fanout/,
+               estructurado/ y batch/ por modo
 requirements.txt  dependencias del venv
 ```
 

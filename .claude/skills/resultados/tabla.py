@@ -5,7 +5,7 @@ from pathlib import Path
 salida = Path(__file__).resolve().parents[3] / "salida"
 print(f"{'expediente':32} {'version':10} {'estado':>7} {'fuente':>7} {'ampl.':>7}  fallan")
 for exp in sorted(p for p in salida.iterdir() if p.is_dir()):
-    for version, carpeta in (("secuencial", exp), ("fan-out", exp / "fanout")):
+    for version, carpeta in (("secuencial", exp), ("fan-out", exp / "fanout"), ("tool M6", exp / "estructurado"), ("batch M6", exp / "batch")):
         ev = carpeta / "eval.json"
         if not ev.exists():
             continue

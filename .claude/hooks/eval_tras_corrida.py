@@ -1,4 +1,4 @@
-"""PostToolUse: despues de una corrida de agente.py u orquestador.py, el eval corre solo.
+"""PostToolUse: despues de una corrida de agente.py, orquestador.py o estructurado.py, el eval corre solo.
 
 El eval no llama a la API: califica lo que la corrida dejo en salida/. Su resumen vuelve a
 Claude como contexto adicional, asi el numero aparece sin que nadie lo pida.
@@ -11,7 +11,7 @@ from pathlib import Path
 
 entrada = json.load(sys.stdin)
 comando = entrada.get("tool_input", {}).get("command", "")
-m = re.search(r"\b(agente|orquestador)\.py\b(?:\s+(C\d_\w+))?", comando)
+m = re.search(r"\b(agente|orquestador|estructurado)\.py\b(?:\s+(C\d_\w+))?", comando)
 if not m:
     sys.exit(0)
 
@@ -24,6 +24,9 @@ expediente = m.group(2) or "C1_Impresos_y_formularios"
 args = [str(raiz.parent / ".venv" / "bin" / "python"), "evals.py", expediente]
 if m.group(1) == "orquestador":
     args += ["--veredictos", f"salida/{expediente}/fanout/veredictos.json"]
+if m.group(1) == "estructurado":
+    carpeta = "batch" if "--batch" in comando else "estructurado"
+    args += ["--veredictos", f"salida/{expediente}/{carpeta}/veredictos.json"]
 if not (raiz / "salida" / expediente / "items.json").exists():
     sys.exit(0)
 

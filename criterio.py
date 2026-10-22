@@ -91,3 +91,43 @@ Una afirmacion puede necesitar dos documentos para quedar respaldada: cita los d
 Las citas van segun el estado: respaldada y contradicha siempre citan el fragmento de la prueba
 que decide el estado; sin_respaldo no cita nada, y lo relacionado que hayas encontrado va solo
 en la nota."""
+
+TOOL_VEREDICTO = {
+    "name": "registrar_veredicto",
+    "description": "Registra el veredicto de una afirmacion de hecho contra la prueba documental. "
+    "Es la unica forma de responder: el analisis va primero, el estado sale de el.",
+    "strict": True,
+    "input_schema": {
+        "type": "object",
+        "additionalProperties": False,
+        "properties": {
+            "analisis": {
+                "type": "string",
+                "description": "Razonamiento breve antes de decidir: que dice la afirmacion en lo esencial "
+                "(acto, fecha, monto), que documento de prueba se refiere a eso y si coincide.",
+            },
+            "estado": {"type": "string", "enum": ESTADOS},
+            "confianza": {"type": "number", "description": "Entre 0 y 1."},
+            "evidencia": {
+                "type": "array",
+                "description": "Vacia si el estado es sin_respaldo. Si no, los pasajes de la prueba que "
+                "deciden el estado.",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "documento_id": {"type": "string", "description": "DOC-1, DOC-2, ..."},
+                        "pagina": {"type": "integer", "description": "Pagina del PDF, desde 1."},
+                        "fragmento": {
+                            "type": "string",
+                            "description": "Texto copiado literal del documento, sin comillas ni cambios.",
+                        },
+                    },
+                    "required": ["documento_id", "pagina", "fragmento"],
+                },
+            },
+            "nota": {"type": "string", "description": "Por que ese estado; lo que la contestacion niega va aca."},
+        },
+        "required": ["analisis", "estado", "confianza", "evidencia", "nota"],
+    },
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Ingreso: 2 de mayo de 2016, con antigüedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La pericia acredita la fecha de ingreso y la antiguedad reconocida desde 2013 por la empresa antecesora. Los recibos de haberes (DOC-1) confirman la fecha de ingreso del 2 de mayo de 2016. La contestacion no aparece como prueba y no decide el estado."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Categoría Auxiliar de estación, categoría 6"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Categoría registrada: Auxiliar de estación, categoría 6, conforme C.C.T. 1764/18 «E»."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "Los recibos de haberes de mayo, junio y julio de 2025 y la pericia contable registran la categoria 6, no la 8. La prueba no describe las tareas de atencion al publico, control de acceso ni manejo de recaudacion, por lo que ese componente de la afirmacion no tiene respaldo documental. La categoria 8 solo aparece en el telegrama de la actora (postura de parte), y la carta documento de la demandada, que niega el reclamo, va a la nota y no decide el estado."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba describe la jornada rotativa de seis horas, los turnos, los dos francos semanales ni horas nocturnas trabajadas. Los recibos no muestran concepto alguno por trabajo nocturno, pero eso solo indica que no se pago, sin acreditar el regimen horario. La pericia contable tampoco releva horarios."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "$ 912.480,44 tomando solamente los conceptos remunerativos."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "Se deja constancia de que los adicionales «Adicional mensual SUBE» y «Falla de caja» se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "El mes (junio de 2025) coincide, pero la base remunerativa es $912.480,44 y no $1.284.320,18, que suma conceptos no remunerativos (SUBE y falla de caja) excluidos por el art. 245 LCT. La contestacion no aparece en el analisis, y la liquidacion que se acompaña no esta en la prueba."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "Total remunerativo 820.723,20 912.480,44 311.548,16"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Adicional convenio 91.872,00"
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "Los recibos y la pericia acreditan que sueldo basico, antiguedad 9%, adicional de convenio y presentismo son remunerativos, y que SUBE y falla de caja son no remunerativos. La afirmacion omite el S.A.C. primer semestre (91.757,24 en junio de 2025), que tambien es remunerativo y figura en la base de 912.480,44 que informa la pericia. Ese detalle no contradice la afirmacion, pero queda sin mencionar."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Adicional mensual SUBE 128.420,00"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Falla de caja 92.180,00"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "Se deja constancia de que los adicionales «Adicional mensual SUBE» y «Falla de caja» se encuentran registrados como no remunerativos conforme las actas acuerdo homologadas del convenio aplicable."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "Los recibos de mayo y junio de 2025 consignan ambos conceptos como no remunerativos, y la pericia lo confirma. La prueba no dice nada sobre el recibo de julio respecto de «Falla de caja», que no aparece liquidada ahi, pero eso no cambia el hecho principal afirmado. La contestacion no fue considerada para decidir el estado."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 3,
+        "fragmento": "comunícole que a partir de la fecha queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Causal registrada: despido con justa causa, artículo 244 L.C.T."
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "La demandada si invoco causa (abandono de trabajo, art. 244 LCT) en la carta documento del 14/07/2025, y la pericia registra la misma causal. La afirmacion de que solo comunico la decision sin causa no coincide con la prueba. La discusion sobre si la causa era procedente es materia de juicio y no altera el estado."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "Telegrama Ley 23.789 N° TL 88204617"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "Intímoles plazo cuarenta y ocho horas procedan a registrar correctamente mi categoría profesional como Auxiliar de estación categoría 8, y abonen diferencias salariales devengadas últimos veinticuatro meses"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "El telegrama acredita la intimacion, con su contenido y con fecha de imposicion anterior al despido (14/07/2025). La demandada niega adeudar diferencias y sostiene la categoria 6 (DOC-2 pagina 2 y DOC-3), pero esa postura no decide el estado del hecho, que es la existencia de la intimacion. El documento no dice expresamente que fuera un \"telegrama laboral\" en el sentido de la Ley 23.789, aunque lo identifica como telegrama de esa ley."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 1,
+        "fragmento": "los certificados previstos en el artículo 80 de la Ley de Contrato de Trabajo se encuentran confeccionados y a su disposición en la Gerencia de Recursos Humanos"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 2,
+        "fragmento": "la ex dependiente no se presentó a retirarlos dentro del plazo previsto"
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La prueba muestra que los certificados se pusieron a disposicion el 18/07/2025 (nota) y que la trabajadora no los retiro; la afirmacion de que nunca se entregaron ni pusieron a disposicion queda contradicha. No se acredita en la prueba la entrega efectiva de los certificados ni el envio al organismo previsional por parte de la demandada (solo la constancia de solicitud, que la nota menciona), por lo que el vencimiento del plazo legal queda como cuestion a debatir. Ademas, la constancia de la demandada es documento de la propia parte y su alcance (puesta a disposicion) es lo que la prueba acredita."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "No hay en la prueba ningun correo electronico entre la actora y el area de personal. El unico reclamo de categoria documentado es el telegrama del 23/06/2025 (DOC-2, p.1), que es un medio distinto y no acredita el intercambio alegado ni la falta de respuesta. La pericia (DOC-3, p.2) registra la categoria 6 sin mencionar reclamos previos."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "Telegrama Ley 23.789 N° TL 88204617"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "Fecha de imposición 23 de junio de 2025"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "todo bajo apercibimiento de considerarme injuriada y en situación de despido indirecto por su exclusiva culpa. Ley 24.013."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "El telegrama TL 88204617 fue impuesto el 23 de junio de 2025 con la intimacion y el apercibimiento de despido indirecto afirmados, y cita la Ley 24.013. La contestacion de la demandada (carta documento CD 258113940) rechaza el telegrama, pero esa postura va a la nota y no contradice el hecho de su envio."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija el total reclamado ni contiene el detalle de rubros al que remite la afirmacion; el monto de $41.284.630,55 no puede verificarse con la prueba. El unico monto del expediente vinculado es el ofrecimiento conciliatorio de $9.400.000 (DOC-4), que no es un total reclamado."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija la constitucion en mora el 14 de julio de 2025; esa fecha es la del despido (DOC-2, pagina 3). El fundamento de falta de pago queda contradicho en parte: la pericia (DOC-3, pagina 4) informa la transferencia del 8 de agosto de 2025 por $1.543.485,88 como liquidacion final, y la afirmacion dice que no hubo pago. La contestacion niega adeudar diferencias, pero eso no decide el estado."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba se refiere a la tasa activa, a la capitalizacion segun acta 2764 ni al calculo de intereses desde la mora. La pericia solo informa que no surgen pagos de indemnizacion por antiguedad, preaviso ni integracion, lo que es un dato relacionado pero no decide el reclamo de intereses. Las costas quedan para lo que decida el juez."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 4,
+        "fragmento": "Consta su pago mediante transferencia bancaria de fecha 8 de agosto de 2025 por $ 1.543.485,88 a la cuenta sueldo de la trabajadora"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "Neto percibido 1.543.485,88"
+      }
+    ],
+    "confianza": 0.92,
+    "nota": "Existe un pago de la liquidacion final (vacaciones y S.A.C. proporcionales, entre otros conceptos) por $1.543.485,88, acreditado por la pericia y el recibo de julio de 2025. La afirmacion de que no hubo ningun pago imputable a la obligacion reclamada queda desmentida. No se acredita pago de indemnizacion por antiguedad, preaviso ni integracion del mes de despido, lo que la pericia deja constancia de forma expresa, pero eso no altera la contradiccion. La contestacion, que no fue considerada como prueba, no decide el estado."
+  }
+]

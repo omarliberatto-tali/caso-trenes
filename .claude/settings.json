@@ -9,7 +9,8 @@
     ],
     "ask": [
       "Bash(../.venv/bin/python agente.py:*)",
-      "Bash(../.venv/bin/python orquestador.py:*)"
+      "Bash(../.venv/bin/python orquestador.py:*)",
+      "Bash(../.venv/bin/python estructurado.py:*)"
     ],
     "deny": [
       "Read(./.env)",

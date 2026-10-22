@@ -1,0 +1,253 @@
+{
+  "modo": "tiempo_real",
+  "modelo": "claude-haiku-5-5",
+  "segundos": 17.1,
+  "in": 2040,
+  "cache_escrita": 32169,
+  "cache_leida": 450366,
+  "out": 9298,
+  "costo_usd": 0.01338,
+  "costo_por_afirmacion_usd": 0.00089,
+  "items": {
+    "AF-01": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la trabajadora ingreso el 2 de mayo de 2016 y que su antiguedad se reconoce desde el 1 de agosto de 2013 por servicios en empresa antecesora. La pericia contable (DOC-3, pagina 2) registra exactamente ambos datos: ingreso el 2 de mayo de 2016 con antiguedad reconocida desde el 1 de agosto de 2013 por servicios prestados en empresa antecesora. Los recibos de haberes (DOC-1) tambien consignan como fecha de ingreso el 2 de mayo de 2016. No hay contradiccion.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 150,
+          "cache_escrita": 32169,
+          "cache_leida": 0,
+          "out": 540,
+          "batch": false
+        }
+      ]
+    },
+    "AF-02": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la actora se desempeno como Auxiliar de estacion categoria 8 del C.C.T. 1764/18 «E», con tareas de atencion al publico, control de acceso y manejo de recaudacion. La prueba registra la categoria de la actora como Auxiliar de estacion categoria 6 (recibos de haberes DOC-1, pericia DOC-3, puntos 3 y 4). Ningun documento de prueba describe las tareas efectivamente prestadas. El telegrama de la actora (DOC-2) reclama la categoria 8, pero es una postura de la parte y no prueba el hecho; la carta documento de la demandada lo niega y sostiene la categoria 6, lo que tampoco es prueba directa de la categoria, sino postura de la parte. Como el hecho principal (la categoria 8) aparece registrado en la prueba con otro valor, la prueba contradice la categoria afirmada.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 131,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 737,
+          "batch": false
+        }
+      ]
+    },
+    "AF-03": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la trabajadora cumplia una jornada rotativa de seis horas en turnos manana, tarde y noche, con dos francos semanales, y que de ello nacia un adicional por nocturnidad impago. Revisadas las cinco piezas de prueba (recibos de haberes, intercambio telegrafico, pericia contable, acta SECLO y actuaciones de personal), ninguna describe la jornada, la distribucion de turnos, los francos ni horas nocturnas trabajadas. Los recibos muestran solo conceptos de sueldo, antiguedad, adicionales y presentismo, sin ningun concepto por nocturnidad, pero la ausencia de un rubro no equivale a que la prueba se refiera al hecho de la jornada. La pericia registra categoria y fechas, no horarios. Como el hecho principal no aparece en la prueba, corresponde sin_respaldo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 145,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 566,
+          "batch": false
+        }
+      ]
+    },
+    "AF-04": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la mejor remuneracion mensual, normal y habitual del ultimo año es $1.284.320,18, correspondiente a junio de 2025. La pericia contable (DOC-3, pagina 3) identifica junio de 2025 como el mes de mejor remuneracion, pero informa dos cifras: $912.480,44 tomando solo los conceptos remunerativos y $1.284.320,18 sumando los no remunerativos. El art. 245 LCT exige calcular la base solo con conceptos remunerativos, y la pericia confirma que SUBE y falla de caja estan registrados como no remunerativos conforme actas homologadas. El monto afirmado incluye conceptos no remunerativos, por lo que la prueba contradice la base de calculo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 150,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 675,
+          "batch": false
+        }
+      ]
+    },
+    "AF-05": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la remuneracion de la actora se integro con sueldo basico, antiguedad del 9%, adicional de convenio y presentismo, es decir, que esos son los rubros remunerativos. El recibo de junio de 2025 (DOC-1, pagina 2) muestra esos cuatro conceptos como remunerativos, mas un S.A.C. primer semestre de 91.757,24, tambien remunerativo, que la afirmacion omite. La pericia (DOC-3, pagina 3) confirma que el total remunerativo de junio es 912.480,44 y que el SUBE y la falla de caja son no remunerativos. La afirmacion no menciona el S.A.C., pero la pericia y los recibos describen la composicion principal del mismo modo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 114,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 658,
+          "batch": false
+        }
+      ]
+    },
+    "AF-06": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la demandada abono los conceptos «Adicional mensual SUBE» y «Falla de caja» consignandolos como no remunerativos. El DOC-1 (recibos de mayo, junio y julio de 2025) muestra ambos conceptos en la columna no remunerativa: Adicional mensual SUBE 128.420,00 y Falla de caja 92.180,00 en mayo y junio. El DOC-3 (pericia) confirma que ambos figuran como no remunerativos conforme actas acuerdo homologadas. El hecho principal coincide con la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 124,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 656,
+          "batch": false
+        }
+      ]
+    },
+    "AF-07": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada despidio sin invocar causa, limitandose a comunicar la decision de prescindir de los servicios. La prueba documental muestra lo contrario: la Carta Documento CD 258114022 del 14/07/2025 dice expresamente \"queda despedida con justa causa por abandono de trabajo, artículo 244 de la Ley de Contrato de Trabajo\", y la pericia contable (DOC-3, pag. 2) registra como causal \"despido con justa causa, artículo 244 L.C.T.\". Esto contradice el hecho de que no se invoco causa.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 106,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 594,
+          "batch": false
+        }
+      ]
+    },
+    "AF-08": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que, antes del distracto, la trabajadora intimo a la demandada por telegrama laboral a registrar correctamente su categoria y a abonar diferencias salariales. DOC-2 pagina 1 contiene exactamente ese telegrama (TL 88204617, imposicion 23/06/2025, entregado 25/06/2025), que intima a registrar la categoria como Auxiliar de estacion categoria 8 y a abonar diferencias salariales de los ultimos 24 meses. El hecho principal (telegrama laboral intimatorio, con ese contenido, previo al despido) coincide con la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 131,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 686,
+          "batch": false
+        }
+      ]
+    },
+    "AF-09": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada nunca entrego ni puso a disposicion los certificados del articulo 80 LCT. La prueba DOC-5 (pagina 1) contiene la nota NO-2025-00588127-APN-GRH#SOTR del 18 de julio de 2025, en la que la Gerencia de Recursos Humanos comunica que los certificados estan confeccionados y a disposicion de la trabajadora, y la constancia de la pagina 2 registra que la ex dependiente no los retiro. La prueba acredita que los certificados fueron puestos a disposicion, lo que es incompatible con el hecho principal afirmado (que nunca se pusieron a disposicion). DOC-3 y DOC-2 (carta documento de 14/07/2025) tambien mencionan la disponibilidad de los certificados.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 147,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 791,
+          "batch": false
+        }
+      ]
+    },
+    "AF-10": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que, antes del distracto, la actora mantuvo con el area de personal un intercambio de correo electronico reclamando la correcta registracion de su categoria, sin respuesta. La prueba contiene un telegrama de la actora (DOC-2, p.1) que reclama la categoria 8 y diferencias salariales, pero es un telegrama, no un correo electronico, y fue enviado el 23/06/2025 sin que conste respuesta por correo. Ningun documento de prueba menciona un intercambio de correos electronicos con el area de personal. Los documentos de la demandada que hablan de categoria (DOC-2 p.2, carta documento de rechazo; DOC-3 pericia) no se refieren a correos previos.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 139,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 519,
+          "batch": false
+        }
+      ]
+    },
+    "AF-11": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el 23 de junio de 2025 la actora remitio el telegrama TL 88204617 intimando en los terminos de la ley 24.013 bajo apercibimiento de despido indirecto. DOC-2 pagina 1 contiene ese telegrama: remitente Aranda, fecha de imposicion 23 de junio de 2025, numero TL 88204617, con el apercibimiento de considerarse injuriada y en situacion de despido indirecto, y cita la Ley 24.013. Coinciden el acto, la fecha, el numero y el apercibimiento.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 147,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 636,
+          "batch": false
+        }
+      ]
+    },
+    "AF-12": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene un total reclamado de $41.284.630,55 \"conforme el detalle que antecede y la liquidacion que antecede\", pero el detalle y la liquidacion de la demanda no figuran entre los documentos de prueba. Los documentos de prueba (DOC-1 a DOC-5) no contienen una planilla de rubros reclamados ni un total de la demanda, por lo que ningun documento se refiere al monto total reclamado. Lo unico que aparece es el ofrecimiento conciliatorio de $9.400.000 en el acta SECLO, que no es el total reclamado y no lo confirma ni contradice.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 168,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 470,
+          "batch": false
+        }
+      ]
+    },
+    "AF-13": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion es una conclusion juridica: la demandada quedo constituida en mora el 14 de julio de 2025 por vencimiento del plazo sin pago ni observacion. El hecho principal es la fecha de la mora. Ningun documento de prueba fija una intimacion o mora con esa fecha; la fecha 14 de julio de 2025 corresponde a la carta documento de despido (DOC-2, pagina 3), que no es una intimacion de pago de creditos sino una comunicacion de despido. La pericia (DOC-3) registra la liquidacion final pagada el 8 de agosto de 2025, lo que contradice el fundamento de falta de pago, pero el hecho principal (la fecha de mora) no aparece fijado en la prueba. Por la regla de conclusiones juridicas, corresponde sin_respaldo y los fundamentos accesorios van a la nota.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 120,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 607,
+          "batch": false
+        }
+      ]
+    },
+    "AF-14": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion reclama intereses desde la mora a tasa activa del Banco Nacion, capitalizables segun acta 2764 de la CNAT, mas costas. Es un reclamo accesorio sobre la deuda principal. Ningun documento de prueba (recibos, telegramas, pericia, acta SECLO, actuaciones de personal) fija una tasa de interes, un criterio de capitalizacion ni una fecha de mora calculada para esos intereses. El acta SECLO y la pericia tratan del reclamo y del pago, pero no del calculo de intereses ni de la tasa. Las costas son una consecuencia procesal que no se acredita con documentos.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 166,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 496,
+          "batch": false
+        }
+      ]
+    },
+    "AF-15": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no efectuo ningun pago, total ni parcial, imputable a la obligacion reclamada. La prueba muestra la liquidacion final de julio de 2025 pagada por transferencia el 8 de agosto de 2025 por $1.543.485,88, que incluye vacaciones proporcionales y S.A.C. proporcional, rubros reclamados o vinculados al reclamo. La pericia contable confirma ese pago en el punto 7 y que no surgen pagos de indemnizacion por antiguedad ni preaviso.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 102,
+          "cache_escrita": 0,
+          "cache_leida": 32169,
+          "out": 667,
+          "batch": false
+        }
+      ]
+    }
+  }
+}
