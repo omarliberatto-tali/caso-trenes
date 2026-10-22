@@ -1,0 +1,253 @@
+{
+  "modo": "tiempo_real",
+  "modelo": "claude-haiku-5-5",
+  "segundos": 15.9,
+  "in": 1949,
+  "cache_escrita": 24420,
+  "cache_leida": 341880,
+  "out": 8533,
+  "costo_usd": 0.01093,
+  "costo_por_afirmacion_usd": 0.00073,
+  "items": {
+    "AF-01": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la demandada emitio la orden de compra N° 430014908 el 18 de julio de 2025, tramitada bajo el expediente EX-2025-00611240-APN-GMR#SOTR, para repuestos de material rodante. El DOC-1 es esa orden de compra: en su pagina 1 figura el numero, la fecha de emision, el expediente y el objeto del suministro. Coincide en todos los elementos esenciales.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 147,
+          "cache_escrita": 24420,
+          "cache_leida": 0,
+          "out": 507,
+          "batch": false
+        }
+      ]
+    },
+    "AF-02": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la orden de compra comprendio cinco renglones: zapatas de freno compuestas, amortiguadores verticales de suspension secundaria, bujes elasticos de brazo de arrastre, placas de desgaste de patin de tercer riel y juntas de estanqueidad para puertas de acceso. La OC 430014908 (DOC-1, pagina 2) detalla exactamente cinco renglones con esas descripciones, en el mismo orden (renglon 1 zapata de freno compuesta tipo K, renglon 2 amortiguador vertical de suspension secundaria, renglon 3 buje elastico de brazo de arrastre, renglon 4 placa de desgaste de patin de tercer riel, renglon 5 junta de estanqueidad para puerta de acceso). El objeto coincide en lo esencial.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 160,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 608,
+          "batch": false
+        }
+      ]
+    },
+    "AF-03": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el pago de cada entrega se pacto a 90 dias corridos desde la presentacion de la factura. La clausula 1 de la orden de compra (DOC-1, pagina 3) fija el pago a los treinta (30) dias corridos de la presentacion de la factura, previa conformidad de recepcion. Es el mismo hecho (plazo de pago de cada entrega, contado desde la factura) con un numero distinto, por lo que la prueba lo contradice.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 96,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 451,
+          "batch": false
+        }
+      ]
+    },
+    "AF-04": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la orden de compra no exigio certificados de origen ni de trazabilidad, y que la demandada los introdujo despues sin sustento contractual. La OC DOC-1 pagina 4 (Anexo A.1) exige \"etiqueta de trazabilidad y certificado de origen por cada lote\", y la clausula 3 (pagina 3) exige la documentacion de trazabilidad por lote. Esto contradice directamente la afirmacion en su parte central: la exigencia figura en el contrato desde la emision de la orden.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 125,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 597,
+          "batch": false
+        }
+      ]
+    },
+    "AF-05": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la actora entrego la totalidad de los cinco renglones de la orden de compra 430014908 en las cantidades previstas. La prueba documental muestra que el acta ACTA-2025-00088-GMR#SOTR (DOC-3, pagina 1) registra una entrega parcial: de 240 placas del renglon 4 se recibieron 140, y de 600 juntas del renglon 5 se recibieron 400. Ademas, la nota NO-2025-00694511 (DOC-3, pagina 2) observa la factura 0007-00000561 por no corresponder al material efectivamente recibido. Esto contradice la entrega total en las cantidades previstas.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 116,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 666,
+          "batch": false
+        }
+      ]
+    },
+    "AF-06": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el material entregado cumple integramente las especificaciones tecnicas y fue aceptado sin observacion de calidad. La prueba contiene la orden de compra (DOC-1), las facturas (DOC-2) y el expediente administrativo (DOC-3). El acta ACTA-2025-00088 registra una recepcion parcial y bajo reserva de verificacion de trazabilidad por falta de certificado de origen, y la nota NO-2025-00694511 observa la factura 0007-00000561 por no corresponder al material efectivamente recibido. Ninguno de los documentos se refiere a la calidad tecnica del material ni a una aceptacion sin observaciones; por el contrario, hay observaciones formales y de cantidad.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 103,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 728,
+          "batch": false
+        }
+      ]
+    },
+    "AF-07": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la factura 0007-00000512, de fecha 22 de septiembre de 2025, fue emitida por $31.480.200,00. El DOC-2 pagina 1 es esa factura: fecha de emision 22 de septiembre de 2025, numero 0007-00000512 y total $ 31.480.200,00, con el mismo importe en letras. Numero, fecha y monto coinciden.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 108,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 403,
+          "batch": false
+        }
+      ]
+    },
+    "AF-08": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que ninguna de las facturas fue observada ni objetada dentro de plazo. DOC-3 contiene una Nota del 28/11/2025 que dice expresamente que la factura 0007-00000561 \"ha sido observada\" por no corresponder al material efectivamente recibido segun el acta ACTA-2025-00088-GMR#SOTR. Esa observacion se refiere a la factura concreta que la afirmacion dice no observada, y la nota es un acto de la demandada que la afirmacion no trata como propio, pero la afirmacion niega precisamente esa observacion, por lo que la prueba documental muestra que el hecho no ocurrio como se afirma.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 122,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 621,
+          "batch": false
+        }
+      ]
+    },
+    "AF-09": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el 29 de enero de 2026 la actora remitio a la demandada la carta documento N° CD 245118036 intimando al pago en 48 horas, y que fue entregada sin respuesta. Revisados DOC-1 (orden de compra), DOC-2 (facturas) y DOC-3 (expediente administrativo: acta, nota de observacion y providencia), ninguno menciona una carta documento, la CD 245118036, una intimacion al pago ni una entrega postal. La providencia de febrero de 2026 solo registra un reclamo administrativo previo RA-2026-00147, que no es la carta documento invocada.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 178,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 483,
+          "batch": false
+        }
+      ]
+    },
+    "AF-10": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el 4 de febrero de 2026 se presento ante Mesa de Entradas una nota de pronto despacho N° RA-2026-00147, con sello de Mesa General de Entradas. La prueba DOC-3 pagina 3 es una providencia de la Secretaria General que tiene por presentado el reclamo administrativo previo RA-2026-00147, registrado por la Mesa General de Entradas el 4 de febrero de 2026. Coinciden la fecha, el numero y la registracion en Mesa General de Entradas. Lo que no surge es que el documento presentado sea una \"nota de pronto despacho\" como tal: la providencia lo llama reclamo administrativo previo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 145,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 580,
+          "batch": false
+        }
+      ]
+    },
+    "AF-11": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no respondio a las presentaciones referidas dentro de los plazos legales, configurando silencio. El hecho principal es la falta de respuesta en plazo a presentaciones concretas. La prueba documental (orden de compra, facturas, expediente administrativo) no contiene ningun documento que acredite la fecha de presentacion de las supuestas peticiones ni el vencimiento de plazos de respuesta. Hay notas emitidas por la demandada (acta, nota de observacion, providencia), pero no prueban que haya dejado de contestar presentaciones del proveedor en plazo; la providencia solo registra la recepcion del reclamo RA-2026-00147 y lo gira internamente, sin fijar plazo de respuesta.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 121,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 585,
+          "batch": false
+        }
+      ]
+    },
+    "AF-12": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el total reclamado es $92.744.180,00, conforme al detalle previo y a una certificacion contable. La prueba contiene tres facturas del proveedor (DOC-2) por $31.480.200,00, $24.912.760,00 y $21.094.880,00, cuya suma es $77.487.840,00, que no coincide con el total afirmado. No hay en la prueba un detalle del reclamo ni una certificacion contable que llegue a $92.744.180,00. La diferencia respecto de la suma de facturas no esta explicada por ningun documento de prueba (los intereses estan excluidos por la clausula 4 de la orden de compra, pero eso no es un componente del total que la prueba contradiga directamente). Como el total no aparece en la prueba y no hay un componente que lo contradiga de forma concluyente, corresponde sin_respaldo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 168,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 666,
+          "batch": false
+        }
+      ]
+    },
+    "AF-13": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion es una conclusion juridica: que la demandada quedo en mora de pleno derecho el 6 de diciembre de 2025 por vencimiento del plazo sin pago ni observacion. El hecho principal es la fecha de mora, y ningun documento de prueba la fija ni menciona ese 6 de diciembre. La prueba muestra una factura observada por la propia demandada (nota del 28/11/2025), lo que contradice el fundamento de 'sin observacion', pero eso es accesorio. Al no aparecer el hecho principal, corresponde sin_respaldo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 122,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 546,
+          "batch": false
+        }
+      ]
+    },
+    "AF-14": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion reclama intereses desde la mora a la tasa activa del Banco Nacion (descuento a 30 dias) mas costas. El hecho principal es el derecho a intereses pretendido. La DOC-1 (orden de compra, clausula 4) dice expresamente que la orden no genera intereses ni actualizacion de ninguna naturaleza a favor del proveedor. Ningun documento de prueba fija una tasa activa del Banco Nacion ni una fecha de mora. Segun el criterio, una clausula que excluye lo reclamado no contradice el reclamo: decidir si corresponde es del juez, y si nada mas se refiere al hecho es sin_respaldo. Las costas no son un hecho probatorio.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 136,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 530,
+          "batch": false
+        }
+      ]
+    },
+    "AF-15": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no realizo ningun pago, total ni parcial, imputable a la obligacion reclamada. La prueba consiste en una orden de compra, tres facturas y actuaciones del expediente administrativo. Ninguno de los documentos registra un pago, cancelacion, cobro o transferencia imputable a las facturas. Las facturas figuran en cuenta corriente y el acta y la nota de observacion no mencionan pagos. Por lo tanto, no hay documento que contradiga la afirmacion ni que la respalde de forma directa.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 102,
+          "cache_escrita": 0,
+          "cache_leida": 24420,
+          "out": 562,
+          "batch": false
+        }
+      ]
+    }
+  }
+}

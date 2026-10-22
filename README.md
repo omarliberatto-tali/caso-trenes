@@ -507,6 +507,28 @@ el join (los resultados vuelven en cualquier orden). Los resultados crudos se gu
 - La extracción sigue siendo la del M1 (JSON por línea): con `--reusar-items` no se corre, y para
   la demanda apartada se corre una vez antes de verificar.
 
+**La demanda apartada (22/10/2026, una sola corrida, tiempo real).** Corrida por Omar con el
+sistema tal como está en este commit, sin ajustes antes ni después.
+
+| | Los 5 conocidos (tiempo real) | Apartada |
+|---|---|---|
+| Extracción | — (reusa items.json) | 100 % afirmaciones, 100 % páginas |
+| Estado | 92,0 % | 86,7 % (13/15) |
+| Fuente | 82,7 % | 88,9 % |
+| Costo por afirmación | US$0,0009 | US$0,00073 (US$0,011 la demanda) |
+
+Fallan dos, y las dos son de aplicar el criterio, no de leer la prueba:
+- AF-06 sale contradicha y es sin_respaldo: el acta de recepción con observaciones es la postura
+  de una parte, que según el criterio va a la nota y no contradice.
+- AF-12 sale sin_respaldo y es contradicha: el análisis suma las tres facturas, ve que no da el
+  total reclamado y aun así no la marca contradicha, que es lo que pide el criterio cuando el
+  monto surge de sumar la prueba y da otro valor.
+
+La diferencia con los conocidos (5 puntos de estado) es del orden de la variación entre corridas
+(una afirmación por expediente). No hay señal de que el criterio esté ajustado de más a los
+expedientes con los que se armó. La apartada no se vuelve a correr: después de esto ya es
+material conocido.
+
 ## Estado del repo
 
 ```
