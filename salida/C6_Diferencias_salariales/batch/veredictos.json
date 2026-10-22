@@ -1,0 +1,192 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "figura registrado como personal en relación de dependencia desde el 16 de marzo de 2011, con vínculo vigente a la fecha de este informe"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La pericia acredita la fecha de ingreso y la vigencia del vinculo a la fecha del informe, y los recibos de haberes de 2025 consignan la misma fecha de ingreso. La contestacion no fue considerada para decidir el estado."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "Categoría registrada: Operario especializado, categoría 5, conforme C.C.T. 1442/15 «T»."
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "Categoría Operario especializado, categoría 5"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La pericia y los recibos acreditan que la demandada registra al actor como Operario especializado, categoria 5 del C.C.T. 1442/15 «T». Que el actor sostenga que corresponde la categoria 9 y que la demandada niegue ese encuadre (carta documento DOC-2) es materia de controversia y no contradice la afirmacion, que solo describe el registro. La liquidacion sobre el basico de categoria 5 tambien surge de los recibos."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "El puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial."
+      }
+    ],
+    "confianza": 0.6,
+    "nota": "La descripcion de puesto de la demandada dice que el puesto no incluye la ejecucion autonoma de reparaciones ni el montaje final de equipos de freno, lo que es incompatible con la afirmacion de que el actor las ejecuta de manera autonoma. Pero es una descripcion del puesto, no un registro de lo efectivamente realizado, por eso la confianza es moderada. La carta documento de la demandada (DOC-2) niega el encuadre y dice que las tareas se ejecutan bajo supervision de un Oficial; esa negativa es postura de la parte y no se usa como prueba. La pericia (DOC-3) no releva tareas. Si el juez considera que la descripcion de puesto no alcanza a demostrar lo que se hizo en la practica, el estado seria sin_respaldo."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8"
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "El puesto no comprende la ejecución autónoma de reparaciones ni el montaje final de equipos de freno, tareas reservadas a la categoría Oficial."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "La pericia dice que la categoria 9 no existe en el convenio aplicable, y la descripcion de puesto excluye las tareas que el actor invoca para el encuadre. La contestacion y la carta documento del empleador (DOC-2, pag. 2) niegan el encuadre; esa postura se toma como negacion de la parte y no fundamenta el estado, que se decide por la pericia y la descripcion de puesto. La categoria Oficial (8) aparece en la escala, pero la afirmacion pide la 9, que no existe en el convenio."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "la categoría 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafón llega hasta la categoría 8"
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "La pericia establece que la categoria 9 no existe en la escala homologada del C.C.T. 1442/15 «T» (llega hasta la categoria 8, Oficial, con basico de $901.320,00 en dic-2025), por lo que no hay basico convencional de $1.041.760 que pueda atribuirse a esa categoria. La denominacion invocada corresponderia al C.C.T. 1198/11 «M», no aplicable. La cifra exacta de $1.041.760 no aparece en ningun documento. La confianza es moderada porque la contradiccion surge de la inexistencia de la categoria mas que de un monto distinto escrito para ella."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.7,
+    "nota": "Ningun documento de prueba fija la diferencia de $353.720 mensuales. La pericia contable (DOC-3, pagina 4) concluye que no surgen diferencias a favor del actor entre enero de 2024 y diciembre de 2025 comparando con la categoria 5, y que la categoria 9 no integra la escala del C.C.T. 1442/15; la contestacion niega adeudar diferencia alguna. Esa conclusion pericial niega el reclamo, pero no informa otro monto para la diferencia, por lo que no decide un estado de contradiccion sobre la cifra."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 4,
+        "fragmento": "el suplemento nocturno liquidado en el recibo de septiembre de 2025 responde a la prestación efectiva de tareas en turno noche y se encuentra correctamente calculado."
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 2,
+        "fragmento": "Suplemento nocturno                                121.844,00"
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "El recibo de septiembre de 2025 liquida el suplemento nocturno y la pericia confirma que responde a tareas efectivas en turno noche. La prueba no documenta el turno noche en los demas meses del periodo reclamado, y el recibo de diciembre de 2025 no muestra el suplemento; eso va como detalle no acreditado en todo el periodo."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "con vínculo vigente a la fecha de este informe"
+      }
+    ],
+    "confianza": 0.75,
+    "nota": "La pericia acredita que el vinculo esta vigente a la fecha del informe. La parte de que sigue desempeñando las mismas tareas no tiene constancia actual en la prueba: la descripcion de puesto (DOC-4, pagina 1) es de 2023 y la nota de noviembre de 2025 (DOC-4, pagina 2) solo dice que las tareas invocadas no corresponden a las asignadas. Esa parte queda sin respaldo expreso."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "su solicitud de recategorización fue analizada por esta Gerencia y desestimada"
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "La nota de la Gerencia de Recursos Humanos del 27/11/2025 responde la solicitud de recategorizacion y comunica su desestimacion, por lo que la empleadora si respondio y si comunico una decision. La afirmacion no es sobre si la respuesta fue adecuada o ajustada a derecho, sino sobre la ausencia de respuesta, que la prueba desmiente."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "Descripción de puesto N° DP-2023-00214-GRH#SOTR"
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "La presente descripción se incorpora al legajo del agente y le fue notificada en la fecha."
+      }
+    ],
+    "confianza": 0.92,
+    "nota": "La descripcion de puesto DP-2023-00214-GRH#SOTR, dirigida al legajo 33.907, se incorpora expresamente al legajo del agente y fija las tareas del puesto. La nota del 27/11/2025 (DOC-4, pagina 2) tambien la identifica como obrante en el legajo. La contestacion no aparece como prueba para este punto; el contenido del legajo surge de DOC-4."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "No hay correos electronicos en la prueba. Lo relacionado: el telegrama TL 91744038 (DOC-2, pag. 1) reclama el encuadre, y la nota NO-2025-00742118 (DOC-4, pag. 2) responde a una \"presentacion\" del actor sobre la recategorizacion, pero no acreditan un intercambio de correo ni la falta de respuesta. La contestacion no fue considerada como prueba."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "La prueba no contiene acta de audiencia ni constancia del SECLO N° 129806/2026 ni referencia a la instancia conciliatoria prevista por la ley 24.635. La unica referencia a una instancia administrativa es la nota de RRHH del 27/11/2025, que remite a la Comision Paritaria, no al SECLO."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.7,
+    "nota": "La prueba no contiene la liquidacion ni el detalle del monto de $18.664.208,40, por lo que no se puede acreditar ese total. La pericia contable (DOC-3, pag. 4) informa que no surgen diferencias salariales a favor del actor entre enero de 2024 y diciembre de 2025, y la nota de la demandada (DOC-4, pag. 2) y la carta documento (DOC-2, pag. 2) niegan adeudar diferencia alguna; eso va a la nota y no decide el estado."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba se refiere a intereses, tasa activa BNA ni fecha de mora. La pericia (DOC-3) concluye que no surgen diferencias salariales, pero no trata intereses; la intimacion del telegrama (DOC-2) no fija una mora por intereses. Las costas tampoco tienen respaldo probatorio, y la contestacion no esta considerada como prueba."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 2,
+        "fragmento": "Totales 901.545,80 126.900,00"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "Neto percibido 1.183.295,27"
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "Los recibos de haberes de 2025 registran pagos de sueldo, antiguedad, adicionales y SAC a favor del actor, que son pagos imputables a los rubros reclamados; la afirmacion de que no hubo pago alguno queda contradicha. La contestacion niega adeudar diferencias (DOC-2, carta documento), lo que va a la nota y no decide el estado. La pericia tambien concluye que no hay diferencias, lo que es una cuestion de fondo y no altera que se hayan efectuado pagos."
+  }
+]

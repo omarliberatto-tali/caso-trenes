@@ -1,0 +1,253 @@
+{
+  "modo": "batch",
+  "modelo": "claude-haiku-5-5",
+  "segundos": 394.3,
+  "in": 2013,
+  "cache_escrita": 47948,
+  "cache_leida": 671272,
+  "out": 9589,
+  "costo_usd": 0.01557,
+  "costo_por_afirmacion_usd": 0.00104,
+  "items": {
+    "AF-01": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el 26 de septiembre de 2025 la demandada emitio a favor de la actora la orden de compra N° 430011742 para la provision de los impresos detallados. DOC-1 es precisamente esa orden de compra: su fecha de emision es 26 de septiembre de 2025, el proveedor es Grafica del Plata S.A. y el detalle de renglones lista los impresos a proveer. El hecho principal (acto, fecha, numero) coincide con el documento.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 132,
+          "cache_escrita": 47948,
+          "cache_leida": 0,
+          "out": 481,
+          "batch": false
+        }
+      ]
+    },
+    "AF-02": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion tiene dos componentes: (a) que la facturacion se pacto en dolares estadounidenses y (b) que el pago se pacto a 60 dias de presentada cada factura. La OC DOC-1 (pagina 1) fija \"Moneda de la operacion: dolares estadounidenses\" y las facturas DOC-2 estan emitidas en USD, por lo que el componente de moneda queda respaldado. Respecto del plazo, la clausula 1 de las cláusulas generales de DOC-1 (pagina 3) fija el pago a treinta (30) dias corridos, no sesenta, lo que contradice el plazo afirmado.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 168,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 599,
+          "batch": true
+        }
+      ]
+    },
+    "AF-03": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la actora entrego la totalidad de los materiales de la orden de compra 430011742. La orden de compra (DOC-1, pag. 2) fija cinco renglones con cantidades: 320, 4.800, 12.000, 6.500 y 2.400 unidades. Los remitos (DOC-3) acreditan entregas por renglon: R-0002-00011653 (renglon 1, 320, recibido de conformidad), R-0002-00011673 (renglon 2, 4.800, conformado), R-0002-00011456 (renglon 3, 12.000, conformado), R-0002-00011674 (renglon 5, 2.400, conformado) y R-0002-00011760 (renglon 4, 6.500, recibido sin conformar), y R-0002-00011807 (renglon 2, 1.600, recibido con observaciones, sin verificar). El renglon 4 nunca fue conformado por el responsable del deposito, y el renglon 2 recibio una entrega adicional de 1.600 no verificada. Ademas, la OC exige conformidad para la recepcion y la clausula 4 dice que el remito sin conformar no acredita recepcion. Las facturas (DOC-2) suman USD 73.798,76, que coincide con la certificacion (DOC-4), pero eso no prueba la entrega completa. La prueba muestra que la totalidad no fue recibida conforme: el renglon 4 quedo sin conformar y el renglon 2 excede lo pedido sin autorizacion. Hay contradiccion en el sentido de que la prueba muestra que la entrega no fue completa y conforme (el renglon 4 no esta conformado) y que el renglon 2 tiene una entrega en exceso no autorizada.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 119,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 984,
+          "batch": true
+        }
+      ]
+    },
+    "AF-04": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la totalidad de los remitos fue suscripta de conformidad por la demandada, sin objeciones. La prueba contiene seis remitos (DOC-3). Los remitos 0002-00011456, 0002-00011653, 0002-00011673 y 0002-00011674 dicen \"Recibido de conformidad\" con firma de R. Quintana, Depósito Liniers. Los remitos 0002-00011760 (renglon 4, 6.500 unidades) y 0002-00011807 (renglon 2, 1.600 unidades) no tienen firma del responsable: \"Recibido sin conformar\" y \"Recibido con observaciones. No se verificaron las cantidades\", recibidos por mesa de recepcion sin firma del responsable. Por lo tanto la afirmacion de que la totalidad fue conformada y sin objeciones es contradicha por la propia prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 115,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 713,
+          "batch": true
+        }
+      ]
+    },
+    "AF-05": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que para el renglon 4 (talonario de planilla de recaudacion) se entregaron 8.000 unidades. La orden de compra pide 6.500 unidades de ese renglon. El remito N° 0002-00011760 (DOC-3, pagina 5) registra el renglon 4 con cantidad 6.500, recibido sin conformar y sin firma del responsable. No hay otro documento de prueba que indique una entrega de 8.000 unidades del renglon 4. La cantidad de 8.000 contradice la cantidad que surge de la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 123,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 541,
+          "batch": true
+        }
+      ]
+    },
+    "AF-06": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la factura 0004-00000335 del 20/02/2026 fue emitida por USD 3.802,79. La factura DOC-2 pagina 4 existe con esa numeracion y fecha, pero su total es USD 3.208,79. La certificacion contable DOC-4 pagina 2 tambien registra ese comprobante por 3.208,79. El monto afirmado no coincide con el de la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 124,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 399,
+          "batch": true
+        }
+      ]
+    },
+    "AF-07": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la totalidad de las facturas reclamadas fue presentada y efectivamente recibida por la demandada, con constancias de recepcion. Los documentos de prueba muestran cinco facturas (0004-00000318, 323, 326, 335 y 336) con remitos asociados, pero las facturas no llevan constancia de recepcion por la demandada. Los remitos que acreditan recepcion conforme son 0002-00011456, 0002-00011653, 0002-00011673 y 0002-00011674 (firmados por R. Quintana, Depósito Liniers); los remitos 0002-00011760 y 0002-00011807 fueron recibidos sin conformar y sin firma del responsable. No hay ningun documento de prueba que registre la recepcion de las facturas en si mismas (sello, acuse o constancia de entrega de la factura). La certificacion contable (DOC-4) informa que los comprobantes estan registrados en los libros de la sociedad, pero eso es registracion del acreedor, no recepcion por la demandada. Las cartas y notas (DOC-5) son del acreedor y reclaman pagos sin acreditar recepcion de facturas.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 120,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 815,
+          "batch": true
+        }
+      ]
+    },
+    "AF-08": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que, antes de la demanda, la actora mantuvo con la demandada un intercambio de correo electronico reclamando el pago sin respuesta satisfactoria. La prueba contiene una carta documento (DOC-5, pag. 1), una nota de pronto despacho (DOC-5, pag. 2) y una constancia de seguimiento (DOC-5, pag. 3), pero ninguna menciona correos electronicos. La nota de pronto despacho alude a \"reclamos efectuados por la via correspondiente\", sin precisar que medio fue. Ningun documento de prueba se refiere al intercambio de correo electronico.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 138,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 521,
+          "batch": true
+        }
+      ]
+    },
+    "AF-09": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el 9 de marzo de 2026 la actora envio la carta documento CD 214880917 intimando al pago en 48 horas bajo apercibimiento, que fue entregada y no tuvo respuesta. DOC-5 pagina 1 registra la carta documento CD 214880917, fecha de imposicion 9 de marzo de 2026, remitente Grafica del Plata, destinatario SOTR, texto con intimacion de pago en 48 horas bajo apercibimiento, y estado 'Entregada el 11 de marzo de 2026'. La constancia de seguimiento (pagina 3) confirma que no hay respuesta registrada. Coinciden el acto, la fecha, el numero y el plazo. La nota de pronto despacho (DOC-5 p.2) tiene un error de fecha de sello (2016) que no contradice el hecho afirmado.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 179,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 731,
+          "batch": true
+        }
+      ]
+    },
+    "AF-10": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion atribuye la presentacion de la nota PD-2026-00418 ante Mesa de Entradas de SOTR S.E. con fecha 12 de marzo de 2026, y que el sello de recepcion obra en el documento. DOC-5 pagina 2 contiene la nota PD-2026-00418 presentada ante Mesa General de Entradas, SOTR S.E., pero el sello de recepcion dice \"12 de marzo de 2016\", no 2026. La constancia de seguimiento (pagina 3) tambien registra PD-2026-00418 con fecha de ingreso \"12 de marzo de 2016\". Por lo tanto, la fecha afirmada (2026) no coincide con la que consta en el sello.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 145,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 659,
+          "batch": true
+        }
+      ]
+    },
+    "AF-11": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no respondio, dentro de plazos normativos, a las presentaciones (carta documento CD 214880917 y nota PD-2026-00418) y que ello configura el silencio que habilita la accion. La prueba incluye la constancia de seguimiento de actuaciones de la demandada, que registra \"Sin respuesta registrada a la fecha\" para ambas presentaciones. Esto acredita la falta de respuesta registrada, pero no fija los plazos normativos aplicables ni la configuracion juridica del silencio, que es una conclusion del juez.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 121,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 659,
+          "batch": true
+        }
+      ]
+    },
+    "AF-12": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el total reclamado es USD 74.392,76. La certificacion contable (DOC-4) detalla cinco comprobantes (318, 323, 326, 335 y 336) por un total de USD 73.798,76, y lo expresa textualmente. Sumando las facturas de DOC-2 (2.347,40 + 15.728,79 + 29.978,74 + 3.208,79 + 22.535,04) se obtiene 73.798,76, lo que coincide con la certificacion. El monto afirmado difiere en USD 594,00 de ese total, por lo que la prueba muestra otra cifra.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 165,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 549,
+          "batch": true
+        }
+      ]
+    },
+    "AF-13": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada quedo en mora de pleno derecho el 22 de abril de 2026 por vencimiento del plazo sin pago ni observacion. Es una conclusion juridica cuyo hecho principal es la fecha de constitucion en mora; ningun documento de prueba fija esa fecha ni menciona el 22 de abril como vencimiento. La carta documento (DOC-5) es una intimacion de pago del 9/3/2026 entregada el 11/3/2026, que no coincide con esa fecha. La transferencia (DOC-6) del 28/4/2026 acredita un pago parcial posterior, pero no determina la mora. Los fundamentos accesorios (plazo de 30 dias de la clausula 1 de DOC-1, pago posterior) no fijan la fecha invocada y van a la nota.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 120,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 699,
+          "batch": true
+        }
+      ]
+    },
+    "AF-14": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion reclama intereses desde la mora a la tasa activa del Banco Nacion para descuento a 30 dias, mas costas. El hecho principal es el reclamo de intereses a una tasa determinada. La prueba no contiene ninguna tasa ni calculo de intereses reclamados. La clausula 5 de la orden de compra (DOC-1, pagina 3) dice que la orden no genera intereses ni actualizacion a favor del proveedor: no se refiere al reclamo como tal, sino que excluye intereses, y segun el criterio es sin_respaldo, con la clausula a la nota. Las costas son una cuestion procesal que no es hecho probatorio. La carta documento (DOC-5) reclama intereses genericamente, sin fijar tasa ni monto.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 142,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 556,
+          "batch": true
+        }
+      ]
+    },
+    "AF-15": {
+      "origen": "batch",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no efectuo ningun pago, total ni parcial, imputable a la obligacion reclamada. DOC-6 es una constancia de transferencia de la demandada (SOTR S.E., ordenante) a Grafica del Plata S.A. por $48.920.330,15 de fecha 28/04/2026, con concepto \"Cancelacion facturas 318, 323 y 326 — OC 430011742\", estado Acreditada. Ese pago se imputa expresamente a facturas reclamadas en autos, por lo que contradice la afirmacion de que no hubo pagos.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 102,
+          "cache_escrita": 0,
+          "cache_leida": 47948,
+          "out": 683,
+          "batch": true
+        }
+      ]
+    }
+  }
+}

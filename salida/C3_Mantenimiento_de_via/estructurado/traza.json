@@ -1,0 +1,253 @@
+{
+  "modo": "tiempo_real",
+  "modelo": "claude-haiku-5-5",
+  "segundos": 20.9,
+  "in": 2038,
+  "cache_escrita": 39201,
+  "cache_leida": 548814,
+  "out": 9058,
+  "costo_usd": 0.01512,
+  "costo_por_afirmacion_usd": 0.00101,
+  "items": {
+    "AF-01": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el 3 de junio de 2024 la demandada adjudico a la actora el contrato CT-42/2024, expediente EX-2024-00297714-APN-GIN#SOTR, para mantenimiento de via del ramal Retiro — Villa Rosa. DOC-1 pagina 1 es la Orden de Compra N° CT-42/2024, con fecha de emision 3 de junio de 2024, proveedor Vias y Obras del Centro S.A., expediente EX-2024-00297714-APN-GIN#SOTR y lugar de entrega Ramal Retiro — Villa Rosa. Coinciden el acto, la fecha, el numero de contrato, el expediente y el objeto. La palabra \"adjudico\" no aparece literalmente, pero la orden de compra emitida y notificada al proveedor acredita la contratacion.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 163,
+          "cache_escrita": 39201,
+          "cache_leida": 0,
+          "out": 698,
+          "batch": false
+        }
+      ]
+    },
+    "AF-02": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el contrato CT-42/2024 incluyo ademas de las tareas de via un servicio de guardia permanente los siete dias, atencion de emergencias dentro de las dos horas, con dotacion propia y equipamiento exclusivo. El contrato (DOC-1) detalla solo cuatro renglones de obra de via (rebaje de riel, durmientes, perfilado de balasto, fijaciones), el lugar de entrega y las condiciones de recepcion, sin mencionar guardia, emergencias, tiempos de respuesta, dotacion ni equipamiento. Ningun documento de prueba se refiere a ese servicio de guardia.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 153,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 478,
+          "batch": false
+        }
+      ]
+    },
+    "AF-03": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que los precios unitarios del contrato son redeterminables segun indices del INDEC y que la demandada nunca aplico ese mecanismo. La prueba (DOC-1, clausula 2 de las cláusulas generales, pagina 3) establece expresamente que los precios unitarios son firmes y definitivos, que el contrato no admite redeterminacion, actualizacion ni reconocimiento de mayores costos por ningun concepto. Esto es incompatible con la existencia de un régimen de redeterminacion convenido. Se trata de la existencia misma del mecanismo contractual, que el documento niega expresamente.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 135,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 580,
+          "batch": false
+        }
+      ]
+    },
+    "AF-04": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el pago de cada certificacion mensual se convino a 60 dias corridos desde su presentacion, y que ese plazo esta vencido para las cuatro certificaciones reclamadas. La clausula 1 de DOC-1 (pagina 3) fija exactamente ese plazo de 60 dias corridos desde la presentacion, condicionado a que se acompañen los partes conformados. La parte de vencimiento depende de fechas de presentacion, que la prueba no fija con certeza para las cuatro certificaciones, pero el hecho principal (el plazo pactado) coincide con el contrato.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 125,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 613,
+          "batch": false
+        }
+      ]
+    },
+    "AF-05": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que todos los partes de servicio fueron conformados por la Inspeccion de Obra, sin observacion alguna. DOC-2 contiene cuatro partes: PS-2025-0811, 0912 y 1014 figuran \"Conformado por la Inspeccion de Obra\", pero PS-2025-1113 (30/11/2025) esta \"Sin conformar\", con \"Presentado por el contratista — sin firma de la Inspeccion\" y una observacion que descuenta el item 1 no ejecutado. Ademas, DOC-4 (nota NO-2026-00318442) registra que la certificacion de noviembre de 2025 fue observada por la Inspeccion de Obra. La afirmacion es incompatible con la prueba en cuanto a la totalidad y a la ausencia de observaciones.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 119,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 733,
+          "batch": false
+        }
+      ]
+    },
+    "AF-06": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que durante el periodo reclamado la actora intervino 4.200 metros de via principal ascendente en rebaje de riel por amolado. El contrato (DOC-1, pag. 2) fija 4.200 metros para el renglon 1 como cantidad contratada, pero eso es la cantidad firme de la orden de compra, no una ejecucion. Los partes de servicio (DOC-2) registran para el renglon 1 solo 1.050 metros en agosto, 1.050 en octubre y 0 en noviembre (parte no conformado). Sumando los partes conformados del renglon 1 (agosto y octubre, 2.100 metros) el total ejecutado es inferior a 4.200; y el parte de septiembre registra el renglon 3, no el 1. Por lo tanto la prueba muestra que se ejecutaron menos metros que los afirmados.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 119,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 745,
+          "batch": false
+        }
+      ]
+    },
+    "AF-07": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion atribuye a la certificacion de noviembre de 2025, instrumentada en la factura N° 0003-00001288, un importe de $ 43.525.126,57. La factura DOC-3 (pagina 4) consigna un total de $ 38.118.406,31, distinto del afirmado. Ademas, DOC-4 (pagina 1) indica que el importe certificable del mes es $ 38.118.406,31 y no el consignado en la factura, lo que refuerza la discrepancia. La afirmacion no coincide con ningun monto de la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 117,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 545,
+          "batch": false
+        }
+      ]
+    },
+    "AF-08": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que ninguna de las certificaciones fue observada ni objetada dentro de plazo. La prueba muestra lo contrario: la nota NO-2026-00318442-APN-GIN#SOTR (DOC-4, pagina 1) informa que la certificacion de noviembre de 2025 (factura 0003-00001288) fue observada por la Inspeccion de Obra, y la intima a emitir nota de credito. Ademas, el parte PS-2025-1113 (DOC-2, pagina 4) fue presentado sin conformar y con observacion de la Inspeccion. La afirmacion es general y la prueba contradice el punto central sobre la certificacion de noviembre.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 112,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 582,
+          "batch": false
+        }
+      ]
+    },
+    "AF-09": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que, antes de la demanda, la actora reclamo el pago a la demandada mediante un intercambio de correos electronicos sin respuesta satisfactoria. El hecho principal es la existencia de ese intercambio de correos. Revisados DOC-1 a DOC-5, ninguno contiene correos electronicos, ni reclamos de pago remitidos por la actora, ni respuestas de la demandada. DOC-4 documenta un reclamo administrativo previo (RA-2026-00092), pero es un tramite formal distinto del intercambio de correo y no acredita su contenido.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 138,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 446,
+          "batch": false
+        }
+      ]
+    },
+    "AF-10": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el 16 de enero de 2026 la actora envio a la demandada la carta documento N° CD 231907744 intimando al pago en 48 horas, con entrega efectiva y sin respuesta. Revisados los cinco documentos de prueba (contrato, partes de servicio, certificaciones, expediente administrativo y certificacion contable), ninguno menciona una carta documento, un telegrama, una intimacion al pago en 48 horas ni el numero CD 231907744. El expediente administrativo registra un reclamo administrativo previo RA-2026-00092 interpuesto el 22 de enero de 2026, pero no es una carta documento ni fija una intimacion de ese dia. La nota de la demandada del 20 de febrero de 2026 es una intimacion propia de la demandada a la contratista, no la intimacion de la actora. El hecho principal no aparece en la prueba.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 178,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 585,
+          "batch": false
+        }
+      ]
+    },
+    "AF-11": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el 22 de enero de 2026 se presento ante la Mesa de Entradas de la demandada una nota de pronto despacho N° RA-2026-00092, con sello de Mesa General de Entradas. El DOC-4 (dictamen, pagina 2) menciona que el reclamo administrativo previo RA-2026-00092, interpuesto por la contratista, fue registrado por la Mesa General de Entradas el 22 de enero de 2026. Esto respalda la fecha, el numero y la registracion en Mesa de Entradas. La afirmacion habla de una \"nota de pronto despacho\" y el documento habla de un \"reclamo administrativo previo\"; se trata del mismo expediente numerado, por lo que el hecho principal coincide. No hay un documento que muestre el sello fisico ni la nota misma, pero el dictamen registra la fecha de ingreso.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 144,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 621,
+          "batch": false
+        }
+      ]
+    },
+    "AF-12": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el total reclamado es $186.430.912,44. La prueba documental sobre deuda son cuatro facturas (0003-00001204, -01233, -01261, -01288) cuyos importes suman $181.024.192,18 (41.883.004,10 + 48.027.663,72 + 52.995.118,05 + 38.118.406,31). La certificacion contable (DOC-5) informa el mismo total de USD 181.024.192,18, y tambien lo declara con la etiqueta USD aunque los importes son pesos. El total afirmado no coincide con la suma de los componentes ni con el total certificado; la diferencia es de $5.406.720,26.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 170,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 677,
+          "batch": false
+        }
+      ]
+    },
+    "AF-13": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion es una conclusion juridica: la demandada quedo en mora de pleno derecho el 3 de febrero de 2026 por vencimiento del plazo sin pago ni observacion. El hecho principal es la fecha de constitucion en mora. Ningun documento de prueba fija una mora ni una intimacion con esa fecha. La unica referencia a una fecha de vencimiento es la clausula 1 del contrato (60 dias corridos desde la presentacion), pero no se calcula ninguna fecha concreta en la prueba. Ademas, la nota NO-2026-00318442 del 20 de febrero de 2026 observa la certificacion de noviembre, lo que contradice el fundamento de \"sin observacion alguna\", pero no fija la fecha de mora. Por la regla de conclusion juridica, el hecho principal no aparece, asi que es sin_respaldo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 121,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 665,
+          "batch": false
+        }
+      ]
+    },
+    "AF-14": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion reclama intereses desde la mora a tasa activa del Banco Nacion (descuento a 30 dias, capitalizable) y costas. La prueba no contiene ningun documento que fije una tasa de interes a favor de la actora ni que reconozca intereses. La unica referencia relacionada es la clausula 5 del Contrato (DOC-1, pagina 3), que dice que el contrato no genera intereses ni actualizacion a favor del contratista por demoras; eso no contradice el reclamo en si (es materia de decision del juez), pero sí es lo relacionado mas cercano. Ningun documento se refiere a la tasa activa del BNA, a la capitalizacion ni a costas.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 142,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 519,
+          "batch": false
+        }
+      ]
+    },
+    "AF-15": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no hizo ningun pago, total ni parcial, imputable a la obligacion reclamada. La prueba no contiene ningun comprobante de pago, recibo, transferencia ni cancelacion de facturas. DOC-4 muestra que tres certificaciones (agosto, septiembre y octubre de 2025) estan conformadas y en tramite de pago, pero no informa que se hayan pagado. DOC-5 certifica que las facturas estan pendientes de cobro, lo que sugiere que no hubo pago, aunque su alcance no es verificar pagos. Ningun documento se refiere de forma directa a la existencia o inexistencia de pagos.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 102,
+          "cache_escrita": 0,
+          "cache_leida": 39201,
+          "out": 571,
+          "batch": false
+        }
+      ]
+    }
+  }
+}

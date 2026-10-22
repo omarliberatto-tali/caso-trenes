@@ -1,0 +1,191 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Orden de Compra N° CT-42/2024"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Fecha de emisión 3 de junio de 2024"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Expediente EX-2024-00297714-APN-GIN#SOTR"
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "La orden de compra CT-42/2024 de fecha 3 de junio de 2024 a favor de Vias y Obras del Centro S.A. acredita el contrato con el expediente y el lugar de entrega afirmados. El documento dice \"emitida y notificada al proveedor\" y no usa el termino \"adjudicacion\", lo que no cambia el hecho principal."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba menciona guardia permanente, atencion de emergencias en dos horas, dotacion propia ni equipamiento exclusivo; el contrato solo describe los cuatro renglones de mantenimiento de via. La ausencia en la prueba no equivale a contradiccion, por lo que corresponde sin_respaldo."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "Los precios unitarios son firmes y definitivos por todo el plazo contractual. El contrato no admite redeterminación, actualización ni reconocimiento de mayores costos por ningún concepto."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "El contrato no prevé redeterminacion por indices; la clausula 2 excluye expresamente cualquier redeterminacion o actualizacion. La parte del reclamo sobre reclamos de la actora no tiene respaldo documental en la prueba, pero no altera el estado, que se fija por la incompatibilidad con el régimen contractual. La decisión sobre la validez de la clausula corresponde al juez."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "1. El pago de cada certificación se efectuará a los sesenta (60) días corridos de su presentación, siempre que se acompañen los partes de servicio conformados por la Inspección de Obra."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "El contrato acredita el plazo de 60 dias corridos desde la presentacion. No se acredita la fecha de presentacion de cada certificacion, por lo que el vencimiento de las cuatro no queda fijado por la prueba; tampoco surge de la prueba que la condicion de partes conformados se haya cumplido en todas. La clausula 1 queda condicionada a partes conformados, y la nota de observacion de noviembre y la resolucion de rechazo (DOC-4) van a la nota como contexto, no deciden el estado."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "Sin conformar. La Inspección de Obra observa que el ítem 1 no fue ejecutado en el período y descuenta los metros correspondientes"
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "La Inspección de Obra dejó constancia de que el ítem 1 no fue ejecutado en el período, por lo que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288."
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "Tres de los cuatro partes (PS-2025-0811, 0912 y 1014) estan conformados, pero el parte PS-2025-1113 de noviembre de 2025 no lo esta y fue observado por la Inspeccion, lo que contradice la afirmacion de que no hubo observacion alguna. La contestacion y el dictamen juridico no se usan como prueba del estado."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "1 Rebaje de riel por amolado, vía principal ascendente 0"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "1 Rebaje de riel por amolado, vía principal ascendente 1.050"
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "Los partes de servicio registran para el renglon 1 solo 1.050 m en agosto y 1.050 m en octubre de 2025, y 0 m en noviembre (parte sin conformar); el total de metros de rebaje de riel no llega a 4.200. Los 4.200 m son la cantidad contratada del renglon 1 en el contrato (DOC-1, pag. 2), no la cantidad ejecutada. La cantidad de 4.200 m del renglon 1 tambien coincide con la contratada, pero la prueba de ejecucion no la respalda. La contestacion de la demandada no se considero para el estado."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 4,
+        "fragmento": "Total de la factura $ 38.118.406,31"
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "por lo que el importe certificable del mes asciende a $ 38.118.406,31 y no al consignado en la factura N° 0003-00001288."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La factura N° 0003-00001288 existe pero por $ 38.118.406,31, no por $ 43.525.126,57. La nota de observacion de DOC-4 fija el importe certificable en el mismo monto de la factura. La demandada niega el reclamo, pero eso no decide el estado."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "la certificación correspondiente al mes de noviembre de 2025 fue observada por la Inspección de Obra."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La certificacion de noviembre de 2025 (factura 0003-00001288, $38.118.406,31) fue observada por la Inspeccion de Obra por el item 1 no ejecutado, segun la nota de 20/02/2026. La afirmacion no es correcta en ese punto. Las certificaciones de agosto a octubre aparecen conformadas en el dictamen, sin observacion surgida de la prueba. La contestacion no fue considerada."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba contiene el intercambio de correos electronicos ni el reclamo de pago por ese medio. El reclamo administrativo previo RA-2026-00092 que cita el dictamen (DOC-4, pagina 2) es un tramite distinto y no acredita el intercambio de correos afirmado."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba se refiere a la carta documento CD 231907744 ni a la intimacion del 16 de enero de 2026. Lo mas cercano es el reclamo administrativo previo RA-2026-00092 del 22 de enero de 2026 (DOC-4), que es otro acto y no acredita la intimacion afirmada. La entrega efectiva y la falta de respuesta tampoco surgen de la prueba."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "interpuesto por la contratista y registrado por la Mesa General de Entradas el 22 de enero de 2026"
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "El dictamen acredita que el reclamo RA-2026-00092 fue registrado por la Mesa General de Entradas el 22 de enero de 2026. La prueba no incluye la nota misma ni el sello, y el documento la califica como reclamo administrativo previo y no como nota de pronto despacho; esa diferencia de denominacion es un detalle a verificar."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 2,
+        "fragmento": "TOTAL 181.024.192,18"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 2,
+        "fragmento": "el total de los créditos así registrados asciende a USD 181.024.192,18"
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "Las cuatro facturas y la certificacion contable suman $181.024.192,18, no $186.430.912,44. La certificacion contable tambien rotula el total como USD, aunque el detalle de comprobantes esta en pesos (facturas en $). Ademas, la prueba no acredita que el total reclamado en autos sea ese monto; la diferencia de $5.406.720,26 no aparece en ningun documento de prueba. Lo que el expediente administrativo (DOC-4) dice sobre la observacion de noviembre de 2025 (importe certificable de $38.118.406,31) tambien incide en el reclamo, pero no cambia la suma de las facturas."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija la constitucion en mora el 3 de febrero de 2026. El contrato (clausula 1, DOC-1 pagina 3) fija un plazo de 60 dias corridos desde la presentacion, pero la prueba no permite calcular esa fecha con certeza. Los fundamentos accesorios de la afirmacion chocan con la prueba: la nota NO-2026-00318442 (DOC-4, pagina 1, fechada 20/02/2026) observo la certificacion de noviembre de 2025, por lo que la afirmacion de que no hubo observacion alguna resulta contradicha. Esos fundamentos van a la nota, no cambian el estado."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba acredita el devengamiento de intereses ni la tasa activa del Banco Nacion. La clausula 5 del contrato (DOC-1, pagina 3) excluye intereses por demoras en la conformacion o el pago, lo que va a la nota como antecedente relacionado pero no decide el estado; la procedencia de los intereses queda para el juez. Las costas no son un hecho probado por la prueba documental."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.6,
+    "nota": "No hay en la prueba ningun comprobante de pago que contradiga la afirmacion, pero tampoco un documento que acredite expresamente la falta de pagos. La certificacion contable (DOC-5, pagina 1) informa que las facturas estan pendientes de cobro a la fecha del informe, lo que es indirectamente compatible con la afirmacion, pero no se refiere de manera especifica a pagos. El dictamen y la resolucion (DOC-4) mencionan certificaciones \"en tramite de pago\" sin informar pagos efectuados. La contestacion no fue considerada como prueba."
+  }
+]

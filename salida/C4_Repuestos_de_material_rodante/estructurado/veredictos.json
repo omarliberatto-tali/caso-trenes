@@ -1,0 +1,191 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Orden de Compra N° 430014908"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Fecha de emisión 18 de julio de 2025"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Expediente EX-2025-00611240-APN-GMR#SOTR"
+      }
+    ],
+    "confianza": 0.97,
+    "nota": "La orden de compra acredita numero, fecha, expediente y objeto (repuestos para material rodante, renglones 1 a 5 en la pagina 2). Los datos de las facturas y del acta no alteran este hecho."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 2,
+        "fragmento": "Renglón Descripción Unidad Cantidad"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 2,
+        "fragmento": "5 Junta de estanqueidad para puerta de acceso unidad 600"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La OC de DOC-1 contiene los cinco renglones afirmados con sus descripciones. La afirmacion no menciona cantidades; estas figuran en la OC (480, 96, 192, 240 y 600 unidades) y no alteran el objeto descripto."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "1. El pago de cada entrega se efectuará a los treinta (30) días corridos de la presentación de la factura, previa conformidad de recepción del área requirente."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La orden de compra pacta 30 dias corridos, no 90. La contestacion no fue considerada como prueba. Las demas clausulas (intereses, controversia) no se refieren al plazo y no alteran la contradiccion."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 4,
+        "fragmento": "La mercadería se entregará en embalaje original del fabricante, con etiqueta de trazabilidad y certificado de origen por cada lote."
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "El proveedor deberá acompañar, por cada lote entregado, la documentación de trazabilidad que se indica en el Anexo A."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La orden de compra del 18 de julio de 2025 ya exige certificado de origen y trazabilidad por lote (Anexo A.1 y clausula 3), por lo que no fue introducido despues. La nota de observacion del 28/11/2025 (DOC-3) solo reitera una exigencia preexistente; la afirmacion de falta de sustento contractual no se sostiene en la prueba."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 1,
+        "fragmento": "se reciben ciento cuarenta (140), y de las seiscientas (600) juntas de estanqueidad del renglón 5 se reciben cuatrocientas (400)"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 1,
+        "fragmento": "Se deja constancia de que la entrega es parcial"
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "El acta del tercer lote deja constancia de entrega parcial en los renglones 4 y 5, con saldo pendiente que el proveedor prometio entregar dentro de los treinta dias. Las facturas de DOC-2 suman $31.480.200 + $24.912.760 + $21.094.880 sin desglose por renglon, y no acreditan cantidades; la contestacion y la demanda no son prueba. La prueba no muestra la entrega del saldo, aunque la falta de entrega total surge del acta."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 1,
+        "fragmento": "Se recibe bajo reserva de verificación de trazabilidad, por no acompañarse el certificado de origen de los lotes."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "la factura N° 0007-00000561 ha sido observada por esta Gerencia, por no corresponder al material efectivamente recibido según el acta ACTA-2025-00088-GMR#SOTR."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "La prueba no acredita conformidad tecnica del material; por el contrario, la recepcion del tercer lote quedo bajo reserva por falta de certificado de origen (requisito del Anexo A de la OC) y la factura 0007-00000561 fue observada por no corresponder al material recibido. Tambien consta la recepcion parcial de los renglones 4 y 5 (140 de 240 y 400 de 600), lo que contradice que el material se haya aceptado integramente. La contestacion no fue considerada como prueba."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 1,
+        "fragmento": "Total de la factura $ 31.480.200,00"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La factura N° 0007-00000512 del 22/09/2025 por $31.480.200,00 figura en la prueba con la fecha y el monto afirmados. La observacion posterior de la factura 0007-00000561 (DOC-3) no se refiere a esta factura."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "la factura N° 0007-00000561 ha sido observada por esta Gerencia, por no corresponder al material efectivamente recibido según el acta ACTA-2025-00088-GMR#SOTR."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La Nota NO-2025-00694511 del 28/11/2025 observa la factura 0007-00000561, lo que contradice que ninguna factura haya sido observada. Las facturas 0007-00000512 y 0007-00000538 no tienen observacion en la prueba. La afirmacion de que constituyen cuenta liquida y exigible es una conclusion juridica que excede la prueba; la observacion tampoco resuelve la exigibilidad de las otras dos facturas."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba se refiere a la carta documento CD 245118036 ni a la intimacion del 29/01/2026. La providencia PV-2026-00170833 menciona solo un reclamo administrativo previo RA-2026-00147 registrado el 4/02/2026, que no es la misma pieza. La entrega y la falta de respuesta tampoco surgen de la prueba."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "Se tiene por presentado el reclamo administrativo previo RA-2026-00147, registrado por la Mesa General de Entradas el 4 de febrero de 2026."
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "La providencia acredita la presentacion del expediente RA-2026-00147 registrado por Mesa General de Entradas el 4/2/2026, con la fecha y el numero afirmados. No dice que el escrito se denomine \"nota de pronto despacho\" ni que tenga el sello fisico de la mesa; ese detalle accesorio no esta acreditado en la prueba."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.75,
+    "nota": "La afirmacion no identifica que presentaciones se respondieron tarde ni cuales son sus plazos, y ningun documento de prueba los fija. La providencia PV-2026-00170833 (DOC-3, pagina 3) solo tiene por presentado el reclamo RA-2026-00147 y lo gira a areas internas, sin datos sobre respuesta; no hay constancia de falta de respuesta en plazo. Esto queda como sin_respaldo y no como contradiccion, porque la prueba no muestra que la demandada haya respondido a tiempo o no."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.7,
+    "nota": "La prueba no contiene el detalle del reclamo ni la certificacion contable mencionada. Las tres facturas de DOC-2 suman $77.487.840,00, distinto de los $92.744.180,00 afirmados; la diferencia de $15.256.340,00 no se explica en la prueba. La clausula 4 de la OC (DOC-1, pagina 3) excluye intereses y actualizaciones, pero no decide el total reclamado. Ademas, la factura 0007-00000561 fue observada por la nota NO-2025-00694511 (DOC-3, pagina 2), y la conformidad de recepcion del tercer lote quedo condicionada, lo que tambien afecta lo exigible."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "Ningun documento de prueba fija la fecha de constitucion en mora del 6 de diciembre de 2025. Son accesorios que la prueba contradice: la nota NO-2025-00694511 del 28/11/2025 observa la factura 0007-00000561 (DOC-3, pagina 2), y la orden de compra fija el pago a 30 dias de la factura (DOC-1, pagina 3). Las facturas son del 22/09, 14/10 y 07/11/2025; la mora se vincularia al vencimiento de esos plazos, que no coincide con la fecha afirmada sin mas calculo sobre la base de la prueba."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "La clausula 4 de la orden de compra (DOC-1, pagina 3) establece que no genera intereses ni actualizacion a favor del proveedor; es una clausula que excluye el reclamo, por lo que va a la nota y no contradice. No hay ningun documento que fije la tasa activa del Banco Nacion ni la fecha de mora, ni que se refiera al reclamo de intereses. Las costas no tienen respaldo documental."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.7,
+    "nota": "Ningun documento de prueba registra pagos ni comprobantes de pago imputables a las facturas 0007-00000512, 0007-00000538 o 0007-00000561. La condicion de venta \"cuenta corriente\" y la falta de constancias de cancelacion no equivalen a una prueba de que no hubo pagos, y la ausencia de pagos en el expediente no puede tomarse como contradiccion. La orden de compra establece pago a 30 dias de la factura, y la nota NO-2025-00694511 observa la factura 0007-00000561, pero ninguno de estos documentos informa un pago. Si la demandada alega pagos, eso surgiria de la contestacion, que no decide el estado."
+  }
+]
