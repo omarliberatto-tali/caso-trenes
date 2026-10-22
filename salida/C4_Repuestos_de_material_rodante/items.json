@@ -1,0 +1,152 @@
+[
+  {
+    "id": "AF-01",
+    "texto": "En fecha 18 de julio de 2025 la demandada emitió la orden de compra N° 430014908, tramitada bajo el expediente EX-2025-00611240-APN-GMR#SOTR, para el suministro de repuestos destinados a su material rodante.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "a",
+    "titulo": "Existencia de la orden de compra"
+  },
+  {
+    "id": "AF-02",
+    "texto": "La orden de compra comprendió cinco renglones: zapatas de freno compuestas, amortiguadores verticales de suspensión secundaria, bujes elásticos de brazo de arrastre, placas de desgaste de patín de tercer riel y juntas de estanqueidad para puertas de acceso.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "a",
+    "titulo": "Objeto de la orden de compra"
+  },
+  {
+    "id": "AF-03",
+    "texto": "El pago de cada entrega se convino a los noventa (90) días corridos de la presentación de la factura respectiva.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "a",
+    "titulo": "Plazo de pago pactado"
+  },
+  {
+    "id": "AF-04",
+    "texto": "La orden de compra no exigió a mi mandante la presentación de certificados de origen ni de trazabilidad, extremo que la demandada introdujo con posterioridad y sin sustento contractual.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "a",
+    "titulo": "Documentación exigida al proveedor"
+  },
+  {
+    "id": "AF-05",
+    "texto": "Mi mandante entregó la totalidad de los repuestos comprendidos en los cinco renglones de la orden de compra, en las cantidades allí previstas.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "b",
+    "titulo": "Entrega de la totalidad de los renglones"
+  },
+  {
+    "id": "AF-06",
+    "texto": "El material entregado responde íntegramente a las especificaciones técnicas requeridas y fue aceptado sin observación de calidad alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "b",
+    "titulo": "Calidad del material entregado"
+  },
+  {
+    "id": "AF-07",
+    "texto": "La factura N° 0007-00000512, de fecha 22 de septiembre de 2025, fue emitida por la suma de $ 31.480.200,00.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "c",
+    "titulo": "Importe de la primera factura"
+  },
+  {
+    "id": "AF-08",
+    "texto": "Ninguna de las facturas emitidas fue observada ni objetada por la demandada dentro de los plazos legales, por lo que constituyen cuenta líquida y exigible.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "c",
+    "titulo": "Ausencia de observaciones a las facturas"
+  },
+  {
+    "id": "AF-09",
+    "texto": "En fecha 29 de enero de 2026 mi parte remitió a la demandada la carta documento N° CD 245118036, intimándola al pago en el plazo de cuarenta y ocho (48) horas bajo apercibimiento de iniciar las acciones judiciales pertinentes. La pieza postal fue efectivamente entregada y no mereció respuesta alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 2
+    },
+    "grupo": "d",
+    "titulo": "Carta documento"
+  },
+  {
+    "id": "AF-10",
+    "texto": "En fecha 4 de febrero de 2026 se presentó ante la Mesa de Entradas de la demandada la nota de pronto despacho N° RA-2026-00147, cuya recepción consta con el sello de Mesa General de Entradas, SOTR S.E..",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "d",
+    "titulo": "Pronto despacho"
+  },
+  {
+    "id": "AF-11",
+    "texto": "Ninguna de las presentaciones referidas fue respondida por la demandada dentro de los plazos que la normativa aplicable le impone, configurándose el silencio que habilita la presente acción.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "d",
+    "titulo": "Silencio de la demandada"
+  },
+  {
+    "id": "AF-12",
+    "texto": "El total reclamado en autos asciende a PESOS NOVENTA Y DOS MILLONES SETECIENTOS CUARENTA Y CUATRO MIL CIENTO OCHENTA CON 00/100 ($ 92.744.180,00), conforme el detalle que antecede y la certificación contable que se acompaña.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "e",
+    "titulo": "Suma total reclamada"
+  },
+  {
+    "id": "AF-13",
+    "texto": "La demandada quedó constituida en mora de pleno derecho el 6 de diciembre de 2025, por haber vencido el plazo pactado sin que mediara pago ni observación alguna.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "e",
+    "titulo": "Fecha de constitución en mora"
+  },
+  {
+    "id": "AF-14",
+    "texto": "Se reclaman los intereses devengados desde la fecha de mora y hasta el efectivo pago, a la tasa activa del Banco de la Nación Argentina para operaciones de descuento a treinta días, con más las costas del proceso.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "e",
+    "titulo": "Intereses pretendidos"
+  },
+  {
+    "id": "AF-15",
+    "texto": "La demandada no efectuó pago alguno, ni total ni parcial, imputable a la obligación que se reclama en autos.",
+    "origen": {
+      "documento_id": "DEM",
+      "pagina": 3
+    },
+    "grupo": "e",
+    "titulo": "Inexistencia de pagos parciales"
+  }
+]

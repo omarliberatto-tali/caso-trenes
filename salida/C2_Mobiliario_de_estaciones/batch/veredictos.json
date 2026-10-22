@@ -1,0 +1,164 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Fecha de emisión 11 de marzo de 2025"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Expediente EX-2025-00133907-APN-GCO#SOTR"
+      }
+    ],
+    "confianza": 0.97,
+    "nota": "La orden de compra N° 4520002029 emitida por la Gerencia de Compras de SOTR S.E. con fecha 11 de marzo de 2025 y el expediente indicado acreditan la afirmacion. El detalle de renglones (cambiadores, bancos y cestos) queda documentado en la pagina 2 de DOC-1. La contestacion no se considera para el estado."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "1. El pago se efectuará a los cuarenta y cinco (45) días corridos de la fecha de presentación de la factura, siempre que ésta se encuentre conformada por el área requirente."
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "La orden de compra pacta 45 dias corridos, no 60. El pago ademas queda condicionado a la conformacion del area requirente (clausula 1 y 4), y el memorandum DOC-4 (pagina 1) informa que los cambiadores no fueron conformados, lo que tambien cuestiona la mora. La mora en si misma no se verifica en la prueba; eso queda para el juez."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.7,
+    "nota": "El remito 0002-00008644 no esta en el expediente; las facturas DOC-2 solo lo citan como \"Remito asociado\", y el correo de DOC-3 del 31/05/2025 afirma la entrega del 14 de abril sin acompanar el remito. La demandada, en DOC-4 (memorandum ME-2026-01254057-APN-GCA#SOTR, 2/2/2026), sostiene que la recepcion del renglon 1 no fue conformada por incumplimiento de especificaciones tecnicas; esa postura va a la nota y no decide el estado. La prueba tampoco fija que la entrega haya sido en tiempo y forma, ni la conformidad de la recepcion."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 1,
+        "fragmento": "El área requirente dejó constancia de que la recepción de los ocho cambiadores de bebé no fue conformada, por no haberse acreditado el cumplimiento de las medidas indicadas en la especificación técnica."
+      }
+    ],
+    "confianza": 0.88,
+    "nota": "La demandada informa que el renglón 1 no fue conformado y que la factura sigue en tramite de conformacion, lo que es incompatible con la conformidad afirmada. Ademas, la clausula 4 de la orden de compra (DOC-1, pagina 3) hace de la conformidad condicion previa al pago. Los correos de DOC-3 sobre la factura 00005-00000172 (contabilizada el 10 de agosto) no acreditan una conformacion del renglon 1 y no cambian el estado."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 2,
+        "fragmento": "la factura se encuentra rechazada en el portal de AFIP, por no contar con la certificación del usuario al momento del vencimiento. Solicitamos proceder a la refacturación."
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "El correo del 28/06/2025 de la Gerencia de Coordinacion Administrativa acredita el rechazo en AFIP por el motivo afirmado y el pedido de refacturacion. La afirmacion no especifica otros detalles que la prueba contradiga; la contestacion no fue considerada para decidir."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 2,
+        "fragmento": "N° 00005-00000158 Fecha de emisión 5 de julio de 2025"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 2,
+        "fragmento": "Total de la factura $ 399.784,00"
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "La emision de la factura 00005-00000158 el 5 de julio de 2025 por $399.784,00 esta acreditada. La prueba no documenta una observacion de la demandada sobre esta factura en particular: el correo del 9 de agosto de 2025 observa la 00005-00000172 y el memorandum del 2 de febrero de 2026 no la identifica. La parte de la afirmacion referida a la observacion queda sin acreditar, y la contestacion la niega o la discute; no se toma como contradiccion."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "La factura N° 00005-00000172 fue emitida por $ 399.784, aplicando un tipo de cambio que no corresponde al día de emisión. Se solicita su anulación y reemplazo."
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 3,
+        "fragmento": "Total a facturar $ 452.535,16."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "El correo del 9/8/2025 acredita que la demandada observo la factura 00005-00000172 por tipo de cambio y fijo el total a facturar en $452.535,16. Tambien figura en la prueba que la factura 00005-00000172 se emitio por $399.784 (DOC-2, pag. 3). La demandada no niega el hecho en la prueba; la calificacion de \"rechazo\" es la del propio correo como observacion, y la eventual validez de la observacion queda para el juez. La prueba no muestra que la factura fuera formalmente \"rechazada\" en el sentido de no aceptada, sino observada con pedido de anulacion y reemplazo, lo que se ajusta en lo esencial a la afirmacion."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "La prueba no registra la contabilizacion de la factura 00005-00000173. El unico dato de contabilizacion del 10 de agosto (correo de Tesoreria del 30/09/2025, DOC-3 pag. 4) corresponde a la factura 00005-00000172, que es otro comprobante, por lo que no puede usarse para acreditar la afirmacion. Tampoco hay prueba de que la informacion haya sido dada por Tesoreria a la actora en ese sentido; el propio correo dice que no posee informacion sobre fechas de transferencia."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.6,
+    "nota": "Existe un intercambio de correos entre las partes (DOC-3), pero son de presentacion de la factura, pedido de refacturacion, observacion de tipo de cambio y consulta de estado, no un reclamo de pago. La prueba no muestra un reclamo de pago ni la respuesta insatisfactoria que describe la afirmacion. Las observaciones de la demandada (factura rechazada, tipo de cambio incorrecto) van a la nota y no contradicen el hecho, que no aparece como tal."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "No hay en la prueba carta documento CD 197340228 ni constancia de su entrega; la nota de pronto despacho PD-2026-00061 del 15 de enero de 2026 (DOC-4) es un documento distinto y no acredita la intimacion. Tampoco hay prueba de la falta de respuesta. La contestacion no fue considerada para decidir el estado."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "Se acusa recibo de la nota de pronto despacho presentada en fecha 15 de enero de 2026 ante la Mesa General de Entradas de esta sociedad, la que fuera registrada bajo el numero de referencia."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La nota de la demandada (NO-2026-01293598-APN-SG#SOTR) acusa recibo de la presentacion del 15 de enero de 2026 y la referencia como PD-2026-00061. El sello de la Mesa de Entradas no aparece como imagen legible en el PDF; el reconocimiento de recepcion por la propia demandada cubre ese detalle accesorio."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.6,
+    "nota": "La prueba no contiene el detalle ni la certificacion contable que dicen sostener el total de $498.212,70, y ningun documento lo informa. Los montos relacionados son las facturas 00005-00000143, 00005-00000158, 00005-00000172 y 00005-00000173 (por $399.784 y $452.535,16) y el calculo del correo del 9/8/2025 (USD 2.800 + IVA = $452.535,16), que no suman el total afirmado. La contestacion no esta en la prueba como fuente de estado."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija la mora en el 10/10/2025. Los fundamentos accesorios no coinciden con la prueba: hubo observaciones de la demandada (correo del 28/6/2025 sobre rechazo de la factura 00005-00000143, correo del 9/8/2025 sobre el tipo de cambio de la factura 00005-00000172 y memorandum ME-2026-01254057 del 2/2/2026 que no conforma el renglon 1), y la OC 4520002029 fija el pago a 45 dias desde la presentacion de la factura conformada, sin que la prueba muestre esa conformacion. Tambien la OC excluye intereses por demora en la conformacion (clausula 5), lo que va a la nota y no decide el estado."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija una tasa de interes ni una fecha de mora. La clausula 5 de la orden de compra (DOC-1, pagina 3) excluye intereses por demora en la conformacion, pero no contradice el reclamo en los terminos del criterio, y su alcance corresponde decidirlo al juez. Las costas no son un hecho documental."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.75,
+    "nota": "La prueba no incluye extractos, transferencias ni recibos de pago, por lo que no puede confirmar ni desmentir la inexistencia de pagos. El correo de Tesoreria del 30/09/2025 (DOC-3, pagina 4) indica que la factura 00005-00000172 fue \"procesada y contabilizada\" el 10/08/2025, pero aclara que no posee informacion sobre fechas de transferencia; esto no prueba un pago. La demandada no se pronuncia expresamente sobre pagos en la prueba."
+  }
+]

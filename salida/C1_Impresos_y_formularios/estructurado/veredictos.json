@@ -1,0 +1,228 @@
+[
+  {
+    "item_id": "AF-01",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Orden de Compra N° 430011742"
+      },
+      {
+        "documento_id": "DOC-1",
+        "pagina": 1,
+        "fragmento": "Fecha de emisión 26 de septiembre de 2025"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La orden de compra acredita su emision en la fecha y con el numero afirmados, a favor de la actora, con el detalle de impresos en el renglon de cantidades (pagina 2). La contestacion no se considera como prueba."
+  },
+  {
+    "item_id": "AF-02",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-1",
+        "pagina": 3,
+        "fragmento": "1. El pago se efectuará a los treinta (30) días corridos de la fecha de presentación de la factura en la casilla de recepción de proveedores, siempre que se acompañe el remito conformado por el responsable del depósito."
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "La moneda dolares estadounidenses coincide con la OC (DOC-1, pag. 1 y cláusula 2 de pag. 3), pero el plazo pactado en la OC es de 30 dias corridos desde la presentacion de la factura, no 60. La afirmacion sobre el vencimiento 'ampliamente vencido' es una conclusion que depende del plazo; el plazo de 30 dias es el que se contradice. La contestacion no fue considerada como prueba."
+  },
+  {
+    "item_id": "AF-03",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 6,
+        "fragmento": "Renglón Descripción Cantidad 2 Talonario, uso boleterías, resumen de ventas 1.600"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 5,
+        "fragmento": "Recibido sin conformar. Pendiente de verificación de cantidades"
+      }
+    ],
+    "confianza": 0.8,
+    "nota": "Los remitos de los renglones 1, 2 (4.800), 3 y 5 llevan \"Recibido de conformidad\", pero el renglon 4 (6.500) fue recibido sin conformar y sin firma del responsable, y aparece un segundo remito por 1.600 unidades del renglon 2, que excede la cantidad firme de la OC (4.800) y tampoco fue verificado. La OC exige autorizacion escrita para entregas en exceso, que no figura en la prueba. La demandada podra negar la entrega conforme, pero la contestacion no decide el estado."
+  },
+  {
+    "item_id": "AF-04",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 5,
+        "fragmento": "Recibido sin conformar. Pendiente de verificación de cantidades"
+      },
+      {
+        "documento_id": "DOC-3",
+        "pagina": 6,
+        "fragmento": "Recibido con observaciones. No se verificaron las cantidades"
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "Dos de los seis remitos (0002-00011760 y 0002-00011807) no fueron conformados y tienen observaciones; los cuatro restantes sí dicen \"Recibido de conformidad\". Según la OC (DOC-1, pág. 4, A.3), solo el remito firmado por el responsable del depósito acredita recepción conforme, por lo que los dos remitos de mesa de recepción no lo acreditan. La contestacion niega la afirmacion en lo que hace a las objeciones; eso va a la nota y no decide el estado, que se funda en los remitos mismos."
+  },
+  {
+    "item_id": "AF-05",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-3",
+        "pagina": 5,
+        "fragmento": "4 Talonario, uso boleterías, planilla de recaudación 6.500"
+      }
+    ],
+    "confianza": 0.9,
+    "nota": "El remito 0002-00011760 registra 6.500 talonarios del renglon 4, no 8.000. Tampoco hay ningun documento de prueba que acredite 8.000 unidades, y la orden de compra fija 6.500 y advierte que cualquier entrega en exceso requiere autorizacion previa y por escrito. Ademas, ese remito figura recibido sin conformar (sin firma del responsable), lo que la contestacion podria discutir; esa observacion no cambia el dato de cantidad."
+  },
+  {
+    "item_id": "AF-06",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "Total de la factura USD 3.208,79"
+      },
+      {
+        "documento_id": "DOC-2",
+        "pagina": 4,
+        "fragmento": "Son DÓLARES ESTADOUNIDENSES TRES MIL DOSCIENTOS OCHO CON 79/100."
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La factura 0004-00000335 existe con la fecha afirmada, pero por USD 3.208,79 y no por USD 3.802,79; la certificacion contable (DOC-4) coincide con ese monto."
+  },
+  {
+    "item_id": "AF-07",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "La prueba contiene las facturas, pero no hay ningun acuse, sello o constancia de que la demandada las haya recibido; los remitos acreditan recepcion de mercaderia, no de facturas, y la carta documento y la nota son de la actora. Las clausulas de la orden de compra que piden presentar facturas por correo electronico no prueban el envio efectivo."
+  },
+  {
+    "item_id": "AF-08",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.85,
+    "nota": "No hay en la prueba ningun correo electronico de reclamo. Lo relacionado es la carta documento CD 214880917 del 9/3/2026 y la nota PD-2026-00418, que son reclamos por otra via y no prueban un intercambio de correo electronico. Ademas, la nota PD-2026-00418 tiene fecha de sello \"12 de marzo de 2016\", que parece un error de tipeo frente a la fecha 2026 de su numero y de la constancia. Esto no cambia el estado."
+  },
+  {
+    "item_id": "AF-09",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 1,
+        "fragmento": "Pieza CD 214880917"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 1,
+        "fragmento": "Fecha de imposición 9 de marzo de 2026"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 1,
+        "fragmento": "Intímoles el pago de la suma adeudada en concepto de facturas impagas correspondientes a la orden de compra N° 430011742, en el plazo de cuarenta y ocho (48) horas de recibida la presente, bajo apercibimiento de iniciar sin más trámite las acciones judiciales que por derecho correspondan"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 1,
+        "fragmento": "Entregada el 11 de marzo de 2026"
+      }
+    ],
+    "confianza": 0.95,
+    "nota": "La carta documento, su fecha de imposicion, el plazo de 48 horas, el apercibimiento y la entrega surgen de DOC-5. La constancia de seguimiento (pagina 3) acredita que no hay respuesta registrada, lo que respalda la ausencia de respuesta. La afirmacion no menciona que la carta reclamara intereses y costas, lo cual no contradice nada. Se toma la constancia como acreditacion del estado de tramite, sin pronunciamiento sobre el fondo."
+  },
+  {
+    "item_id": "AF-10",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 2,
+        "fragmento": "Sello de recepción 12 de marzo de 2016"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 3,
+        "fragmento": "PD-2026-00418 12 de marzo de 2016 Sin respuesta registrada a la fecha"
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "La nota existe y consta como presentada ante Mesa General de Entradas de SOTR S.E., pero el sello de recepcion y la constancia de seguimiento fijan la fecha el 12 de marzo de 2016, no de 2026 como afirma la demanda. Puede tratarse de un error de tipeo en el sello, lo que deberia verificarse con el original; la contestacion no fue considerada."
+  },
+  {
+    "item_id": "AF-11",
+    "estado": "respaldada",
+    "evidencia": [
+      {
+        "documento_id": "DOC-5",
+        "pagina": 3,
+        "fragmento": "CD 214880917 11 de marzo de 2026 Sin respuesta registrada a la fecha"
+      },
+      {
+        "documento_id": "DOC-5",
+        "pagina": 3,
+        "fragmento": "PD-2026-00418 12 de marzo de 2016 Sin respuesta registrada a la fecha"
+      }
+    ],
+    "confianza": 0.7,
+    "nota": "La constancia acredita que ninguna de las dos presentaciones tiene respuesta registrada a la fecha, que es el hecho principal. No acredita los plazos normativos que la demandada tendria que cumplir, que no figuran en la prueba, ni la configuracion del silencio como habilitante de la accion, que es una conclusion juridica. Ademas, la fecha de ingreso de PD-2026-00418 figura como 12 de marzo de 2016, anterior a la OC y a la carta documento, lo que parece un error material en la prueba."
+  },
+  {
+    "item_id": "AF-12",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "TOTAL 73.798,76"
+      },
+      {
+        "documento_id": "DOC-4",
+        "pagina": 2,
+        "fragmento": "informo que los comprobantes detallados se encuentran registrados en los libros de la sociedad y que el total de los créditos así registrados asciende a USD 73.798,76."
+      }
+    ],
+    "confianza": 0.85,
+    "nota": "La prueba suma USD 73.798,76 (cinco facturas de DOC-2, igual al total certificado en DOC-4), no USD 74.392,76. La diferencia de USD 594,00 no aparece en ningun documento. Ademas, DOC-6 registra un pago de $ 48.920.330,15 que cancela las facturas 318, 323 y 326, lo que afecta el saldo a reclamar; ese pago no tiene equivalencia en dolares en la prueba y su alcance es una cuestion para el juez."
+  },
+  {
+    "item_id": "AF-13",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija la mora en la fecha afirmada. La carta documento CD 214880917 del 9/03/2026 intima el pago sin mencionar el 22/04/2026. Los fundamentos accesorios tambien presentan problemas: la OC pacta pago a 30 dias de la presentacion de la factura (no un vencimiento fijo) y la transferencia del 28/04/2026 registra un pago de $48.920.330,15 por las facturas 318, 323 y 326, lo que no es pago nulo como sostiene la afirmacion, aunque no se refiere a la fecha de mora. Estas cuestiones quedan para el juez."
+  },
+  {
+    "item_id": "AF-14",
+    "estado": "sin_respaldo",
+    "evidencia": [],
+    "confianza": 0.8,
+    "nota": "Ningun documento de prueba fija la tasa activa del Banco Nacion ni calcula intereses desde la mora. La clausula 5 de la orden de compra (DOC-1, pagina 3) establece que no genera intereses ni actualizacion a favor del proveedor; es una clausula que no contradice el reclamo, pero debe considerarse para la decision del juez. La carta documento CD 214880917 (DOC-5) solo menciona \"mas intereses y costas\" sin tasa ni fecha de mora fijada."
+  },
+  {
+    "item_id": "AF-15",
+    "estado": "contradicha",
+    "evidencia": [
+      {
+        "documento_id": "DOC-6",
+        "pagina": 1,
+        "fragmento": "Concepto Cancelación facturas 318, 323 y 326 — OC 430011742"
+      },
+      {
+        "documento_id": "DOC-6",
+        "pagina": 1,
+        "fragmento": "Estado Acreditada"
+      }
+    ],
+    "confianza": 0.93,
+    "nota": "La constancia de transferencia acredita un pago de $48.920.330,15 de la demandada al actor, imputado a las facturas 0004-00000318, 00323 y 00326 de la OC 430011742, que son parte de lo reclamado. El importe figura en pesos y las facturas en USD; la constancia no aclara la conversion, lo que no cambia que se trata de un pago imputable a la obligacion. La certificacion contable (DOC-4) y las facturas (DOC-2) no contienen pagos. La carta documento y la nota de pronto despacho (DOC-5) no se refieren a pagos y no alteran el estado."
+  }
+]

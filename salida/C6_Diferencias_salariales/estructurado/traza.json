@@ -1,0 +1,253 @@
+{
+  "modo": "tiempo_real",
+  "modelo": "claude-haiku-5-5",
+  "segundos": 17.3,
+  "in": 1933,
+  "cache_escrita": 25853,
+  "cache_leida": 361942,
+  "out": 9520,
+  "costo_usd": 0.0118,
+  "costo_por_afirmacion_usd": 0.00079,
+  "items": {
+    "AF-01": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el actor ingreso el 16 de marzo de 2011 y sigue prestando servicios. Los recibos de haberes (DOC-1) registran \"Fecha de ingreso 16 de marzo de 2011\" en los tres periodos (marzo, septiembre y diciembre de 2025). La pericia contable (DOC-3, pagina 2) confirma que el actor figura registrado como personal en relacion de dependencia desde el 16 de marzo de 2011, con vinculo vigente a la fecha del informe. Ambos documentos coinciden en la fecha de ingreso y en la vigencia.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 129,
+          "cache_escrita": 25853,
+          "cache_leida": 0,
+          "out": 567,
+          "batch": false
+        }
+      ]
+    },
+    "AF-02": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que la demandada registra al actor como Operario especializado, categoria 5 del C.C.T. 1442/15 «T» y liquida sus haberes sobre esa base. Los recibos de haberes (DOC-1) muestran en los tres periodos \"Operario especializado, categoria 5\" y \"C.C.T. 1442/15 «T»\", con sueldo basico de 30 dias igual al basico de categoria 5 de la escala. La pericia contable (DOC-3, pagina 2) confirma que la categoria registrada es Operario especializado, categoria 5, conforme C.C.T. 1442/15 «T», y la pagina 3 muestra que el basico dic-2025 de categoria 5 coincide con el sueldo basico del recibo de diciembre de 2025. La descripcion de puesto (DOC-4) tambien identifica el puesto como Operario especializado.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 125,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 664,
+          "batch": false
+        }
+      ]
+    },
+    "AF-03": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el actor ejecuta en forma autonoma y sin supervision reparacion integral de bogies y montaje final de equipos de freno, tareas que exceden su categoria registrada (Operario especializado, categoria 5). La prueba documental que se refiere directamente a las tareas efectivamente prestadas es la descripcion de puesto DP-2023-00214 (DOC-4, pag. 1), que asigna al puesto tareas de desarme, limpieza, asistencia al Oficial y excluye expresamente la ejecucion autonoma de reparaciones y el montaje final de equipos de freno. Tambien la carta documento de la demandada (DOC-2, pag. 2) dice que las tareas que menciona el actor se ejecutan bajo supervision de un Oficial, lo que es la postura de la demandada y no prueba del hecho. La descripcion de puesto describe las tareas asignadas, no las efectivamente prestadas; no acredita que el actor no haga tareas autonomas. Ningun documento de prueba acredita que el actor ejecute tareas autonomas de reparacion o montaje final, ni que las ejecute sin supervision.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 139,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 787,
+          "batch": false
+        }
+      ]
+    },
+    "AF-04": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que las tareas del actor encuadran en la categoria 9 \"Oficial de mantenimiento\" del C.C.T. 1442/15 «T». La prueba no respalda ese encuadre: la pericia (DOC-3, pag. 3) informa que la categoria 9 no integra la escala de ese convenio, que llega hasta la categoria 8, y que la denominacion invocada corresponde a otro convenio (C.C.T. 1198/11). Ademas, la descripcion de puesto (DOC-4, pag. 1) asigna al actor la categoria Operario especializado (5) y excluye expresamente la ejecucion autonoma de reparaciones y el montaje final de equipos de freno, que son las tareas que el actor invoca. Los recibos (DOC-1) muestran la categoria 5 y la pericia (DOC-3, pag. 4) no encuentra diferencias.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 132,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 773,
+          "batch": false
+        }
+      ]
+    },
+    "AF-05": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion dice que el basico de la categoria 9 del C.C.T. 1442/15 «T» a diciembre de 2025 es $1.041.760 segun la escala homologada. La pericia (DOC-3, pagina 3) informa que la categoria 9 «Oficial de mantenimiento» no integra la escala del C.C.T. 1442/15 «T», cuyo escalafon llega hasta la categoria 8, y que la denominacion invocada corresponde al C.C.T. 1198/11 «M», no aplicable. La escala homologada muestra la categoria 8 «Oficial» con basico dic-2025 de $901.320,00, cifra distinta de la afirmada. La prueba no contiene ningun basico para una categoria 9 del convenio aplicable.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 133,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 669,
+          "batch": false
+        }
+      ]
+    },
+    "AF-06": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene una diferencia mensual devengada de $353.720 desde enero de 2024, que surge del encuadre reclamado (categoria 9 \"Oficial de mantenimiento\"). La prueba no fija ningun monto de diferencia mensual: el perito (DOC-3, pag. 4) concluye que no surgen diferencias salariales a favor del actor entre enero de 2024 y diciembre de 2025, y los recibos (DOC-1) muestran basicos de categoria 5. La pericia tambien informa que la categoria 9 no existe en el C.C.T. 1442/15 (escala hasta categoria 8), lo que impide cualquier calculo sobre ese encuadre. Hay una contradiccion clara con la conclusion pericial de que no hay diferencias, pero el monto de $353.720 no se reconstruye en la prueba y el perito no calcula una diferencia respecto de la categoria 8 ni de otra categoria.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 132,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 743,
+          "batch": false
+        }
+      ]
+    },
+    "AF-07": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el actor presto tareas en turno noche durante el periodo reclamado, generando el suplemento nocturno que aparece en sus recibos. El recibo de septiembre de 2025 (DOC-1, pagina 2) liquida \"Suplemento nocturno\" por $121.844,00 en el rubro remunerativo, lo que acredita el suplemento. La pericia contable (DOC-3, pagina 4) deja constancia de que ese suplemento responde a la prestacion efectiva de tareas en turno noche y esta correctamente calculado. Ambos documentos coinciden con la afirmacion en lo esencial.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 115,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 642,
+          "batch": false
+        }
+      ]
+    },
+    "AF-08": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene dos cosas: que el vinculo laboral sigue vigente y que el actor continua haciendo las mismas tareas reclamadas. El perito (DOC-3, pagina 2) deja constancia de que el vinculo esta vigente a la fecha de su informe, lo que respalda la primera parte. Los recibos de haberes (DOC-1) llegan hasta diciembre de 2025 con la misma categoria y fecha de ingreso, lo que acompana la continuidad. Sobre la continuidad de las tareas, ningun documento de prueba describe las tareas que el actor realiza al momento de la demanda; la descripcion de puesto DP-2023-00214 (DOC-4) es de 2023 y fija tareas de otra categoria, sin decir nada sobre las tareas actuales del reclamo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 105,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 691,
+          "batch": false
+        }
+      ]
+    },
+    "AF-09": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada nunca respondio la solicitud de recategorizacion ni comunico decision alguna. La prueba incluye la Nota N° NO-2025-00742118-APN-GRH#SOTR de fecha 27 de noviembre de 2025, dirigida al actor, que le informa que su solicitud de recategorizacion fue analizada y desestimada. Esto es una respuesta expresa y una decision comunicada, lo que es incompatible con la afirmacion de que nunca hubo respuesta ni decision.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 110,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 467,
+          "batch": false
+        }
+      ]
+    },
+    "AF-10": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el legajo del actor no contiene descripcion de puesto ni instrumento que delimite sus tareas. La prueba contradice esto: DOC-4 pagina 1 es la Descripcion de puesto N° DP-2023-00214-GRH#SOTR del 12/09/2023, dirigida al legajo 33.907, que delimita las tareas asignadas al puesto \"Operario especializado\" y dice que \"se incorpora al legajo del agente\". DOC-4 pagina 2 tambien remite a esa descripcion \"obrante en su legajo\". La afirmacion es contraria a la prueba documental.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 108,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 693,
+          "batch": false
+        }
+      ]
+    },
+    "AF-11": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que, antes del distracto, el actor intercambio correos electronicos con el area de personal reclamando la correcta registracion de su categoria, sin obtener respuesta. La prueba contiene un telegrama del actor (DOC-2, p.1) que intima el encuadre en categoria 9 y una carta documento de la demandada (DOC-2, p.2) que rechaza ese telegrama, y una nota de RRHH (DOC-4, p.2) que desestima una solicitud de recategorizacion. Ningun documento de prueba menciona un correo electronico ni un intercambio de correos. Los reclamos que si aparecen son por telegrama y por presentacion escrita, no por correo electronico, y la demandada respondio a ellos, lo que es contrario a la afirmacion de ausencia de respuesta, pero no versa sobre correos.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 138,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 607,
+          "batch": false
+        }
+      ]
+    },
+    "AF-12": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el 12 de febrero de 2026 se celebro audiencia ante el SECLO en el expediente 129806/2026, cumpliendo la instancia conciliatoria previa. Revisé los cuatro documentos de prueba (recibos de haberes, intercambio telegrafico, pericia contable y legajo/actuaciones de personal). Ninguno menciona el SECLO, una audiencia conciliatoria, el expediente 129806/2026 ni una fecha de audiencia en febrero de 2026. El unico acto posterior fechado es el recibo de enero de 2026 (pago del 6/1/2026), que no se refiere a conciliacion.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 155,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 493,
+          "batch": false
+        }
+      ]
+    },
+    "AF-13": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que el total reclamado asciende a $18.664.208,40, conforme un detalle y liquidacion que no se incorporan como prueba. Ningun documento de prueba (DOC-1 a DOC-4) contiene una liquidacion de diferencias salariales ni un total reclamado. La pericia (DOC-3) concluye que no surgen diferencias a favor del actor, lo que cuestiona el fundamento del reclamo, pero no fija ni contradice un monto total reclamado en la demanda. Como el total no aparece en la prueba y no se puede recalcular un monto reclamado sin la liquidacion que lo sustenta, no hay documento que lo respalde ni que lo contradiga directamente.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 165,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 551,
+          "batch": false
+        }
+      ]
+    },
+    "AF-14": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion reclama intereses desde la fecha de mora a la tasa activa BNA (cartera general nominal anual vencida a 30 dias) y costas. El hecho principal es el reclamo de intereses sobre un capital adeudado. Ningun documento de prueba fija una tasa de interes, ni liquida intereses, ni menciona una tasa activa BNA. La pericia concluye que no hay diferencias salariales a favor del actor, por lo que no hay capital sobre el cual calcular intereses, pero eso es un fundamento accesorio y la prueba no se refiere a la tasa ni al calculo de intereses como tales. Las costas son una cuestion procesal fuera de la prueba documental.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 144,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 526,
+          "batch": false
+        }
+      ]
+    },
+    "AF-15": {
+      "origen": "tiempo_real",
+      "error": "",
+      "revisar": false,
+      "analisis": "La afirmacion sostiene que la demandada no realizo ningun pago, total ni parcial, imputable a la obligacion reclamada (diferencias salariales por recategorizacion). La prueba incluye recibos de haberes de marzo, septiembre y diciembre de 2025 que registran pagos de salarios, incluido el S.A.C. del segundo semestre, y la pericia contable que revisa los recibos. Segun el criterio, cualquier pago imputable a un rubro reclamado contradice la afirmacion de que no hubo pagos. Los recibos pagan remuneraciones de la categoria 5 que el actor cuestiona, por lo que los pagos son imputables a la obligacion reclamada en el periodo.",
+      "ajustes": [],
+      "uso": [
+        {
+          "in": 103,
+          "cache_escrita": 0,
+          "cache_leida": 25853,
+          "out": 647,
+          "batch": false
+        }
+      ]
+    }
+  }
+}

@@ -12,14 +12,16 @@ El venv está un nivel arriba del repo, junto con el `.env` de la API key: `../.
 ```
 ../.venv/bin/python agente.py C2_Mobiliario_de_estaciones --reusar-items      # secuencial (M1-M3)
 ../.venv/bin/python orquestador.py C2_Mobiliario_de_estaciones --reusar-items --primeras 5   # fan-out (M4)
+../.venv/bin/python estructurado.py C2_Mobiliario_de_estaciones --primeras 3     # tool forzada (M6), tiempo real
+../.venv/bin/python estructurado.py --batch                                    # los 5 por la Batch API (M6)
 ../.venv/bin/python evals.py C2_Mobiliario_de_estaciones                       # eval, no gasta API
 ```
 
 - `--reusar-items` verifica el `items.json` que ya está en `salida/` sin volver a extraer.
 - `agente.py` y `orquestador.py` gastan saldo de API: el tope es mensual y chico. Antes de
   correrlos, decir cuánto va a costar (una pasada secuencial de los 5 expedientes ≈ US$0,085;
-  el fan-out gasta unas 6 veces más de entrada por afirmación). Depurar sobre un expediente y
-  con `--primeras`, no sobre los 5.
+  el fan-out gasta unas 6 veces más de entrada por afirmación; `estructurado.py` ≈ US$0,07 los 5
+  en tiempo real). Depurar sobre un expediente y con `--primeras`, no sobre los 5.
 - Después de cada corrida el hook `eval_tras_corrida` corre el eval solo y devuelve el resumen.
 - `/resultados` muestra la tabla de aciertos de todos los expedientes, sin llamar a la API.
 - El servidor MCP del corpus (`corpus-trenes`, en `.mcp.json`) sirve un expediente por vez:
@@ -47,6 +49,12 @@ las afirmaciones. Sale más caro en tokens, pero el número mide al agente y no 
 **La prueba va como PDF y no como texto plano.** Con PDF se pueden usar citations, y la cita
 trae la página del documento, que es lo que mide el acierto de fuente. Con texto plano la cita
 devolvería posiciones de caracteres y la página habría que reconstruirla.
+
+**El veredicto del M6 sale por una tool forzada y sin citations.** Citations solo viene en
+bloques de texto, así que con `tool_choice` forzado la página la declara el modelo. El código la
+comprueba contra el texto del PDF (`_anclar` en `estructurado.py`): si el fragmento está en
+otra página vale la del texto, y si no está en el documento el veredicto vuelve al modelo como
+error, una vez.
 
 **En el fan-out el orquestador no ve los textos ni la evidencia.** Recibe ids, títulos y
 estados; el resto va directo del sub-agente al fan-in por código. El contexto del orquestador
